@@ -2165,7 +2165,7 @@
       "filled"
     ],
     "paths": [
-      "M21 10.5H11V6l-8 6 8 6v-4.5h10z"
+      "M20.25 10.75H9.75V7.3l-6 4.7 6 4.7v-3.45h10.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2179,7 +2179,7 @@
       "filled"
     ],
     "paths": [
-      "M3 10.5h10V6l8 6-8 6v-4.5H3z"
+      "M3.75 10.75h10.5V7.3l6 4.7-6 4.7v-3.45H3.75z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2193,7 +2193,7 @@
       "filled"
     ],
     "paths": [
-      "M10.5 21V11H6l6-8 6 8h-4.5v10z"
+      "M10.75 20.25V9.75H7.3l4.7-6 4.7 6h-3.45v10.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2207,7 +2207,7 @@
       "filled"
     ],
     "paths": [
-      "M10.5 3v10H6l6 8 6-8h-4.5V3z"
+      "M10.75 3.75v10.5H7.3l4.7 6 4.7-6h-3.45V3.75z"
     ],
     "variant": "filled",
     "stroke": "none"
