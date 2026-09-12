@@ -20,9 +20,19 @@ import {
       [attr.width]="cssSize()"
       [attr.height]="cssSize()"
       [attr.viewBox]="icon().viewBox"
-      [attr.fill]="icon().variant === 'filled' ? 'currentColor' : 'none'"
-      [attr.stroke]="icon().variant === 'filled' ? 'none' : 'currentColor'"
-      [attr.stroke-width]="strokeWidth()"
+      [attr.fill]="
+        icon().variant === 'filled' && canFill() ? 'currentColor' : 'none'
+      "
+      [attr.stroke]="
+        icon().variant === 'filled'
+          ? (icon().stroke ?? 'currentColor')
+          : 'currentColor'
+      "
+      [attr.stroke-width]="
+        icon().variant === 'filled' ? filledStrokeWidth() : strokeWidth()
+      "
+      fill-rule="evenodd"
+      clip-rule="evenodd"
       stroke-linecap="round"
       stroke-linejoin="round"
       focusable="false"
@@ -63,4 +73,16 @@ export class NeuralIcon {
     const size = this.size();
     return typeof size === 'number' ? `${size}px` : size;
   });
+
+  protected readonly filledStrokeWidth = computed(
+    () => strokeWidthValue(this.strokeWidth()) * 1.28,
+  );
+
+  protected readonly canFill = computed(() =>
+    this.icon().paths.every((path) => path.trim().endsWith('z')),
+  );
+}
+
+function strokeWidthValue(value: number): number {
+  return Number.isFinite(value) && value > 0 ? value : NEURAL_ICON_STROKE_WIDTH;
 }

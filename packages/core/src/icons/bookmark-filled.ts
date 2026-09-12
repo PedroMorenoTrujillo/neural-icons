@@ -3,7 +3,8 @@ import { defineIcon } from '../lib/icon-definition.js';
 export const iconBookmarkFilled = defineIcon({
   name: 'bookmark-filled',
   category: 'action',
-  tags: ['bookmark', 'action', 'favorite'],
-  variant: 'filled',
+  tags: ['bookmark', 'action', 'favorite', 'filled'],
   paths: ['M6 4h12v16l-6-3-6 3z'],
+  variant: 'filled',
+  stroke: 'none',
 });

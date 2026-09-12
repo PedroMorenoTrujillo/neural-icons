@@ -4,12 +4,14 @@ export const NEURAL_ICON_STROKE_WIDTH = 1.75 as const;
 export type NeuralIconCategory =
   'action' | 'communication' | 'file' | 'navigation' | 'status' | 'system';
 export type NeuralIconVariant = 'outline' | 'filled';
+export type NeuralIconStroke = 'none' | 'currentColor';
 
 export interface NeuralIconDefinition {
   readonly name: string;
   readonly category: NeuralIconCategory;
   readonly tags: readonly string[];
   readonly variant: NeuralIconVariant;
+  readonly stroke?: NeuralIconStroke;
   readonly viewBox: typeof NEURAL_ICON_VIEW_BOX;
   readonly paths: readonly string[];
 }
@@ -18,9 +20,7 @@ type NeuralIconInput = Omit<NeuralIconDefinition, 'viewBox' | 'variant'> & {
   readonly variant?: NeuralIconVariant;
 };
 
-export function defineIcon<
-  const T extends NeuralIconInput,
->(
+export function defineIcon<const T extends NeuralIconInput>(
   definition: T,
 ): Readonly<
   Omit<T, 'tags' | 'paths' | 'variant'> & {

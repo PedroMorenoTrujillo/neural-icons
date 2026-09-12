@@ -1,6 +1,6 @@
 # Architecture audit — 2026-09-12
 
-Baseline: `963986f` (`feat: establish Neural Icons monorepo`). Scope: package architecture, build contracts, portability, accessibility and SSR/hydration verification. The original 48 canonical icon specifications remain unchanged; the catalog now contains 200 specifications including 12 filled variants.
+Baseline: `963986f` (`feat: establish Neural Icons monorepo`). Scope: package architecture, build contracts, portability, accessibility and SSR/hydration verification. The original 48 canonical icon specifications remain unchanged; the catalog now contains 376 specifications: 188 coordinated outline and filled treatments.
 
 ## Assessment
 
@@ -11,7 +11,7 @@ Retain the existing three-layer design: framework-neutral definitions → Angula
 | Priority | Finding                                                                                                                                                                | Resolution/evidence                                                                                                                                                                                                            |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | P1       | Existing browser coverage used the development server and did not prove production hydration. The production server returned HTTP 400 for the unconfigured local host. | Test the built Node server with an explicit allowed loopback host. Assert server HTML, delay JavaScript, record SVG nodes, then verify the surviving nodes are reused after hydration and filtering. Both Chromium tests pass. |
-| P2       | Workspace aliases let source tests bypass the distributed package surface. No external consumer check existed.                                                         | Pack both build outputs locally, extract into an isolated consumer, verify all 200 JS and SVG exports, reject internal imports, and compile an Angular AOT consumer with no Neural source aliases.                             |
+| P2       | Workspace aliases let source tests bypass the distributed package surface. No external consumer check existed.                                                         | Pack both build outputs locally, extract into an isolated consumer, verify all 376 JS and SVG exports, reject internal imports, and compile an Angular AOT consumer with no Neural source aliases.                             |
 | P2       | Raw SVGs were shipped but the export map prevented package-subpath resolution.                                                                                         | Add `./svg/*.svg` to core exports and verify every asset subpath.                                                                                                                                                              |
 | P2       | `defineIcon` froze arrays at runtime but its generic return type retained mutable array methods for mutable caller inputs.                                             | Return readonly path/tag types while preserving literal names. The external compiler test uses expected type errors to prevent regression.                                                                                     |
 | P2       | Building directly through Nx skipped generated-source validation; removed specs could leave exported artifacts behind.                                                 | Require validation before core builds, reject orphaned generated artifacts, and include shared tooling/configuration in task inputs.                                                                                           |
@@ -43,7 +43,7 @@ The package check uses the installed Angular/Vite toolchain and temporary local 
 ## Limits and deferred work
 
 - Compatibility testing covers Angular 22.1.6, Node 22.22.3, the installed Vite bundler and Chromium. Other Angular 22 minors, other bundlers, dynamic request-time SSR and the actual Neural UI 2.0 consumer require integration coverage before a stable release claim.
-- The catalog now has a 200-icon baseline, including 12 filled variants. Further expansion, stricter geometric/path-syntax validation, visual review and license selection are separate workstreams.
+- The catalog now has a 376-entry baseline: 188 base icons with outline and filled treatments. Further expansion, stricter geometric/path-syntax validation, visual review and license selection are separate workstreams.
 - Independent release configuration is provisional. Both packages are `0.0.1`, and the adapter's core range `^0.0.1` deliberately does not accept `0.0.2`; revisit versioning when releases are authorized.
 
 ## References

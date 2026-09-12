@@ -217,7 +217,9 @@ const paths = {
     'M12 4v4M12 16v4M4 12h4M16 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z',
   ],
   route: ['M5 19c0-5 4-5 4-8s-4-3-4-6M9 5h10M16 2l3 3-3 3'],
-  navigation: ['M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z'],
+  navigation: [
+    'M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z',
+  ],
   link: ['M9 15l6-6M7 17H6a4 4 0 0 1 0-8h4M17 7h1a4 4 0 0 1 0 8h-4'],
   unlink: [
     'm8 8-2-2a4 4 0 0 0-5.5 5.5l2 2M16 16l2 2a4 4 0 0 0 5.5-5.5l-2-2M9 15l6-6',
@@ -437,21 +439,25 @@ const paths = {
   error: ['M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16zM9 9l6 6M15 9l-6 6'],
   check: ['m4.25 12.5 4.75 4.75 10.75-10.5'],
   bookmarkFilled: ['M6 4h12v16l-6-3-6 3z'],
-  homeFilled: ['M3 10 12 3l9 7v10H4V10zM10 20v-7h4v7'],
+  homeFilled: ['M3 10 12 3l9 7v10H4V10zM10 20v-7h4v7z'],
   heartFilled: [
     'M12 20S4 15.5 4 9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.5 12 20 12 20z',
   ],
   starFilled: [
     'm12 3 2.8 5.8 6.2.9-4.5 4.4 1.1 6.4-5.6-3-5.6 3 1.1-6.4-4.5-4.4 6.2-.9z',
   ],
-  bellFilled: ['M5 17h14l-2-3v-4a5 5 0 0 0-10 0v4zM10 20h4'],
+  bellFilled: ['M5 17h14l-2-3v-4a5 5 0 0 0-10 0v4zM10 20a2 2 0 0 0 4 0z'],
   personFilled: ['M12 12a4 4 0 1 0 0-8a4 4 0 1 0 0 8zM4 21a8 8 0 0 1 16 0z'],
   checkFilled: ['M4 12.5 9 18l11-12-3-2-8 8-3-3z'],
-  warningFilled: ['M12 3 22 21H2zM12 9v5M12 17h.01'],
-  errorFilled: ['M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM9 9l6 6M15 9l-6 6'],
-  infoFilled: ['M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM12 9v6M12 6.5h.01'],
+  warningFilled: ['M12 3 22 21H2zM11 9h2v5h-2zM11 17h2v2h-2z'],
+  errorFilled: [
+    'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM9.2 8.2 15.8 14.8 14.8 15.8 8.2 9.2zM14.8 8.2 15.8 9.2 9.2 15.8 8.2 14.8z',
+  ],
+  infoFilled: [
+    'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM11 9h2v7h-2zM11 6h2v2h-2z',
+  ],
   folderFilled: ['M3 6h7l2 2h9v12H3z'],
-  fileFilled: ['M6 3h8l4 4v14H6zM14 3v5h5'],
+  fileFilled: ['M6 3h8l4 4v14H6zM14 3v5h5z'],
 };
 
 const camel = (name) =>
@@ -523,7 +529,14 @@ const make = (name, category, variant = 'outline') => {
     name,
     category,
     tags: [...new Set(tags)],
-    ...(variant === 'filled' ? { variant } : {}),
+    ...(variant === 'filled'
+      ? {
+          variant,
+          ...(['warning', 'error', 'info'].includes(root)
+            ? { stroke: 'none' }
+            : {}),
+        }
+      : {}),
     paths: paths[kindFor(name)] ?? paths.roundSquare,
   };
 };
@@ -549,7 +562,10 @@ if (names.length !== 152)
 
 const newNames = new Set(names.map(({ name }) => name));
 const baseline = existing.filter(({ name }) => !newNames.has(name));
-await writeFile(manifestPath, `${JSON.stringify([...baseline, ...names], null, 2)}\n`);
+await writeFile(
+  manifestPath,
+  `${JSON.stringify([...baseline, ...names], null, 2)}\n`,
+);
 console.log(
   `Added ${names.length} original specs; catalog now contains ${byName.size} icons.`,
 );

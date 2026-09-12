@@ -10,7 +10,7 @@ Original, framework-agnostic iconography for Neural UI 2.0. The repository is pr
 
 ## Design status
 
-The current set contains 200 icons chosen to cover navigation, form controls, feedback, overlays, data tables, accounts, communication, and file interactions required by Neural UI 2.0. The visual language and source workflow are documented in [Iconography](docs/iconography.md); the complete generated list is in [Icon inventory](docs/icon-inventory.md).
+The current set contains 188 base icons with two coordinated treatments (376 entries) chosen to cover navigation, form controls, feedback, overlays, data tables, accounts, communication, and file interactions required by Neural UI 2.0. Every base icon has an outline and filled treatment. The visual language and source workflow are documented in [Iconography](docs/iconography.md); the complete generated list is in [Icon inventory](docs/icon-inventory.md).
 
 The geometry is original. No third-party SVG path data is included. Familiar semantic metaphors may be studied, but every path is rebuilt from the Neural grid and rules.
 
@@ -35,7 +35,7 @@ npx nx run angular:verify-package
 npx nx e2e showcase-e2e
 ```
 
-`npm run generate:icons` converts the canonical geometry manifest into individual TypeScript modules, standalone SVG files, and the inventory document. CI should use `npm run check:generated` to reject stale generated artifacts. The current catalog has 200 entries, including 12 explicitly named `-filled` variants.
+`npm run generate:icons` converts the canonical geometry manifest into individual TypeScript modules, standalone SVG files, and the inventory document. `npm run generate:variants` completes the filled companions before refreshing those artifacts. CI should use `npm run check:generated` to reject stale generated artifacts. The current catalog has 376 entries: 188 each of `outline` and `filled`.
 
 Every core build also depends on validation. Renamed/removed icons must not leave orphaned generated files; the generator reports these for manual review. Dependency installation uses normal peer resolution; see the [audit](docs/architecture-audit.md) for the verified tooling contract.
 

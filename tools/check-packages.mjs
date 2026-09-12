@@ -163,7 +163,9 @@ try {
       .filter((item) => item.type === 'chunk')
       .map((item) => item.code)
       .join('\n');
-    for (const icon of specs.filter(({ name }) => name !== 'search')) {
+    for (const icon of specs.filter(
+      ({ name }) => name !== 'search' && name !== 'search-filled',
+    )) {
       assert(
         !code.includes(`name:"${icon.name}"`),
         `${name} retained unrelated icon ${icon.name}`,

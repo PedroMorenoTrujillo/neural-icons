@@ -30,9 +30,13 @@ export const ${exportName} = defineIcon(${JSON.stringify(icon, null, 2)});
 
   const paths = icon.paths.map((path) => `  <path d="${path}"/>`).join('\n');
   const filled = icon.variant === 'filled';
+  const canFill =
+    filled && icon.paths.every((path) => path.trim().endsWith('z'));
+  const strokeWidth = filled ? '2.24' : '1.75';
+  const stroke = filled ? (icon.stroke ?? 'currentColor') : 'currentColor';
   expected.set(
     `packages/core/svg/${icon.name}.svg`,
-    `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="${filled ? 'currentColor' : 'none'}" stroke="${filled ? 'none' : 'currentColor'}" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">\n${paths}\n</svg>\n`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="${canFill ? 'currentColor' : 'none'}" stroke="${stroke}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd" aria-hidden="true">\n${paths}\n</svg>\n`,
   );
 }
 

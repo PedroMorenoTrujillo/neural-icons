@@ -1,0 +1,12 @@
+import { defineIcon } from '../lib/icon-definition.js';
+
+export const iconMoreVerticalFilled = defineIcon({
+  name: 'more-vertical-filled',
+  category: 'action',
+  tags: ['overflow', 'options', 'filled'],
+  paths: [
+    'M13.25 5 L13.08 5.63 L12.63 6.08 L12 6.25 L11.38 6.08 L10.92 5.63 L10.75 5 L10.92 4.38 L11.38 3.92 L12 3.75 L12.63 3.92 L13.08 4.37 L13.25 5 z M13.25 12 L13.08 12.63 L12.63 13.08 L12 13.25 L11.38 13.08 L10.92 12.63 L10.75 12 L10.92 11.38 L11.38 10.92 L12 10.75 L12.63 10.92 L13.08 11.38 L13.25 12 z M13.25 19 L13.08 19.63 L12.63 20.08 L12 20.25 L11.38 20.08 L10.92 19.63 L10.75 19 L10.92 18.38 L11.38 17.92 L12 17.75 L12.63 17.92 L13.08 18.38 L13.25 19 z',
+  ],
+  variant: 'filled',
+  stroke: 'none',
+});

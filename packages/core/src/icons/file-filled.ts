@@ -5,5 +5,5 @@ export const iconFileFilled = defineIcon({
   category: 'file',
   tags: ['file', 'document'],
   variant: 'filled',
-  paths: ['M6 3h8l4 4v14H6zM14 3v5h5'],
+  paths: ['M6 3h8l4 4v14H6zM14 3v5h5z'],
 });

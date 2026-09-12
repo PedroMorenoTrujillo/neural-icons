@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  color-scheme: dark;
-  --background: #07100e;
-  --surface: #0b1512;
-  --line: #20302a;
-  --text: #ecf7f2;
-  --muted: #8d9b96;
-  --accent: #4af6be;
+  color-scheme: light;
+  --background: #f6f9fe;
+  --surface: #ffffff;
+  --line: #d9e3f2;
+  --text: #14213a;
+  --muted: #60708a;
+  --accent: #236ed8;
   font-family:
     Inter,
     ui-sans-serif,
@@ -29,7 +29,7 @@ body {
   background:
     radial-gradient(
       circle at 20% -10%,
-      rgba(74, 246, 190, 0.08),
+      rgba(35, 110, 216, 0.08),
       transparent 32rem
     ),
     var(--background);

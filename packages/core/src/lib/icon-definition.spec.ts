@@ -4,8 +4,8 @@ import { defineIcon, NEURAL_ICON_VIEW_BOX } from './icon-definition.js';
 
 describe('Neural icon definitions', () => {
   it('ships the reviewed Neural UI 2.0 baseline', () => {
-    expect(neuralIcons).toHaveLength(200);
-    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(200);
+    expect(neuralIcons).toHaveLength(376);
+    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(376);
   });
 
   it.each(neuralIcons)('$name has immutable, portable geometry', (icon) => {
@@ -39,5 +39,13 @@ describe('Neural icon definitions', () => {
     });
 
     expect(icon.variant).toBe('filled');
+  });
+
+  it('keeps every catalog Filled treatment as closed geometry', () => {
+    for (const icon of neuralIcons.filter(
+      ({ variant }) => variant === 'filled',
+    )) {
+      expect(icon.paths.every((path) => path.trim().endsWith('z'))).toBe(true);
+    }
   });
 });

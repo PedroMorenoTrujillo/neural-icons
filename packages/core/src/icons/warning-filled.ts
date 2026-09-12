@@ -5,5 +5,6 @@ export const iconWarningFilled = defineIcon({
   category: 'status',
   tags: ['warning', 'status'],
   variant: 'filled',
-  paths: ['M12 3 22 21H2zM12 9v5M12 17h.01'],
+  stroke: 'none',
+  paths: ['M12 3 22 21H2zM11 9h2v5h-2zM11 17h2v2h-2z'],
 });

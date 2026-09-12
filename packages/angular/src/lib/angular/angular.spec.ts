@@ -58,10 +58,11 @@ describe('NeuralIcon', () => {
       ...iconSearch,
       name: 'search-filled',
       variant: 'filled',
+      paths: ['M4 4h16v16H4z'],
     });
     fixture.detectChanges();
     const svg = fixture.nativeElement.querySelector('svg') as SVGElement;
     expect(svg.getAttribute('fill')).toBe('currentColor');
-    expect(svg.getAttribute('stroke')).toBe('none');
+    expect(svg.getAttribute('stroke')).toBe('currentColor');
   });
 });

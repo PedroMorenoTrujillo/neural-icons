@@ -5,5 +5,5 @@ export const iconBellFilled = defineIcon({
   category: 'communication',
   tags: ['bell', 'communication'],
   variant: 'filled',
-  paths: ['M5 17h14l-2-3v-4a5 5 0 0 0-10 0v4zM10 20h4'],
+  paths: ['M5 17h14l-2-3v-4a5 5 0 0 0-10 0v4zM10 20a2 2 0 0 0 4 0z'],
 });

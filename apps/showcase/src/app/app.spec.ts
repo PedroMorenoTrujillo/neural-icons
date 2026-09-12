@@ -15,7 +15,7 @@ describe('App', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('Neural Icons');
     expect(compiled.querySelectorAll('article.card')).toHaveLength(188);
     expect(compiled.querySelectorAll('.variant')).toHaveLength(376);
-    expect(compiled.querySelectorAll('.filled-stage')).toHaveLength(12);
-    expect(compiled.querySelectorAll('.unavailable-stage')).toHaveLength(176);
+    expect(compiled.querySelectorAll('.filled-stage')).toHaveLength(188);
+    expect(compiled.querySelectorAll('.unavailable-stage')).toHaveLength(0);
   });
 });

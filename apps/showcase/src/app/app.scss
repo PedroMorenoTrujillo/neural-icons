@@ -23,11 +23,11 @@ main {
   height: 58px;
   place-items: center;
   border-radius: 18px;
-  color: #07110f;
+  color: #ffffff;
   background: var(--accent);
   font-size: 1.35rem;
   font-weight: 800;
-  box-shadow: 0 14px 40px rgba(74, 246, 190, 0.16);
+  box-shadow: 0 14px 40px rgba(35, 110, 216, 0.18);
 }
 
 .eyebrow,
@@ -55,10 +55,10 @@ h1 {
 
 .count {
   padding: 9px 13px;
-  border: 1px solid rgba(74, 246, 190, 0.3);
+  border: 1px solid rgba(35, 110, 216, 0.3);
   border-radius: 999px;
   color: var(--accent);
-  background: rgba(74, 246, 190, 0.06);
+  background: rgba(35, 110, 216, 0.06);
   font-size: 0.82rem;
 }
 
@@ -96,7 +96,7 @@ input {
 }
 
 input::placeholder {
-  color: #65706c;
+  color: #8b9bb2;
 }
 
 .results {
@@ -121,7 +121,7 @@ input::placeholder {
 }
 
 .card:hover {
-  border-color: rgba(74, 246, 190, 0.42);
+  border-color: rgba(35, 110, 216, 0.5);
   transform: translateY(-2px);
 }
 
@@ -133,7 +133,7 @@ input::placeholder {
   place-items: center;
   border-radius: 14px;
   color: var(--accent);
-  background: #101d19;
+  background: #eef4fc;
 }
 
 .variants {
@@ -143,13 +143,13 @@ input::placeholder {
   margin-bottom: 14px;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: #08110f;
+  background: #f4f7fc;
 }
 
 .variant {
   min-width: 0;
   padding: 9px 8px 8px;
-  background: #0d1915;
+  background: #ffffff;
 }
 
 .variant + .variant {
@@ -165,22 +165,30 @@ input::placeholder {
 
 .filled-stage {
   color: var(--accent);
-  background: rgba(74, 246, 190, 0.16);
+  background: #dceaff;
 }
 
 .unavailable-stage {
   border: 1px dashed rgba(143, 161, 153, 0.25);
-  color: #65706c;
-  background: rgba(16, 29, 25, 0.45);
+  color: #91a0b5;
+  background: #f6f8fb;
 }
 
 .variant-label {
   display: block;
   color: var(--muted);
-  font-size: 0.62rem;
+  overflow: hidden;
+  font-size: 0.56rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.01em;
+  text-overflow: ellipsis;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.card .variant-label {
+  margin-top: 4px;
+  font-size: 0.56rem;
 }
 
 .card strong,

@@ -186,18 +186,194 @@ import { iconCalendarCheck } from './calendar-check.js';
 import { iconCalendarX } from './calendar-x.js';
 import { iconClockPlus } from './clock-plus.js';
 import { iconClockX } from './clock-x.js';
+import { iconArrowLeftFilled } from './arrow-left-filled.js';
+import { iconArrowRightFilled } from './arrow-right-filled.js';
+import { iconArrowUpFilled } from './arrow-up-filled.js';
+import { iconArrowDownFilled } from './arrow-down-filled.js';
+import { iconChevronLeftFilled } from './chevron-left-filled.js';
+import { iconChevronRightFilled } from './chevron-right-filled.js';
+import { iconChevronUpFilled } from './chevron-up-filled.js';
+import { iconChevronDownFilled } from './chevron-down-filled.js';
+import { iconCheckFilled } from './check-filled.js';
+import { iconXFilled } from './x-filled.js';
+import { iconPlusFilled } from './plus-filled.js';
+import { iconMinusFilled } from './minus-filled.js';
+import { iconSearchFilled } from './search-filled.js';
+import { iconMenuFilled } from './menu-filled.js';
+import { iconMoreHorizontalFilled } from './more-horizontal-filled.js';
+import { iconMoreVerticalFilled } from './more-vertical-filled.js';
 import { iconHomeFilled } from './home-filled.js';
+import { iconSettingsFilled } from './settings-filled.js';
+import { iconUserFilled } from './user-filled.js';
+import { iconUsersFilled } from './users-filled.js';
 import { iconHeartFilled } from './heart-filled.js';
 import { iconStarFilled } from './star-filled.js';
 import { iconBellFilled } from './bell-filled.js';
-import { iconUserFilled } from './user-filled.js';
-import { iconCheckFilled } from './check-filled.js';
-import { iconWarningFilled } from './warning-filled.js';
-import { iconErrorFilled } from './error-filled.js';
 import { iconInfoFilled } from './info-filled.js';
+import { iconWarningFilled } from './warning-filled.js';
+import { iconHelpFilled } from './help-filled.js';
+import { iconSuccessFilled } from './success-filled.js';
+import { iconErrorFilled } from './error-filled.js';
+import { iconEyeFilled } from './eye-filled.js';
+import { iconEyeOffFilled } from './eye-off-filled.js';
+import { iconEditFilled } from './edit-filled.js';
+import { iconTrashFilled } from './trash-filled.js';
+import { iconCopyFilled } from './copy-filled.js';
+import { iconDownloadFilled } from './download-filled.js';
+import { iconUploadFilled } from './upload-filled.js';
+import { iconCalendarFilled } from './calendar-filled.js';
+import { iconClockFilled } from './clock-filled.js';
+import { iconFilterFilled } from './filter-filled.js';
+import { iconSortAscendingFilled } from './sort-ascending-filled.js';
+import { iconLockFilled } from './lock-filled.js';
+import { iconUnlockFilled } from './unlock-filled.js';
+import { iconMailFilled } from './mail-filled.js';
+import { iconExternalLinkFilled } from './external-link-filled.js';
 import { iconFolderFilled } from './folder-filled.js';
 import { iconFileFilled } from './file-filled.js';
+import { iconRefreshFilled } from './refresh-filled.js';
+import { iconLoaderFilled } from './loader-filled.js';
+import { iconLogoutFilled } from './logout-filled.js';
+import { iconDashboardFilled } from './dashboard-filled.js';
+import { iconGridFilled } from './grid-filled.js';
+import { iconListFilled } from './list-filled.js';
+import { iconSidebarFilled } from './sidebar-filled.js';
+import { iconPanelLeftFilled } from './panel-left-filled.js';
+import { iconPanelRightFilled } from './panel-right-filled.js';
+import { iconMaximizeFilled } from './maximize-filled.js';
+import { iconMinimizeFilled } from './minimize-filled.js';
+import { iconExpandFilled } from './expand-filled.js';
+import { iconCollapseFilled } from './collapse-filled.js';
+import { iconArrowUpRightFilled } from './arrow-up-right-filled.js';
+import { iconArrowUpLeftFilled } from './arrow-up-left-filled.js';
+import { iconArrowDownRightFilled } from './arrow-down-right-filled.js';
+import { iconArrowDownLeftFilled } from './arrow-down-left-filled.js';
+import { iconCornerUpLeftFilled } from './corner-up-left-filled.js';
+import { iconCornerUpRightFilled } from './corner-up-right-filled.js';
+import { iconCornerDownLeftFilled } from './corner-down-left-filled.js';
+import { iconCornerDownRightFilled } from './corner-down-right-filled.js';
+import { iconCompassFilled } from './compass-filled.js';
+import { iconMapFilled } from './map-filled.js';
+import { iconPinFilled } from './pin-filled.js';
+import { iconLocationFilled } from './location-filled.js';
+import { iconRouteFilled } from './route-filled.js';
+import { iconNavigationFilled } from './navigation-filled.js';
+import { iconLinkFilled } from './link-filled.js';
+import { iconUnlinkFilled } from './unlink-filled.js';
+import { iconGlobeFilled } from './globe-filled.js';
+import { iconSaveFilled } from './save-filled.js';
+import { iconShareFilled } from './share-filled.js';
+import { iconSendFilled } from './send-filled.js';
+import { iconPlayFilled } from './play-filled.js';
+import { iconPauseFilled } from './pause-filled.js';
+import { iconSkipBackFilled } from './skip-back-filled.js';
+import { iconSkipForwardFilled } from './skip-forward-filled.js';
+import { iconRewindFilled } from './rewind-filled.js';
+import { iconFastForwardFilled } from './fast-forward-filled.js';
+import { iconRotateCwFilled } from './rotate-cw-filled.js';
+import { iconRotateCcwFilled } from './rotate-ccw-filled.js';
+import { iconUndoFilled } from './undo-filled.js';
+import { iconRedoFilled } from './redo-filled.js';
+import { iconZoomInFilled } from './zoom-in-filled.js';
+import { iconZoomOutFilled } from './zoom-out-filled.js';
+import { iconSelectFilled } from './select-filled.js';
+import { iconCursorFilled } from './cursor-filled.js';
+import { iconDragFilled } from './drag-filled.js';
+import { iconWandFilled } from './wand-filled.js';
+import { iconSparklesFilled } from './sparkles-filled.js';
+import { iconCommandFilled } from './command-filled.js';
+import { iconKeyboardFilled } from './keyboard-filled.js';
+import { iconScanFilled } from './scan-filled.js';
+import { iconQrCodeFilled } from './qr-code-filled.js';
+import { iconPrintFilled } from './print-filled.js';
+import { iconArchiveFilled } from './archive-filled.js';
 import { iconBookmarkFilled } from './bookmark-filled.js';
+import { iconFlagFilled } from './flag-filled.js';
+import { iconTagFilled } from './tag-filled.js';
+import { iconPaperclipFilled } from './paperclip-filled.js';
+import { iconAttachFilled } from './attach-filled.js';
+import { iconClipboardFilled } from './clipboard-filled.js';
+import { iconPasteFilled } from './paste-filled.js';
+import { iconCropFilled } from './crop-filled.js';
+import { iconAlignLeftFilled } from './align-left-filled.js';
+import { iconAlignCenterFilled } from './align-center-filled.js';
+import { iconAlignRightFilled } from './align-right-filled.js';
+import { iconMessageFilled } from './message-filled.js';
+import { iconMessagesFilled } from './messages-filled.js';
+import { iconChatFilled } from './chat-filled.js';
+import { iconPhoneFilled } from './phone-filled.js';
+import { iconVideoFilled } from './video-filled.js';
+import { iconMicFilled } from './mic-filled.js';
+import { iconMicOffFilled } from './mic-off-filled.js';
+import { iconCameraFilled } from './camera-filled.js';
+import { iconCameraOffFilled } from './camera-off-filled.js';
+import { iconInboxFilled } from './inbox-filled.js';
+import { iconMentionFilled } from './mention-filled.js';
+import { iconBellOffFilled } from './bell-off-filled.js';
+import { iconVolumeFilled } from './volume-filled.js';
+import { iconVolumeOffFilled } from './volume-off-filled.js';
+import { iconRssFilled } from './rss-filled.js';
+import { iconWifiFilled } from './wifi-filled.js';
+import { iconWifiOffFilled } from './wifi-off-filled.js';
+import { iconCircleCheckFilled } from './circle-check-filled.js';
+import { iconCircleXFilled } from './circle-x-filled.js';
+import { iconCircleInfoFilled } from './circle-info-filled.js';
+import { iconCircleAlertFilled } from './circle-alert-filled.js';
+import { iconShieldFilled } from './shield-filled.js';
+import { iconShieldCheckFilled } from './shield-check-filled.js';
+import { iconShieldOffFilled } from './shield-off-filled.js';
+import { iconKeyFilled } from './key-filled.js';
+import { iconPasswordFilled } from './password-filled.js';
+import { iconLoginFilled } from './login-filled.js';
+import { iconUserPlusFilled } from './user-plus-filled.js';
+import { iconUserMinusFilled } from './user-minus-filled.js';
+import { iconUserCheckFilled } from './user-check-filled.js';
+import { iconUserXFilled } from './user-x-filled.js';
+import { iconGroupFilled } from './group-filled.js';
+import { iconDatabaseFilled } from './database-filled.js';
+import { iconServerFilled } from './server-filled.js';
+import { iconCloudFilled } from './cloud-filled.js';
+import { iconCloudUploadFilled } from './cloud-upload-filled.js';
+import { iconCloudDownloadFilled } from './cloud-download-filled.js';
+import { iconHardDriveFilled } from './hard-drive-filled.js';
+import { iconCpuFilled } from './cpu-filled.js';
+import { iconTerminalFilled } from './terminal-filled.js';
+import { iconCodeFilled } from './code-filled.js';
+import { iconBugFilled } from './bug-filled.js';
+import { iconZapFilled } from './zap-filled.js';
+import { iconActivityFilled } from './activity-filled.js';
+import { iconChartFilled } from './chart-filled.js';
+import { iconAnalyticsFilled } from './analytics-filled.js';
+import { iconFilePlusFilled } from './file-plus-filled.js';
+import { iconFileMinusFilled } from './file-minus-filled.js';
+import { iconFileCheckFilled } from './file-check-filled.js';
+import { iconFileXFilled } from './file-x-filled.js';
+import { iconFileTextFilled } from './file-text-filled.js';
+import { iconFileCodeFilled } from './file-code-filled.js';
+import { iconFileImageFilled } from './file-image-filled.js';
+import { iconFileVideoFilled } from './file-video-filled.js';
+import { iconFileAudioFilled } from './file-audio-filled.js';
+import { iconFileArchiveFilled } from './file-archive-filled.js';
+import { iconFileSpreadsheetFilled } from './file-spreadsheet-filled.js';
+import { iconFilesFilled } from './files-filled.js';
+import { iconFolderPlusFilled } from './folder-plus-filled.js';
+import { iconFolderMinusFilled } from './folder-minus-filled.js';
+import { iconFolderCheckFilled } from './folder-check-filled.js';
+import { iconFolderXFilled } from './folder-x-filled.js';
+import { iconFolderOpenFilled } from './folder-open-filled.js';
+import { iconFolderTreeFilled } from './folder-tree-filled.js';
+import { iconTableFilled } from './table-filled.js';
+import { iconListCheckFilled } from './list-check-filled.js';
+import { iconListPlusFilled } from './list-plus-filled.js';
+import { iconListMinusFilled } from './list-minus-filled.js';
+import { iconSortDescendingFilled } from './sort-descending-filled.js';
+import { iconFunnelFilled } from './funnel-filled.js';
+import { iconCalendarPlusFilled } from './calendar-plus-filled.js';
+import { iconCalendarMinusFilled } from './calendar-minus-filled.js';
+import { iconCalendarCheckFilled } from './calendar-check-filled.js';
+import { iconCalendarXFilled } from './calendar-x-filled.js';
+import { iconClockPlusFilled } from './clock-plus-filled.js';
+import { iconClockXFilled } from './clock-x-filled.js';
 import type { NeuralIconDefinition } from '../lib/icon-definition.js';
 
 export { iconArrowLeft } from './arrow-left.js';
@@ -388,18 +564,194 @@ export { iconCalendarCheck } from './calendar-check.js';
 export { iconCalendarX } from './calendar-x.js';
 export { iconClockPlus } from './clock-plus.js';
 export { iconClockX } from './clock-x.js';
+export { iconArrowLeftFilled } from './arrow-left-filled.js';
+export { iconArrowRightFilled } from './arrow-right-filled.js';
+export { iconArrowUpFilled } from './arrow-up-filled.js';
+export { iconArrowDownFilled } from './arrow-down-filled.js';
+export { iconChevronLeftFilled } from './chevron-left-filled.js';
+export { iconChevronRightFilled } from './chevron-right-filled.js';
+export { iconChevronUpFilled } from './chevron-up-filled.js';
+export { iconChevronDownFilled } from './chevron-down-filled.js';
+export { iconCheckFilled } from './check-filled.js';
+export { iconXFilled } from './x-filled.js';
+export { iconPlusFilled } from './plus-filled.js';
+export { iconMinusFilled } from './minus-filled.js';
+export { iconSearchFilled } from './search-filled.js';
+export { iconMenuFilled } from './menu-filled.js';
+export { iconMoreHorizontalFilled } from './more-horizontal-filled.js';
+export { iconMoreVerticalFilled } from './more-vertical-filled.js';
 export { iconHomeFilled } from './home-filled.js';
+export { iconSettingsFilled } from './settings-filled.js';
+export { iconUserFilled } from './user-filled.js';
+export { iconUsersFilled } from './users-filled.js';
 export { iconHeartFilled } from './heart-filled.js';
 export { iconStarFilled } from './star-filled.js';
 export { iconBellFilled } from './bell-filled.js';
-export { iconUserFilled } from './user-filled.js';
-export { iconCheckFilled } from './check-filled.js';
-export { iconWarningFilled } from './warning-filled.js';
-export { iconErrorFilled } from './error-filled.js';
 export { iconInfoFilled } from './info-filled.js';
+export { iconWarningFilled } from './warning-filled.js';
+export { iconHelpFilled } from './help-filled.js';
+export { iconSuccessFilled } from './success-filled.js';
+export { iconErrorFilled } from './error-filled.js';
+export { iconEyeFilled } from './eye-filled.js';
+export { iconEyeOffFilled } from './eye-off-filled.js';
+export { iconEditFilled } from './edit-filled.js';
+export { iconTrashFilled } from './trash-filled.js';
+export { iconCopyFilled } from './copy-filled.js';
+export { iconDownloadFilled } from './download-filled.js';
+export { iconUploadFilled } from './upload-filled.js';
+export { iconCalendarFilled } from './calendar-filled.js';
+export { iconClockFilled } from './clock-filled.js';
+export { iconFilterFilled } from './filter-filled.js';
+export { iconSortAscendingFilled } from './sort-ascending-filled.js';
+export { iconLockFilled } from './lock-filled.js';
+export { iconUnlockFilled } from './unlock-filled.js';
+export { iconMailFilled } from './mail-filled.js';
+export { iconExternalLinkFilled } from './external-link-filled.js';
 export { iconFolderFilled } from './folder-filled.js';
 export { iconFileFilled } from './file-filled.js';
+export { iconRefreshFilled } from './refresh-filled.js';
+export { iconLoaderFilled } from './loader-filled.js';
+export { iconLogoutFilled } from './logout-filled.js';
+export { iconDashboardFilled } from './dashboard-filled.js';
+export { iconGridFilled } from './grid-filled.js';
+export { iconListFilled } from './list-filled.js';
+export { iconSidebarFilled } from './sidebar-filled.js';
+export { iconPanelLeftFilled } from './panel-left-filled.js';
+export { iconPanelRightFilled } from './panel-right-filled.js';
+export { iconMaximizeFilled } from './maximize-filled.js';
+export { iconMinimizeFilled } from './minimize-filled.js';
+export { iconExpandFilled } from './expand-filled.js';
+export { iconCollapseFilled } from './collapse-filled.js';
+export { iconArrowUpRightFilled } from './arrow-up-right-filled.js';
+export { iconArrowUpLeftFilled } from './arrow-up-left-filled.js';
+export { iconArrowDownRightFilled } from './arrow-down-right-filled.js';
+export { iconArrowDownLeftFilled } from './arrow-down-left-filled.js';
+export { iconCornerUpLeftFilled } from './corner-up-left-filled.js';
+export { iconCornerUpRightFilled } from './corner-up-right-filled.js';
+export { iconCornerDownLeftFilled } from './corner-down-left-filled.js';
+export { iconCornerDownRightFilled } from './corner-down-right-filled.js';
+export { iconCompassFilled } from './compass-filled.js';
+export { iconMapFilled } from './map-filled.js';
+export { iconPinFilled } from './pin-filled.js';
+export { iconLocationFilled } from './location-filled.js';
+export { iconRouteFilled } from './route-filled.js';
+export { iconNavigationFilled } from './navigation-filled.js';
+export { iconLinkFilled } from './link-filled.js';
+export { iconUnlinkFilled } from './unlink-filled.js';
+export { iconGlobeFilled } from './globe-filled.js';
+export { iconSaveFilled } from './save-filled.js';
+export { iconShareFilled } from './share-filled.js';
+export { iconSendFilled } from './send-filled.js';
+export { iconPlayFilled } from './play-filled.js';
+export { iconPauseFilled } from './pause-filled.js';
+export { iconSkipBackFilled } from './skip-back-filled.js';
+export { iconSkipForwardFilled } from './skip-forward-filled.js';
+export { iconRewindFilled } from './rewind-filled.js';
+export { iconFastForwardFilled } from './fast-forward-filled.js';
+export { iconRotateCwFilled } from './rotate-cw-filled.js';
+export { iconRotateCcwFilled } from './rotate-ccw-filled.js';
+export { iconUndoFilled } from './undo-filled.js';
+export { iconRedoFilled } from './redo-filled.js';
+export { iconZoomInFilled } from './zoom-in-filled.js';
+export { iconZoomOutFilled } from './zoom-out-filled.js';
+export { iconSelectFilled } from './select-filled.js';
+export { iconCursorFilled } from './cursor-filled.js';
+export { iconDragFilled } from './drag-filled.js';
+export { iconWandFilled } from './wand-filled.js';
+export { iconSparklesFilled } from './sparkles-filled.js';
+export { iconCommandFilled } from './command-filled.js';
+export { iconKeyboardFilled } from './keyboard-filled.js';
+export { iconScanFilled } from './scan-filled.js';
+export { iconQrCodeFilled } from './qr-code-filled.js';
+export { iconPrintFilled } from './print-filled.js';
+export { iconArchiveFilled } from './archive-filled.js';
 export { iconBookmarkFilled } from './bookmark-filled.js';
+export { iconFlagFilled } from './flag-filled.js';
+export { iconTagFilled } from './tag-filled.js';
+export { iconPaperclipFilled } from './paperclip-filled.js';
+export { iconAttachFilled } from './attach-filled.js';
+export { iconClipboardFilled } from './clipboard-filled.js';
+export { iconPasteFilled } from './paste-filled.js';
+export { iconCropFilled } from './crop-filled.js';
+export { iconAlignLeftFilled } from './align-left-filled.js';
+export { iconAlignCenterFilled } from './align-center-filled.js';
+export { iconAlignRightFilled } from './align-right-filled.js';
+export { iconMessageFilled } from './message-filled.js';
+export { iconMessagesFilled } from './messages-filled.js';
+export { iconChatFilled } from './chat-filled.js';
+export { iconPhoneFilled } from './phone-filled.js';
+export { iconVideoFilled } from './video-filled.js';
+export { iconMicFilled } from './mic-filled.js';
+export { iconMicOffFilled } from './mic-off-filled.js';
+export { iconCameraFilled } from './camera-filled.js';
+export { iconCameraOffFilled } from './camera-off-filled.js';
+export { iconInboxFilled } from './inbox-filled.js';
+export { iconMentionFilled } from './mention-filled.js';
+export { iconBellOffFilled } from './bell-off-filled.js';
+export { iconVolumeFilled } from './volume-filled.js';
+export { iconVolumeOffFilled } from './volume-off-filled.js';
+export { iconRssFilled } from './rss-filled.js';
+export { iconWifiFilled } from './wifi-filled.js';
+export { iconWifiOffFilled } from './wifi-off-filled.js';
+export { iconCircleCheckFilled } from './circle-check-filled.js';
+export { iconCircleXFilled } from './circle-x-filled.js';
+export { iconCircleInfoFilled } from './circle-info-filled.js';
+export { iconCircleAlertFilled } from './circle-alert-filled.js';
+export { iconShieldFilled } from './shield-filled.js';
+export { iconShieldCheckFilled } from './shield-check-filled.js';
+export { iconShieldOffFilled } from './shield-off-filled.js';
+export { iconKeyFilled } from './key-filled.js';
+export { iconPasswordFilled } from './password-filled.js';
+export { iconLoginFilled } from './login-filled.js';
+export { iconUserPlusFilled } from './user-plus-filled.js';
+export { iconUserMinusFilled } from './user-minus-filled.js';
+export { iconUserCheckFilled } from './user-check-filled.js';
+export { iconUserXFilled } from './user-x-filled.js';
+export { iconGroupFilled } from './group-filled.js';
+export { iconDatabaseFilled } from './database-filled.js';
+export { iconServerFilled } from './server-filled.js';
+export { iconCloudFilled } from './cloud-filled.js';
+export { iconCloudUploadFilled } from './cloud-upload-filled.js';
+export { iconCloudDownloadFilled } from './cloud-download-filled.js';
+export { iconHardDriveFilled } from './hard-drive-filled.js';
+export { iconCpuFilled } from './cpu-filled.js';
+export { iconTerminalFilled } from './terminal-filled.js';
+export { iconCodeFilled } from './code-filled.js';
+export { iconBugFilled } from './bug-filled.js';
+export { iconZapFilled } from './zap-filled.js';
+export { iconActivityFilled } from './activity-filled.js';
+export { iconChartFilled } from './chart-filled.js';
+export { iconAnalyticsFilled } from './analytics-filled.js';
+export { iconFilePlusFilled } from './file-plus-filled.js';
+export { iconFileMinusFilled } from './file-minus-filled.js';
+export { iconFileCheckFilled } from './file-check-filled.js';
+export { iconFileXFilled } from './file-x-filled.js';
+export { iconFileTextFilled } from './file-text-filled.js';
+export { iconFileCodeFilled } from './file-code-filled.js';
+export { iconFileImageFilled } from './file-image-filled.js';
+export { iconFileVideoFilled } from './file-video-filled.js';
+export { iconFileAudioFilled } from './file-audio-filled.js';
+export { iconFileArchiveFilled } from './file-archive-filled.js';
+export { iconFileSpreadsheetFilled } from './file-spreadsheet-filled.js';
+export { iconFilesFilled } from './files-filled.js';
+export { iconFolderPlusFilled } from './folder-plus-filled.js';
+export { iconFolderMinusFilled } from './folder-minus-filled.js';
+export { iconFolderCheckFilled } from './folder-check-filled.js';
+export { iconFolderXFilled } from './folder-x-filled.js';
+export { iconFolderOpenFilled } from './folder-open-filled.js';
+export { iconFolderTreeFilled } from './folder-tree-filled.js';
+export { iconTableFilled } from './table-filled.js';
+export { iconListCheckFilled } from './list-check-filled.js';
+export { iconListPlusFilled } from './list-plus-filled.js';
+export { iconListMinusFilled } from './list-minus-filled.js';
+export { iconSortDescendingFilled } from './sort-descending-filled.js';
+export { iconFunnelFilled } from './funnel-filled.js';
+export { iconCalendarPlusFilled } from './calendar-plus-filled.js';
+export { iconCalendarMinusFilled } from './calendar-minus-filled.js';
+export { iconCalendarCheckFilled } from './calendar-check-filled.js';
+export { iconCalendarXFilled } from './calendar-x-filled.js';
+export { iconClockPlusFilled } from './clock-plus-filled.js';
+export { iconClockXFilled } from './clock-x-filled.js';
 
 export const neuralIcons = Object.freeze([
   iconArrowLeft,
@@ -590,18 +942,194 @@ export const neuralIcons = Object.freeze([
   iconCalendarX,
   iconClockPlus,
   iconClockX,
+  iconArrowLeftFilled,
+  iconArrowRightFilled,
+  iconArrowUpFilled,
+  iconArrowDownFilled,
+  iconChevronLeftFilled,
+  iconChevronRightFilled,
+  iconChevronUpFilled,
+  iconChevronDownFilled,
+  iconCheckFilled,
+  iconXFilled,
+  iconPlusFilled,
+  iconMinusFilled,
+  iconSearchFilled,
+  iconMenuFilled,
+  iconMoreHorizontalFilled,
+  iconMoreVerticalFilled,
   iconHomeFilled,
+  iconSettingsFilled,
+  iconUserFilled,
+  iconUsersFilled,
   iconHeartFilled,
   iconStarFilled,
   iconBellFilled,
-  iconUserFilled,
-  iconCheckFilled,
-  iconWarningFilled,
-  iconErrorFilled,
   iconInfoFilled,
+  iconWarningFilled,
+  iconHelpFilled,
+  iconSuccessFilled,
+  iconErrorFilled,
+  iconEyeFilled,
+  iconEyeOffFilled,
+  iconEditFilled,
+  iconTrashFilled,
+  iconCopyFilled,
+  iconDownloadFilled,
+  iconUploadFilled,
+  iconCalendarFilled,
+  iconClockFilled,
+  iconFilterFilled,
+  iconSortAscendingFilled,
+  iconLockFilled,
+  iconUnlockFilled,
+  iconMailFilled,
+  iconExternalLinkFilled,
   iconFolderFilled,
   iconFileFilled,
+  iconRefreshFilled,
+  iconLoaderFilled,
+  iconLogoutFilled,
+  iconDashboardFilled,
+  iconGridFilled,
+  iconListFilled,
+  iconSidebarFilled,
+  iconPanelLeftFilled,
+  iconPanelRightFilled,
+  iconMaximizeFilled,
+  iconMinimizeFilled,
+  iconExpandFilled,
+  iconCollapseFilled,
+  iconArrowUpRightFilled,
+  iconArrowUpLeftFilled,
+  iconArrowDownRightFilled,
+  iconArrowDownLeftFilled,
+  iconCornerUpLeftFilled,
+  iconCornerUpRightFilled,
+  iconCornerDownLeftFilled,
+  iconCornerDownRightFilled,
+  iconCompassFilled,
+  iconMapFilled,
+  iconPinFilled,
+  iconLocationFilled,
+  iconRouteFilled,
+  iconNavigationFilled,
+  iconLinkFilled,
+  iconUnlinkFilled,
+  iconGlobeFilled,
+  iconSaveFilled,
+  iconShareFilled,
+  iconSendFilled,
+  iconPlayFilled,
+  iconPauseFilled,
+  iconSkipBackFilled,
+  iconSkipForwardFilled,
+  iconRewindFilled,
+  iconFastForwardFilled,
+  iconRotateCwFilled,
+  iconRotateCcwFilled,
+  iconUndoFilled,
+  iconRedoFilled,
+  iconZoomInFilled,
+  iconZoomOutFilled,
+  iconSelectFilled,
+  iconCursorFilled,
+  iconDragFilled,
+  iconWandFilled,
+  iconSparklesFilled,
+  iconCommandFilled,
+  iconKeyboardFilled,
+  iconScanFilled,
+  iconQrCodeFilled,
+  iconPrintFilled,
+  iconArchiveFilled,
   iconBookmarkFilled,
+  iconFlagFilled,
+  iconTagFilled,
+  iconPaperclipFilled,
+  iconAttachFilled,
+  iconClipboardFilled,
+  iconPasteFilled,
+  iconCropFilled,
+  iconAlignLeftFilled,
+  iconAlignCenterFilled,
+  iconAlignRightFilled,
+  iconMessageFilled,
+  iconMessagesFilled,
+  iconChatFilled,
+  iconPhoneFilled,
+  iconVideoFilled,
+  iconMicFilled,
+  iconMicOffFilled,
+  iconCameraFilled,
+  iconCameraOffFilled,
+  iconInboxFilled,
+  iconMentionFilled,
+  iconBellOffFilled,
+  iconVolumeFilled,
+  iconVolumeOffFilled,
+  iconRssFilled,
+  iconWifiFilled,
+  iconWifiOffFilled,
+  iconCircleCheckFilled,
+  iconCircleXFilled,
+  iconCircleInfoFilled,
+  iconCircleAlertFilled,
+  iconShieldFilled,
+  iconShieldCheckFilled,
+  iconShieldOffFilled,
+  iconKeyFilled,
+  iconPasswordFilled,
+  iconLoginFilled,
+  iconUserPlusFilled,
+  iconUserMinusFilled,
+  iconUserCheckFilled,
+  iconUserXFilled,
+  iconGroupFilled,
+  iconDatabaseFilled,
+  iconServerFilled,
+  iconCloudFilled,
+  iconCloudUploadFilled,
+  iconCloudDownloadFilled,
+  iconHardDriveFilled,
+  iconCpuFilled,
+  iconTerminalFilled,
+  iconCodeFilled,
+  iconBugFilled,
+  iconZapFilled,
+  iconActivityFilled,
+  iconChartFilled,
+  iconAnalyticsFilled,
+  iconFilePlusFilled,
+  iconFileMinusFilled,
+  iconFileCheckFilled,
+  iconFileXFilled,
+  iconFileTextFilled,
+  iconFileCodeFilled,
+  iconFileImageFilled,
+  iconFileVideoFilled,
+  iconFileAudioFilled,
+  iconFileArchiveFilled,
+  iconFileSpreadsheetFilled,
+  iconFilesFilled,
+  iconFolderPlusFilled,
+  iconFolderMinusFilled,
+  iconFolderCheckFilled,
+  iconFolderXFilled,
+  iconFolderOpenFilled,
+  iconFolderTreeFilled,
+  iconTableFilled,
+  iconListCheckFilled,
+  iconListPlusFilled,
+  iconListMinusFilled,
+  iconSortDescendingFilled,
+  iconFunnelFilled,
+  iconCalendarPlusFilled,
+  iconCalendarMinusFilled,
+  iconCalendarCheckFilled,
+  iconCalendarXFilled,
+  iconClockPlusFilled,
+  iconClockXFilled,
 ]) satisfies readonly NeuralIconDefinition[];
 
 export type NeuralIconName = (typeof neuralIcons)[number]['name'];

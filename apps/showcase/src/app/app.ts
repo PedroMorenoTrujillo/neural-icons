@@ -25,7 +25,6 @@ export class App {
         .filter((icon) => icon.variant === 'filled')
         .map((icon) => [icon.name.replace(/-filled$/, ''), icon]),
     );
-
     return neuralIcons
       .filter((icon) => icon.variant === 'outline')
       .map((outline) => ({

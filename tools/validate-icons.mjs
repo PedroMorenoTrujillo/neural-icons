@@ -15,9 +15,9 @@ const allowedCategories = new Set([
 ]);
 const pathCharacters = /^[0-9a-zA-Z.,+\-\s]+$/;
 
-if (specs.length < 30 || specs.length > 300) {
+if (specs.length < 30 || specs.length > 500) {
   errors.push(
-    `Expected a focused catalog of 30–300 icons, found ${specs.length}.`,
+    `Expected a focused catalog of 30–500 icons, found ${specs.length}.`,
   );
 }
 
@@ -39,6 +39,12 @@ for (const icon of specs) {
   ) {
     errors.push(`${icon.name}: variant must be outline or filled.`);
   }
+  if (
+    icon.stroke !== undefined &&
+    !['none', 'currentColor'].includes(icon.stroke)
+  ) {
+    errors.push(`${icon.name}: stroke must be none or currentColor.`);
+  }
   if (!Array.isArray(icon.paths) || icon.paths.length === 0) {
     errors.push(`${icon.name}: at least one path is required.`);
     continue;
@@ -49,6 +55,16 @@ for (const icon of specs) {
       /(?:script|style|url|href|on\w+=)/i.test(path)
     ) {
       errors.push(`${icon.name}: path contains forbidden content.`);
+    }
+  }
+
+  if (icon.variant === 'filled' && icon.name.endsWith('-filled')) {
+    const rootName = icon.name.replace(/-filled$/, '');
+    if (['error', 'info', 'warning'].includes(rootName)) {
+      const pathText = icon.paths.join(' ');
+      if (!pathText.includes('z')) {
+        errors.push(`${icon.name}: status cut-outs must use closed subpaths.`);
+      }
     }
   }
 }
