@@ -5,7 +5,7 @@ export const iconCollapseFilled = defineIcon({
   category: 'navigation',
   tags: ['collapse', 'navigation', 'filled'],
   paths: [
-    'M3 3h8v2.75H5.75V11H3zM13 3h8v8h-2.75V5.75H13zM3 13h2.75v5.25H11V21H3zM18.25 13H21v8h-8v-2.75h5.25z',
+    'M4 4h5v2.5H6.5V9H4zM15 4h5v5h-2.5V6.5H15zM4 15h2.5v2.5H9V20H4zM17.5 15H20v5h-5v-2.5h2.5z',
   ],
   variant: 'filled',
   stroke: 'none',

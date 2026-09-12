@@ -5,7 +5,7 @@ export const iconBellOffFilled = defineIcon({
   category: 'communication',
   tags: ['bell-off', 'communication', 'off', 'filled'],
   paths: [
-    'M3.05 3.05 21 21l-1.75 1.75-3.3-3.3H8.5a3.5 3.5 0 0 0 7 .25l-2.5-2.5H5l2-3V10c0-1.16.35-2.22.95-3.1L1.3 4.3zM12 3.5a6.5 6.5 0 0 1 6.5 6.5v4.25l2 3h-2.2L9.85 8.8A3.75 3.75 0 0 1 12 6.25z',
+    'M12 2.75a6.25 6.25 0 0 0-6.25 6.25v4.25l-2 3v2h16.5v-2l-2-3V9A6.25 6.25 0 0 0 12 2.75zM9.5 19.25a2.5 2.5 0 0 0 5 0zM3.3 4.65 4.65 3.3 20.7 19.35l-1.35 1.35z',
   ],
   variant: 'filled',
   stroke: 'none',

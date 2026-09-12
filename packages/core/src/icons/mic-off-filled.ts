@@ -5,7 +5,7 @@ export const iconMicOffFilled = defineIcon({
   category: 'communication',
   tags: ['mic-off', 'communication', 'off', 'filled'],
   paths: [
-    'M3.05 3.05 21 21l-1.75 1.75-4.1-4.1a7.46 7.46 0 0 1-1.9.75v2.05H17V22H7v-2.5h3.75v-2.05A7.5 7.5 0 0 1 4.5 10.5v-.75H7v.75a5 5 0 0 0 5.9 4.92l-2.1-2.1A4 4 0 0 1 8 9.5v-6a4 4 0 0 1 5.65-.55L19.25 8.55l1.75-1.75z',
+    'M8 3.5a4 4 0 0 1 8 0v7a4 4 0 0 1-8 0zM4.5 9.75H7v.75a5 5 0 0 0 10 0v-.75h2.5v.75a7.5 7.5 0 0 1-6.25 7.4v2.1H17V22H7v-2.5h3.75v-2.1A7.5 7.5 0 0 1 4.5 10.5zM3.3 4.65 4.65 3.3 20.7 19.35l-1.35 1.35z',
   ],
   variant: 'filled',
   stroke: 'none',

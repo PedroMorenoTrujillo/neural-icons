@@ -5,7 +5,7 @@ export const iconEyeFilled = defineIcon({
   category: 'action',
   tags: ['visible', 'view', 'filled'],
   paths: [
-    'M12 4.25C5.65 4.25 2.25 12 2.25 12S5.65 19.75 12 19.75 21.75 12 21.75 12 18.35 4.25 12 4.25zm0 3.25a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z',
+    'M2.75 12s3.3-6.25 9.25-6.25S21.25 12 21.25 12 17.95 18.25 12 18.25 2.75 12 2.75 12zM12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z',
   ],
   variant: 'filled',
   stroke: 'none',
