@@ -8,7 +8,7 @@
         A precise, original 24-pixel icon language built for Neural UI 2.0.
       </p>
     </div>
-    <span class="count">{{ total }} base icons</span>
+    <span class="count">{{ total }} icons · {{ filledTotal }} filled</span>
   </header>
 
   <section class="toolbar" aria-label="Icon filters">
@@ -28,13 +28,41 @@
   <section aria-live="polite" aria-atomic="true">
     <p class="results">Showing {{ icons().length }} of {{ total }}</p>
     <div class="grid">
-      @for (icon of icons(); track icon.name) {
+      @for (icon of icons(); track icon.outline.name) {
       <article class="card">
-        <div class="icon-stage">
-          <neural-icon [icon]="icon" [size]="28" />
+        <div class="variants" aria-label="Icon variants">
+          <div class="variant">
+            <div class="icon-stage">
+              <neural-icon
+                [icon]="icon.outline"
+                [size]="28"
+                [label]="iconLabel(icon.outline, 'outline')"
+              />
+            </div>
+            <span class="variant-label">Outline</span>
+          </div>
+          <div class="variant">
+            @if (icon.filled; as filled) {
+            <div class="icon-stage filled-stage">
+              <neural-icon
+                [icon]="filled"
+                [size]="28"
+                [label]="iconLabel(filled, 'filled')"
+              />
+            </div>
+            } @else {
+            <div
+              class="icon-stage unavailable-stage"
+              aria-label="Filled variant not available"
+            >
+              <span aria-hidden="true">—</span>
+            </div>
+            }
+            <span class="variant-label">Filled</span>
+          </div>
         </div>
-        <strong>{{ icon.name }}</strong>
-        <span>{{ icon.category }}</span>
+        <strong>{{ icon.outline.name }}</strong>
+        <span>{{ icon.outline.category }}</span>
       </article>
       } @empty {
       <p class="empty">No icons match “{{ query() }}”.</p>

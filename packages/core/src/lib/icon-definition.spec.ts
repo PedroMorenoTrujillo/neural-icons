@@ -28,4 +28,16 @@ describe('Neural icon definitions', () => {
     paths[0] = 'M0 0';
     expect(icon.paths[0]).toBe('M4 12h16');
   });
+
+  it('preserves an explicit filled variant', () => {
+    const icon = defineIcon({
+      name: 'test-filled',
+      category: 'status',
+      tags: ['test', 'filled'],
+      variant: 'filled',
+      paths: ['M4 4h16v16H4z'],
+    });
+
+    expect(icon.variant).toBe('filled');
+  });
 });

@@ -110,8 +110,8 @@ input::placeholder {
 }
 
 .card {
-  min-height: 150px;
-  padding: 16px;
+  min-height: 178px;
+  padding: 12px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--surface);
@@ -134,6 +134,53 @@ input::placeholder {
   border-radius: 14px;
   color: var(--accent);
   background: #101d19;
+}
+
+.variants {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  margin-bottom: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #08110f;
+}
+
+.variant {
+  min-width: 0;
+  padding: 9px 8px 8px;
+  background: #0d1915;
+}
+
+.variant + .variant {
+  border-left: 1px solid var(--line);
+}
+
+.variant .icon-stage {
+  width: 100%;
+  height: 54px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+}
+
+.filled-stage {
+  color: var(--accent);
+  background: rgba(74, 246, 190, 0.16);
+}
+
+.unavailable-stage {
+  border: 1px dashed rgba(143, 161, 153, 0.25);
+  color: #65706c;
+  background: rgba(16, 29, 25, 0.45);
+}
+
+.variant-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .card strong,

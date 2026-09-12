@@ -14,12 +14,16 @@ export interface NeuralIconDefinition {
   readonly paths: readonly string[];
 }
 
+type NeuralIconInput = Omit<NeuralIconDefinition, 'viewBox' | 'variant'> & {
+  readonly variant?: NeuralIconVariant;
+};
+
 export function defineIcon<
-  const T extends Omit<NeuralIconDefinition, 'viewBox' | 'variant'>,
+  const T extends NeuralIconInput,
 >(
   definition: T,
 ): Readonly<
-  Omit<T, 'tags' | 'paths'> & {
+  Omit<T, 'tags' | 'paths' | 'variant'> & {
     tags: Readonly<T['tags']>;
     paths: Readonly<T['paths']>;
     variant: NeuralIconVariant;
@@ -30,10 +34,10 @@ export function defineIcon<
     ...definition,
     tags: Object.freeze([...definition.tags]),
     paths: Object.freeze([...definition.paths]),
-    variant: 'outline' as const,
+    variant: definition.variant ?? 'outline',
     viewBox: NEURAL_ICON_VIEW_BOX,
   }) as Readonly<
-    Omit<T, 'tags' | 'paths'> & {
+    Omit<T, 'tags' | 'paths' | 'variant'> & {
       tags: Readonly<T['tags']>;
       paths: Readonly<T['paths']>;
       variant: NeuralIconVariant;
