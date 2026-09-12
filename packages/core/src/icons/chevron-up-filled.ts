@@ -4,7 +4,7 @@ export const iconChevronUpFilled = defineIcon({
   name: 'chevron-up-filled',
   category: 'navigation',
   tags: ['collapse', 'top', 'filled'],
-  paths: ['M5.5 14.75 12 8.25l6.5 6.5h-2L12 10.25l-4.5 4.5z'],
+  paths: ['M4.5 15.5 6.25 17.25 12 11.5l5.75 5.75 1.75-1.75L12 8z'],
   variant: 'filled',
   stroke: 'none',
 });
