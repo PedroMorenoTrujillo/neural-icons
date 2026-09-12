@@ -28,10 +28,15 @@ export const ${exportName} = defineIcon(${JSON.stringify(icon, null, 2)});
   );
   expected.set(`packages/core/src/icons/${icon.name}.ts`, moduleSource);
 
-  const paths = icon.paths.map((path) => `  <path d="${path}"/>`).join('\n');
   const filled = icon.variant === 'filled';
   const canFill =
     filled && icon.paths.every((path) => path.trim().endsWith('z'));
+  // Filled icons may have several closed contours. Keep them in one compound
+  // path so even-odd cutouts stay visible instead of being painted over by a
+  // same-colour sibling path.
+  const paths = canFill
+    ? `  <path d="${icon.paths.join(' ')}"/>`
+    : icon.paths.map((path) => `  <path d="${path}"/>`).join('\n');
   const strokeWidth = filled ? '2.24' : '1.75';
   const stroke = filled ? (icon.stroke ?? 'currentColor') : 'currentColor';
   expected.set(

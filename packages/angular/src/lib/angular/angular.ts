@@ -40,8 +40,12 @@ import {
       [attr.aria-label]="accessibleLabel()"
       [attr.aria-hidden]="accessibleLabel() ? null : 'true'"
     >
+      @if (icon().variant === 'filled' && canFill()) {
+        <path [attr.d]="icon().paths.join(' ')" />
+      } @else {
       @for (path of icon().paths; track $index) {
         <path [attr.d]="path" />
+      }
       }
     </svg>
   `,

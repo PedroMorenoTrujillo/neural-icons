@@ -65,4 +65,19 @@ describe('NeuralIcon', () => {
     expect(svg.getAttribute('fill')).toBe('currentColor');
     expect(svg.getAttribute('stroke')).toBe('currentColor');
   });
+
+  it('renders closed Filled contours as one compound path', () => {
+    fixture.componentRef.setInput('icon', {
+      ...iconSearch,
+      name: 'compound-filled',
+      variant: 'filled',
+      paths: ['M3 3h18v18H3z', 'M8 8h8v8H8z'],
+    });
+    fixture.detectChanges();
+
+    const svg = fixture.nativeElement.querySelector('svg') as SVGElement;
+    const paths = svg.querySelectorAll('path');
+    expect(paths).toHaveLength(1);
+    expect(paths[0]?.getAttribute('d')).toBe('M3 3h18v18H3z M8 8h8v8H8z');
+  });
 });
