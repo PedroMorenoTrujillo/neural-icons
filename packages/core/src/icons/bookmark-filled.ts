@@ -4,7 +4,7 @@ export const iconBookmarkFilled = defineIcon({
   name: 'bookmark-filled',
   category: 'action',
   tags: ['bookmark', 'action', 'favorite', 'filled'],
-  paths: ['M6 4h12v16l-6-3-6 3z'],
+  paths: ['M5 2.5h14v19l-7-3.75-7 3.75z'],
   variant: 'filled',
   stroke: 'none',
 });

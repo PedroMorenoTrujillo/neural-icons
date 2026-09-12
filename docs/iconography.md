@@ -6,7 +6,7 @@ Neural Icons use a calm technical outline style intended to sit beside Neural UI
 
 - Canvas: `24 × 24`, with the primary drawing kept inside an optical safe area of roughly `3–21`.
 - Outline stroke: `1.75`, round caps, round joins, `currentColor`.
-- Filled is a separate, coordinated geometry treatment: its paths are closed surfaces with `fill="currentColor"` and no stroke. The generator expands our original centerlines into closed surfaces for consistent weights; symbols with meaningful negative space (status, home, file, and similar shapes) use explicitly authored filled paths so their counters stay crisp. This follows the same-style/different-weight model used by mature icon systems while keeping every path original to Neural.
+- Filled is a separate, coordinated geometry treatment: every Filled path is an explicitly authored, closed surface with `fill="currentColor"` and no stroke. It is never created by mechanically widening the outline. Symbols with meaningful negative space use authored cut-outs so their counters stay crisp. This follows the same-style/different-weight model used by mature icon systems while keeping every path original to Neural.
 - Coordinates: prefer whole, half, and quarter units. Optical correction may use quarters when a mathematically centered shape looks visually off.
 - Corners: soft but economical. Containers normally use 1–2 unit radii; symbols avoid bubbly over-rounding.
 - Density: one dominant silhouette and at most two supporting details. At 16px, the meaning must remain recognizable.
@@ -16,7 +16,7 @@ Neural Icons use a calm technical outline style intended to sit beside Neural UI
 
 The recognizable Neural signature is the combination of a slightly finer 1.75 stroke, generous internal air, compact rounded terminals, and consistent quarter-unit optical alignment. Similar UI metaphors are unavoidable across icon systems; path data and proportions here are authored independently from these rules.
 
-Filled variants are explicit catalog entries with the `-filled` suffix. Every base outline has a coordinated filled companion with independent closed geometry; status icons use authored closed subpaths for their interior cut-outs.
+Filled variants are explicit catalog entries with the `-filled` suffix. Every base outline has a coordinated Filled companion with independent closed geometry; the variant generator fails if a base icon is missing that geometry, preventing a line-to-fill fallback from entering the catalog.
 
 ## Naming
 

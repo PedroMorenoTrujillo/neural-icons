@@ -4,7 +4,7 @@ export const iconFastForwardFilled = defineIcon({
   name: 'fast-forward-filled',
   category: 'action',
   tags: ['fast-forward', 'action', 'forward', 'filled'],
-  paths: ['M5 5l9 7-9 7zM14 5l6 7-6 7z'],
+  paths: ['M19.5 4v16L12 12zM12.5 4v16L5 12z'],
   variant: 'filled',
   stroke: 'none',
 });

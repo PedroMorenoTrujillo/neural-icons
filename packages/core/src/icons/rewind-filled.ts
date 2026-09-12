@@ -4,7 +4,7 @@ export const iconRewindFilled = defineIcon({
   name: 'rewind-filled',
   category: 'action',
   tags: ['rewind', 'action', 'filled'],
-  paths: ['M18 5 9 12l9 7zM9 5 4 12l5 7z'],
+  paths: ['M4.5 4v16L12 12zM11.5 4v16L19 12z'],
   variant: 'filled',
   stroke: 'none',
 });

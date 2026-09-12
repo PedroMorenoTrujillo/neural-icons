@@ -4,7 +4,7 @@ export const iconDashboardFilled = defineIcon({
   name: 'dashboard-filled',
   category: 'navigation',
   tags: ['dashboard', 'navigation', 'overview', 'filled'],
-  paths: ['M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z'],
+  paths: ['M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z'],
   variant: 'filled',
   stroke: 'none',
 });

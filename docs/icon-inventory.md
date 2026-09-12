@@ -200,7 +200,7 @@ Generated from `packages/core/icons/icons.json`. Do not edit by hand.
 | `chevron-right-filled`     | navigation    | next, expand, filled                         |
 | `chevron-up-filled`        | navigation    | collapse, top, filled                        |
 | `chevron-down-filled`      | navigation    | expand, bottom, filled                       |
-| `check-filled`             | action        | check, action                                |
+| `check-filled`             | action        | confirm, done, filled                        |
 | `x-filled`                 | action        | close, remove, filled                        |
 | `plus-filled`              | action        | add, create, filled                          |
 | `minus-filled`             | action        | remove, collapse, filled                     |
@@ -208,18 +208,18 @@ Generated from `packages/core/icons/icons.json`. Do not edit by hand.
 | `menu-filled`              | navigation    | navigation, hamburger, filled                |
 | `more-horizontal-filled`   | action        | overflow, options, filled                    |
 | `more-vertical-filled`     | action        | overflow, options, filled                    |
-| `home-filled`              | navigation    | home, navigation                             |
+| `home-filled`              | navigation    | house, dashboard, filled                     |
 | `settings-filled`          | system        | preferences, gear, filled                    |
-| `user-filled`              | system        | user, system                                 |
+| `user-filled`              | system        | person, account, filled                      |
 | `users-filled`             | system        | people, team, filled                         |
-| `heart-filled`             | status        | heart, status                                |
-| `star-filled`              | status        | star, status                                 |
-| `bell-filled`              | communication | bell, communication                          |
-| `info-filled`              | status        | info, status                                 |
-| `warning-filled`           | status        | warning, status                              |
+| `heart-filled`             | action        | favorite, like, filled                       |
+| `star-filled`              | action        | favorite, rating, filled                     |
+| `bell-filled`              | system        | notification, alert, filled                  |
+| `info-filled`              | status        | information, details, filled                 |
+| `warning-filled`           | status        | alert, caution, filled                       |
 | `help-filled`              | status        | question, support, filled                    |
 | `success-filled`           | status        | complete, valid, filled                      |
-| `error-filled`             | status        | error, status                                |
+| `error-filled`             | status        | invalid, failure, filled                     |
 | `eye-filled`               | action        | visible, view, filled                        |
 | `eye-off-filled`           | action        | hidden, visibility, filled                   |
 | `edit-filled`              | action        | pencil, write, filled                        |
@@ -235,8 +235,8 @@ Generated from `packages/core/icons/icons.json`. Do not edit by hand.
 | `unlock-filled`            | system        | open, public, filled                         |
 | `mail-filled`              | communication | email, message, filled                       |
 | `external-link-filled`     | navigation    | open, new-window, filled                     |
-| `folder-filled`            | file          | folder, file, directory                      |
-| `file-filled`              | file          | file, document                               |
+| `folder-filled`            | file          | directory, files, filled                     |
+| `file-filled`              | file          | document, page, filled                       |
 | `refresh-filled`           | action        | reload, sync, filled                         |
 | `loader-filled`            | status        | loading, progress, filled                    |
 | `logout-filled`            | navigation    | sign-out, exit, filled                       |

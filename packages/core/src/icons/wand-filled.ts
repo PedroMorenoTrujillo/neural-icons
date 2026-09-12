@@ -5,7 +5,7 @@ export const iconWandFilled = defineIcon({
   category: 'action',
   tags: ['wand', 'action', 'filled'],
   paths: [
-    'M5 19 17 7M14 4l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM19 14l.75 1.5L21 16l-1.25.5L19 18l-.75-1.5L17 16l1.25-.5z',
+    'M3 18.85 16.9 4.95l2.15 2.15-13.9 13.9zM14 2l1.05 2.45L17.5 5.5l-2.45 1.05L14 9l-1.05-2.45L10.5 5.5l2.45-1.05zM19 12l.8 1.7 1.7.8-1.7.8L19 17l-.8-1.7-1.7-.8 1.7-.8z',
   ],
   variant: 'filled',
   stroke: 'none',

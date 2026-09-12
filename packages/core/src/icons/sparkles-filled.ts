@@ -5,7 +5,7 @@ export const iconSparklesFilled = defineIcon({
   category: 'action',
   tags: ['sparkles', 'action', 'filled'],
   paths: [
-    'M8 3.5l1.2 4.3L13.5 9l-4.3 1.2L8 14.5l-1.2-4.3L2.5 9l4.3-1.2zM17 12l.8 2.2L20 15l-2.2.8L17 18l-.8-2.2L14 15l2.2-.8z',
+    'M7.5 2 9.1 7.4 14.5 9l-5.4 1.6L7.5 16l-1.6-5.4L.5 9l5.4-1.6zM17 11l1.1 3.4 3.4 1.1-3.4 1.1L17 20l-1.1-3.4-3.4-1.1 3.4-1.1z',
   ],
   variant: 'filled',
   stroke: 'none',

@@ -4,7 +4,9 @@ export const iconGridFilled = defineIcon({
   name: 'grid-filled',
   category: 'navigation',
   tags: ['grid', 'navigation', 'layout', 'filled'],
-  paths: ['M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z'],
+  paths: [
+    'M3.5 3.5h7v7h-7zM13.5 3.5h7v7h-7zM3.5 13.5h7v7h-7zM13.5 13.5h7v7h-7z',
+  ],
   variant: 'filled',
   stroke: 'none',
 });

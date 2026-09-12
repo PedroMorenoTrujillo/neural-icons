@@ -4,7 +4,9 @@ export const iconCloudFilled = defineIcon({
   name: 'cloud-filled',
   category: 'system',
   tags: ['cloud', 'system', 'remote', 'filled'],
-  paths: ['M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10z'],
+  paths: [
+    'M6.2 19.5h11.2a4.6 4.6 0 0 0 .86-9.12A6.5 6.5 0 0 0 6.5 8.17 5.7 5.7 0 0 0 6.2 19.5z',
+  ],
   variant: 'filled',
   stroke: 'none',
 });

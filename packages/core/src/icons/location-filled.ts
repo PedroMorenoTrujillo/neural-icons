@@ -4,7 +4,9 @@ export const iconLocationFilled = defineIcon({
   name: 'location-filled',
   category: 'navigation',
   tags: ['location', 'navigation', 'target', 'filled'],
-  paths: ['M12 4v4M12 16v4M4 12h4M16 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z'],
+  paths: [
+    'M10.75 2h2.5v5.85a6.15 6.15 0 0 1 2.9 2.9H22v2.5h-5.85a6.15 6.15 0 0 1-2.9 2.9V22h-2.5v-5.85a6.15 6.15 0 0 1-2.9-2.9H2v-2.5h5.85a6.15 6.15 0 0 1 2.9-2.9zM12 9.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z',
+  ],
   variant: 'filled',
   stroke: 'none',
 });

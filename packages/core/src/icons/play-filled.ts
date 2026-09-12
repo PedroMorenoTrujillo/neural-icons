@@ -4,7 +4,7 @@ export const iconPlayFilled = defineIcon({
   name: 'play-filled',
   category: 'action',
   tags: ['play', 'action', 'filled'],
-  paths: ['M7 4.5 19 12 7 19.5z'],
+  paths: ['M6 3.75v16.5L19.5 12z'],
   variant: 'filled',
   stroke: 'none',
 });

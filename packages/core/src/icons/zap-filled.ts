@@ -4,7 +4,7 @@ export const iconZapFilled = defineIcon({
   name: 'zap-filled',
   category: 'system',
   tags: ['zap', 'system', 'filled'],
-  paths: ['m13 3-8 10h6l-1 8 8-10h-6z'],
+  paths: ['M13.25 2 4.5 13h6.25l-1 9 8.75-11H12.25z'],
   variant: 'filled',
   stroke: 'none',
 });
