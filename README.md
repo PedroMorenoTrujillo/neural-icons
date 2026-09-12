@@ -10,16 +10,16 @@ Original, framework-agnostic iconography for Neural UI 2.0. The repository is pr
 
 ## Design status
 
-The initial set contains 48 icons chosen to cover navigation, form controls, feedback, overlays, data tables, accounts, and file interactions required by Neural UI 2.0. The visual language and source workflow are documented in [Iconography](docs/iconography.md); the complete generated list is in [Icon inventory](docs/icon-inventory.md).
+The current set contains 200 icons chosen to cover navigation, form controls, feedback, overlays, data tables, accounts, communication, and file interactions required by Neural UI 2.0. The visual language and source workflow are documented in [Iconography](docs/iconography.md); the complete generated list is in [Icon inventory](docs/icon-inventory.md).
 
 The geometry is original. No third-party SVG path data is included. Familiar semantic metaphors may be studied, but every path is rebuilt from the Neural grid and rules.
 
 ## Development
 
-Requires Node.js 22 and npm.
+Use Node.js 22.22.3 (`.nvmrc`) and npm. The supported Node ranges match the installed Angular 22 toolchain: `^22.22.3 || ^24.15.0 || >=26.0.0`.
 
 ```bash
-npm install
+npm ci
 npm run generate:icons
 npm run check
 ```
@@ -31,9 +31,24 @@ npx nx test core
 npx nx test angular
 npx nx build angular
 npx nx serve showcase
+npx nx run angular:verify-package
+npx nx e2e showcase-e2e
 ```
 
-`npm run generate:icons` converts the canonical geometry manifest into individual TypeScript modules, standalone SVG files, and the inventory document. CI should use `npm run check:generated` to reject stale generated artifacts.
+`npm run generate:icons` converts the canonical geometry manifest into individual TypeScript modules, standalone SVG files, and the inventory document. CI should use `npm run check:generated` to reject stale generated artifacts. The current catalog has 200 entries, including 12 explicitly named `-filled` variants.
+
+Every core build also depends on validation. Renamed/removed icons must not leave orphaned generated files; the generator reports these for manual review. Dependency installation uses normal peer resolution; see the [audit](docs/architecture-audit.md) for the verified tooling contract.
+
+`angular:verify-package` packs and extracts both compiled packages into a temporary directory, checks their exports and tree-shaking, and compiles a consumer with Angular AOT without workspace aliases. This uses local tarballs only and does not publish or install anything. The browser suite runs the production showcase locally, checks prerendered SVG markup, and verifies DOM-node reuse during hydration.
+
+To inspect the production build locally:
+
+```bash
+npx nx build showcase
+NG_ALLOWED_HOSTS=127.0.0.1 node dist/apps/showcase/server/server.mjs
+```
+
+Open `http://127.0.0.1:4000`. The showcase server binds to loopback only.
 
 ## Consumption contract
 
@@ -60,6 +75,8 @@ export class SearchButton {
 ```
 
 Omit `label` when adjacent text already provides the accessible name. Decorative icons render with `aria-hidden="true"`; labeled icons render with `role="img"` and `aria-label`.
+
+Labels are trimmed; empty or whitespace-only labels remain decorative. SVG assets are exposed at `@neural-icons/core/svg/<name>.svg` for asset-aware consumers. Their accessible semantics must be supplied by the consuming application.
 
 ## Publishing
 

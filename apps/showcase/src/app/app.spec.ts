@@ -13,6 +13,6 @@ describe('App', () => {
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Neural Icons');
-    expect(compiled.querySelectorAll('article.card')).toHaveLength(48);
+    expect(compiled.querySelectorAll('article.card')).toHaveLength(200);
   });
 });

@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { format } from 'prettier';
@@ -29,9 +29,10 @@ export const ${exportName} = defineIcon(${JSON.stringify(icon, null, 2)});
   expected.set(`packages/core/src/icons/${icon.name}.ts`, moduleSource);
 
   const paths = icon.paths.map((path) => `  <path d="${path}"/>`).join('\n');
+  const filled = icon.variant === 'filled';
   expected.set(
     `packages/core/svg/${icon.name}.svg`,
-    `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">\n${paths}\n</svg>\n`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="${filled ? 'currentColor' : 'none'}" stroke="${filled ? 'none' : 'currentColor'}" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">\n${paths}\n</svg>\n`,
   );
 }
 
@@ -78,6 +79,19 @@ expected.set(
 );
 
 let failed = false;
+// A removed/renamed spec must not leave an orphaned import or SVG in a package.
+// Report these files rather than deleting potentially hand-authored work.
+for (const directory of ['packages/core/src/icons', 'packages/core/svg']) {
+  const files = await readdir(join(root, directory)).catch(() => []);
+  for (const file of files) {
+    if (!expected.has(`${directory}/${file}`)) {
+      console.error(
+        `Unexpected generated artifact; review and remove: ${directory}/${file}`,
+      );
+      failed = true;
+    }
+  }
+}
 for (const [relativePath, content] of expected) {
   const absolutePath = join(root, relativePath);
   if (check) {

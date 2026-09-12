@@ -5,15 +5,17 @@
 Neural Icons use a calm technical outline style intended to sit beside Neural UI typography without competing with it.
 
 - Canvas: `24 × 24`, with the primary drawing kept inside an optical safe area of roughly `3–21`.
-- Stroke: `1.75`, round caps, round joins, no fill.
+- Outline stroke: `1.75`, round caps, round joins, `currentColor`. Filled variants use closed silhouettes with `fill="currentColor"` and no stroke.
 - Coordinates: prefer whole, half, and quarter units. Optical correction may use quarters when a mathematically centered shape looks visually off.
 - Corners: soft but economical. Containers normally use 1–2 unit radii; symbols avoid bubbly over-rounding.
 - Density: one dominant silhouette and at most two supporting details. At 16px, the meaning must remain recognizable.
 - Directional geometry: arrow heads use balanced 45-degree movements and a consistent 5–6 unit reach.
 - Status geometry: circular status containers share the same 8.75-unit radius and internal mark scale.
-- Color: never encoded in an icon. Stroke inherits `currentColor`; semantic color belongs to Neural UI.
+- Color: never encoded as a fixed pigment. Outline stroke and filled surfaces inherit `currentColor`; semantic color belongs to Neural UI.
 
 The recognizable Neural signature is the combination of a slightly finer 1.75 stroke, generous internal air, compact rounded terminals, and consistent quarter-unit optical alignment. Similar UI metaphors are unavoidable across icon systems; path data and proportions here are authored independently from these rules.
+
+Filled variants are explicit catalog entries with the `-filled` suffix. They are reserved for high-salience states and familiar silhouettes; they do not imply that every outline icon must have a duplicate filled form.
 
 ## Naming
 

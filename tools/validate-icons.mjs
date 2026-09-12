@@ -15,9 +15,9 @@ const allowedCategories = new Set([
 ]);
 const pathCharacters = /^[0-9a-zA-Z.,+\-\s]+$/;
 
-if (specs.length < 30 || specs.length > 50) {
+if (specs.length < 30 || specs.length > 300) {
   errors.push(
-    `Expected a focused base set of 30–50 icons, found ${specs.length}.`,
+    `Expected a focused catalog of 30–300 icons, found ${specs.length}.`,
   );
 }
 
@@ -32,6 +32,12 @@ for (const icon of specs) {
   }
   if (!Array.isArray(icon.tags) || icon.tags.length < 2) {
     errors.push(`${icon.name}: include at least two search tags.`);
+  }
+  if (
+    icon.variant !== undefined &&
+    !['outline', 'filled'].includes(icon.variant)
+  ) {
+    errors.push(`${icon.name}: variant must be outline or filled.`);
   }
   if (!Array.isArray(icon.paths) || icon.paths.length === 0) {
     errors.push(`${icon.name}: at least one path is required.`);

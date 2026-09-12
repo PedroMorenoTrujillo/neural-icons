@@ -20,15 +20,15 @@ import {
       [attr.width]="cssSize()"
       [attr.height]="cssSize()"
       [attr.viewBox]="icon().viewBox"
-      fill="none"
-      stroke="currentColor"
+      [attr.fill]="icon().variant === 'filled' ? 'currentColor' : 'none'"
+      [attr.stroke]="icon().variant === 'filled' ? 'none' : 'currentColor'"
       [attr.stroke-width]="strokeWidth()"
       stroke-linecap="round"
       stroke-linejoin="round"
       focusable="false"
-      [attr.role]="label() ? 'img' : null"
-      [attr.aria-label]="label()"
-      [attr.aria-hidden]="label() ? null : 'true'"
+      [attr.role]="accessibleLabel() ? 'img' : null"
+      [attr.aria-label]="accessibleLabel()"
+      [attr.aria-hidden]="accessibleLabel() ? null : 'true'"
     >
       @for (path of icon().paths; track $index) {
         <path [attr.d]="path" />
@@ -54,6 +54,10 @@ export class NeuralIcon {
   readonly size = input<string | number>('1em');
   readonly strokeWidth = input<number>(NEURAL_ICON_STROKE_WIDTH);
   readonly label = input<string | null>(null);
+
+  protected readonly accessibleLabel = computed(
+    () => this.label()?.trim() || null,
+  );
 
   protected readonly cssSize = computed(() => {
     const size = this.size();

@@ -4,8 +4,8 @@ import { defineIcon, NEURAL_ICON_VIEW_BOX } from './icon-definition.js';
 
 describe('Neural icon definitions', () => {
   it('ships the reviewed Neural UI 2.0 baseline', () => {
-    expect(neuralIcons).toHaveLength(48);
-    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(48);
+    expect(neuralIcons).toHaveLength(200);
+    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(200);
   });
 
   it.each(neuralIcons)('$name has immutable, portable geometry', (icon) => {

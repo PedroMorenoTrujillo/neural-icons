@@ -41,4 +41,27 @@ describe('NeuralIcon', () => {
     expect(svg.hasAttribute('aria-hidden')).toBe(false);
     expect(svg.getAttribute('width')).toBe('20px');
   });
+
+  it('returns to decorative mode when the accessible label is blank', () => {
+    fixture.componentRef.setInput('label', 'Search');
+    fixture.detectChanges();
+    fixture.componentRef.setInput('label', '   ');
+    fixture.detectChanges();
+    const svg = fixture.nativeElement.querySelector('svg') as SVGElement;
+    expect(svg.getAttribute('aria-hidden')).toBe('true');
+    expect(svg.hasAttribute('aria-label')).toBe(false);
+    expect(svg.hasAttribute('role')).toBe(false);
+  });
+
+  it('renders filled variants with a fill and without a stroke', () => {
+    fixture.componentRef.setInput('icon', {
+      ...iconSearch,
+      name: 'search-filled',
+      variant: 'filled',
+    });
+    fixture.detectChanges();
+    const svg = fixture.nativeElement.querySelector('svg') as SVGElement;
+    expect(svg.getAttribute('fill')).toBe('currentColor');
+    expect(svg.getAttribute('stroke')).toBe('none');
+  });
 });

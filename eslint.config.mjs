@@ -23,6 +23,13 @@ export default [
             {
               sourceTag: 'scope:core',
               onlyDependOnLibsWithTags: ['scope:core'],
+              bannedExternalImports: [
+                '@angular/*',
+                'react',
+                'react-dom',
+                'vue',
+                'rxjs',
+              ],
             },
             {
               sourceTag: 'scope:angular',

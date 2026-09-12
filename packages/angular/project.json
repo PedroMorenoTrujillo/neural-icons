@@ -13,6 +13,14 @@
   },
   "tags": ["scope:angular", "type:library", "platform:angular"],
   "targets": {
+    "verify-package": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build", "^build"],
+      "cache": false,
+      "options": {
+        "command": "node tools/check-packages.mjs"
+      }
+    },
     "build": {
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],

@@ -12,7 +12,16 @@
   },
   "tags": ["scope:core", "type:library", "platform:agnostic"],
   "targets": {
+    "validate": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "inputs": ["default", "{workspaceRoot}/docs/icon-inventory.md"],
+      "options": {
+        "command": "npm run check:generated && npm run validate:icons"
+      }
+    },
     "build": {
+      "dependsOn": ["validate", "^build"],
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {

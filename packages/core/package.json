@@ -9,6 +9,7 @@
   "types": "./src/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
+    "./svg/*.svg": "./svg/*.svg",
     ".": {
       "types": "./src/index.d.ts",
       "import": "./src/index.js",

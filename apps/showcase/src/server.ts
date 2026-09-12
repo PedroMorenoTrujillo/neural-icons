@@ -54,9 +54,9 @@ app.use('/{*splat}', (req, res, next) => {
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
 if (isMainModule(import.meta.url) || process.env['pm_id']) {
-  const port = process.env['PORT'] || 4000;
-  app.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
+  const port = Number(process.env['PORT'] || 4000);
+  app.listen(port, '127.0.0.1', () => {
+    console.log(`Node Express server listening on http://127.0.0.1:${port}`);
   });
 }
 
