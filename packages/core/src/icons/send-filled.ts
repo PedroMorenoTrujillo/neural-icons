@@ -4,7 +4,7 @@ export const iconSendFilled = defineIcon({
   name: 'send-filled',
   category: 'action',
   tags: ['send', 'action', 'deliver', 'filled'],
-  paths: ['M2.5 3.25 22 12 2.5 20.75l4.2-7.5L14.5 12 6.7 10.75z'],
+  paths: ['M3 9.5 21 2.25 13.75 21l-3.5-6.75z'],
   variant: 'filled',
   stroke: 'none',
 });

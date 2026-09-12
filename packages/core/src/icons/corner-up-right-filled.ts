@@ -4,7 +4,9 @@ export const iconCornerUpRightFilled = defineIcon({
   name: 'corner-up-right-filled',
   category: 'navigation',
   tags: ['corner-up-right', 'navigation', 'right', 'filled'],
-  paths: ['M9 3h12v13h-2.75V8.95L5.2 21H2v-2L16.3 5.75H9z'],
+  paths: [
+    'M3.75 19h2.5V9.25H16l-2.87 2.87 1.78 1.78 6-6-6-6-1.78 1.78L16 6.75H3.75z',
+  ],
   variant: 'filled',
   stroke: 'none',
 });
