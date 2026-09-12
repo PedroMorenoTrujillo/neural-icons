@@ -4,7 +4,7 @@ export const iconArrowRightFilled = defineIcon({
   name: 'arrow-right-filled',
   category: 'navigation',
   tags: ['forward', 'next', 'filled'],
-  paths: ['M21 10.5H11V6l-8 6 8 6v-4.5h10z'],
+  paths: ['M3 10.5h10V6l8 6-8 6v-4.5H3z'],
   variant: 'filled',
   stroke: 'none',
 });
