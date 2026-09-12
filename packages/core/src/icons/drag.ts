@@ -4,7 +4,5 @@ export const iconDrag = defineIcon({
   name: 'drag',
   category: 'action',
   tags: ['drag', 'action'],
-  paths: [
-    'M8 5v14M16 5v14M5 8l3-3 3 3M13 8l3-3 3 3M5 16l3 3 3-3M13 16l3 3 3-3',
-  ],
+  paths: ['M9 7h.01M15 7h.01M9 12h.01M15 12h.01M9 17h.01M15 17h.01'],
 });
