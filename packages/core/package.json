@@ -1,0 +1,34 @@
+{
+  "name": "@neural-icons/core",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Framework-agnostic icon definitions for the Neural design system.",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./icons/*": {
+      "types": "./src/icons/*.d.ts",
+      "import": "./src/icons/*.js",
+      "default": "./src/icons/*.js"
+    }
+  },
+  "files": [
+    "src",
+    "svg",
+    "README.md",
+    "LICENSE.md",
+    "!**/*.tsbuildinfo"
+  ],
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "license": "UNLICENSED"
+}
