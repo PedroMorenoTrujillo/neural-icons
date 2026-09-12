@@ -5,7 +5,7 @@ export const iconSortDescendingFilled = defineIcon({
   category: 'file',
   tags: ['sort-descending', 'file', 'descending', 'filled'],
   paths: [
-    'M5.75 3h2.5v12.5l2.75-2.75 1.75 1.75-5.75 5.75-5.75-5.75L3 12.75l2.75 2.75zM14 5h7v2.5h-7zM14 10.75h5v2.5h-5zM14 16.5h3v2.5h-3z',
+    'M6 4h2v12l2.5-2.5 1.75 1.75L7 20.5l-5.25-5.25 1.75-1.75L6 16zM14 6h6v2.25h-6zM14 10.9h4v2.25h-4zM14 15.8h2v2.25h-2z',
   ],
   variant: 'filled',
   stroke: 'none',

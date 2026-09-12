@@ -5,7 +5,7 @@ export const iconFolderTreeFilled = defineIcon({
   category: 'file',
   tags: ['folder-tree', 'file', 'tree', 'filled'],
   paths: [
-    'M3 3.5h9v8H3zm9 9h9v8h-9zM6.5 11.5V15h3v2.5H6.5A2.5 2.5 0 0 1 4 15v-3.5z',
+    'M4.25 4.25h7.5v6h-7.5zM12.25 13.75h7.5v6h-7.5zM7.25 10.25h2.5v2.25h4v1.5h2.5v-3.75h-6.5z',
   ],
   variant: 'filled',
   stroke: 'none',

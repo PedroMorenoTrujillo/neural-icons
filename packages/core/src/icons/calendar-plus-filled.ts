@@ -5,7 +5,7 @@ export const iconCalendarPlusFilled = defineIcon({
   category: 'file',
   tags: ['calendar-plus', 'file', 'plus', 'filled'],
   paths: [
-    'M4 4.5h2V2h2v2.5h8V2h2v2.5h2A2.5 2.5 0 0 1 22.5 7v13A2.5 2.5 0 0 1 20 22.5H4A2.5 2.5 0 0 1 1.5 20V7A2.5 2.5 0 0 1 4 4.5zm0 7v8.5h16v-8.5zm6.75 2h2.5v2.75H16v2.5h-2.75v2.75h-2.5v-2.75H8v-2.5h2.75z',
+    'M4 4.5h16v16H4zM8 2h2v2.5H8zM14 2h2v2.5h-2zM6.5 10h11v8.5h-11zM10.75 12.5h2.5v2.25h2.25v2.5h-2.25v2.25h-2.5v-2.25H8.5v-2.5h2.25z',
   ],
   variant: 'filled',
   stroke: 'none',
