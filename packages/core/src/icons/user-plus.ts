@@ -5,6 +5,6 @@ export const iconUserPlus = defineIcon({
   category: 'system',
   tags: ['user-plus', 'system', 'plus'],
   paths: [
-    'M15 20v-1a5 5 0 0 0-10 0v1M10 11a4 4 0 1 0 0-8a4 4 0 1 0 0 8zM19 9v6M16 12h6',
+    'M3.5 20v-1.5a5.5 5.5 0 0 1 11 0V20M9 11a3.5 3.5 0 1 0 0-7a3.5 3.5 0 1 0 0 7zM18.5 8.5v7M15 12h7',
   ],
 });

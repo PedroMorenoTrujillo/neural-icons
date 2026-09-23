@@ -2,142 +2,79 @@
   {
     "name": "arrow-left",
     "category": "navigation",
-    "tags": [
-      "back",
-      "previous"
-    ],
-    "paths": [
-      "M20.25 12H3.75M9.25 6.5 3.75 12l5.5 5.5"
-    ]
+    "tags": ["back", "previous"],
+    "paths": ["M20.25 12H3.75M9.25 6.5 3.75 12l5.5 5.5"]
   },
   {
     "name": "arrow-right",
     "category": "navigation",
-    "tags": [
-      "forward",
-      "next"
-    ],
-    "paths": [
-      "M3.75 12h16.5M14.75 6.5l5.5 5.5-5.5 5.5"
-    ]
+    "tags": ["forward", "next"],
+    "paths": ["M3.75 12h16.5M14.75 6.5l5.5 5.5-5.5 5.5"]
   },
   {
     "name": "arrow-up",
     "category": "navigation",
-    "tags": [
-      "top",
-      "increase"
-    ],
-    "paths": [
-      "M12 20.25V3.75M6.5 9.25 12 3.75l5.5 5.5"
-    ]
+    "tags": ["top", "increase"],
+    "paths": ["M12 20.25V3.75M6.5 9.25 12 3.75l5.5 5.5"]
   },
   {
     "name": "arrow-down",
     "category": "navigation",
-    "tags": [
-      "bottom",
-      "decrease"
-    ],
-    "paths": [
-      "M12 3.75v16.5M6.5 14.75l5.5 5.5 5.5-5.5"
-    ]
+    "tags": ["bottom", "decrease"],
+    "paths": ["M12 3.75v16.5M6.5 14.75l5.5 5.5 5.5-5.5"]
   },
   {
     "name": "chevron-left",
     "category": "navigation",
-    "tags": [
-      "previous",
-      "collapse"
-    ],
-    "paths": [
-      "m14.75 5.5-6.5 6.5 6.5 6.5"
-    ]
+    "tags": ["previous", "collapse"],
+    "paths": ["m14.75 5.5-6.5 6.5 6.5 6.5"]
   },
   {
     "name": "chevron-right",
     "category": "navigation",
-    "tags": [
-      "next",
-      "expand"
-    ],
-    "paths": [
-      "m9.25 5.5 6.5 6.5-6.5 6.5"
-    ]
+    "tags": ["next", "expand"],
+    "paths": ["m9.25 5.5 6.5 6.5-6.5 6.5"]
   },
   {
     "name": "chevron-up",
     "category": "navigation",
-    "tags": [
-      "collapse",
-      "top"
-    ],
-    "paths": [
-      "m5.5 14.75 6.5-6.5 6.5 6.5"
-    ]
+    "tags": ["collapse", "top"],
+    "paths": ["m5.5 14.75 6.5-6.5 6.5 6.5"]
   },
   {
     "name": "chevron-down",
     "category": "navigation",
-    "tags": [
-      "expand",
-      "bottom"
-    ],
-    "paths": [
-      "m5.5 9.25 6.5 6.5 6.5-6.5"
-    ]
+    "tags": ["expand", "bottom"],
+    "paths": ["m5.5 9.25 6.5 6.5 6.5-6.5"]
   },
   {
     "name": "check",
     "category": "action",
-    "tags": [
-      "confirm",
-      "done"
-    ],
-    "paths": [
-      "m4.25 12.5 4.75 4.75 10.75-10.5"
-    ]
+    "tags": ["confirm", "done"],
+    "paths": ["m4.25 12.5 4.75 4.75 10.75-10.5"]
   },
   {
     "name": "x",
     "category": "action",
-    "tags": [
-      "close",
-      "remove"
-    ],
-    "paths": [
-      "M5.5 5.5 18.5 18.5M18.5 5.5 5.5 18.5"
-    ]
+    "tags": ["close", "remove"],
+    "paths": ["M5.5 5.5 18.5 18.5M18.5 5.5 5.5 18.5"]
   },
   {
     "name": "plus",
     "category": "action",
-    "tags": [
-      "add",
-      "create"
-    ],
-    "paths": [
-      "M12 4v16M4 12h16"
-    ]
+    "tags": ["add", "create"],
+    "paths": ["M12 4v16M4 12h16"]
   },
   {
     "name": "minus",
     "category": "action",
-    "tags": [
-      "remove",
-      "collapse"
-    ],
-    "paths": [
-      "M4 12h16"
-    ]
+    "tags": ["remove", "collapse"],
+    "paths": ["M4 12h16"]
   },
   {
     "name": "search",
     "category": "action",
-    "tags": [
-      "find",
-      "magnifier"
-    ],
+    "tags": ["find", "magnifier"],
     "paths": [
       "M10.75 3.5a7.25 7.25 0 1 0 0 14.5 7.25 7.25 0 1 0 0-14.5M16.1 16.1l4.4 4.4"
     ]
@@ -145,43 +82,25 @@
   {
     "name": "menu",
     "category": "navigation",
-    "tags": [
-      "navigation",
-      "hamburger"
-    ],
-    "paths": [
-      "M4 6.5h16M4 12h16M4 17.5h16"
-    ]
+    "tags": ["navigation", "hamburger"],
+    "paths": ["M4 6.5h16M4 12h16M4 17.5h16"]
   },
   {
     "name": "more-horizontal",
     "category": "action",
-    "tags": [
-      "overflow",
-      "options"
-    ],
-    "paths": [
-      "M5 12h.01M12 12h.01M19 12h.01"
-    ]
+    "tags": ["overflow", "options"],
+    "paths": ["M5 12h.01M12 12h.01M19 12h.01"]
   },
   {
     "name": "more-vertical",
     "category": "action",
-    "tags": [
-      "overflow",
-      "options"
-    ],
-    "paths": [
-      "M12 5h.01M12 12h.01M12 19h.01"
-    ]
+    "tags": ["overflow", "options"],
+    "paths": ["M12 5h.01M12 12h.01M12 19h.01"]
   },
   {
     "name": "home",
     "category": "navigation",
-    "tags": [
-      "house",
-      "dashboard"
-    ],
+    "tags": ["house", "dashboard"],
     "paths": [
       "M3.25 10.25 12 3.5l8.75 6.75M5 9.25v10.5c0 .55.45 1 1 1h4v-6.25h4v6.25h4c.55 0 1-.45 1-1V9.25"
     ]
@@ -189,21 +108,15 @@
   {
     "name": "settings",
     "category": "system",
-    "tags": [
-      "preferences",
-      "gear"
-    ],
+    "tags": ["preferences", "gear"],
     "paths": [
-      "M12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 1 0 0-6.5M19.25 13.75l1.5 1.15-1.75 3.05-1.75-.72a7.8 7.8 0 0 1-2.4 1.4l-.25 1.87h-3.5l-.25-1.87a7.8 7.8 0 0 1-2.4-1.4l-1.75.72-1.75-3.05 1.5-1.15a7.9 7.9 0 0 1 0-2.75l-1.5-1.15L6.7 6.75l1.75.72a7.8 7.8 0 0 1 2.4-1.4l.25-1.87h3.5l.25 1.87a7.8 7.8 0 0 1 2.4 1.4L19 6.75l1.75 3.05-1.5 1.15a7.9 7.9 0 0 1 0 2.8Z"
+      "M10.75 2.8h2.5l.55 2.6 1.6.65 2.2-1.45 1.8 1.8-1.45 2.2.65 1.6 2.6.55v2.5l-2.6.55-.65 1.6 1.45 2.2-1.8 1.8-2.2-1.45-1.6.65-.55 2.6h-2.5l-.55-2.6-1.6-.65-2.2 1.45-1.8-1.8 1.45-2.2-.65-1.6-2.6-.55v-2.5l2.6-.55.65-1.6-1.45-2.2 1.8-1.8 2.2 1.45 1.6-.65zM12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 1 0 0-6.5z"
     ]
   },
   {
     "name": "user",
     "category": "system",
-    "tags": [
-      "person",
-      "account"
-    ],
+    "tags": ["person", "account"],
     "paths": [
       "M12 3.25a4 4 0 1 0 0 8 4 4 0 1 0 0-8M4.5 20.75c.4-4.2 3.1-6.5 7.5-6.5s7.1 2.3 7.5 6.5"
     ]
@@ -211,10 +124,7 @@
   {
     "name": "users",
     "category": "system",
-    "tags": [
-      "people",
-      "team"
-    ],
+    "tags": ["people", "team"],
     "paths": [
       "M9.25 4a3.5 3.5 0 1 0 0 7 3.5 3.5 0 1 0 0-7M2.75 19.5c.35-3.75 2.7-5.75 6.5-5.75s6.15 2 6.5 5.75M16 7a3 3 0 0 1 0 6M17 14.25c2.6.45 4.05 2.2 4.25 5.25"
     ]
@@ -222,10 +132,7 @@
   {
     "name": "heart",
     "category": "action",
-    "tags": [
-      "favorite",
-      "like"
-    ],
+    "tags": ["favorite", "like"],
     "paths": [
       "M12 20.25S3.5 15.1 3.5 9.25A4.75 4.75 0 0 1 12 6.3a4.75 4.75 0 0 1 8.5 2.95c0 5.85-8.5 11-8.5 11Z"
     ]
@@ -233,10 +140,7 @@
   {
     "name": "star",
     "category": "action",
-    "tags": [
-      "favorite",
-      "rating"
-    ],
+    "tags": ["favorite", "rating"],
     "paths": [
       "m12 3.25 2.65 5.45 6 .85-4.35 4.2 1.05 6-5.35-2.85-5.35 2.85 1.05-6-4.35-4.2 6-.85L12 3.25Z"
     ]
@@ -244,10 +148,7 @@
   {
     "name": "bell",
     "category": "system",
-    "tags": [
-      "notification",
-      "alert"
-    ],
+    "tags": ["notification", "alert"],
     "paths": [
       "M5 17.5h14l-1.35-2V10a5.65 5.65 0 0 0-11.3 0v5L5 17.5ZM9.75 20.25h4.5"
     ]
@@ -255,10 +156,7 @@
   {
     "name": "info",
     "category": "status",
-    "tags": [
-      "information",
-      "details"
-    ],
+    "tags": ["information", "details"],
     "paths": [
       "M12 3.25a8.75 8.75 0 1 0 0 17.5 8.75 8.75 0 1 0 0-17.5M12 10.75v5.5M12 7.5h.01"
     ]
@@ -266,10 +164,7 @@
   {
     "name": "warning",
     "category": "status",
-    "tags": [
-      "alert",
-      "caution"
-    ],
+    "tags": ["alert", "caution"],
     "paths": [
       "M10.75 4.25 3.1 18a1.25 1.25 0 0 0 1.1 1.85h15.6A1.25 1.25 0 0 0 20.9 18L13.25 4.25a1.42 1.42 0 0 0-2.5 0ZM12 9v4.75M12 17h.01"
     ]
@@ -277,10 +172,7 @@
   {
     "name": "help",
     "category": "status",
-    "tags": [
-      "question",
-      "support"
-    ],
+    "tags": ["question", "support"],
     "paths": [
       "M12 3.25a8.75 8.75 0 1 0 0 17.5 8.75 8.75 0 1 0 0-17.5M9.5 9a2.65 2.65 0 1 1 3.2 2.6c-.7.2-.7.9-.7 1.65M12 16.75h.01"
     ]
@@ -288,10 +180,7 @@
   {
     "name": "success",
     "category": "status",
-    "tags": [
-      "complete",
-      "valid"
-    ],
+    "tags": ["complete", "valid"],
     "paths": [
       "M12 3.25a8.75 8.75 0 1 0 0 17.5 8.75 8.75 0 1 0 0-17.5m-4.1 8.9 2.65 2.65 5.75-5.6"
     ]
@@ -299,10 +188,7 @@
   {
     "name": "error",
     "category": "status",
-    "tags": [
-      "invalid",
-      "failure"
-    ],
+    "tags": ["invalid", "failure"],
     "paths": [
       "M12 3.25a8.75 8.75 0 1 0 0 17.5 8.75 8.75 0 1 0 0-17.5M9 9l6 6M15 9l-6 6"
     ]
@@ -310,10 +196,7 @@
   {
     "name": "eye",
     "category": "action",
-    "tags": [
-      "visible",
-      "view"
-    ],
+    "tags": ["visible", "view"],
     "paths": [
       "M2.75 12s3.3-6.25 9.25-6.25S21.25 12 21.25 12 17.95 18.25 12 18.25 2.75 12 2.75 12ZM12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6"
     ]
@@ -321,21 +204,15 @@
   {
     "name": "eye-off",
     "category": "action",
-    "tags": [
-      "hidden",
-      "visibility"
-    ],
+    "tags": ["hidden", "visibility"],
     "paths": [
-      "M4.25 4.25 19.75 19.75M9.1 6.15A9.7 9.7 0 0 1 12 5.75c5.95 0 9.25 6.25 9.25 6.25a15.5 15.5 0 0 1-2.75 3.65M14.1 17.95a9.8 9.8 0 0 1-2.1.3C6.05 18.25 2.75 12 2.75 12a15.5 15.5 0 0 1 2.75-3.65M9.9 9.9a3 3 0 0 0 4.2 4.2"
+      "M3 3l18 18M8.2 6.2C9.3 5.9 10.5 5.75 12 5.75c3.75 0 6.75 2.25 9.25 6.25-1.05 1.8-2.15 3.1-3.45 3.8M15.8 17.8c-1.1.3-2.3.45-3.8.45C8.25 18.25 5.25 16 2.75 12c1.05-1.8 2.15-3.1 3.45-3.8M11.13 9.13a3 3 0 0 1 3.74 3.74M12.87 14.87a3 3 0 0 0-3.74-3.74"
     ]
   },
   {
     "name": "edit",
     "category": "action",
-    "tags": [
-      "pencil",
-      "write"
-    ],
+    "tags": ["pencil", "write"],
     "paths": [
       "M4.25 19.75 5 15.5 15.9 4.6a1.9 1.9 0 0 1 2.7 0l.8.8a1.9 1.9 0 0 1 0 2.7L8.5 19l-4.25.75ZM14.5 6l3.5 3.5M4.75 15.75 8.25 19.25"
     ]
@@ -343,10 +220,7 @@
   {
     "name": "trash",
     "category": "action",
-    "tags": [
-      "delete",
-      "remove"
-    ],
+    "tags": ["delete", "remove"],
     "paths": [
       "M4 6.5h16M9 3.5h6l.75 3M6.25 6.5l.75 14h10l.75-14M10 10v6.75M14 10v6.75"
     ]
@@ -354,54 +228,31 @@
   {
     "name": "copy",
     "category": "action",
-    "tags": [
-      "duplicate",
-      "clipboard"
-    ],
-    "paths": [
-      "M8.25 8.25h11.5v11.5H8.25zM4.25 15.75V4.25h11.5"
-    ]
+    "tags": ["duplicate", "clipboard"],
+    "paths": ["M8.25 8.25h11.5v11.5H8.25zM4.25 15.75V4.25h11.5"]
   },
   {
     "name": "download",
     "category": "action",
-    "tags": [
-      "save",
-      "export"
-    ],
-    "paths": [
-      "M12 3.5v11.75M7.25 10.75 12 15.5l4.75-4.75M4 20.5h16"
-    ]
+    "tags": ["save", "export"],
+    "paths": ["M12 3.5v11.75M7.25 10.75 12 15.5l4.75-4.75M4 20.5h16"]
   },
   {
     "name": "upload",
     "category": "action",
-    "tags": [
-      "import",
-      "send"
-    ],
-    "paths": [
-      "M12 15.5V3.75M7.25 8.5 12 3.75l4.75 4.75M4 20.5h16"
-    ]
+    "tags": ["import", "send"],
+    "paths": ["M12 15.5V3.75M7.25 8.5 12 3.75l4.75 4.75M4 20.5h16"]
   },
   {
     "name": "calendar",
     "category": "system",
-    "tags": [
-      "date",
-      "schedule"
-    ],
-    "paths": [
-      "M5.25 5.5h13.5c.83 0 1.5.67 1.5 1.5v12c0 .83-.67 1.5-1.5 1.5H5.25c-.83 0-1.5-.67-1.5-1.5V7c0-.83.67-1.5 1.5-1.5ZM3.75 9.5h16.5M8 3.5v4M16 3.5v4"
-    ]
+    "tags": ["date", "schedule"],
+    "paths": ["M5 5h14v15H5zM5 9h14M9 3v4M15 3v4"]
   },
   {
     "name": "clock",
     "category": "system",
-    "tags": [
-      "time",
-      "history"
-    ],
+    "tags": ["time", "history"],
     "paths": [
       "M12 3.25a8.75 8.75 0 1 0 0 17.5 8.75 8.75 0 1 0 0-17.5M12 7.25v5l3.5 2"
     ]
@@ -409,54 +260,31 @@
   {
     "name": "filter",
     "category": "action",
-    "tags": [
-      "funnel",
-      "refine"
-    ],
-    "paths": [
-      "M3.5 5h17l-6.25 7.25v5.5l-4.5 2.25v-7.75L3.5 5Z"
-    ]
+    "tags": ["funnel", "refine"],
+    "paths": ["M3.5 5h17l-6.25 7.25v5.5l-4.5 2.25v-7.75L3.5 5Z"]
   },
   {
     "name": "sort-ascending",
     "category": "action",
-    "tags": [
-      "order",
-      "ascending"
-    ],
-    "paths": [
-      "M8 18V5M4.5 8.5 8 5l3.5 3.5M14.5 7h5M14.5 12h4M14.5 17h3"
-    ]
+    "tags": ["order", "ascending"],
+    "paths": ["M8 18V5M4.5 8.5 8 5l3.5 3.5M14.5 7h5M14.5 12h4M14.5 17h3"]
   },
   {
     "name": "lock",
     "category": "system",
-    "tags": [
-      "secure",
-      "private"
-    ],
-    "paths": [
-      "M6 10h12v10.25H6zM8.5 10V7.5a3.5 3.5 0 0 1 7 0V10M12 14v2.5"
-    ]
+    "tags": ["secure", "private"],
+    "paths": ["M6 10h12v10.25H6zM8.5 10V7.5a3.5 3.5 0 0 1 7 0V10M12 14v2.5"]
   },
   {
     "name": "unlock",
     "category": "system",
-    "tags": [
-      "open",
-      "public"
-    ],
-    "paths": [
-      "M6 10h12v10.25H6zM8.5 10V7.5a3.5 3.5 0 0 1 6.65-1.55M12 14v2.5"
-    ]
+    "tags": ["open", "public"],
+    "paths": ["M6 10h12v10.25H6zM8.5 10V7.5a3.5 3.5 0 0 1 6.65-1.55M12 14v2.5"]
   },
   {
     "name": "mail",
     "category": "communication",
-    "tags": [
-      "email",
-      "message"
-    ],
+    "tags": ["email", "message"],
     "paths": [
       "M4.5 5.25h15c.7 0 1.25.55 1.25 1.25v11c0 .7-.55 1.25-1.25 1.25h-15c-.7 0-1.25-.55-1.25-1.25v-11c0-.7.55-1.25 1.25-1.25ZM3.75 6.25 12 13l8.25-6.75"
     ]
@@ -464,10 +292,7 @@
   {
     "name": "external-link",
     "category": "navigation",
-    "tags": [
-      "open",
-      "new-window"
-    ],
+    "tags": ["open", "new-window"],
     "paths": [
       "M13.25 4h6.75v6.75M20 4l-9.25 9.25M18.5 13.5v5.25c0 .7-.55 1.25-1.25 1.25h-12c-.7 0-1.25-.55-1.25-1.25v-12c0-.7.55-1.25 1.25-1.25h5.25"
     ]
@@ -475,32 +300,19 @@
   {
     "name": "folder",
     "category": "file",
-    "tags": [
-      "directory",
-      "files"
-    ],
-    "paths": [
-      "M3.25 6.25c0-.7.55-1.25 1.25-1.25h5l2 2h8c.7 0 1.25.55 1.25 1.25v10.5c0 .7-.55 1.25-1.25 1.25h-15c-.7 0-1.25-.55-1.25-1.25V6.25Z"
-    ]
+    "tags": ["directory", "files"],
+    "paths": ["M3.5 6h6l2 2h9v11h-17z"]
   },
   {
     "name": "file",
     "category": "file",
-    "tags": [
-      "document",
-      "page"
-    ],
-    "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 12h6M9 16h6"
-    ]
+    "tags": ["document", "page"],
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 12h6M9 16h6"]
   },
   {
     "name": "refresh",
     "category": "action",
-    "tags": [
-      "reload",
-      "sync"
-    ],
+    "tags": ["reload", "sync"],
     "paths": [
       "M19.25 7.5A8 8 0 0 0 5 8.25L3.25 10M3.25 5.5V10H7.5M4.75 16.5A8 8 0 0 0 19 15.75L20.75 14M20.75 18.5V14H16.5"
     ]
@@ -508,10 +320,7 @@
   {
     "name": "loader",
     "category": "status",
-    "tags": [
-      "loading",
-      "progress"
-    ],
+    "tags": ["loading", "progress"],
     "paths": [
       "M12 3.25v2.5M18.2 5.8l-1.75 1.75M20.75 12h-2.5M18.2 18.2l-1.75-1.75M12 20.75v-2.5M5.8 18.2l1.75-1.75M3.25 12h2.5M5.8 5.8l1.75 1.75"
     ]
@@ -519,10 +328,7 @@
   {
     "name": "logout",
     "category": "navigation",
-    "tags": [
-      "sign-out",
-      "exit"
-    ],
+    "tags": ["sign-out", "exit"],
     "paths": [
       "M10.5 4H5.25C4.55 4 4 4.55 4 5.25v13.5c0 .7.55 1.25 1.25 1.25h5.25M13.75 8l4 4-4 4M8.5 12h9.25"
     ]
@@ -530,221 +336,115 @@
   {
     "name": "dashboard",
     "category": "navigation",
-    "tags": [
-      "dashboard",
-      "navigation",
-      "overview"
-    ],
-    "paths": [
-      "M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"
-    ]
+    "tags": ["dashboard", "navigation", "overview"],
+    "paths": ["M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"]
   },
   {
     "name": "grid",
     "category": "navigation",
-    "tags": [
-      "grid",
-      "navigation",
-      "layout"
-    ],
-    "paths": [
-      "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"
-    ]
+    "tags": ["grid", "navigation", "layout"],
+    "paths": ["M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"]
   },
   {
     "name": "list",
     "category": "navigation",
-    "tags": [
-      "list",
-      "navigation"
-    ],
-    "paths": [
-      "M8 6.5h12M8 12h12M8 17.5h12M4.5 6.5h.01M4.5 12h.01M4.5 17.5h.01"
-    ]
+    "tags": ["list", "navigation"],
+    "paths": ["M8 6.5h12M8 12h12M8 17.5h12M4.5 6.5h.01M4.5 12h.01M4.5 17.5h.01"]
   },
   {
     "name": "sidebar",
     "category": "navigation",
-    "tags": [
-      "sidebar",
-      "navigation",
-      "drawer"
-    ],
-    "paths": [
-      "M4 4h16v16H4zM9 4v16"
-    ]
+    "tags": ["sidebar", "navigation", "drawer"],
+    "paths": ["M4 4h16v16H4zM9 4v16"]
   },
   {
     "name": "panel-left",
     "category": "navigation",
-    "tags": [
-      "panel-left",
-      "navigation",
-      "left"
-    ],
-    "paths": [
-      "M4 4h16v16H4zM10 4v16M7 8h.01M7 12h.01M7 16h.01"
-    ]
+    "tags": ["panel-left", "navigation", "left"],
+    "paths": ["M4 4h16v16H4zM10 4v16M12 8h5M12 12h5M12 16h5"]
   },
   {
     "name": "panel-right",
     "category": "navigation",
-    "tags": [
-      "panel-right",
-      "navigation",
-      "right"
-    ],
-    "paths": [
-      "M4 4h16v16H4zM14 4v16M17 8h.01M17 12h.01M17 16h.01"
-    ]
+    "tags": ["panel-right", "navigation", "right"],
+    "paths": ["M4 4h16v16H4zM14 4v16M7 8h5M7 12h5M7 16h5"]
   },
   {
     "name": "maximize",
     "category": "navigation",
-    "tags": [
-      "maximize",
-      "navigation"
-    ],
-    "paths": [
-      "M8 4H4v4M16 4h4v4M20 16v4h-4M4 16v4h4"
-    ]
+    "tags": ["maximize", "navigation"],
+    "paths": ["M8 4H4v4M16 4h4v4M20 16v4h-4M4 16v4h4"]
   },
   {
     "name": "minimize",
     "category": "navigation",
-    "tags": [
-      "minimize",
-      "navigation"
-    ],
-    "paths": [
-      "M4 9h7V4M20 9h-7V4M4 15h7v5M20 15h-7v5"
-    ]
+    "tags": ["minimize", "navigation"],
+    "paths": ["M4 6h16v12H4zM9 12h6"]
   },
   {
     "name": "expand",
     "category": "navigation",
-    "tags": [
-      "expand",
-      "navigation"
-    ],
-    "paths": [
-      "M9 4H4v5M15 4h5v5M20 15v5h-5M4 15v5h5"
-    ]
+    "tags": ["expand", "navigation"],
+    "paths": ["M9 4H4v5M15 4h5v5M20 15v5h-5M4 15v5h5"]
   },
   {
     "name": "collapse",
     "category": "navigation",
-    "tags": [
-      "collapse",
-      "navigation"
-    ],
-    "paths": [
-      "M9 9H4V4M15 9h5V4M20 15h-5v5M4 15h5v5"
-    ]
+    "tags": ["collapse", "navigation"],
+    "paths": ["M9 9H4V4M15 9h5V4M20 15h-5v5M4 15h5v5"]
   },
   {
     "name": "arrow-up-right",
     "category": "navigation",
-    "tags": [
-      "arrow-up-right",
-      "navigation",
-      "right"
-    ],
-    "paths": [
-      "M5 19 19 5M9 5h10v10"
-    ]
+    "tags": ["arrow-up-right", "navigation", "right"],
+    "paths": ["M5 19 19 5M9 5h10v10"]
   },
   {
     "name": "arrow-up-left",
     "category": "navigation",
-    "tags": [
-      "arrow-up-left",
-      "navigation",
-      "left"
-    ],
-    "paths": [
-      "M19 19 5 5M5 15V5h10"
-    ]
+    "tags": ["arrow-up-left", "navigation", "left"],
+    "paths": ["M19 19 5 5M5 15V5h10"]
   },
   {
     "name": "arrow-down-right",
     "category": "navigation",
-    "tags": [
-      "arrow-down-right",
-      "navigation",
-      "right"
-    ],
-    "paths": [
-      "M5 5 19 19M19 9v10H9"
-    ]
+    "tags": ["arrow-down-right", "navigation", "right"],
+    "paths": ["M5 5 19 19M19 9v10H9"]
   },
   {
     "name": "arrow-down-left",
     "category": "navigation",
-    "tags": [
-      "arrow-down-left",
-      "navigation",
-      "left"
-    ],
-    "paths": [
-      "M19 5 5 19M15 19H5V9"
-    ]
+    "tags": ["arrow-down-left", "navigation", "left"],
+    "paths": ["M19 5 5 19M15 19H5V9"]
   },
   {
     "name": "corner-up-left",
     "category": "navigation",
-    "tags": [
-      "corner-up-left",
-      "navigation",
-      "left"
-    ],
-    "paths": [
-      "M19 19V8H5M5 8l5-5M5 8l5 5"
-    ]
+    "tags": ["corner-up-left", "navigation", "left"],
+    "paths": ["M19 19V8H5M5 8l5-5M5 8l5 5"]
   },
   {
     "name": "corner-up-right",
     "category": "navigation",
-    "tags": [
-      "corner-up-right",
-      "navigation",
-      "right"
-    ],
-    "paths": [
-      "M5 19V8h14M19 8l-5-5M19 8l-5 5"
-    ]
+    "tags": ["corner-up-right", "navigation", "right"],
+    "paths": ["M5 19V8h14M19 8l-5-5M19 8l-5 5"]
   },
   {
     "name": "corner-down-left",
     "category": "navigation",
-    "tags": [
-      "corner-down-left",
-      "navigation",
-      "left"
-    ],
-    "paths": [
-      "M19 5v11H5M5 16l5-5M5 16l5 5"
-    ]
+    "tags": ["corner-down-left", "navigation", "left"],
+    "paths": ["M19 5v11H5M5 16l5-5M5 16l5 5"]
   },
   {
     "name": "corner-down-right",
     "category": "navigation",
-    "tags": [
-      "corner-down-right",
-      "navigation",
-      "right"
-    ],
-    "paths": [
-      "M5 5v11h14M19 16l-5-5M19 16l-5 5"
-    ]
+    "tags": ["corner-down-right", "navigation", "right"],
+    "paths": ["M5 5v11h14M19 16l-5-5M19 16l-5 5"]
   },
   {
     "name": "compass",
     "category": "navigation",
-    "tags": [
-      "compass",
-      "navigation"
-    ],
+    "tags": ["compass", "navigation"],
     "paths": [
       "M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z"
     ]
@@ -752,10 +452,7 @@
   {
     "name": "map",
     "category": "navigation",
-    "tags": [
-      "map",
-      "navigation"
-    ],
+    "tags": ["map", "navigation"],
     "paths": [
       "M4 6.5 9 4l6 2.5L20 4v13.5l-5 2.5-6-2.5-5 2.5zM9 4v13.5M15 6.5V20"
     ]
@@ -763,11 +460,7 @@
   {
     "name": "pin",
     "category": "navigation",
-    "tags": [
-      "pin",
-      "navigation",
-      "marker"
-    ],
+    "tags": ["pin", "navigation", "marker"],
     "paths": [
       "M12 21s6-5.25 6-10a6 6 0 1 0-12 0c0 4.75 6 10 6 10zM12 13a2 2 0 1 0 0-4a2 2 0 1 0 0 4"
     ]
@@ -775,11 +468,7 @@
   {
     "name": "location",
     "category": "navigation",
-    "tags": [
-      "location",
-      "navigation",
-      "target"
-    ],
+    "tags": ["location", "navigation", "target"],
     "paths": [
       "M12 4v4M12 16v4M4 12h4M16 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"
     ]
@@ -787,56 +476,33 @@
   {
     "name": "route",
     "category": "navigation",
-    "tags": [
-      "route",
-      "navigation",
-      "path"
-    ],
+    "tags": ["route", "navigation", "path"],
     "paths": [
-      "M5 19c0-5 4-5 4-8s-4-3-4-6M9 5h10M16 2l3 3-3 3"
+      "M5 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM7 18h5V6h5"
     ]
   },
   {
     "name": "navigation",
     "category": "navigation",
-    "tags": [
-      "navigation",
-      "compass"
-    ],
-    "paths": [
-      "M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z"
-    ]
+    "tags": ["navigation", "compass"],
+    "paths": ["M3.5 11 20.5 3.5 13 20.5l-2-7.5z"]
   },
   {
     "name": "link",
     "category": "navigation",
-    "tags": [
-      "link",
-      "navigation",
-      "connect"
-    ],
-    "paths": [
-      "M9 15l6-6M7 17H6a4 4 0 0 1 0-8h4M17 7h1a4 4 0 0 1 0 8h-4"
-    ]
+    "tags": ["link", "navigation", "connect"],
+    "paths": ["M10 6H8a6 6 0 0 0 0 12h2M14 6h2a6 6 0 0 1 0 12h-2M9.5 12h5"]
   },
   {
     "name": "unlink",
     "category": "navigation",
-    "tags": [
-      "unlink",
-      "navigation"
-    ],
-    "paths": [
-      "m8 8-2-2a4 4 0 0 0-5.5 5.5l2 2M16 16l2 2a4 4 0 0 0 5.5-5.5l-2-2M9 15l6-6"
-    ]
+    "tags": ["unlink", "navigation"],
+    "paths": ["M9 7H7a5 5 0 0 0 0 10h2M15 7h2a5 5 0 0 1 0 10h-2"]
   },
   {
     "name": "globe",
     "category": "navigation",
-    "tags": [
-      "globe",
-      "navigation"
-    ],
+    "tags": ["globe", "navigation"],
     "paths": [
       "M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM3.8 12h16.4M12 3.5c2.2 2.3 3.3 5.1 3.3 8.5s-1.1 6.2-3.3 8.5c-2.2-2.3-3.3-5.1-3.3-8.5s1.1-6.2 3.3-8.5z"
     ]
@@ -844,23 +510,13 @@
   {
     "name": "save",
     "category": "action",
-    "tags": [
-      "save",
-      "action",
-      "store"
-    ],
-    "paths": [
-      "M5 4h14v16H5zM8 4v5h8V4M8 15h8"
-    ]
+    "tags": ["save", "action", "store"],
+    "paths": ["M5 4h14v16H5zM8 4v5h8V4M8 14h8v4H8z"]
   },
   {
     "name": "share",
     "category": "action",
-    "tags": [
-      "share",
-      "action",
-      "export"
-    ],
+    "tags": ["share", "action", "export"],
     "paths": [
       "M17 8a2.5 2.5 0 1 0 0-5a2.5 2.5 0 1 0 0 5zM7 14.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 1 0 0 5zM17 21a2.5 2.5 0 1 0 0-5a2.5 2.5 0 1 0 0 5zM9.2 10.7l5.6-3.4M9.2 12.8l5.6 3.4"
     ]
@@ -868,138 +524,73 @@
   {
     "name": "send",
     "category": "action",
-    "tags": [
-      "send",
-      "action",
-      "deliver"
-    ],
-    "paths": [
-      "M20 4 4 10.5l6.5 2.5L13 20zM10.5 13 20 4"
-    ]
+    "tags": ["send", "action", "deliver"],
+    "paths": ["M20 4 4 10.5l6.5 2.5L13 20zM10.5 13 20 4"]
   },
   {
     "name": "play",
     "category": "action",
-    "tags": [
-      "play",
-      "action"
-    ],
-    "paths": [
-      "M7 4.5 19 12 7 19.5z"
-    ]
+    "tags": ["play", "action"],
+    "paths": ["M7 4.5 19 12 7 19.5z"]
   },
   {
     "name": "pause",
     "category": "action",
-    "tags": [
-      "pause",
-      "action"
-    ],
-    "paths": [
-      "M7 5v14M17 5v14"
-    ]
+    "tags": ["pause", "action"],
+    "paths": ["M7 5v14M17 5v14"]
   },
   {
     "name": "skip-back",
     "category": "action",
-    "tags": [
-      "skip-back",
-      "action",
-      "back"
-    ],
-    "paths": [
-      "M6 5v14M9 12l9-7v14z"
-    ]
+    "tags": ["skip-back", "action", "back"],
+    "paths": ["M6 5v14M9 12l9-7v14z"]
   },
   {
     "name": "skip-forward",
     "category": "action",
-    "tags": [
-      "skip-forward",
-      "action",
-      "forward"
-    ],
-    "paths": [
-      "M18 5v14M15 12 6 5v14z"
-    ]
+    "tags": ["skip-forward", "action", "forward"],
+    "paths": ["M18 5v14M15 12 6 5v14z"]
   },
   {
     "name": "rewind",
     "category": "action",
-    "tags": [
-      "rewind",
-      "action"
-    ],
-    "paths": [
-      "M18 5 9 12l9 7zM9 5 4 12l5 7z"
-    ]
+    "tags": ["rewind", "action"],
+    "paths": ["M18 5 9 12l9 7zM9 5 4 12l5 7z"]
   },
   {
     "name": "fast-forward",
     "category": "action",
-    "tags": [
-      "fast-forward",
-      "action",
-      "forward"
-    ],
-    "paths": [
-      "M5 5l9 7-9 7zM14 5l6 7-6 7z"
-    ]
+    "tags": ["fast-forward", "action", "forward"],
+    "paths": ["M5 5l9 7-9 7zM14 5l6 7-6 7z"]
   },
   {
     "name": "rotate-cw",
     "category": "action",
-    "tags": [
-      "rotate-cw",
-      "action",
-      "cw"
-    ],
-    "paths": [
-      "M19 8a8 8 0 1 0 1 6M19 4v4h-4"
-    ]
+    "tags": ["rotate-cw", "action", "cw"],
+    "paths": ["M19 8a8 8 0 1 0 1 6M19 4v4h-4"]
   },
   {
     "name": "rotate-ccw",
     "category": "action",
-    "tags": [
-      "rotate-ccw",
-      "action",
-      "ccw"
-    ],
-    "paths": [
-      "M5 8a8 8 0 1 1-1 6M5 4v4h4"
-    ]
+    "tags": ["rotate-ccw", "action", "ccw"],
+    "paths": ["M5 8a8 8 0 1 1-1 6M5 4v4h4"]
   },
   {
     "name": "undo",
     "category": "action",
-    "tags": [
-      "undo",
-      "action"
-    ],
-    "paths": [
-      "M9 7 4 12l5 5M5 12h8a6 6 0 0 1 6 6"
-    ]
+    "tags": ["undo", "action"],
+    "paths": ["M9 7 4 12l5 5M5 12h8a6 6 0 0 1 6 6"]
   },
   {
     "name": "redo",
     "category": "action",
-    "tags": [
-      "redo",
-      "action"
-    ],
-    "paths": [
-      "M15 7l5 5-5 5M19 12h-8a6 6 0 0 0-6 6"
-    ]
+    "tags": ["redo", "action"],
+    "paths": ["M15 7l5 5-5 5M19 12h-8a6 6 0 0 0-6 6"]
   },
   {
     "name": "zoom-in",
     "category": "action",
-    "tags": [
-      "zoom-in",
-      "action",
-      "in"
-    ],
+    "tags": ["zoom-in", "action", "in"],
     "paths": [
       "M10.5 3.5a7 7 0 1 0 0 14a7 7 0 1 0 0-14zM16 16l5 5M10.5 7v7M7 10.5h7"
     ]
@@ -1007,66 +598,39 @@
   {
     "name": "zoom-out",
     "category": "action",
-    "tags": [
-      "zoom-out",
-      "action",
-      "out"
-    ],
-    "paths": [
-      "M10.5 3.5a7 7 0 1 0 0 14a7 7 0 1 0 0-14zM16 16l5 5M7 10.5h7"
-    ]
+    "tags": ["zoom-out", "action", "out"],
+    "paths": ["M10.5 3.5a7 7 0 1 0 0 14a7 7 0 1 0 0-14zM16 16l5 5M7 10.5h7"]
   },
   {
     "name": "select",
     "category": "action",
-    "tags": [
-      "select",
-      "action"
-    ],
-    "paths": [
-      "M5 5h14v14H5zM9 12l2 2 4-4"
-    ]
+    "tags": ["select", "action"],
+    "paths": ["M5 5h14v14H5zM9 12l2 2 4-4"]
   },
   {
     "name": "cursor",
     "category": "action",
-    "tags": [
-      "cursor",
-      "action"
-    ],
-    "paths": [
-      "M6 4l3 16 3-6 6 3z"
-    ]
+    "tags": ["cursor", "action"],
+    "paths": ["M6 4l3 16 3-6 6 3z"]
   },
   {
     "name": "drag",
     "category": "action",
-    "tags": [
-      "drag",
-      "action"
-    ],
-    "paths": [
-      "M9 7h.01M15 7h.01M9 12h.01M15 12h.01M9 17h.01M15 17h.01"
-    ]
+    "tags": ["drag", "action"],
+    "paths": ["M9 7h.01M15 7h.01M9 12h.01M15 12h.01M9 17h.01M15 17h.01"]
   },
   {
     "name": "wand",
     "category": "action",
-    "tags": [
-      "wand",
-      "action"
-    ],
+    "tags": ["wand", "action"],
     "paths": [
-      "M5 19 17 7M14 4l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM19 14l.75 1.5L21 16l-1.25.5L19 18l-.75-1.5L17 16l1.25-.5z"
+      "M4.5 19.5l9-9M16 3.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9zM20 13.5l.625 1.875L22.5 16l-1.875.625L20 18.5l-.625-1.875L17.5 16l1.875-.625z"
     ]
   },
   {
     "name": "sparkles",
     "category": "action",
-    "tags": [
-      "sparkles",
-      "action"
-    ],
+    "tags": ["sparkles", "action"],
     "paths": [
       "M8 3.5l1.2 4.3L13.5 9l-4.3 1.2L8 14.5l-1.2-4.3L2.5 9l4.3-1.2zM17 12l.8 2.2L20 15l-2.2.8L17 18l-.8-2.2L14 15l2.2-.8z"
     ]
@@ -1074,56 +638,35 @@
   {
     "name": "command",
     "category": "action",
-    "tags": [
-      "command",
-      "action"
-    ],
+    "tags": ["command", "action"],
     "paths": [
-      "M8 4a3 3 0 1 0 0 6h2V8a3 3 0 1 0-2-4zM16 4a3 3 0 1 1 0 6h-2V8a3 3 0 1 1 2-4zM8 20a3 3 0 1 1 0-6h2v2a3 3 0 1 1-2 4zM16 20a3 3 0 1 0 0-6h-2v2a3 3 0 1 0 2 4zM10 10h4v4h-4z"
+      "M9 9h6v6H9zM9 9H6a3 3 0 1 1 3-3v3M15 9h3a3 3 0 1 0-3-3v3M9 15H6a3 3 0 1 0 3 3v-3M15 15h3a3 3 0 1 1-3 3v-3"
     ]
   },
   {
     "name": "keyboard",
     "category": "action",
-    "tags": [
-      "keyboard",
-      "action"
-    ],
-    "paths": [
-      "M4 6h16v12H4zM7 10h.01M10 10h.01M13 10h.01M16 10h.01M7 14h10"
-    ]
+    "tags": ["keyboard", "action"],
+    "paths": ["M4 6h16v12H4zM7 10h.01M10 10h.01M13 10h.01M16 10h.01M7 14h10"]
   },
   {
     "name": "scan",
     "category": "action",
-    "tags": [
-      "scan",
-      "action",
-      "detect"
-    ],
-    "paths": [
-      "M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"
-    ]
+    "tags": ["scan", "action", "detect"],
+    "paths": ["M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5M7 12h10"]
   },
   {
     "name": "qr-code",
     "category": "action",
-    "tags": [
-      "qr-code",
-      "action",
-      "code"
-    ],
+    "tags": ["qr-code", "action", "code"],
     "paths": [
-      "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM15 15h2v2h-2zM18 18h2v2h-2zM18 14h2v2h-2z"
+      "M4 4h6v6H4zM6 6h2v2H6zM14 4h6v6h-6zM16 6h2v2h-2zM4 14h6v6H4zM6 16h2v2H6zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z"
     ]
   },
   {
     "name": "print",
     "category": "action",
-    "tags": [
-      "print",
-      "action"
-    ],
+    "tags": ["print", "action"],
     "paths": [
       "M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z"
     ]
@@ -1131,319 +674,193 @@
   {
     "name": "archive",
     "category": "action",
-    "tags": [
-      "archive",
-      "action",
-      "storage"
-    ],
-    "paths": [
-      "M4 7h16v13H4zM3 4h18v3H3zM9 12h6"
-    ]
+    "tags": ["archive", "action", "storage"],
+    "paths": ["M4 7h16v13H4zM3 4h18v3H3zM9 12h6"]
   },
   {
     "name": "bookmark",
     "category": "action",
-    "tags": [
-      "bookmark",
-      "action",
-      "favorite"
-    ],
-    "paths": [
-      "M6 4h12v16l-6-3-6 3z"
-    ]
+    "tags": ["bookmark", "action", "favorite"],
+    "paths": ["M6 4h12v16l-6-3-6 3z"]
   },
   {
     "name": "flag",
     "category": "action",
-    "tags": [
-      "flag",
-      "action"
-    ],
-    "paths": [
-      "M6 20V4M6 5h11l-2.5 3L17 11H6"
-    ]
+    "tags": ["flag", "action"],
+    "paths": ["M6 20V4M6 5h11l-2.5 3L17 11H6"]
   },
   {
     "name": "tag",
     "category": "action",
-    "tags": [
-      "tag",
-      "action"
-    ],
-    "paths": [
-      "m4 5 7-1 9 9-6 6-9-9zM8 8h.01"
-    ]
+    "tags": ["tag", "action"],
+    "paths": ["m4 5 7-1 9 9-6 6-9-9zM8 8h.01"]
   },
   {
     "name": "paperclip",
     "category": "action",
-    "tags": [
-      "paperclip",
-      "action"
-    ],
-    "paths": [
-      "m8 12 6.5-6.5a3.5 3.5 0 0 1 5 5L11 19a5 5 0 0 1-7-7l8-8"
-    ]
+    "tags": ["paperclip", "action"],
+    "paths": ["m8 12 6.5-6.5a3.5 3.5 0 0 1 5 5L11 19a5 5 0 0 1-7-7l8-8"]
   },
   {
     "name": "attach",
     "category": "action",
-    "tags": [
-      "attach",
-      "action"
-    ],
-    "paths": [
-      "m8 12 6.5-6.5a3.5 3.5 0 0 1 5 5L11 19a5 5 0 0 1-7-7l8-8"
-    ]
+    "tags": ["attach", "action"],
+    "paths": ["m8 12 6.5-6.5a3.5 3.5 0 0 1 5 5L11 19a5 5 0 0 1-7-7l8-8"]
   },
   {
     "name": "clipboard",
     "category": "action",
-    "tags": [
-      "clipboard",
-      "action"
-    ],
-    "paths": [
-      "M8 5h8v3H8zM6 6H5v14h14V6h-1M9 12h6M9 16h4"
-    ]
+    "tags": ["clipboard", "action"],
+    "paths": ["M8 5h8v3H8zM6 6H5v14h14V6h-1M9 12h6M9 16h4"]
   },
   {
     "name": "paste",
     "category": "action",
-    "tags": [
-      "paste",
-      "action"
-    ],
-    "paths": [
-      "M8 5h8v3H8zM6 6H4v14h12v-2M10 10h10v10H10z"
-    ]
+    "tags": ["paste", "action"],
+    "paths": ["M8 5h8v3H8zM6 6H4v14h12v-2M10 10h10v10H10z"]
   },
   {
     "name": "crop",
     "category": "action",
-    "tags": [
-      "crop",
-      "action"
-    ],
-    "paths": [
-      "M7 4v13h13M4 7h13v13"
-    ]
+    "tags": ["crop", "action"],
+    "paths": ["M7 4v13h13M4 7h13v13"]
   },
   {
     "name": "align-left",
     "category": "action",
-    "tags": [
-      "align-left",
-      "action",
-      "left"
-    ],
-    "paths": [
-      "M4 6h16M4 10h11M4 14h16M4 18h11"
-    ]
+    "tags": ["align-left", "action", "left"],
+    "paths": ["M4 6h16M4 12h12M4 18h14"]
   },
   {
     "name": "align-center",
     "category": "action",
-    "tags": [
-      "align-center",
-      "action",
-      "center"
-    ],
-    "paths": [
-      "M4 6h16M7 10h10M4 14h16M7 18h10"
-    ]
+    "tags": ["align-center", "action", "center"],
+    "paths": ["M4 6h16M7 12h10M5 18h14"]
   },
   {
     "name": "align-right",
     "category": "action",
-    "tags": [
-      "align-right",
-      "action",
-      "right"
-    ],
-    "paths": [
-      "M4 6h16M9 10h11M4 14h16M9 18h11"
-    ]
+    "tags": ["align-right", "action", "right"],
+    "paths": ["M4 6h16M8 12h12M6 18h14"]
   },
   {
     "name": "message",
     "category": "communication",
-    "tags": [
-      "message",
-      "communication",
-      "comment"
-    ],
+    "tags": ["message", "communication", "comment"],
     "paths": [
-      "M4 5h16v11H9l-5 4zM8 9h8M8 12h5"
+      "M6.5 4h11A3.5 3.5 0 0 1 21 7.5v6A3.5 3.5 0 0 1 17.5 17H10l-6 4v-4.9A3.5 3.5 0 0 1 3 13.5v-6A3.5 3.5 0 0 1 6.5 4zM7.5 9h9M7.5 12.5h6"
     ]
   },
   {
     "name": "messages",
     "category": "communication",
-    "tags": [
-      "messages",
-      "communication"
-    ],
+    "tags": ["messages", "communication"],
     "paths": [
-      "M4 5h14v10H9l-5 3zM8 9h7M8 12h4M8 20h11l2-3V7"
+      "M8 4h10a3 3 0 0 1 3 3v9M6 7h9a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H9l-5 3v-4a3 3 0 0 1-1-2v-5a3 3 0 0 1 3-3zM7 11h7M7 14h4"
     ]
   },
   {
     "name": "chat",
     "category": "communication",
-    "tags": [
-      "chat",
-      "communication",
-      "conversation"
-    ],
+    "tags": ["chat", "communication", "conversation"],
     "paths": [
-      "M5 5h14v10H9l-4 4zM8 9h8M8 12h5"
+      "M12 4c-5 0-9 3.3-9 7.5 0 2.1 1 4 2.7 5.4L5 21l4.2-2a11 11 0 0 0 2.8.4c5 0 9-3.7 9-7.9S17 4 12 4zM8 11.5h.01M12 11.5h.01M16 11.5h.01"
     ]
   },
   {
     "name": "phone",
     "category": "communication",
-    "tags": [
-      "phone",
-      "communication"
-    ],
+    "tags": ["phone", "communication"],
     "paths": [
-      "M7 4h3l1.5 4-2 1.5a13 13 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2C10 19 5 14 5 6a2 2 0 0 1 2-2z"
+      "M6.5 3.5h3l1.5 4.2-1.8 1.4a14 14 0 0 0 5.7 5.7l1.4-1.8 4.2 1.5v2.8a3 3 0 0 1-3.3 3.2C9.2 20.2 3.8 14.8 3.5 6.8a3 3 0 0 1 3-3.3z"
     ]
   },
   {
     "name": "video",
     "category": "communication",
-    "tags": [
-      "video",
-      "communication"
-    ],
+    "tags": ["video", "communication"],
     "paths": [
-      "M4 7h11v10H4zM15 10l5-3v10l-5-3"
+      "M6 5h8a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3zM17 9l4-2v10l-4-2"
     ]
   },
   {
     "name": "mic",
     "category": "communication",
-    "tags": [
-      "mic",
-      "communication"
-    ],
+    "tags": ["mic", "communication"],
     "paths": [
-      "M8 5a4 4 0 0 1 8 0v6a4 4 0 0 1-8 0zM5 10v1a7 7 0 0 0 14 0M12 18v3M8 21h8"
+      "M9 6a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0zM6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"
     ]
   },
   {
     "name": "mic-off",
     "category": "communication",
-    "tags": [
-      "mic-off",
-      "communication",
-      "off"
-    ],
+    "tags": ["mic-off", "communication", "off"],
     "paths": [
-      "M8 5a4 4 0 0 1 7.2-2.4M16 8v3a4 4 0 0 1-6.8 2.8M5 10v1a7 7 0 0 0 10.8 5.9M12 18v3M8 21h8M4 4l16 16"
+      "M6.5 6a2.5 2.5 0 0 1 5 0v5a2.5 2.5 0 0 1-5 0zM4.5 11a4.5 4.5 0 0 0 9 0M9 15.5v4M6.5 19.5h5M16 9l5 5M21 9l-5 5"
     ]
   },
   {
     "name": "camera",
     "category": "communication",
-    "tags": [
-      "camera",
-      "communication"
-    ],
+    "tags": ["camera", "communication"],
     "paths": [
-      "M4 8h4l2-3h4l2 3h4v11H4zM12 10a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"
+      "M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM12 9.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z"
     ]
   },
   {
     "name": "camera-off",
     "category": "communication",
-    "tags": [
-      "camera-off",
-      "communication",
-      "off"
-    ],
+    "tags": ["camera-off", "communication", "off"],
     "paths": [
-      "M4 8h4l2-3h4l2 3h4v11H4zM9.5 9.5l5 5M14.5 9.5l-5 5M4 4l16 16"
+      "M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM9.75 10.75l4.5 4.5M14.25 10.75l-4.5 4.5"
     ]
   },
   {
     "name": "inbox",
     "category": "communication",
-    "tags": [
-      "inbox",
-      "communication",
-      "mailbox"
-    ],
+    "tags": ["inbox", "communication", "mailbox"],
     "paths": [
-      "M4 5h16v14H4zM4 14h5l2 2h2l2-2h5"
+      "M6 5h12a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3zM3 14h5l2 2h4l2-2h5"
     ]
   },
   {
     "name": "mention",
     "category": "communication",
-    "tags": [
-      "mention",
-      "communication"
-    ],
+    "tags": ["mention", "communication"],
     "paths": [
-      "M12 5a7 7 0 1 0 7 7v3a2 2 0 1 0 4 0v-3a11 11 0 1 0-3.2 7.8M16 12a4 4 0 1 1-8 0a4 4 0 1 1 8 0z"
+      "M18.3 18.3A9 9 0 1 1 21 12v2a2 2 0 0 1-4 0V8M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"
     ]
   },
   {
     "name": "bell-off",
     "category": "communication",
-    "tags": [
-      "bell-off",
-      "communication",
-      "off"
-    ],
+    "tags": ["bell-off", "communication", "off"],
     "paths": [
-      "M18 9a6 6 0 0 0-10.5-3.9M6 9v4l-2 3h11M14 19a3 3 0 0 1-5 0M4 4l16 16"
+      "M9 4a4 4 0 0 0-4 4v5l-2 3h12l-2-3V8a4 4 0 0 0-4-4zM7.5 19a1.5 1.5 0 0 0 3 0M16.5 9l5 5M21.5 9l-5 5"
     ]
   },
   {
     "name": "volume",
     "category": "communication",
-    "tags": [
-      "volume",
-      "communication"
-    ],
-    "paths": [
-      "M4 10h4l5-4v12l-5-4H4zM16 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"
-    ]
+    "tags": ["volume", "communication"],
+    "paths": ["M4 10h4l5-4v12l-5-4H4zM15.5 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"]
   },
   {
     "name": "volume-off",
     "category": "communication",
-    "tags": [
-      "volume-off",
-      "communication",
-      "off"
-    ],
-    "paths": [
-      "M4 10h4l5-4v12l-5-4H4zM16 9l4 6M20 9l-4 6"
-    ]
+    "tags": ["volume-off", "communication", "off"],
+    "paths": ["M4 10h4l5-4v12l-5-4H4zM16 9l5 6M21 9l-5 6"]
   },
   {
     "name": "rss",
     "category": "communication",
-    "tags": [
-      "rss",
-      "communication"
-    ],
-    "paths": [
-      "M5 19h.01M5 14a5 5 0 0 1 5 5M5 9a10 10 0 0 1 10 10"
-    ]
+    "tags": ["rss", "communication"],
+    "paths": ["M4 4a16 16 0 0 1 16 16M4 10a10 10 0 0 1 10 10M4 20h.01"]
   },
   {
     "name": "wifi",
     "category": "communication",
-    "tags": [
-      "wifi",
-      "communication"
-    ],
+    "tags": ["wifi", "communication"],
     "paths": [
       "M3 8a14 14 0 0 1 18 0M6 12a9 9 0 0 1 12 0M9 16a4 4 0 0 1 6 0M12 20h.01"
     ]
@@ -1451,47 +868,31 @@
   {
     "name": "wifi-off",
     "category": "communication",
-    "tags": [
-      "wifi-off",
-      "communication",
-      "off"
-    ],
+    "tags": ["wifi-off", "communication", "off"],
     "paths": [
-      "M3 8a14 14 0 0 1 7-3M14 5a14 14 0 0 1 7 3M6 12a9 9 0 0 1 3-1M15 11a9 9 0 0 1 3 1M9 16a4 4 0 0 1 3-1M15 16a4 4 0 0 1 0 0M12 20h.01M4 4l16 16"
+      "M3 8a10 10 0 0 1 12 0M5 12a7 7 0 0 1 8 0M7.5 16a3 3 0 0 1 3 0M9 20h.01M16.5 9l5 5M21.5 9l-5 5"
     ]
   },
   {
     "name": "circle-check",
     "category": "system",
-    "tags": [
-      "circle-check",
-      "system",
-      "check"
-    ],
+    "tags": ["circle-check", "system", "check"],
     "paths": [
-      "M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM7.5 12.2l3 3 6-6"
+      "M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM8 12.5l2.5 2.5 5.5-5.5"
     ]
   },
   {
     "name": "circle-x",
     "category": "system",
-    "tags": [
-      "circle-x",
-      "system",
-      "x"
-    ],
+    "tags": ["circle-x", "system", "x"],
     "paths": [
-      "M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM9 9l6 6M15 9l-6 6"
+      "M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM8.5 8.5l7 7M15.5 8.5l-7 7"
     ]
   },
   {
     "name": "circle-info",
     "category": "system",
-    "tags": [
-      "circle-info",
-      "system",
-      "info"
-    ],
+    "tags": ["circle-info", "system", "info"],
     "paths": [
       "M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM12 10v6M12 7.5h.01"
     ]
@@ -1499,11 +900,7 @@
   {
     "name": "circle-alert",
     "category": "system",
-    "tags": [
-      "circle-alert",
-      "system",
-      "alert"
-    ],
+    "tags": ["circle-alert", "system", "alert"],
     "paths": [
       "M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM12 8v5M12 16.5h.01"
     ]
@@ -1511,106 +908,67 @@
   {
     "name": "shield",
     "category": "system",
-    "tags": [
-      "shield",
-      "system",
-      "security"
-    ],
-    "paths": [
-      "M12 3.5 19 6v5.5c0 4.3-2.8 7.6-7 9-4.2-1.4-7-4.7-7-9V6z"
-    ]
+    "tags": ["shield", "system", "security"],
+    "paths": ["M12 4 19 6.5v5.2c0 4.2-2.8 7.3-7 8.8-4.2-1.5-7-4.6-7-8.8V6.5z"]
   },
   {
     "name": "shield-check",
     "category": "system",
-    "tags": [
-      "shield-check",
-      "system",
-      "check"
-    ],
+    "tags": ["shield-check", "system", "check"],
     "paths": [
-      "M12 3.5 19 6v5.5c0 4.3-2.8 7.6-7 9-4.2-1.4-7-4.7-7-9V6zM8.5 12l2.2 2.2 4.8-4.8"
+      "M12 4 19 6.5v5.2c0 4.2-2.8 7.3-7 8.8-4.2-1.5-7-4.6-7-8.8V6.5zM8 12.5l2.5 2.5 5-5"
     ]
   },
   {
     "name": "shield-off",
     "category": "system",
-    "tags": [
-      "shield-off",
-      "system",
-      "off"
-    ],
+    "tags": ["shield-off", "system", "off"],
     "paths": [
-      "M5 5.5 12 3.5 19 6v5.5c0 1.8-.5 3.4-1.3 4.8M5 5.5v6c0 4.3 2.8 7.6 7 9 .8-.3 1.5-.6 2.2-1M4 4l16 16"
+      "M9.5 4 15 6v5c0 4-2 7-5.5 8.5C6 18 4 15 4 11V6zM16.5 9l5 5M21.5 9l-5 5"
     ]
   },
   {
     "name": "key",
     "category": "system",
-    "tags": [
-      "key",
-      "system",
-      "access"
-    ],
+    "tags": ["key", "system", "access"],
     "paths": [
-      "M14 10a4 4 0 1 0-3 3l6 6 2-2-2-2 2-2-3-3"
+      "M8 7a4.5 4.5 0 1 0 4.2 6H15v3h3v-3h3v-3h-8.8A4.5 4.5 0 0 0 8 7zM7.5 11.5h.01"
     ]
   },
   {
     "name": "password",
     "category": "system",
-    "tags": [
-      "password",
-      "system",
-      "credential"
-    ],
+    "tags": ["password", "system", "credential"],
     "paths": [
-      "M5 7h14v10H5zM8 12h.01M12 12h.01M16 12h.01"
+      "M6 6h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zM8 12h.01M12 12h.01M16 12h.01"
     ]
   },
   {
     "name": "login",
     "category": "system",
-    "tags": [
-      "login",
-      "system"
-    ],
-    "paths": [
-      "M14 8l4 4-4 4M18 12H5M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5"
-    ]
+    "tags": ["login", "system"],
+    "paths": ["M11 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5M9 12h11M16 8l4 4-4 4"]
   },
   {
     "name": "user-plus",
     "category": "system",
-    "tags": [
-      "user-plus",
-      "system",
-      "plus"
-    ],
+    "tags": ["user-plus", "system", "plus"],
     "paths": [
-      "M15 20v-1a5 5 0 0 0-10 0v1M10 11a4 4 0 1 0 0-8a4 4 0 1 0 0 8zM19 9v6M16 12h6"
+      "M3.5 20v-1.5a5.5 5.5 0 0 1 11 0V20M9 11a3.5 3.5 0 1 0 0-7a3.5 3.5 0 1 0 0 7zM18.5 8.5v7M15 12h7"
     ]
   },
   {
     "name": "user-minus",
     "category": "system",
-    "tags": [
-      "user-minus",
-      "system",
-      "minus"
-    ],
+    "tags": ["user-minus", "system", "minus"],
     "paths": [
-      "M15 20v-1a5 5 0 0 0-10 0v1M10 11a4 4 0 1 0 0-8a4 4 0 1 0 0 8zM16 12h6"
+      "M14.5 20v-1a5 5 0 0 0-10 0v1M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM16 12h5"
     ]
   },
   {
     "name": "user-check",
     "category": "system",
-    "tags": [
-      "user-check",
-      "system",
-      "check"
-    ],
+    "tags": ["user-check", "system", "check"],
     "paths": [
       "M15 20v-1a5 5 0 0 0-10 0v1M10 11a4 4 0 1 0 0-8a4 4 0 1 0 0 8zM16 13l2 2 4-4"
     ]
@@ -1618,22 +976,15 @@
   {
     "name": "user-x",
     "category": "system",
-    "tags": [
-      "user-x",
-      "system",
-      "x"
-    ],
+    "tags": ["user-x", "system", "x"],
     "paths": [
-      "M15 20v-1a5 5 0 0 0-10 0v1M10 11a4 4 0 1 0 0-8a4 4 0 1 0 0 8zM17 13l5 5M22 13l-5 5"
+      "M15 20v-1a5 5 0 0 0-10 0v1M10 11a4 4 0 1 0 0-8a4 4 0 1 0 0 8zM16.5 11l5 5M21.5 11l-5 5"
     ]
   },
   {
     "name": "group",
     "category": "system",
-    "tags": [
-      "group",
-      "system"
-    ],
+    "tags": ["group", "system"],
     "paths": [
       "M8 11a3.5 3.5 0 1 0 0-7a3.5 3.5 0 1 0 0 7zM3 20v-1a5 5 0 0 1 10 0v1M16 11a3 3 0 1 0 0-6M17 15a4 4 0 0 1 4 4v1"
     ]
@@ -1641,11 +992,7 @@
   {
     "name": "database",
     "category": "system",
-    "tags": [
-      "database",
-      "system",
-      "storage"
-    ],
+    "tags": ["database", "system", "storage"],
     "paths": [
       "M4 6c0 1.7 3.6 3 8 3s8-1.3 8-3-3.6-3-8-3-8 1.3-8 3zM4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"
     ]
@@ -1653,34 +1000,19 @@
   {
     "name": "server",
     "category": "system",
-    "tags": [
-      "server",
-      "system"
-    ],
-    "paths": [
-      "M4 5h16v5H4zM4 14h16v5H4zM7 7.5h.01M7 16.5h.01"
-    ]
+    "tags": ["server", "system"],
+    "paths": ["M4 5h16v5H4zM4 14h16v5H4zM7 7.5h.01M7 16.5h.01"]
   },
   {
     "name": "cloud",
     "category": "system",
-    "tags": [
-      "cloud",
-      "system",
-      "remote"
-    ],
-    "paths": [
-      "M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10z"
-    ]
+    "tags": ["cloud", "system", "remote"],
+    "paths": ["M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10z"]
   },
   {
     "name": "cloud-upload",
     "category": "system",
-    "tags": [
-      "cloud-upload",
-      "system",
-      "upload"
-    ],
+    "tags": ["cloud-upload", "system", "upload"],
     "paths": [
       "M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10zM12 16V9M9.5 11.5 12 9l2.5 2.5"
     ]
@@ -1688,11 +1020,7 @@
   {
     "name": "cloud-download",
     "category": "system",
-    "tags": [
-      "cloud-download",
-      "system",
-      "download"
-    ],
+    "tags": ["cloud-download", "system", "download"],
     "paths": [
       "M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10zM12 9v7M9.5 13.5 12 16l2.5-2.5"
     ]
@@ -1700,22 +1028,13 @@
   {
     "name": "hard-drive",
     "category": "system",
-    "tags": [
-      "hard-drive",
-      "system",
-      "drive"
-    ],
-    "paths": [
-      "M4 7h16l2 10H2zM5 14h.01M9 14h.01M13 14h.01"
-    ]
+    "tags": ["hard-drive", "system", "drive"],
+    "paths": ["M4 7h16l2 10H2zM5 14h.01M9 14h.01M13 14h.01"]
   },
   {
     "name": "cpu",
     "category": "system",
-    "tags": [
-      "cpu",
-      "system"
-    ],
+    "tags": ["cpu", "system"],
     "paths": [
       "M7 7h10v10H7zM4 9v2M4 15v2M20 9v2M20 15v2M9 4v2M15 4v2M9 18v2M15 18v2"
     ]
@@ -1723,32 +1042,19 @@
   {
     "name": "terminal",
     "category": "system",
-    "tags": [
-      "terminal",
-      "system"
-    ],
-    "paths": [
-      "M5 7l5 5-5 5M12 17h7"
-    ]
+    "tags": ["terminal", "system"],
+    "paths": ["M3.5 4.5h17v15h-17zM6.5 8l4 4-4 4M12.5 16h5"]
   },
   {
     "name": "code",
     "category": "system",
-    "tags": [
-      "code",
-      "system"
-    ],
-    "paths": [
-      "m9 7-5 5 5 5M15 7l5 5-5 5"
-    ]
+    "tags": ["code", "system"],
+    "paths": ["m9 7-5 5 5 5M15 7l5 5-5 5"]
   },
   {
     "name": "bug",
     "category": "system",
-    "tags": [
-      "bug",
-      "system"
-    ],
+    "tags": ["bug", "system"],
     "paths": [
       "M9 8a3 3 0 0 1 6 0v1a5 5 0 0 1 2 4v2a5 5 0 0 1-10 0v-2a5 5 0 0 1 2-4zM5 12h14M4 9h3M17 9h3M4 16h3M17 16h3"
     ]
@@ -1756,540 +1062,375 @@
   {
     "name": "zap",
     "category": "system",
-    "tags": [
-      "zap",
-      "system"
-    ],
-    "paths": [
-      "m13 3-8 10h6l-1 8 8-10h-6z"
-    ]
+    "tags": ["zap", "system"],
+    "paths": ["m13 3-8 10h6l-1 8 8-10h-6z"]
   },
   {
     "name": "activity",
     "category": "system",
-    "tags": [
-      "activity",
-      "system"
-    ],
-    "paths": [
-      "M3 12h4l2-6 4 12 2-6h6"
-    ]
+    "tags": ["activity", "system"],
+    "paths": ["M3 12h4l2-6 4 12 2-6h6"]
   },
   {
     "name": "chart",
     "category": "system",
-    "tags": [
-      "chart",
-      "system"
-    ],
-    "paths": [
-      "M5 19V9M12 19V5M19 19v-8M3 19h18"
-    ]
+    "tags": ["chart", "system"],
+    "paths": ["M5 19V9M12 19V5M19 19v-8M3 19h18"]
   },
   {
     "name": "analytics",
     "category": "system",
-    "tags": [
-      "analytics",
-      "system"
-    ],
-    "paths": [
-      "M4 18V6M4 18h16M8 15l3-4 3 2 5-6"
-    ]
+    "tags": ["analytics", "system"],
+    "paths": ["M4 18V6M4 18h16M8 15l3-4 3 2 5-6"]
   },
   {
     "name": "file-plus",
     "category": "file",
-    "tags": [
-      "file-plus",
-      "file",
-      "plus"
-    ],
-    "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M12 12v6M9 15h6"
-    ]
+    "tags": ["file-plus", "file", "plus"],
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M12 12v6M9 15h6"]
   },
   {
     "name": "file-minus",
     "category": "file",
-    "tags": [
-      "file-minus",
-      "file",
-      "minus"
-    ],
-    "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 15h6"
-    ]
+    "tags": ["file-minus", "file", "minus"],
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 15h6"]
   },
   {
     "name": "file-check",
     "category": "file",
-    "tags": [
-      "file-check",
-      "file",
-      "check"
-    ],
-    "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 15l2 2 4-4"
-    ]
+    "tags": ["file-check", "file", "check"],
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 15l2 2 4-4"]
   },
   {
     "name": "file-x",
     "category": "file",
-    "tags": [
-      "file-x",
-      "file",
-      "x"
-    ],
-    "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 14l6 6M15 14l-6 6"
-    ]
+    "tags": ["file-x", "file", "x"],
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M9.5 12l5 5M14.5 12l-5 5"]
   },
   {
     "name": "file-text",
     "category": "file",
-    "tags": [
-      "file-text",
-      "file",
-      "text"
-    ],
-    "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 12h6M9 16h6"
-    ]
+    "tags": ["file-text", "file", "text"],
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 12h6M9 16h6"]
   },
   {
     "name": "file-code",
     "category": "file",
-    "tags": [
-      "file-code",
-      "file",
-      "code"
-    ],
-    "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M10 12l-2 2 2 2M14 12l2 2-2 2"
-    ]
+    "tags": ["file-code", "file", "code"],
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M10 12l-2 2 2 2M14 12l2 2-2 2"]
   },
   {
     "name": "file-image",
     "category": "file",
-    "tags": [
-      "file-image",
-      "file",
-      "image"
-    ],
-    "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M8 17l3-3 2 2 2-2 2 3M10 10h.01"
-    ]
+    "tags": ["file-image", "file", "image"],
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M8 17l3-3 2 2 2-2 2 3M10 10h.01"]
   },
   {
     "name": "file-video",
     "category": "file",
-    "tags": [
-      "file-video",
-      "file",
-      "video"
-    ],
-    "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 12h4v4H9zM13 13l2-1v4l-2-1"
-    ]
+    "tags": ["file-video", "file", "video"],
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 12h4v4H9zM13 13l2-1v4l-2-1"]
   },
   {
     "name": "file-audio",
     "category": "file",
-    "tags": [
-      "file-audio",
-      "file",
-      "audio"
-    ],
+    "tags": ["file-audio", "file", "audio"],
     "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M10 16v-5l5-1v5M10 16a2 2 0 1 0 0 1M15 15a2 2 0 1 0 0 1"
+      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M15 10v6c0 1.3-1.1 2.25-2.5 2.25s-2.5-.7-2.5-1.75 1.1-1.75 2.5-1.75c.9 0 1.8.25 2.5.75M15 10c1.4.2 2.2 1 2.2 2.25"
     ]
   },
   {
     "name": "file-archive",
     "category": "file",
-    "tags": [
-      "file-archive",
-      "file",
-      "archive"
-    ],
+    "tags": ["file-archive", "file", "archive"],
     "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M10 9h4M10 12h4M10 15h4"
+      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M8.5 11h7v2h-7zM9.5 13v5h5v-5M11 15.5h2"
     ]
   },
   {
     "name": "file-spreadsheet",
     "category": "file",
-    "tags": [
-      "file-spreadsheet",
-      "file",
-      "spreadsheet"
-    ],
+    "tags": ["file-spreadsheet", "file", "spreadsheet"],
     "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 11h6M9 15h6M12 9v8"
+      "M6 3.5h8l4 4v13H6zM14 3.5v4h4M8.5 11h7M8.5 15h7M12 11v7M8.5 18h7"
     ]
   },
   {
     "name": "files",
     "category": "file",
-    "tags": [
-      "files",
-      "file"
-    ],
-    "paths": [
-      "M7 5h12v15H7zM4 16V4h12"
-    ]
+    "tags": ["files", "file"],
+    "paths": ["M7 5h12v15H7zM4 16V4h12"]
   },
   {
     "name": "folder-plus",
     "category": "file",
-    "tags": [
-      "folder-plus",
-      "file",
-      "plus"
-    ],
-    "paths": [
-      "M3.5 6h6l2 2h9v11h-17zM12 11v5M9.5 13.5h5"
-    ]
+    "tags": ["folder-plus", "file", "plus"],
+    "paths": ["M3.5 6h6l2 2h9v11h-17zM12 11v5M9.5 13.5h5"]
   },
   {
     "name": "folder-minus",
     "category": "file",
-    "tags": [
-      "folder-minus",
-      "file",
-      "minus"
-    ],
-    "paths": [
-      "M3.5 6h6l2 2h9v11h-17zM9.5 13.5h5"
-    ]
+    "tags": ["folder-minus", "file", "minus"],
+    "paths": ["M3.5 6h6l2 2h9v11h-17zM9.5 13.5h5"]
   },
   {
     "name": "folder-check",
     "category": "file",
-    "tags": [
-      "folder-check",
-      "file",
-      "check"
-    ],
-    "paths": [
-      "M3.5 6h6l2 2h9v11h-17zM8 14l2 2 5-5"
-    ]
+    "tags": ["folder-check", "file", "check"],
+    "paths": ["M3.5 6h6l2 2h9v11h-17zM8 14l2 2 5-5"]
   },
   {
     "name": "folder-x",
     "category": "file",
-    "tags": [
-      "folder-x",
-      "file",
-      "x"
-    ],
-    "paths": [
-      "M3.5 6h6l2 2h9v11h-17zM9 12l5 5M14 12l-5 5"
-    ]
+    "tags": ["folder-x", "file", "x"],
+    "paths": ["M3.5 6h6l2 2h9v11h-17zM9 12l5 5M14 12l-5 5"]
   },
   {
     "name": "folder-open",
     "category": "file",
-    "tags": [
-      "folder-open",
-      "file",
-      "open"
-    ],
-    "paths": [
-      "M3.5 6h6l2 2h9l-2 11h-15z"
-    ]
+    "tags": ["folder-open", "file", "open"],
+    "paths": ["M3.5 6h6l2 2h9l-2 11h-15z"]
   },
   {
     "name": "folder-tree",
     "category": "file",
-    "tags": [
-      "folder-tree",
-      "file",
-      "tree"
-    ],
-    "paths": [
-      "M5 5h6v5H5zM13 14h6v5h-6zM8 10v3h8v1M8 10h8v4"
-    ]
+    "tags": ["folder-tree", "file", "tree"],
+    "paths": ["M3.5 4.5h3l1 1h4v4h-8zM12.5 14.5h3l1 1h4v4h-8zM7.5 9.5v3h9v2"]
   },
   {
     "name": "table",
     "category": "file",
-    "tags": [
-      "table",
-      "file",
-      "data"
-    ],
-    "paths": [
-      "M4 5h16v14H4zM4 10h16M4 15h16M10 5v14M16 5v14"
-    ]
+    "tags": ["table", "file", "data"],
+    "paths": ["M4 5h16v14H4zM4 10h16M4 15h16M10 5v14M16 5v14"]
   },
   {
     "name": "list-check",
     "category": "file",
-    "tags": [
-      "list-check",
-      "file",
-      "check"
-    ],
+    "tags": ["list-check", "file", "check"],
     "paths": [
-      "M8 6h12M8 12h12M8 18h12M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"
+      "M9.5 6H20M9.5 12H20M9.5 18H20M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"
     ]
   },
   {
     "name": "list-plus",
     "category": "file",
-    "tags": [
-      "list-plus",
-      "file",
-      "plus"
-    ],
-    "paths": [
-      "M8 6h12M8 12h12M8 18h12M4 6v4M2 8h4"
-    ]
+    "tags": ["list-plus", "file", "plus"],
+    "paths": ["M8 6h12M8 12h12M8 18h12M4 6v4M2 8h4"]
   },
   {
     "name": "list-minus",
     "category": "file",
-    "tags": [
-      "list-minus",
-      "file",
-      "minus"
-    ],
-    "paths": [
-      "M8 6h12M8 12h12M8 18h12M2 8h4"
-    ]
+    "tags": ["list-minus", "file", "minus"],
+    "paths": ["M8 6h12M8 12h12M8 18h12M2 8h4"]
   },
   {
     "name": "sort-descending",
     "category": "file",
-    "tags": [
-      "sort-descending",
-      "file",
-      "descending"
-    ],
-    "paths": [
-      "M7 5v14M4 16l3 3 3-3M14 7h6M14 12h4M14 17h2"
-    ]
+    "tags": ["sort-descending", "file", "descending"],
+    "paths": ["M7 5v14M4 16l3 3 3-3M14 7h6M14 12h4M14 17h2"]
   },
   {
     "name": "funnel",
     "category": "file",
-    "tags": [
-      "funnel",
-      "file",
-      "filter"
-    ],
-    "paths": [
-      "M4 5h16l-6 7v6l-4 2v-8z"
-    ]
+    "tags": ["funnel", "file", "filter"],
+    "paths": ["M4 5h16l-6 7v6l-4 2v-8z"]
   },
   {
     "name": "calendar-plus",
     "category": "file",
-    "tags": [
-      "calendar-plus",
-      "file",
-      "plus"
-    ],
-    "paths": [
-      "M5 5h14v15H5zM5 9h14M9 3v4M15 3v4M12 13v6M9 16h6"
-    ]
+    "tags": ["calendar-plus", "file", "plus"],
+    "paths": ["M5 5h14v15H5zM5 9h14M9 3v4M15 3v4M12 13v6M9 16h6"]
   },
   {
     "name": "calendar-minus",
     "category": "file",
-    "tags": [
-      "calendar-minus",
-      "file",
-      "minus"
-    ],
-    "paths": [
-      "M5 5h14v15H5zM5 9h14M9 3v4M15 3v4M9 16h6"
-    ]
+    "tags": ["calendar-minus", "file", "minus"],
+    "paths": ["M5 5h14v15H5zM5 9h14M9 3v4M15 3v4M9 16h6"]
   },
   {
     "name": "calendar-check",
     "category": "file",
-    "tags": [
-      "calendar-check",
-      "file",
-      "check"
-    ],
-    "paths": [
-      "M5 5h14v15H5zM5 9h14M9 3v4M15 3v4M8 16l2 2 5-5"
-    ]
+    "tags": ["calendar-check", "file", "check"],
+    "paths": ["M5 5h14v15H5zM5 9h14M9 3v4M15 3v4M8.5 15.5l2.2 2.2 4.8-4.8"]
   },
   {
     "name": "calendar-x",
     "category": "file",
-    "tags": [
-      "calendar-x",
-      "file",
-      "x"
-    ],
-    "paths": [
-      "M5 5h14v15H5zM5 9h14M9 3v4M15 3v4M9 14l6 6M15 14l-6 6"
-    ]
+    "tags": ["calendar-x", "file", "x"],
+    "paths": ["M5 5h14v15H5zM5 9h14M9 3v4M15 3v4M9.5 13.5l5 5M14.5 13.5l-5 5"]
   },
   {
     "name": "clock-plus",
     "category": "file",
-    "tags": [
-      "clock-plus",
-      "file",
-      "plus"
-    ],
+    "tags": ["clock-plus", "file", "plus"],
     "paths": [
-      "M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16zM12 8v4l3 2M18 16v5M15.5 18.5h5"
+      "M12 17.85A7.5 7.5 0 1 1 18 10.5M10.5 6.5v4l2.7 1.7M18 14.75v6.5M14.75 18h6.5"
     ]
   },
   {
     "name": "clock-x",
     "category": "file",
-    "tags": [
-      "clock-x",
-      "file",
-      "x"
-    ],
+    "tags": ["clock-x", "file", "x"],
     "paths": [
-      "M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16zM12 8v4l3 2M16 16l4 4M20 16l-4 4"
+      "M12 17.85A7.5 7.5 0 1 1 18 10.5M10.5 6.5v4l2.7 1.7M15.7 15.7l4.6 4.6M20.3 15.7l-4.6 4.6"
     ]
+  },
+  {
+    "name": "bold",
+    "category": "action",
+    "tags": ["format", "text weight"],
+    "paths": [
+      "M6.25 3.75h6.25a4.25 4.25 0 0 1 0 8.5H6.25V3.75ZM6.25 12.25h7a4 4 0 0 1 0 8h-7v-8ZM6.25 3.75v16.5"
+    ]
+  },
+  {
+    "name": "dollar-sign",
+    "category": "system",
+    "tags": ["currency", "money"],
+    "paths": [
+      "M17.75 7.25c-1.35-1.45-3.25-2.25-5.75-2.25-3.55 0-5.75 1.6-5.75 4.25 0 2.4 2.2 3.45 5.75 3.45s5.75 1.05 5.75 3.45c0 2.65-2.2 4.25-5.75 4.25-2.5 0-4.4-.8-5.75-2.25M12 2.75v18.5"
+    ]
+  },
+  {
+    "name": "eraser",
+    "category": "action",
+    "tags": ["clear", "formatting"],
+    "paths": [
+      "m4.2 14.25 9.8-9.8a2 2 0 0 1 2.85 0l3.1 3.1a2 2 0 0 1 0 2.85l-9.8 9.8H7.05l-2.85-2.85a2.2 2.2 0 0 1 0-3.1ZM9.25 9.2l5.55 5.55M10.15 20.2h10.1"
+    ]
+  },
+  {
+    "name": "flip-horizontal",
+    "category": "action",
+    "tags": ["mirror", "image"],
+    "paths": [
+      "M12 3.75v2M12 9v6M12 18.25v2M4.25 7.25 9.25 12l-5 4.75V7.25ZM19.75 7.25 14.75 12l5 4.75V7.25Z"
+    ]
+  },
+  {
+    "name": "flip-vertical",
+    "category": "action",
+    "tags": ["mirror", "image"],
+    "paths": [
+      "M3.75 12h2M9 12h6M18.25 12h2M7.25 4.25 12 9.25l4.75-5H7.25ZM7.25 19.75 12 14.75l4.75 5H7.25Z"
+    ]
+  },
+  {
+    "name": "image",
+    "category": "system",
+    "tags": ["photo", "landscape"],
+    "paths": [
+      "M4.25 4.25h15.5v15.5H4.25zM7.4 15.75l3.4-3.5 2.15 2.1 2.25-2.5 3.25 3.9M8.75 8.75h.01"
+    ]
+  },
+  {
+    "name": "italic",
+    "category": "action",
+    "tags": ["format", "text style"],
+    "paths": ["M10.25 4.25h9M4.75 19.75h9M15.75 4.25l-7.5 15.5"]
+  },
+  {
+    "name": "list-ordered",
+    "category": "navigation",
+    "tags": ["numbered", "list"],
+    "paths": [
+      "M4 4l1.5-1v4M4 7h3M4 11a1.5 1.5 0 1 1 3 0c0 .7-.5 1.1-1 1.5L4 14h3M4.25 17.5H7l-1.5 1.5h1a1.25 1.25 0 0 1 0 2.5H4.25M10 5h10M10 12h10M10 19h10"
+    ]
+  },
+  {
+    "name": "trending-down",
+    "category": "system",
+    "tags": ["decrease", "chart"],
+    "paths": ["M3.5 5.5 9 11l3.5-3.5L20.5 15.5M15 15.5h5.5V10"]
+  },
+  {
+    "name": "trending-up",
+    "category": "system",
+    "tags": ["increase", "chart"],
+    "paths": ["M3.5 18.5 9 13l3.5 3.5L20.5 8.5M15 8.5h5.5V14"]
+  },
+  {
+    "name": "underline",
+    "category": "action",
+    "tags": ["format", "text decoration"],
+    "paths": ["M5.75 4.25v7.25a6.25 6.25 0 0 0 12.5 0V4.25M4.5 20.25h15"]
   },
   {
     "name": "arrow-left-filled",
     "category": "navigation",
-    "tags": [
-      "back",
-      "previous",
-      "filled"
-    ],
-    "paths": [
-      "M20.25 10.75H9.75V7.3l-6 4.7 6 4.7v-3.45h10.5z"
-    ],
+    "tags": ["back", "previous", "filled"],
+    "paths": ["M20.25 10.75H9.75V7.3l-6 4.7 6 4.7v-3.45h10.5z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "arrow-right-filled",
     "category": "navigation",
-    "tags": [
-      "forward",
-      "next",
-      "filled"
-    ],
-    "paths": [
-      "M3.75 10.75h10.5V7.3l6 4.7-6 4.7v-3.45H3.75z"
-    ],
+    "tags": ["forward", "next", "filled"],
+    "paths": ["M3.75 10.75h10.5V7.3l6 4.7-6 4.7v-3.45H3.75z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "arrow-up-filled",
     "category": "navigation",
-    "tags": [
-      "top",
-      "increase",
-      "filled"
-    ],
-    "paths": [
-      "M10.75 20.25V9.75H7.3l4.7-6 4.7 6h-3.45v10.5z"
-    ],
+    "tags": ["top", "increase", "filled"],
+    "paths": ["M10.75 20.25V9.75H7.3l4.7-6 4.7 6h-3.45v10.5z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "arrow-down-filled",
     "category": "navigation",
-    "tags": [
-      "bottom",
-      "decrease",
-      "filled"
-    ],
-    "paths": [
-      "M10.75 3.75v10.5H7.3l4.7 6 4.7-6h-3.45V3.75z"
-    ],
+    "tags": ["bottom", "decrease", "filled"],
+    "paths": ["M10.75 3.75v10.5H7.3l4.7 6 4.7-6h-3.45V3.75z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "chevron-left-filled",
     "category": "navigation",
-    "tags": [
-      "previous",
-      "collapse",
-      "filled"
-    ],
-    "paths": [
-      "M15.5 4.5 17.25 6.25 11.5 12l5.75 5.75-1.75 1.75L8 12z"
-    ],
+    "tags": ["previous", "collapse", "filled"],
+    "paths": ["M15.5 4.5 17.25 6.25 11.5 12l5.75 5.75-1.75 1.75L8 12z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "chevron-right-filled",
     "category": "navigation",
-    "tags": [
-      "next",
-      "expand",
-      "filled"
-    ],
-    "paths": [
-      "M8.5 4.5 6.75 6.25 12.5 12l-5.75 5.75 1.75 1.75L16 12z"
-    ],
+    "tags": ["next", "expand", "filled"],
+    "paths": ["M8.5 4.5 6.75 6.25 12.5 12l-5.75 5.75 1.75 1.75L16 12z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "chevron-up-filled",
     "category": "navigation",
-    "tags": [
-      "collapse",
-      "top",
-      "filled"
-    ],
-    "paths": [
-      "M4.5 15.5 6.25 17.25 12 11.5l5.75 5.75 1.75-1.75L12 8z"
-    ],
+    "tags": ["collapse", "top", "filled"],
+    "paths": ["M4.5 15.5 6.25 17.25 12 11.5l5.75 5.75 1.75-1.75L12 8z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "chevron-down-filled",
     "category": "navigation",
-    "tags": [
-      "expand",
-      "bottom",
-      "filled"
-    ],
-    "paths": [
-      "M4.5 8.5 6.25 6.75 12 12.5l5.75-5.75 1.75 1.75L12 16z"
-    ],
+    "tags": ["expand", "bottom", "filled"],
+    "paths": ["M4.5 8.5 6.25 6.75 12 12.5l5.75-5.75 1.75 1.75L12 16z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "check-filled",
     "category": "action",
-    "tags": [
-      "confirm",
-      "done",
-      "filled"
-    ],
-    "paths": [
-      "M4 12.5 9 18l11-12-3-2-8 8-3-3z"
-    ],
+    "tags": ["confirm", "done", "filled"],
+    "paths": ["M4 12.5 9 18l11-12-3-2-8 8-3-3z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "x-filled",
     "category": "action",
-    "tags": [
-      "close",
-      "remove",
-      "filled"
-    ],
+    "tags": ["close", "remove", "filled"],
     "paths": [
       "M5 3.25 12 10.25l7-7 1.75 1.75-7 7 7 7-1.75 1.75-7-7-7 7L3.25 19l7-7-7-7z"
     ],
@@ -2299,39 +1440,23 @@
   {
     "name": "plus-filled",
     "category": "action",
-    "tags": [
-      "add",
-      "create",
-      "filled"
-    ],
-    "paths": [
-      "M10.5 3.5h3v7h7v3h-7v7h-3v-7h-7v-3h7z"
-    ],
+    "tags": ["add", "create", "filled"],
+    "paths": ["M10.5 3.5h3v7h7v3h-7v7h-3v-7h-7v-3h7z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "minus-filled",
     "category": "action",
-    "tags": [
-      "remove",
-      "collapse",
-      "filled"
-    ],
-    "paths": [
-      "M3.5 10.5h17v3h-17z"
-    ],
+    "tags": ["remove", "collapse", "filled"],
+    "paths": ["M3.5 10.5h17v3h-17z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "search-filled",
     "category": "action",
-    "tags": [
-      "find",
-      "magnifier",
-      "filled"
-    ],
+    "tags": ["find", "magnifier", "filled"],
     "paths": [
       "M10.5 3a7.5 7.5 0 1 0 4.66 13.38L20.4 21l1.6-1.6-4.62-4.62A7.5 7.5 0 0 0 10.5 3zM10.5 5.5a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"
     ],
@@ -2341,25 +1466,15 @@
   {
     "name": "menu-filled",
     "category": "navigation",
-    "tags": [
-      "navigation",
-      "hamburger",
-      "filled"
-    ],
-    "paths": [
-      "M3.5 4.5h17v3h-17zM3.5 10.5h17v3h-17zM3.5 16.5h17v3h-17z"
-    ],
+    "tags": ["navigation", "hamburger", "filled"],
+    "paths": ["M3.5 4.5h17v3h-17zM3.5 10.5h17v3h-17zM3.5 16.5h17v3h-17z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "more-horizontal-filled",
     "category": "action",
-    "tags": [
-      "overflow",
-      "options",
-      "filled"
-    ],
+    "tags": ["overflow", "options", "filled"],
     "paths": [
       "M6.25 12a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM13.25 12a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM20.25 12a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0z"
     ],
@@ -2369,11 +1484,7 @@
   {
     "name": "more-vertical-filled",
     "category": "action",
-    "tags": [
-      "overflow",
-      "options",
-      "filled"
-    ],
+    "tags": ["overflow", "options", "filled"],
     "paths": [
       "M12 6.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zM12 13.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zM12 20.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"
     ],
@@ -2383,27 +1494,17 @@
   {
     "name": "home-filled",
     "category": "navigation",
-    "tags": [
-      "house",
-      "dashboard",
-      "filled"
-    ],
-    "paths": [
-      "M3 10 12 3l9 7v10H4V10zM10 20v-7h4v7z"
-    ],
+    "tags": ["house", "dashboard", "filled"],
+    "paths": ["M3 10 12 3l9 7v10H4V10zM10 20v-7h4v7z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "settings-filled",
     "category": "system",
-    "tags": [
-      "preferences",
-      "gear",
-      "filled"
-    ],
+    "tags": ["preferences", "gear", "filled"],
     "paths": [
-      "M10.5 2.5h3l.7 2.6c.7.2 1.34.47 1.93.82l2.3-1.32 2.12 2.12-1.32 2.3c.35.59.62 1.23.82 1.93l2.6.7v3l-2.6.7c-.2.7-.47 1.34-.82 1.93l1.32 2.3-2.12 2.12-2.3-1.32c-.59.35-1.23.62-1.93.82l-.7 2.6h-3l-.7-2.6a8.1 8.1 0 0 1-1.93-.82l-2.3 1.32-2.12-2.12 1.32-2.3a8.1 8.1 0 0 1-.82-1.93l-2.6-.7v-3l2.6-.7c.2-.7.47-1.34.82-1.93L3.48 6.72 5.6 4.6l2.3 1.32c.59-.35 1.23-.62 1.93-.82zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+      "M10.75 2.8h2.5l.55 2.6 1.6.65 2.2-1.45 1.8 1.8-1.45 2.2.65 1.6 2.6.55v2.5l-2.6.55-.65 1.6 1.45 2.2-1.8 1.8-2.2-1.45-1.6.65-.55 2.6h-2.5l-.55-2.6-1.6-.65-2.2 1.45-1.8-1.8 1.45-2.2-.65-1.6-2.6-.55v-2.5l2.6-.55.65-1.6-1.45-2.2 1.8-1.8 2.2 1.45 1.6-.65zM12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 1 0 0-6.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2411,11 +1512,7 @@
   {
     "name": "user-filled",
     "category": "system",
-    "tags": [
-      "person",
-      "account",
-      "filled"
-    ],
+    "tags": ["person", "account", "filled"],
     "paths": [
       "M12 11a3.5 3.5 0 1 0 0-7a3.5 3.5 0 1 0 0 7zM5 20v-1a7 7 0 0 1 14 0v1z"
     ],
@@ -2425,25 +1522,21 @@
   {
     "name": "users-filled",
     "category": "system",
-    "tags": [
-      "people",
-      "team",
-      "filled"
-    ],
+    "tags": ["people", "team", "filled"],
     "paths": [
-      "M9.25 4a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM16 7a3 3 0 1 0 0 6h-1.5a5 5 0 0 0-1.15-6zM9.25 13.75c-3.8 0-6.15 2-6.5 5.75h13c-.35-3.75-2.7-5.75-6.5-5.75zM17 14.25c2.6.45 4.05 2.2 4.25 5.25H18.5c-.2-2.55-1.05-4.3-2.5-5.3z"
+      "M17 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6z",
+      "M17 14c3.3 0 5.25 2.2 5.25 5.5V21h-6.5v-1.5c0-2.25-.65-4.15-1.8-5.2.95-.2 1.9-.3 3.05-.3z",
+      "M9.25 4a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z",
+      "M9.25 13.75c-3.8 0-6.15 2-6.5 5.75h13c-.35-3.75-2.7-5.75-6.5-5.75z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "heart-filled",
     "category": "action",
-    "tags": [
-      "favorite",
-      "like",
-      "filled"
-    ],
+    "tags": ["favorite", "like", "filled"],
     "paths": [
       "M12 20S4 15.5 4 9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.5 12 20 12 20z"
     ],
@@ -2453,11 +1546,7 @@
   {
     "name": "star-filled",
     "category": "action",
-    "tags": [
-      "favorite",
-      "rating",
-      "filled"
-    ],
+    "tags": ["favorite", "rating", "filled"],
     "paths": [
       "m12 3 2.8 5.8 6.2.9-4.5 4.4 1.1 6.4-5.6-3-5.6 3 1.1-6.4-4.5-4.4 6.2-.9z"
     ],
@@ -2467,53 +1556,31 @@
   {
     "name": "bell-filled",
     "category": "system",
-    "tags": [
-      "notification",
-      "alert",
-      "filled"
-    ],
-    "paths": [
-      "M5 17h14l-2-3v-4a5 5 0 0 0-10 0v4zM10 20a2 2 0 0 0 4 0z"
-    ],
+    "tags": ["notification", "alert", "filled"],
+    "paths": ["M5 17h14l-2-3v-4a5 5 0 0 0-10 0v4zM10 20a2 2 0 0 0 4 0z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "info-filled",
     "category": "status",
-    "tags": [
-      "information",
-      "details",
-      "filled"
-    ],
-    "paths": [
-      "M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM11 9h2v7h-2zM11 6h2v2h-2z"
-    ],
+    "tags": ["information", "details", "filled"],
+    "paths": ["M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18zM11 9h2v7h-2zM11 6h2v2h-2z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "warning-filled",
     "category": "status",
-    "tags": [
-      "alert",
-      "caution",
-      "filled"
-    ],
-    "paths": [
-      "M12 3 22 21H2zM11 9h2v5h-2zM11 17h2v2h-2z"
-    ],
+    "tags": ["alert", "caution", "filled"],
+    "paths": ["M12 3 22 21H2zM11 9h2v5h-2zM11 17h2v2h-2z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "help-filled",
     "category": "status",
-    "tags": [
-      "question",
-      "support",
-      "filled"
-    ],
+    "tags": ["question", "support", "filled"],
     "paths": [
       "M12 3.25a8.75 8.75 0 1 0 0 17.5 8.75 8.75 0 0 0 0-17.5zM10.9 15.65h2.2v2.2h-2.2zM10.9 13.4v-1.05c0-1.05.3-1.58 1.35-1.9a2.1 2.1 0 1 0-2.75-2v.25H7.3v-.25a4.35 4.35 0 1 1 6.1 3.98c-.42.17-.6.35-.6.8v.17z"
     ],
@@ -2523,11 +1590,7 @@
   {
     "name": "success-filled",
     "category": "status",
-    "tags": [
-      "complete",
-      "valid",
-      "filled"
-    ],
+    "tags": ["complete", "valid", "filled"],
     "paths": [
       "M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zm-1.75 13.8L5.8 11.85l1.95-1.95 2.5 2.5 5.95-5.95 1.95 1.95z"
     ],
@@ -2537,11 +1600,7 @@
   {
     "name": "error-filled",
     "category": "status",
-    "tags": [
-      "invalid",
-      "failure",
-      "filled"
-    ],
+    "tags": ["invalid", "failure", "filled"],
     "paths": [
       "M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zM8.1 6.35 12 10.25l3.9-3.9 1.75 1.75-3.9 3.9 3.9 3.9-1.75 1.75-3.9-3.9-3.9 3.9-1.75-1.75 3.9-3.9-3.9-3.9z"
     ],
@@ -2551,11 +1610,7 @@
   {
     "name": "eye-filled",
     "category": "action",
-    "tags": [
-      "visible",
-      "view",
-      "filled"
-    ],
+    "tags": ["visible", "view", "filled"],
     "paths": [
       "M2.75 12s3.3-6.25 9.25-6.25S21.25 12 21.25 12 17.95 18.25 12 18.25 2.75 12 2.75 12zM12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"
     ],
@@ -2565,27 +1620,22 @@
   {
     "name": "eye-off-filled",
     "category": "action",
-    "tags": [
-      "hidden",
-      "visibility",
-      "filled"
-    ],
+    "tags": ["hidden", "visibility", "filled"],
     "paths": [
-      "M2.75 12s3.3-6.25 9.25-6.25S21.25 12 21.25 12 17.95 18.25 12 18.25 2.75 12 2.75 12zM3.3 4.65 4.65 3.3l16.05 16.05-1.35 1.35z"
+      "M8.2 6.2C9.3 5.9 10.5 5.75 12 5.75c3.75 0 6.75 2.25 9.25 6.25-1.05 1.8-2.15 3.1-3.45 3.8l-2.93-2.93A3 3 0 0 0 11.13 9.13z",
+      "M6.2 8.2l2.93 2.93A3 3 0 0 0 12.87 14.87l2.93 2.93c-1.1.3-2.3.45-3.8.45C8.25 18.25 5.25 16 2.75 12c1.05-1.8 2.15-3.1 3.45-3.8z",
+      "M3.6 2.4 21.6 20.4 20.4 21.6 2.4 3.6z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "edit-filled",
     "category": "action",
-    "tags": [
-      "pencil",
-      "write",
-      "filled"
-    ],
+    "tags": ["pencil", "write", "filled"],
     "paths": [
-      "M4 16.5V20h3.5L19.6 7.9l-3.5-3.5L4 16.5zM17.5 3l3.5 3.5-1.65 1.65-3.5-3.5z"
+      "M4.25 19.75 5 15.5 15.9 4.6a1.9 1.9 0 0 1 2.7 0l.8.8a1.9 1.9 0 0 1 0 2.7L8.5 19zM14.45 6.05l.7-.7 3.5 3.5-.7.7zM5.1 16.5l2.4 2.4-2.9.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2593,11 +1643,7 @@
   {
     "name": "trash-filled",
     "category": "action",
-    "tags": [
-      "delete",
-      "remove",
-      "filled"
-    ],
+    "tags": ["delete", "remove", "filled"],
     "paths": [
       "M8 3h8l1 2h4v2H3V5h4zM6 8h12l-1 13H7zM9 10.5h2v8H9zM13 10.5h2v8h-2z"
     ],
@@ -2607,69 +1653,46 @@
   {
     "name": "copy-filled",
     "category": "action",
-    "tags": [
-      "duplicate",
-      "clipboard",
-      "filled"
-    ],
-    "paths": [
-      "M7.5 7.5H20V20H7.5zM4 4h11.5v2.5H6.5V16H4z"
-    ],
+    "tags": ["duplicate", "clipboard", "filled"],
+    "paths": ["M7.5 7.5H20V20H7.5zM4 4h11.5v2.5H6.5V16H4z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "download-filled",
     "category": "action",
-    "tags": [
-      "save",
-      "export",
-      "filled"
-    ],
-    "paths": [
-      "M10.5 3h3v9h4l-5.5 6-5.5-6h4zM4 19h16v2.5H4z"
-    ],
+    "tags": ["save", "export", "filled"],
+    "paths": ["M10.5 3h3v9h4l-5.5 6-5.5-6h4zM4 19h16v2.5H4z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "upload-filled",
     "category": "action",
-    "tags": [
-      "import",
-      "send",
-      "filled"
-    ],
-    "paths": [
-      "M10.5 19h3v-9h4L12 4l-5.5 6h4zM4 19h16v2.5H4z"
-    ],
+    "tags": ["import", "send", "filled"],
+    "paths": ["M10.5 19h3v-9h4L12 4l-5.5 6h4zM4 19h16v2.5H4z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "calendar-filled",
     "category": "system",
-    "tags": [
-      "date",
-      "schedule",
-      "filled"
-    ],
+    "tags": ["date", "schedule", "filled"],
     "paths": [
-      "M5 4h2V2h2v2h6V2h2v2h2a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zM4.5 10.5h15v9h-15z"
+      "M4.125 4.125h15.75v16.75H4.125zM6 10h12v8.875H6z",
+      "M8.125 2.125h1.75v4.75h-1.75z",
+      "M14.125 2.125h1.75v4.75h-1.75z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "clock-filled",
     "category": "system",
-    "tags": [
-      "time",
-      "history",
-      "filled"
-    ],
+    "tags": ["time", "history", "filled"],
     "paths": [
-      "M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM10.5 6h3v5.25l3.75 2.25-1.5 2.5-5.25-3.25z"
+      "M12 2.375a9.625 9.625 0 1 0 0 19.25 9.625 9.625 0 1 0 0-19.25zM11.125 7.25h1.75v4.5l3.5 2-1 1.5-4.25-2.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2677,27 +1700,17 @@
   {
     "name": "filter-filled",
     "category": "action",
-    "tags": [
-      "funnel",
-      "refine",
-      "filled"
-    ],
-    "paths": [
-      "M3 4h18l-7 8v6.5l-4 1.75V12z"
-    ],
+    "tags": ["funnel", "refine", "filled"],
+    "paths": ["M3 4h18l-7 8v6.5l-4 1.75V12z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "sort-ascending-filled",
     "category": "action",
-    "tags": [
-      "order",
-      "ascending",
-      "filled"
-    ],
+    "tags": ["order", "ascending", "filled"],
     "paths": [
-      "M5 4h14v2.5H5zM5 9.75h10v2.5H5zM5 15.5h6v2.5H5zM17 14l4 4-4 4v-3h-4v-2h4z"
+      "M6.75 19V8.25L4.3 10.7l-1.8-1.8L8 3.4l5.5 5.5-1.8 1.8-2.45-2.45V19zM14.5 5.75h6v2.5h-6zM14.5 10.75h4.75v2.5H14.5zM14.5 15.75H18v2.5h-3.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2705,11 +1718,7 @@
   {
     "name": "lock-filled",
     "category": "system",
-    "tags": [
-      "secure",
-      "private",
-      "filled"
-    ],
+    "tags": ["secure", "private", "filled"],
     "paths": [
       "M6 10V7a6 6 0 0 1 12 0v3h1.5a2.5 2.5 0 0 1 2.5 2.5v7a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 19.5v-7A2.5 2.5 0 0 1 4.5 10zM8.5 10h7V7a3.5 3.5 0 1 0-7 0z"
     ],
@@ -2719,11 +1728,7 @@
   {
     "name": "unlock-filled",
     "category": "system",
-    "tags": [
-      "open",
-      "public",
-      "filled"
-    ],
+    "tags": ["open", "public", "filled"],
     "paths": [
       "M4 9.5h16a2.5 2.5 0 0 1 2.5 2.5v8a2.5 2.5 0 0 1-2.5 2.5H4A2.5 2.5 0 0 1 1.5 20v-8A2.5 2.5 0 0 1 4 9.5zM8.5 9.5V7a3.5 3.5 0 0 1 6.65-1.55l2.25-1.2A6 6 0 0 0 6 7v2.5zM11 13h2v4.5h-2z"
     ],
@@ -2733,67 +1738,39 @@
   {
     "name": "mail-filled",
     "category": "communication",
-    "tags": [
-      "email",
-      "message",
-      "filled"
-    ],
-    "paths": [
-      "M3 5h18v14H3zM5.5 7l6.5 5 6.5-5v2.75L12 14.7 5.5 9.75z"
-    ],
+    "tags": ["email", "message", "filled"],
+    "paths": ["M3 5h18v14H3zM5.5 7l6.5 5 6.5-5v2.75L12 14.7 5.5 9.75z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "external-link-filled",
     "category": "navigation",
-    "tags": [
-      "open",
-      "new-window",
-      "filled"
-    ],
-    "paths": [
-      "M14 3h7v7h-3V8.1l-6.1 6.1-2-2L16 6h-2zM4 5h7v3H7v9h9v-4h3v7H4z"
-    ],
+    "tags": ["open", "new-window", "filled"],
+    "paths": ["M14 3h7v7h-3V8.1l-6.1 6.1-2-2L16 6h-2zM4 5h7v3H7v9h9v-4h3v7H4z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "folder-filled",
     "category": "file",
-    "tags": [
-      "directory",
-      "files",
-      "filled"
-    ],
-    "paths": [
-      "M3 6h7l2 2h9v12H3z"
-    ],
+    "tags": ["directory", "files", "filled"],
+    "paths": ["M2.625 5.125h7.25l2 2h9.5v12.75H2.625z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "file-filled",
     "category": "file",
-    "tags": [
-      "document",
-      "page",
-      "filled"
-    ],
-    "paths": [
-      "M6 3h8l4 4v14H6zM14 3v5h5zM9 12h6v2.25H9zM9 16h6v2.25H9z"
-    ],
+    "tags": ["document", "page", "filled"],
+    "paths": ["M6 3h8l4 4v14H6zM14 3v5h5zM9 12h6v2.25H9zM9 16h6v2.25H9z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "refresh-filled",
     "category": "action",
-    "tags": [
-      "reload",
-      "sync",
-      "filled"
-    ],
+    "tags": ["reload", "sync", "filled"],
     "paths": [
       "M12 2.5a9.48 9.48 0 0 0-7.27 3.37L2.5 3.65v7.1h7.1L6.47 7.62A6.75 6.75 0 0 1 17.65 9.4l2.18-1.22A9.5 9.5 0 0 0 12 2.5zM21.5 13.25h-7.1l3.13 3.13A6.75 6.75 0 0 1 6.35 14.6l-2.18 1.22A9.5 9.5 0 0 0 12 21.5a9.48 9.48 0 0 0 7.27-3.37l2.23 2.22z"
     ],
@@ -2803,13 +1780,9 @@
   {
     "name": "loader-filled",
     "category": "status",
-    "tags": [
-      "loading",
-      "progress",
-      "filled"
-    ],
+    "tags": ["loading", "progress", "filled"],
     "paths": [
-      "M10.75 2.5h2.5v4h-2.5zM16.42 4.3l2.17 1.25-2 3.46-2.16-1.25zM19.5 10.75h4v2.5h-4zM18.59 16.45l-2.17 1.25-2-3.46 2.16-1.25zM10.75 17.5h2.5v4h-2.5zM7.58 15.69l2 3.46-2.16 1.25-2-3.46zM.5 10.75h4v2.5h-4zM5.41 4.3l2 3.46L5.25 9.01l-2-3.46z"
+      "M10.9 2.8h2.2v3.3h-2.2zM17.9 10.9h3.3v2.2h-3.3zM10.9 17.9h2.2v3.3h-2.2zM2.8 10.9h3.3v2.2H2.8zM17.2 4.95l1.55 1.55-2.35 2.35-1.55-1.55zM17.2 19.05l-2.35-2.35 1.55-1.55 2.35 2.35zM6.8 19.05l-1.55-1.55 2.35-2.35 1.55 1.55zM6.8 4.95l2.35 2.35-1.55 1.55-2.35-2.35z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2817,11 +1790,7 @@
   {
     "name": "logout-filled",
     "category": "navigation",
-    "tags": [
-      "sign-out",
-      "exit",
-      "filled"
-    ],
+    "tags": ["sign-out", "exit", "filled"],
     "paths": [
       "M3 4.5A2.5 2.5 0 0 1 5.5 2h6v3H6v14h5.5v3h-6A2.5 2.5 0 0 1 3 19.5zM15 6l6 6-6 6-2.1-2.1 2.4-2.4H8.5v-3h6.8l-2.4-2.4z"
     ],
@@ -2831,27 +1800,15 @@
   {
     "name": "dashboard-filled",
     "category": "navigation",
-    "tags": [
-      "dashboard",
-      "navigation",
-      "overview",
-      "filled"
-    ],
-    "paths": [
-      "M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"
-    ],
+    "tags": ["dashboard", "navigation", "overview", "filled"],
+    "paths": ["M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "grid-filled",
     "category": "navigation",
-    "tags": [
-      "grid",
-      "navigation",
-      "layout",
-      "filled"
-    ],
+    "tags": ["grid", "navigation", "layout", "filled"],
     "paths": [
       "M3.5 3.5h7v7h-7zM13.5 3.5h7v7h-7zM3.5 13.5h7v7h-7zM13.5 13.5h7v7h-7z"
     ],
@@ -2861,13 +1818,9 @@
   {
     "name": "list-filled",
     "category": "navigation",
-    "tags": [
-      "list",
-      "navigation",
-      "filled"
-    ],
+    "tags": ["list", "navigation", "filled"],
     "paths": [
-      "M3.5 5.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM7 5.25h14v2.5H7zM3.5 10.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM7 10.75h14v2.5H7zM3.5 16.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM7 16.25h14v2.5H7z"
+      "M4.5 5.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM7.125 5.25h13.75v2.5H7.125zM4.5 10.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM7.125 10.75h13.75v2.5H7.125zM4.5 16.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM7.125 16.25h13.75v2.5H7.125z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2875,27 +1828,15 @@
   {
     "name": "sidebar-filled",
     "category": "navigation",
-    "tags": [
-      "sidebar",
-      "navigation",
-      "drawer",
-      "filled"
-    ],
-    "paths": [
-      "M3 3h18v18H3zM5.5 5.5h3v13h-3z"
-    ],
+    "tags": ["sidebar", "navigation", "drawer", "filled"],
+    "paths": ["M3 3h18v18H3zM5.5 5.5h3v13h-3z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "panel-left-filled",
     "category": "navigation",
-    "tags": [
-      "panel-left",
-      "navigation",
-      "left",
-      "filled"
-    ],
+    "tags": ["panel-left", "navigation", "left", "filled"],
     "paths": [
       "M3 3h18v18H3zM5.5 5.5h3v13h-3zM11 5.75h7.5v2.5H11zM11 10.75h7.5v2.5H11zM11 15.75h7.5v2.5H11z"
     ],
@@ -2905,12 +1846,7 @@
   {
     "name": "panel-right-filled",
     "category": "navigation",
-    "tags": [
-      "panel-right",
-      "navigation",
-      "right",
-      "filled"
-    ],
+    "tags": ["panel-right", "navigation", "right", "filled"],
     "paths": [
       "M3 3h18v18H3zM15.5 5.5h3v13h-3zM5.5 5.75H13v2.5H5.5zM5.5 10.75H13v2.5H5.5zM5.5 15.75H13v2.5H5.5z"
     ],
@@ -2920,11 +1856,7 @@
   {
     "name": "maximize-filled",
     "category": "navigation",
-    "tags": [
-      "maximize",
-      "navigation",
-      "filled"
-    ],
+    "tags": ["maximize", "navigation", "filled"],
     "paths": [
       "M3 3h7v2.75H5.75V10H3zM14 3h7v7h-2.75V5.75H14zM18.25 14H21v7h-7v-2.75h4.25zM3 14h2.75v4.25H10V21H3z"
     ],
@@ -2934,25 +1866,15 @@
   {
     "name": "minimize-filled",
     "category": "navigation",
-    "tags": [
-      "minimize",
-      "navigation",
-      "filled"
-    ],
-    "paths": [
-      "M3 8.5h5.5V3h2.75v8.25H3zM12.75 3h2.75v5.5H21v2.75h-8.25zM3 12.75h8.25V21H8.5v-5.5H3zM12.75 12.75H21v2.75h-5.5V21h-2.75z"
-    ],
+    "tags": ["minimize", "navigation", "filled"],
+    "paths": ["M3.125 5.125h17.75v13.75H3.125zM8.5 11.125h7v1.75h-7z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "expand-filled",
     "category": "navigation",
-    "tags": [
-      "expand",
-      "navigation",
-      "filled"
-    ],
+    "tags": ["expand", "navigation", "filled"],
     "paths": [
       "M3 3h8.25v2.75H5.75v5.5H3zM12.75 3H21v8.25h-2.75v-5.5h-5.5zM18.25 12.75H21V21h-8.25v-2.75h5.5zM3 12.75h2.75v5.5h5.5V21H3z"
     ],
@@ -2962,86 +1884,47 @@
   {
     "name": "collapse-filled",
     "category": "navigation",
-    "tags": [
-      "collapse",
-      "navigation",
-      "filled"
-    ],
-    "paths": [
-      "M4 4h5v2.5H6.5V9H4zM15 4h5v5h-2.5V6.5H15zM4 15h2.5v2.5H9V20H4zM17.5 15H20v5h-5v-2.5h2.5z"
-    ],
+    "tags": ["collapse", "navigation", "filled"],
+    "paths": ["M9 9H4V4M15 9h5V4M20 15h-5v5M4 15h5v5"],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "arrow-up-right-filled",
     "category": "navigation",
-    "tags": [
-      "arrow-up-right",
-      "navigation",
-      "right",
-      "filled"
-    ],
-    "paths": [
-      "M5 16.9 16.9 5H10V2.5h11.5V14H19V7.1L6.8 19.3z"
-    ],
+    "tags": ["arrow-up-right", "navigation", "right", "filled"],
+    "paths": ["M5 19 19 5M9 5h10v10"],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "arrow-up-left-filled",
     "category": "navigation",
-    "tags": [
-      "arrow-up-left",
-      "navigation",
-      "left",
-      "filled"
-    ],
-    "paths": [
-      "M19 16.9 7.1 5H14V2.5H2.5V14H5V7.1l12.2 12.2z"
-    ],
+    "tags": ["arrow-up-left", "navigation", "left", "filled"],
+    "paths": ["M19 19 5 5M5 15V5h10"],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "arrow-down-right-filled",
     "category": "navigation",
-    "tags": [
-      "arrow-down-right",
-      "navigation",
-      "right",
-      "filled"
-    ],
-    "paths": [
-      "M5 7.1 16.9 19H10v2.5h11.5V10H19v6.9L6.8 4.7z"
-    ],
+    "tags": ["arrow-down-right", "navigation", "right", "filled"],
+    "paths": ["M5 5 19 19M19 9v10H9"],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "arrow-down-left-filled",
     "category": "navigation",
-    "tags": [
-      "arrow-down-left",
-      "navigation",
-      "left",
-      "filled"
-    ],
-    "paths": [
-      "M19 7.1 7.1 19H14v2.5H2.5V10H5v6.9L17.2 4.7z"
-    ],
+    "tags": ["arrow-down-left", "navigation", "left", "filled"],
+    "paths": ["M19 5 5 19M15 19H5V9"],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "corner-up-left-filled",
     "category": "navigation",
-    "tags": [
-      "corner-up-left",
-      "navigation",
-      "left",
-      "filled"
-    ],
+    "tags": ["corner-up-left", "navigation", "left", "filled"],
     "paths": [
       "M17.75 19H20.25V6.75H8.02l2.87-2.87L9.12 2.1l-6 6 6 6 1.78-1.78L8 9.25h9.75z"
     ],
@@ -3051,12 +1934,7 @@
   {
     "name": "corner-up-right-filled",
     "category": "navigation",
-    "tags": [
-      "corner-up-right",
-      "navigation",
-      "right",
-      "filled"
-    ],
+    "tags": ["corner-up-right", "navigation", "right", "filled"],
     "paths": [
       "M3.75 19h2.5V9.25H16l-2.87 2.87 1.78 1.78 6-6-6-6-1.78 1.78L16 6.75H3.75z"
     ],
@@ -3066,12 +1944,7 @@
   {
     "name": "corner-down-left-filled",
     "category": "navigation",
-    "tags": [
-      "corner-down-left",
-      "navigation",
-      "left",
-      "filled"
-    ],
+    "tags": ["corner-down-left", "navigation", "left", "filled"],
     "paths": [
       "M17.75 5H20.25v13.25H8.02l2.87 2.87-1.78 1.78-6-6 6-6 1.78 1.78L8 15.75h9.75z"
     ],
@@ -3081,12 +1954,7 @@
   {
     "name": "corner-down-right-filled",
     "category": "navigation",
-    "tags": [
-      "corner-down-right",
-      "navigation",
-      "right",
-      "filled"
-    ],
+    "tags": ["corner-down-right", "navigation", "right", "filled"],
     "paths": [
       "M3.75 5h2.5v10.75H16l-2.87-2.87 1.78-1.78 6 6-6 6-1.78-1.78L16 18.25H3.75z"
     ],
@@ -3096,13 +1964,9 @@
   {
     "name": "compass-filled",
     "category": "navigation",
-    "tags": [
-      "compass",
-      "navigation",
-      "filled"
-    ],
+    "tags": ["compass", "navigation", "filled"],
     "paths": [
-      "M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM16.8 6.2l-3.2 8-8 3.2 3.2-8zM12 10.25a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5z"
+      "M12 2.625a9.375 9.375 0 1 0 0 18.75 9.375 9.375 0 1 0 0-18.75zM15.5 8.5l-2 5-5 2 2-5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3110,11 +1974,7 @@
   {
     "name": "map-filled",
     "category": "navigation",
-    "tags": [
-      "map",
-      "navigation",
-      "filled"
-    ],
+    "tags": ["map", "navigation", "filled"],
     "paths": [
       "M3 4.7 8 2.2l6 2.5 7-2.5v17.1l-7 2.5-6-2.5-5 2.5zM9.5 5.2v13.6l3 1.25V6.45zM14.5 6.45v13.6l3.5-1.25V5.2z"
     ],
@@ -3124,12 +1984,7 @@
   {
     "name": "pin-filled",
     "category": "navigation",
-    "tags": [
-      "pin",
-      "navigation",
-      "marker",
-      "filled"
-    ],
+    "tags": ["pin", "navigation", "marker", "filled"],
     "paths": [
       "M12 2.5a7.5 7.5 0 0 0-7.5 7.5c0 5.55 6.02 10.42 7.5 11.5 1.48-1.08 7.5-5.95 7.5-11.5A7.5 7.5 0 0 0 12 2.5zm0 4.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
     ],
@@ -3139,12 +1994,7 @@
   {
     "name": "location-filled",
     "category": "navigation",
-    "tags": [
-      "location",
-      "navigation",
-      "target",
-      "filled"
-    ],
+    "tags": ["location", "navigation", "target", "filled"],
     "paths": [
       "M10.75 2h2.5v5.85a6.15 6.15 0 0 1 2.9 2.9H22v2.5h-5.85a6.15 6.15 0 0 1-2.9 2.9V22h-2.5v-5.85a6.15 6.15 0 0 1-2.9-2.9H2v-2.5h5.85a6.15 6.15 0 0 1 2.9-2.9zM12 9.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"
     ],
@@ -3154,14 +2004,9 @@
   {
     "name": "route-filled",
     "category": "navigation",
-    "tags": [
-      "route",
-      "navigation",
-      "path",
-      "filled"
-    ],
+    "tags": ["route", "navigation", "path", "filled"],
     "paths": [
-      "M4 21v-4.25c0-4.08 3.5-4.55 3.5-7.75S4 5.33 4 3.5V2h2.75v1.5c0 2.73 3.5 3.17 3.5 6.5 0 3.9-3.5 4.43-3.5 7.75V21zM9.5 3.5h8V1l4 4-4 4V6.5h-8z"
+      "M5 15.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM19 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM7 16.75h3.75v-11H17v2.5h-3.75v11H7z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3169,28 +2014,17 @@
   {
     "name": "navigation-filled",
     "category": "navigation",
-    "tags": [
-      "navigation",
-      "compass",
-      "filled"
-    ],
-    "paths": [
-      "M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.8 4.8-3.2 8-8 3.2 3.2-8zM12 10.25a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5z"
-    ],
+    "tags": ["navigation", "compass", "filled"],
+    "paths": ["M3.5 11 20.5 3.5 13 20.5l-2-7.5z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "link-filled",
     "category": "navigation",
-    "tags": [
-      "link",
-      "navigation",
-      "connect",
-      "filled"
-    ],
+    "tags": ["link", "navigation", "connect", "filled"],
     "paths": [
-      "M8.75 5h3v2.75h-3a3.25 3.25 0 0 0 0 6.5h3V17h-3a6 6 0 0 1 0-12zM12.25 9h3.5v2.5h-3.5zM15.25 5h3a6 6 0 0 1 0 12h-3v-2.75h3a3.25 3.25 0 0 0 0-6.5h-3z"
+      "M8.75 5h3v2.75h-3a3.25 3.25 0 0 0 0 6.5h3V17h-3a6 6 0 0 1 0-12zM12.25 9h3.5v2.5h-3.5zM14 5h3a6 6 0 0 1 0 12h-3v-2.75h3a3.25 3.25 0 0 0 0-6.5h-3z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3198,13 +2032,9 @@
   {
     "name": "unlink-filled",
     "category": "navigation",
-    "tags": [
-      "unlink",
-      "navigation",
-      "filled"
-    ],
+    "tags": ["unlink", "navigation", "filled"],
     "paths": [
-      "M4.5 3 21 19.5 19.5 21l-3.15-3.15A6 6 0 0 1 12.25 19h-3a6 6 0 0 1-4.42-10.05l1.95 1.95a3.25 3.25 0 0 0 2.47 5.35h3c.64 0 1.2-.18 1.7-.5l-2.2-2.2h-.5v-2.5h-2.5v-.5l-2.4-2.4L3 4.5zM15.25 5h3a6 6 0 0 1 4.42 10.05l-1.95-1.95a3.25 3.25 0 0 0-2.47-5.35h-3c-.64 0-1.2.18-1.7.5l-2.2-2.2c1.05-.7 2.34-1.05 3.95-1.05z"
+      "M9 5.5H7a6.5 6.5 0 0 0 0 13h2V16H7a4 4 0 0 1 0-8h2zM15 5.5h2a6.5 6.5 0 0 1 0 13h-2V16h2a4 4 0 0 0 0-8h-2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3212,11 +2042,7 @@
   {
     "name": "globe-filled",
     "category": "navigation",
-    "tags": [
-      "globe",
-      "navigation",
-      "filled"
-    ],
+    "tags": ["globe", "navigation", "filled"],
     "paths": [
       "M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zm-6.7 7.75h3.05a15.2 15.2 0 0 1 1.22-4.72A7.05 7.05 0 0 0 5.3 10.25zm0 3.5a7.05 7.05 0 0 0 4.27 4.72 15.2 15.2 0 0 1-1.22-4.72zm6.7 5.25c-1.25-1.37-2.05-3.18-2.2-5.25h4.4c-.15 2.07-.95 3.88-2.2 5.25zm2.2-8.75H9.8c.15-2.07.95-3.88 2.2-5.25 1.25 1.37 2.05 3.18 2.2 5.25zm.23-4.72a15.2 15.2 0 0 1 1.22 4.72h3.05a7.05 7.05 0 0 0-4.27-4.72zm1.22 8.22a15.2 15.2 0 0 1-1.22 4.72 7.05 7.05 0 0 0 4.27-4.72z"
     ],
@@ -3226,44 +2052,32 @@
   {
     "name": "save-filled",
     "category": "action",
-    "tags": [
-      "save",
-      "action",
-      "store",
-      "filled"
-    ],
-    "paths": [
-      "M4 3h14l3 3v15H4zM8 3v6h7V3zM12 13a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"
-    ],
+    "tags": ["save", "action", "store", "filled"],
+    "paths": ["M4 3h16v18H4zM8 4h8v5H8zM8 14h8v4H8z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "share-filled",
     "category": "action",
-    "tags": [
-      "share",
-      "action",
-      "export",
-      "filled"
-    ],
+    "tags": ["share", "action", "export", "filled"],
     "paths": [
-      "M17 2.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM7 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm10 6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM9.8 10.55l4.4-2.65v2.92l-4.4 2.65zm0 2.9 4.4 2.65v2.92l-4.4-2.65z"
+      "M17 2.5a3 3 0 1 0 0 6 3 3 0 1 0 0-6z",
+      "M7 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z",
+      "M17 15.5a3 3 0 1 0 0 6 3 3 0 1 0 0-6z",
+      "M8.6 10.35 14.4 6.85 15.55 8.75 9.75 12.25z",
+      "M9.75 11.75 15.55 15.25 14.4 17.15 8.6 13.65z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "send-filled",
     "category": "action",
-    "tags": [
-      "send",
-      "action",
-      "deliver",
-      "filled"
-    ],
+    "tags": ["send", "action", "deliver", "filled"],
     "paths": [
-      "M3 9.5 21 2.25 13.75 21l-3.5-6.75z"
+      "M20 4 4 10.5l6.5 2.5L13 20zM10.7 12.35l7.65-7.1 1.1.65-8.15 7.55z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3271,128 +2085,71 @@
   {
     "name": "play-filled",
     "category": "action",
-    "tags": [
-      "play",
-      "action",
-      "filled"
-    ],
-    "paths": [
-      "M6 3.75v16.5L19.5 12z"
-    ],
+    "tags": ["play", "action", "filled"],
+    "paths": ["M6 3.75v16.5L19.5 12z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "pause-filled",
     "category": "action",
-    "tags": [
-      "pause",
-      "action",
-      "filled"
-    ],
-    "paths": [
-      "M5 4h5.5v16H5zM13.5 4H19v16h-5.5z"
-    ],
+    "tags": ["pause", "action", "filled"],
+    "paths": ["M5 4h5.5v16H5zM13.5 4H19v16h-5.5z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "skip-back-filled",
     "category": "action",
-    "tags": [
-      "skip-back",
-      "action",
-      "back",
-      "filled"
-    ],
-    "paths": [
-      "M4 4h2.75v16H4zM19.5 4v16L7.25 12z"
-    ],
+    "tags": ["skip-back", "action", "back", "filled"],
+    "paths": ["M4 4h2.75v16H4zM19.5 4v16L7.25 12z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "skip-forward-filled",
     "category": "action",
-    "tags": [
-      "skip-forward",
-      "action",
-      "forward",
-      "filled"
-    ],
-    "paths": [
-      "M17.25 4H20v16h-2.75zM4.5 4v16L16.75 12z"
-    ],
+    "tags": ["skip-forward", "action", "forward", "filled"],
+    "paths": ["M17.25 4H20v16h-2.75zM4.5 4v16L16.75 12z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "rewind-filled",
     "category": "action",
-    "tags": [
-      "rewind",
-      "action",
-      "filled"
-    ],
-    "paths": [
-      "M19.5 4v16L12 12zM12.5 4v16L5 12z"
-    ],
+    "tags": ["rewind", "action", "filled"],
+    "paths": ["M18 5 9 12l9 7zM9 5 4 12l5 7z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "fast-forward-filled",
     "category": "action",
-    "tags": [
-      "fast-forward",
-      "action",
-      "forward",
-      "filled"
-    ],
-    "paths": [
-      "M4.5 4v16L12 12zM11.5 4v16L19 12z"
-    ],
+    "tags": ["fast-forward", "action", "forward", "filled"],
+    "paths": ["M5 5l9 7-9 7zM14 5l6 7-6 7z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "rotate-cw-filled",
     "category": "action",
-    "tags": [
-      "rotate-cw",
-      "action",
-      "cw",
-      "filled"
-    ],
-    "paths": [
-      "M12 2.5a9.5 9.5 0 1 0 9.25 11.7h-2.6a7 7 0 1 1-1.6-5.45H14V6.25h7.5v7.5H19v-2.93A9.45 9.45 0 0 0 12 2.5z"
-    ],
+    "tags": ["rotate-cw", "action", "cw", "filled"],
+    "paths": ["M19 8a8 8 0 1 0 1 6M19 4v4h-4"],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "rotate-ccw-filled",
     "category": "action",
-    "tags": [
-      "rotate-ccw",
-      "action",
-      "ccw",
-      "filled"
-    ],
-    "paths": [
-      "M12 2.5a9.45 9.45 0 0 0-7 3.07V2.5H2.5V10H5v-2.9A7 7 0 1 1 5.35 14.2h-2.6A9.5 9.5 0 1 0 12 2.5z"
-    ],
+    "tags": ["rotate-ccw", "action", "ccw", "filled"],
+    "paths": ["M5 8a8 8 0 1 1-1 6M5 4v4h4"],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "undo-filled",
     "category": "action",
-    "tags": [
-      "undo",
-      "action",
-      "filled"
-    ],
+    "tags": ["undo", "action", "filled"],
     "paths": [
       "M8.25 3.5 1.75 10l6.5 6.5v-4h4.25a5 5 0 0 1 5 5V21h3v-3.5a8 8 0 0 0-8-8H8.25z"
     ],
@@ -3402,11 +2159,7 @@
   {
     "name": "redo-filled",
     "category": "action",
-    "tags": [
-      "redo",
-      "action",
-      "filled"
-    ],
+    "tags": ["redo", "action", "filled"],
     "paths": [
       "M15.75 3.5v6H11.5a8 8 0 0 0-8 8V21h3v-3.5a5 5 0 0 1 5-5h4.25v4l6.5-6.5z"
     ],
@@ -3416,12 +2169,7 @@
   {
     "name": "zoom-in-filled",
     "category": "action",
-    "tags": [
-      "zoom-in",
-      "action",
-      "in",
-      "filled"
-    ],
+    "tags": ["zoom-in", "action", "in", "filled"],
     "paths": [
       "M10.5 2.5a8 8 0 1 0 5.1 14.16L21.2 22l1.8-1.8-5.35-5.6A8 8 0 0 0 10.5 2.5zm-1.25 4h2.5v2.75h2.75v2.5h-2.75v2.75h-2.5v-2.75H6.5v-2.5h2.75z"
     ],
@@ -3431,12 +2179,7 @@
   {
     "name": "zoom-out-filled",
     "category": "action",
-    "tags": [
-      "zoom-out",
-      "action",
-      "out",
-      "filled"
-    ],
+    "tags": ["zoom-out", "action", "out", "filled"],
     "paths": [
       "M10.5 2.5a8 8 0 1 0 5.1 14.16L21.2 22l1.8-1.8-5.35-5.6A8 8 0 0 0 10.5 2.5zM6.5 9.25h8v2.5h-8z"
     ],
@@ -3446,11 +2189,7 @@
   {
     "name": "select-filled",
     "category": "action",
-    "tags": [
-      "select",
-      "action",
-      "filled"
-    ],
+    "tags": ["select", "action", "filled"],
     "paths": [
       "M3 3h18v18H3zM7.25 11.75l3.1 3.1 6.4-6.4 1.75 1.75-8.15 8.15-4.85-4.85z"
     ],
@@ -3460,25 +2199,15 @@
   {
     "name": "cursor-filled",
     "category": "action",
-    "tags": [
-      "cursor",
-      "action",
-      "filled"
-    ],
-    "paths": [
-      "M4.5 2.5 9 21.5l3.1-6.2 6.2 3.1L21.5 15z"
-    ],
+    "tags": ["cursor", "action", "filled"],
+    "paths": ["M6 4l3 16 3-6 6 3z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "drag-filled",
     "category": "action",
-    "tags": [
-      "drag",
-      "action",
-      "filled"
-    ],
+    "tags": ["drag", "action", "filled"],
     "paths": [
       "M9 5.25a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM15 5.25a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM9 10.25a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM15 10.25a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM9 15.25a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM15 15.25a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5z"
     ],
@@ -3488,25 +2217,20 @@
   {
     "name": "wand-filled",
     "category": "action",
-    "tags": [
-      "wand",
-      "action",
-      "filled"
-    ],
+    "tags": ["wand", "action", "filled"],
     "paths": [
-      "M4.15 18.15 16.15 6.15l1.7 1.7-12 12zM14 3.25l.75 1.75 1.75.75-1.75.75L14 8.25l-.75-1.75-1.75-.75 1.75-.75zM19 13.25l.55 1.2 1.2.55-1.2.55L19 16.75l-.55-1.2-1.2-.55 1.2-.55z"
+      "M3.65 18.65 12.65 9.65 14.35 11.35 5.35 20.35z",
+      "M16 3.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z",
+      "M20 13.5l.625 1.875L22.5 16l-1.875.625L20 18.5l-.625-1.875L17.5 16l1.875-.625z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "sparkles-filled",
     "category": "action",
-    "tags": [
-      "sparkles",
-      "action",
-      "filled"
-    ],
+    "tags": ["sparkles", "action", "filled"],
     "paths": [
       "M7.5 2 9.1 7.4 14.5 9l-5.4 1.6L7.5 16l-1.6-5.4L.5 9l5.4-1.6zM17 11l1.1 3.4 3.4 1.1-3.4 1.1L17 20l-1.1-3.4-3.4-1.1 3.4-1.1z"
     ],
@@ -3516,27 +2240,19 @@
   {
     "name": "command-filled",
     "category": "action",
-    "tags": [
-      "command",
-      "action",
-      "filled"
-    ],
+    "tags": ["command", "action", "filled"],
     "paths": [
-      "M8 2.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM8 5.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM16 2.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM16 5.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM8 12.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM8 15.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM16 12.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM16 15.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM10 10h4v4h-4z"
+      "M9 9h6v6H9zM9 9H6a3 3 0 1 1 3-3v3M15 9h3a3 3 0 1 0-3-3v3M9 15H6a3 3 0 1 0 3 3v-3M15 15h3a3 3 0 1 1-3 3v-3"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "keyboard-filled",
     "category": "action",
-    "tags": [
-      "keyboard",
-      "action",
-      "filled"
-    ],
+    "tags": ["keyboard", "action", "filled"],
     "paths": [
-      "M2.5 4h19v16h-19zM5 7h2.5v2.5H5zM9 7h2.5v2.5H9zM13 7h2.5v2.5H13zM17 7h2.5v2.5H17zM5 11h2.5v2.5H5zM9 11h2.5v2.5H9zM13 11h2.5v2.5H13zM17 11h2.5v2.5H17zM5 15h14.5v2.5H5z"
+      "M3 5h18v14H3zM6.25 9.25h1.5v1.5h-1.5zM9.25 9.25h1.5v1.5h-1.5zM12.25 9.25h1.5v1.5h-1.5zM15.25 9.25h1.5v1.5h-1.5zM7 13.25h10v1.5H7z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3544,14 +2260,9 @@
   {
     "name": "scan-filled",
     "category": "action",
-    "tags": [
-      "scan",
-      "action",
-      "detect",
-      "filled"
-    ],
+    "tags": ["scan", "action", "detect", "filled"],
     "paths": [
-      "M3 3h7v2.75H5.75V10H3zM14 3h7v7h-2.75V5.75H14zM18.25 14H21v7h-7v-2.75h4.25zM3 14h2.75v4.25H10V21H3z"
+      "M3 3h7v2.75H5.75V10H3zM14 3h7v7h-2.75V5.75H14zM18.25 14H21v7h-7v-2.75h4.25zM3 14h2.75v4.25H10V21H3zM7 10.75h10v2.5H7z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3559,14 +2270,9 @@
   {
     "name": "qr-code-filled",
     "category": "action",
-    "tags": [
-      "qr-code",
-      "action",
-      "code",
-      "filled"
-    ],
+    "tags": ["qr-code", "action", "code", "filled"],
     "paths": [
-      "M3 3h8v8H3zM5.5 5.5h3v3h-3zM13 3h8v8h-8zM15.5 5.5h3v3h-3zM3 13h8v8H3zM5.5 15.5h3v3h-3zM13 13h3v3h-3zM18 13h3v5h-3zM15.5 18h2.5v3h-2.5zM18.5 18h2.5v3h-2.5z"
+      "M3 3h8v8H3zM5 5h4v4H5zM6 6h2v2H6zM13 3h8v8h-8zM15 5h4v4h-4zM16 6h2v2h-2zM3 13h8v8H3zM5 15h4v4H5zM6 16h2v2H6zM13 13h3v3h-3zM18 13h3v3h-3zM13 18h3v3h-3zM18 18h3v3h-3z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3574,11 +2280,7 @@
   {
     "name": "print-filled",
     "category": "action",
-    "tags": [
-      "print",
-      "action",
-      "filled"
-    ],
+    "tags": ["print", "action", "filled"],
     "paths": [
       "M7 2.5h10v5H7zM4 8h16a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-2v3.5H6V18H4a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3zm4.5 12h7v-4.5h-7zM18 11h2v2h-2z"
     ],
@@ -3588,55 +2290,31 @@
   {
     "name": "archive-filled",
     "category": "action",
-    "tags": [
-      "archive",
-      "action",
-      "storage",
-      "filled"
-    ],
-    "paths": [
-      "M2.5 3h19v4h-19zM3.5 8.5h17v13h-17zM9 12h6v2.5H9z"
-    ],
+    "tags": ["archive", "action", "storage", "filled"],
+    "paths": ["M2.5 3h19v4h-19zM3.5 8.5h17v13h-17zM9 12h6v2.5H9z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "bookmark-filled",
     "category": "action",
-    "tags": [
-      "bookmark",
-      "action",
-      "favorite",
-      "filled"
-    ],
-    "paths": [
-      "M5 2.5h14v19l-7-3.75-7 3.75z"
-    ],
+    "tags": ["bookmark", "action", "favorite", "filled"],
+    "paths": ["M5 2.5h14v19l-7-3.75-7 3.75z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "flag-filled",
     "category": "action",
-    "tags": [
-      "flag",
-      "action",
-      "filled"
-    ],
-    "paths": [
-      "M4 2.5h2.75v19H4zM6.75 4.25h11.5l-2.5 3.75 2.5 3.75H6.75z"
-    ],
+    "tags": ["flag", "action", "filled"],
+    "paths": ["M4 2.5h2.75v19H4zM6.75 4.25h11.5l-2.5 3.75 2.5 3.75H6.75z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "tag-filled",
     "category": "action",
-    "tags": [
-      "tag",
-      "action",
-      "filled"
-    ],
+    "tags": ["tag", "action", "filled"],
     "paths": [
       "M2.5 4.5 10 2.75 21.25 14 14 21.25 2.75 10zM7.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"
     ],
@@ -3646,11 +2324,7 @@
   {
     "name": "paperclip-filled",
     "category": "action",
-    "tags": [
-      "paperclip",
-      "action",
-      "filled"
-    ],
+    "tags": ["paperclip", "action", "filled"],
     "paths": [
       "M14.5 3.25a4.75 4.75 0 0 1 6.72 6.72l-8.6 8.6a6.5 6.5 0 0 1-9.2-9.2l7.55-7.55 1.95 1.95-7.55 7.55a3.75 3.75 0 0 0 5.3 5.3l8.6-8.6a2 2 0 1 0-2.82-2.82l-8.6 8.6-1.95-1.95 8.6-8.6z"
     ],
@@ -3660,11 +2334,7 @@
   {
     "name": "attach-filled",
     "category": "action",
-    "tags": [
-      "attach",
-      "action",
-      "filled"
-    ],
+    "tags": ["attach", "action", "filled"],
     "paths": [
       "M14.5 3.25a4.75 4.75 0 0 1 6.72 6.72l-8.6 8.6a6.5 6.5 0 0 1-9.2-9.2l7.55-7.55 1.95 1.95-7.55 7.55a3.75 3.75 0 0 0 5.3 5.3l8.6-8.6a2 2 0 1 0-2.82-2.82l-8.6 8.6-1.95-1.95 8.6-8.6z"
     ],
@@ -3674,11 +2344,7 @@
   {
     "name": "clipboard-filled",
     "category": "action",
-    "tags": [
-      "clipboard",
-      "action",
-      "filled"
-    ],
+    "tags": ["clipboard", "action", "filled"],
     "paths": [
       "M8 2.5h8v2H19a2.5 2.5 0 0 1 2.5 2.5v14.5h-19V7A2.5 2.5 0 0 1 5 4.5h3zm2.5 2v2h3v-2zM7.5 11h9v2.5h-9zM7.5 15.5h6v2.5h-6z"
     ],
@@ -3688,27 +2354,17 @@
   {
     "name": "paste-filled",
     "category": "action",
-    "tags": [
-      "paste",
-      "action",
-      "filled"
-    ],
-    "paths": [
-      "M8 2.5h8v2h2.5A2.5 2.5 0 0 1 21 7v5h-2.75V7.25H5.75v11h4V21H3V7a2.5 2.5 0 0 1 2.5-2.5H8zm2.5 2v2h2v-2zM10 10h11v11H10zm2.5 2.5v6h6v-6z"
-    ],
+    "tags": ["paste", "action", "filled"],
+    "paths": ["M8 5h8v3H8zM6 6H4v14h12v-2M10 10h10v10H10z"],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "crop-filled",
     "category": "action",
-    "tags": [
-      "crop",
-      "action",
-      "filled"
-    ],
+    "tags": ["crop", "action", "filled"],
     "paths": [
-      "M6 3h2.5v2.75H17V7h1.25v8.75H21v2.5h-2.75V21h-2.5v-2.75H6v-10H4v-2.5h2z"
+      "M5.75 3h2.5v2.75H18v10h3v2.5h-3V21h-2.5v-2.75H5.75v-10H3v-2.5h2.75zM8.25 8.25v7.5h7.25v-7.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3716,59 +2372,33 @@
   {
     "name": "align-left-filled",
     "category": "action",
-    "tags": [
-      "align-left",
-      "action",
-      "left",
-      "filled"
-    ],
-    "paths": [
-      "M3 4h18v2.5H3zM3 8.5h12v2.5H3zM3 13h18v2.5H3zM3 17.5h12V20H3z"
-    ],
+    "tags": ["align-left", "action", "left", "filled"],
+    "paths": ["M4 5h16v2H4zM4 11h12v2H4zM4 17h14v2H4z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "align-center-filled",
     "category": "action",
-    "tags": [
-      "align-center",
-      "action",
-      "center",
-      "filled"
-    ],
-    "paths": [
-      "M3 4h18v2.5H3zM6 8.5h12v2.5H6zM3 13h18v2.5H3zM6 17.5h12V20H6z"
-    ],
+    "tags": ["align-center", "action", "center", "filled"],
+    "paths": ["M4 5h16v2H4zM7 11h10v2H7zM5 17h14v2H5z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "align-right-filled",
     "category": "action",
-    "tags": [
-      "align-right",
-      "action",
-      "right",
-      "filled"
-    ],
-    "paths": [
-      "M3 4h18v2.5H3zM9 8.5h12v2.5H9zM3 13h18v2.5H3zM9 17.5h12V20H9z"
-    ],
+    "tags": ["align-right", "action", "right", "filled"],
+    "paths": ["M4 5h16v2H4zM8 11h12v2H8zM6 17h14v2H6z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "message-filled",
     "category": "communication",
-    "tags": [
-      "message",
-      "communication",
-      "comment",
-      "filled"
-    ],
+    "tags": ["message", "communication", "comment", "filled"],
     "paths": [
-      "M3 4h18v13H10l-7 4zM7 8.25h10v2.25H7zM7 12.25h6v2.25H7z"
+      "M6.5 3h11A4.5 4.5 0 0 1 22 7.5v6a4.5 4.5 0 0 1-4.5 4.5h-7.2L3 22v-5.5a4.5 4.5 0 0 1-1-3v-6A4.5 4.5 0 0 1 6.5 3zM7 8.5h10v2H7zM7 12.5h7v2H7z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3776,13 +2406,9 @@
   {
     "name": "messages-filled",
     "category": "communication",
-    "tags": [
-      "messages",
-      "communication",
-      "filled"
-    ],
+    "tags": ["messages", "communication", "filled"],
     "paths": [
-      "M3 4h15v12H10l-7 4zm17 4h1v11l-5 2.5V18h2V8zM7 8h8v2.25H7zM7 12h5v2.25H7z"
+      "M8 3h10a3 3 0 0 1 3 3v10h-2V6a1 1 0 0 0-1-1H8zM6 6h9a4 4 0 0 1 4 4v5a4 4 0 0 1-4 4H9.3L3 22v-5.1A4 4 0 0 1 2 15v-5a4 4 0 0 1 4-4zM7 10h7v2H7zM7 14h4v2H7z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3790,14 +2416,9 @@
   {
     "name": "chat-filled",
     "category": "communication",
-    "tags": [
-      "chat",
-      "communication",
-      "conversation",
-      "filled"
-    ],
+    "tags": ["chat", "communication", "conversation", "filled"],
     "paths": [
-      "M3.5 4h17v12H10l-6.5 4zM7 8.25h10v2.25H7zM7 12.25h6v2.25H7z"
+      "M12 3c5.5 0 10 3.7 10 8.5S17.5 20 12 20c-.9 0-1.8-.1-2.6-.3L3.7 22l1-5.5A8.2 8.2 0 0 1 2 11.5C2 6.7 6.5 3 12 3zM8 10.5a1 1 0 1 0 0 2 1 1 0 1 0 0-2zM12 10.5a1 1 0 1 0 0 2 1 1 0 1 0 0-2zM16 10.5a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3805,13 +2426,9 @@
   {
     "name": "phone-filled",
     "category": "communication",
-    "tags": [
-      "phone",
-      "communication",
-      "filled"
-    ],
+    "tags": ["phone", "communication", "filled"],
     "paths": [
-      "M7 3h3.5l1.75 4.65-2.35 1.75a13.75 13.75 0 0 0 4.7 4.7l1.75-2.35L21 13.5V17a3.5 3.5 0 0 1-3.75 3.5C9.5 20.1 3.9 14.5 3.5 6.75A3.5 3.5 0 0 1 7 3z"
+      "M6.5 3h3.4l1.75 4.9-2 1.55a13.3 13.3 0 0 0 4.9 4.9l1.55-2L21 14.1v3.4a3.5 3.5 0 0 1-3.8 3.5C9 20.6 3.4 15 3 6.8A3.5 3.5 0 0 1 6.5 3z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3819,13 +2436,9 @@
   {
     "name": "video-filled",
     "category": "communication",
-    "tags": [
-      "video",
-      "communication",
-      "filled"
-    ],
+    "tags": ["video", "communication", "filled"],
     "paths": [
-      "M3 6h13.5v12H3zM16.5 9.35 21 6.5v11l-4.5-2.85z"
+      "M6 4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4zM19 9l3-1.8v9.6L19 15z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3833,13 +2446,9 @@
   {
     "name": "mic-filled",
     "category": "communication",
-    "tags": [
-      "mic",
-      "communication",
-      "filled"
-    ],
+    "tags": ["mic", "communication", "filled"],
     "paths": [
-      "M8 3.5a4 4 0 0 1 8 0v7a4 4 0 0 1-8 0zM4.5 9.75H7v.75a5 5 0 0 0 10 0v-.75h2.5v.75a7.5 7.5 0 0 1-6.25 7.4v2.1H17V22H7v-2.5h3.75v-2.1A7.5 7.5 0 0 1 4.5 10.5z"
+      "M8 6a4 4 0 0 1 8 0v5a4 4 0 0 1-8 0zM5 10.5h2.5v.5a4.5 4.5 0 0 0 9 0v-.5H19V11a7 7 0 0 1-5.75 6.88V19.5H17V22H7v-2.5h3.75v-1.62A7 7 0 0 1 5 11z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3847,14 +2456,9 @@
   {
     "name": "mic-off-filled",
     "category": "communication",
-    "tags": [
-      "mic-off",
-      "communication",
-      "off",
-      "filled"
-    ],
+    "tags": ["mic-off", "communication", "off", "filled"],
     "paths": [
-      "M8 3.5a4 4 0 0 1 8 0v7a4 4 0 0 1-8 0zM4.5 9.75H7v.75a5 5 0 0 0 10 0v-.75h2.5v.75a7.5 7.5 0 0 1-6.25 7.4v2.1H17V22H7v-2.5h3.75v-2.1A7.5 7.5 0 0 1 4.5 10.5zM3.3 4.65 4.65 3.3 20.7 19.35l-1.35 1.35z"
+      "M6 6a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0zM4 10h2v1a3 3 0 0 0 6 0v-1h2v1a5 5 0 0 1-4 4.9V19h3v2H5v-2h3v-3.1A5 5 0 0 1 4 11zM15.5 9l1.5-1.5 2 2 2-2L22.5 9l-2 2 2 2-1.5 1.5-2-2-2 2-1.5-1.5 2-2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3862,13 +2466,9 @@
   {
     "name": "camera-filled",
     "category": "communication",
-    "tags": [
-      "camera",
-      "communication",
-      "filled"
-    ],
+    "tags": ["camera", "communication", "filled"],
     "paths": [
-      "M3 7h4l2-3h6l2 3h4v13H3zm9 2.25a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5z"
+      "M5 6h2.5L9 4h6l1.5 2H19a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3zm7 3.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3876,14 +2476,9 @@
   {
     "name": "camera-off-filled",
     "category": "communication",
-    "tags": [
-      "camera-off",
-      "communication",
-      "off",
-      "filled"
-    ],
+    "tags": ["camera-off", "communication", "off", "filled"],
     "paths": [
-      "M3 7h4l2-3h6l2 3h4v13H3zm9 2.25a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM3.3 4.65 4.65 3.3 20.7 19.35l-1.35 1.35z"
+      "M5 6h2.5L9 4h6l1.5 2H19a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3zM9.8 9.9 12 12.1l2.2-2.2.9.9-2.2 2.2 2.2 2.2-.9.9-2.2-2.2-2.2 2.2-.9-.9 2.2-2.2-2.2-2.2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3891,14 +2486,9 @@
   {
     "name": "inbox-filled",
     "category": "communication",
-    "tags": [
-      "inbox",
-      "communication",
-      "mailbox",
-      "filled"
-    ],
+    "tags": ["inbox", "communication", "mailbox", "filled"],
     "paths": [
-      "M3 4h18v16H3zm2.75 2.75v8.5h4l1.5 2h1.5l1.5-2h4v-8.5z"
+      "M6 4h12a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4zm0 3a1 1 0 0 0-1 1v6h3.5l2 2h3l2-2H19V8a1 1 0 0 0-1-1z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3906,28 +2496,19 @@
   {
     "name": "mention-filled",
     "category": "communication",
-    "tags": [
-      "mention",
-      "communication",
-      "filled"
-    ],
+    "tags": ["mention", "communication", "filled"],
     "paths": [
-      "M12 3a9 9 0 1 0 9 9v2.5a1.5 1.5 0 0 1-3 0V12a6 6 0 1 0-1.78 4.27 4.17 4.17 0 0 0 6.78-3.27V12a11 11 0 1 0-3.22 7.78l-1.77-1.77A8.5 8.5 0 1 1 12 3zm0 6a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+      "M18.3 18.3A9 9 0 1 1 21 12v2a2 2 0 0 1-4 0V8M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "bell-off-filled",
     "category": "communication",
-    "tags": [
-      "bell-off",
-      "communication",
-      "off",
-      "filled"
-    ],
+    "tags": ["bell-off", "communication", "off", "filled"],
     "paths": [
-      "M12 2.75a6.25 6.25 0 0 0-6.25 6.25v4.25l-2 3v2h16.5v-2l-2-3V9A6.25 6.25 0 0 0 12 2.75zM9.5 19.25a2.5 2.5 0 0 0 5 0zM3.3 4.65 4.65 3.3 20.7 19.35l-1.35 1.35z"
+      "M9 3a5 5 0 0 1 5 5v5l2 3v2H2v-2l2-3V8a5 5 0 0 1 5-5zM7 19h4a2 2 0 0 1-4 0zM15.5 9l1.5-1.5 2 2 2-2L22.5 9l-2 2 2 2-1.5 1.5-2-2-2 2-1.5-1.5 2-2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3935,13 +2516,9 @@
   {
     "name": "volume-filled",
     "category": "communication",
-    "tags": [
-      "volume",
-      "communication",
-      "filled"
-    ],
+    "tags": ["volume", "communication", "filled"],
     "paths": [
-      "M3 9.5h4.5l5-4v13l-5-4H3zm13.25.18a3.25 3.25 0 0 1 0 4.64v-4.64zm1.75-3.15a7.75 7.75 0 0 1 0 10.94l-1.75-1.75a5.25 5.25 0 0 0 0-7.44z"
+      "M3 9h4l6-4v14l-6-4H3zM16 8a5 5 0 0 1 0 8l-1.5-1.5a3 3 0 0 0 0-5zM18.5 5.5a9 9 0 0 1 0 13L17 17a7 7 0 0 0 0-10z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3949,14 +2526,9 @@
   {
     "name": "volume-off-filled",
     "category": "communication",
-    "tags": [
-      "volume-off",
-      "communication",
-      "off",
-      "filled"
-    ],
+    "tags": ["volume-off", "communication", "off", "filled"],
     "paths": [
-      "M3 9.5h4.5l5-4v13l-5-4H3zM14.8 8.25l1.75-1.75 2.45 2.45 2.45-2.45 1.75 1.75-2.45 2.45 2.45 2.45-1.75 1.75-2.45-2.45-2.45 2.45-1.75-1.75 2.45-2.45z"
+      "M3 9h4l6-4v14l-6-4H3zM15.5 9l1.5-1.5 2 2 2-2L22.5 9l-2 2 2 2-1.5 1.5-2-2-2 2-1.5-1.5 2-2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3964,13 +2536,9 @@
   {
     "name": "rss-filled",
     "category": "communication",
-    "tags": [
-      "rss",
-      "communication",
-      "filled"
-    ],
+    "tags": ["rss", "communication", "filled"],
     "paths": [
-      "M4.5 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 10v3a8 8 0 0 1 8 8h3c0-6.08-4.92-11-11-11zm0-7v3c8.84 0 16 7.16 16 16h3C22 11.5 13.5 3 3 3z"
+      "M4 3a17 17 0 0 1 17 17h-2.5A14.5 14.5 0 0 0 4 5.5zM4 9a11 11 0 0 1 11 11h-2.5A8.5 8.5 0 0 0 4 11.5zM4.5 17.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3978,11 +2546,7 @@
   {
     "name": "wifi-filled",
     "category": "communication",
-    "tags": [
-      "wifi",
-      "communication",
-      "filled"
-    ],
+    "tags": ["wifi", "communication", "filled"],
     "paths": [
       "M2 7.2a15.1 15.1 0 0 1 20 0l-1.75 1.95a12.45 12.45 0 0 0-16.5 0zm3.35 4.05a10.1 10.1 0 0 1 13.3 0L16.9 13.2a7.45 7.45 0 0 0-9.8 0zM8.7 15.3a5.1 5.1 0 0 1 6.6 0L12 19zM12 19a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5z"
     ],
@@ -3992,14 +2556,9 @@
   {
     "name": "wifi-off-filled",
     "category": "communication",
-    "tags": [
-      "wifi-off",
-      "communication",
-      "off",
-      "filled"
-    ],
+    "tags": ["wifi-off", "communication", "off", "filled"],
     "paths": [
-      "M2 7.2a15.1 15.1 0 0 1 20 0l-1.75 1.95a12.45 12.45 0 0 0-16.5 0zm3.35 4.05a10.1 10.1 0 0 1 13.3 0L16.9 13.2a7.45 7.45 0 0 0-9.8 0zM8.7 15.3a5.1 5.1 0 0 1 6.6 0L12 19zM12 19a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM3.3 4.65 4.65 3.3 20.7 19.35l-1.35 1.35z"
+      "M2.5 7.5a10 10 0 0 1 13 0L14 9.2a7.5 7.5 0 0 0-10 0zM5.5 12a6 6 0 0 1 7 0L11 13.7a3.8 3.8 0 0 0-4 0zM9 17a1.75 1.75 0 1 0 0 3.5A1.75 1.75 0 0 0 9 17zM15.5 9l1.5-1.5 2 2 2-2L22.5 9l-2 2 2 2-1.5 1.5-2-2-2 2-1.5-1.5 2-2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4007,14 +2566,9 @@
   {
     "name": "circle-check-filled",
     "category": "system",
-    "tags": [
-      "circle-check",
-      "system",
-      "check",
-      "filled"
-    ],
+    "tags": ["circle-check", "system", "check", "filled"],
     "paths": [
-      "M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zm-1.75 13.8L5.8 11.85l1.95-1.95 2.5 2.5 5.95-5.95 1.95 1.95z"
+      "M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zm-1.5 14L6.9 12.9l1.5-1.5 2.1 2.1 5.3-5.3 1.5 1.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4022,14 +2576,9 @@
   {
     "name": "circle-x-filled",
     "category": "system",
-    "tags": [
-      "circle-x",
-      "system",
-      "x",
-      "filled"
-    ],
+    "tags": ["circle-x", "system", "x", "filled"],
     "paths": [
-      "M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zM8.2 6.45 12 10.25l3.8-3.8 1.75 1.75-3.8 3.8 3.8 3.8-1.75 1.75-3.8-3.8-3.8 3.8-1.75-1.75 3.8-3.8-3.8-3.8z"
+      "M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zM8.5 7 12 10.5 15.5 7 17 8.5 13.5 12l3.5 3.5-1.5 1.5-3.5-3.5L8.5 17 7 15.5l3.5-3.5L7 8.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4037,12 +2586,7 @@
   {
     "name": "circle-info-filled",
     "category": "system",
-    "tags": [
-      "circle-info",
-      "system",
-      "info",
-      "filled"
-    ],
+    "tags": ["circle-info", "system", "info", "filled"],
     "paths": [
       "M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zM10.75 10.25h2.5v7h-2.5zM10.75 6.5h2.5V9h-2.5z"
     ],
@@ -4052,12 +2596,7 @@
   {
     "name": "circle-alert-filled",
     "category": "system",
-    "tags": [
-      "circle-alert",
-      "system",
-      "alert",
-      "filled"
-    ],
+    "tags": ["circle-alert", "system", "alert", "filled"],
     "paths": [
       "M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zM10.75 6.5h2.5v7h-2.5zM10.75 16h2.5v2.5h-2.5z"
     ],
@@ -4067,14 +2606,9 @@
   {
     "name": "shield-filled",
     "category": "system",
-    "tags": [
-      "shield",
-      "system",
-      "security",
-      "filled"
-    ],
+    "tags": ["shield", "system", "security", "filled"],
     "paths": [
-      "M12 2.5 20.25 5v6.5c0 5.05-3.22 8.73-8.25 10.5-5.03-1.77-8.25-5.45-8.25-10.5V5z"
+      "M12 3 19.5 5.5v6c0 4.5-2.8 7.7-7.5 9.5-4.7-1.8-7.5-5-7.5-9.5v-6z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4082,14 +2616,9 @@
   {
     "name": "shield-check-filled",
     "category": "system",
-    "tags": [
-      "shield-check",
-      "system",
-      "check",
-      "filled"
-    ],
+    "tags": ["shield-check", "system", "check", "filled"],
     "paths": [
-      "M12 2.5 20.25 5v6.5c0 5.05-3.22 8.73-8.25 10.5-5.03-1.77-8.25-5.45-8.25-10.5V5zm-1.7 12.7-2.8-2.8-1.8 1.8 4.6 4.6 7.95-7.95-1.8-1.8z"
+      "M12 3 19.5 5.5v6c0 4.5-2.8 7.7-7.5 9.5-4.7-1.8-7.5-5-7.5-9.5v-6zm-1.5 13-3.2-3.2 1.5-1.5 1.7 1.7 4.7-4.7 1.5 1.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4097,14 +2626,9 @@
   {
     "name": "shield-off-filled",
     "category": "system",
-    "tags": [
-      "shield-off",
-      "system",
-      "off",
-      "filled"
-    ],
+    "tags": ["shield-off", "system", "off", "filled"],
     "paths": [
-      "M3.05 3.05 21 21l-1.75 1.75-3.05-3.05A16.3 16.3 0 0 1 12 22c-5.03-1.77-8.25-5.45-8.25-10.5V5.78L1.3 3.3zM12 2.5 20.25 5v6.5c0 2.2-.62 4.08-1.73 5.62L7.75 6.35V5z"
+      "M9.5 3 16 5.5V11c0 4.5-2.5 7.7-6.5 9C5.5 18.7 3 15.5 3 11V5.5zM15.5 9l1.5-1.5 2 2 2-2L22.5 9l-2 2 2 2-1.5 1.5-2-2-2 2-1.5-1.5 2-2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4112,14 +2636,9 @@
   {
     "name": "key-filled",
     "category": "system",
-    "tags": [
-      "key",
-      "system",
-      "access",
-      "filled"
-    ],
+    "tags": ["key", "system", "access", "filled"],
     "paths": [
-      "M8.5 3a5.5 5.5 0 0 0-3.9 9.4L15.45 23l2.25-2.25-2-2 2-2-2-2 2-2-3.2-3.2A5.5 5.5 0 0 0 8.5 3zm0 3a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"
+      "M8 6a5 5 0 1 0 4.6 7H15v3h3v-3h3V9h-8.4A5 5 0 0 0 8 6zM8 9a2 2 0 1 1 0 4 2 2 0 1 1 0-4z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4127,14 +2646,9 @@
   {
     "name": "password-filled",
     "category": "system",
-    "tags": [
-      "password",
-      "system",
-      "credential",
-      "filled"
-    ],
+    "tags": ["password", "system", "credential", "filled"],
     "paths": [
-      "M3 5.5h18v13H3zm4.25 4.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5zm4.75 0a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5zm4.75 0a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5z"
+      "M6 5h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3zm2 5.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zm4 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zm4 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4142,13 +2656,9 @@
   {
     "name": "login-filled",
     "category": "system",
-    "tags": [
-      "login",
-      "system",
-      "filled"
-    ],
+    "tags": ["login", "system", "filled"],
     "paths": [
-      "M3 3h9v2.75H5.75v12.5H12V21H3zM15.25 6l6 6-6 6-1.95-1.95 2.67-2.67H8v-2.75h7.97L13.3 7.95z"
+      "M6 3h5v2.5H6a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 .5.5h5V21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3zM9 10.75h7V8l4 4-4 4v-2.75H9z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4156,14 +2666,9 @@
   {
     "name": "user-plus-filled",
     "category": "system",
-    "tags": [
-      "user-plus",
-      "system",
-      "plus",
-      "filled"
-    ],
+    "tags": ["user-plus", "system", "plus", "filled"],
     "paths": [
-      "M9.5 2.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM9.5 13.5c-4.3 0-7 2.18-7 6.5v1.5h14V20c0-.95-.14-1.8-.4-2.55H13.5v-2.5h2.6v-2.6h2.5v2.6h2.6v2.5h-2.6v2.6h-2.5v-2.6h-.53c-1.2-2.6-3.27-3.95-6.12-3.95z"
+      "M9 3a4 4 0 1 0 0 8 4 4 0 1 0 0-8zM9 13c-4 0-6.5 2.5-6.5 6.5V21h13v-1.5C15.5 15.5 13 13 9 13zM17.5 8.5H20V11h2.5v2.5H20V16h-2.5v-2.5H15V11h2.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4171,14 +2676,9 @@
   {
     "name": "user-minus-filled",
     "category": "system",
-    "tags": [
-      "user-minus",
-      "system",
-      "minus",
-      "filled"
-    ],
+    "tags": ["user-minus", "system", "minus", "filled"],
     "paths": [
-      "M9.5 2.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM9.5 13.5c-4.3 0-7 2.18-7 6.5v1.5h14V20c0-.95-.14-1.8-.4-2.55H14v-2.5h7v2.5h-4.9c-1.2-2.6-3.27-3.95-6.12-3.95z"
+      "M9.5 2.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM9.5 13.5c-4.3 0-7 2.18-7 6.5v1.5H15V20c0-4.32-1.8-6.5-5.5-6.5zM16 10.75h5v2.5h-5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4186,14 +2686,9 @@
   {
     "name": "user-check-filled",
     "category": "system",
-    "tags": [
-      "user-check",
-      "system",
-      "check",
-      "filled"
-    ],
+    "tags": ["user-check", "system", "check", "filled"],
     "paths": [
-      "M9.5 2.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM9.5 13.5c-4.3 0-7 2.18-7 6.5v1.5h14V20c0-.87-.12-1.65-.34-2.36l2.84 2.84 5.25-5.25-1.75-1.75-3.5 3.5-2.15-2.15-1.75 1.75.92.92c-1.28-2.63-3.35-4-6.08-4z"
+      "M9.5 2.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM9.5 13.5c-4.3 0-7 2.18-7 6.5v1.5H16V20c0-4.32-2.7-6.5-6.5-6.5zM16 12.5l1.5-1.5 1.5 1.5 2.5-2.5 1.5 1.5-4 4z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4201,14 +2696,9 @@
   {
     "name": "user-x-filled",
     "category": "system",
-    "tags": [
-      "user-x",
-      "system",
-      "x",
-      "filled"
-    ],
+    "tags": ["user-x", "system", "x", "filled"],
     "paths": [
-      "M9.5 2.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM9.5 13.5c-4.3 0-7 2.18-7 6.5v1.5h14V20c0-.87-.12-1.65-.34-2.36l2.09-2.09-2.4-2.4 1.75-1.75 2.4 2.4 2.4-2.4 1.75 1.75-2.4 2.4 2.4 2.4-1.75 1.75-2.4-2.4-2.15 2.15c-1.28-2.63-3.35-4-6.08-4z"
+      "M9.5 2.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM9.5 13.5c-4.3 0-7 2.18-7 6.5v1.5H16V20c0-4.32-2.7-6.5-6.5-6.5zM16 11.5l1.5-1.5 1.5 1.5 1.5-1.5 1.5 1.5-1.5 1.5 1.5 1.5-1.5 1.5-1.5-1.5-1.5 1.5-1.5-1.5 1.5-1.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4216,11 +2706,7 @@
   {
     "name": "group-filled",
     "category": "system",
-    "tags": [
-      "group",
-      "system",
-      "filled"
-    ],
+    "tags": ["group", "system", "filled"],
     "paths": [
       "M8 3a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 8 3zm7.9 1.25a3.1 3.1 0 0 1 0 6.2h-1.3a5.55 5.55 0 0 0-1.15-6.2zM8 12.5c-4.2 0-7 2.15-7 6.5v2h14v-2c0-4.35-2.8-6.5-7-6.5zm8.8.5c3.45.4 5.2 2.32 5.2 5.75V21h-4v-2c0-2.4-.8-4.33-2.3-5.78z"
     ],
@@ -4230,12 +2716,7 @@
   {
     "name": "database-filled",
     "category": "system",
-    "tags": [
-      "database",
-      "system",
-      "storage",
-      "filled"
-    ],
+    "tags": ["database", "system", "storage", "filled"],
     "paths": [
       "M12 2.5c-5.25 0-8.5 1.5-8.5 3.75V18c0 2.25 3.25 3.75 8.5 3.75s8.5-1.5 8.5-3.75V6.25C20.5 4 17.25 2.5 12 2.5zm0 2.5c3.55 0 5.65.8 5.98 1.25C17.65 6.7 15.55 7.5 12 7.5s-5.65-.8-5.98-1.25C6.35 5.8 8.45 5 12 5zm5.98 5.75C17.65 11.2 15.55 12 12 12s-5.65-.8-5.98-1.25v-1.9c1.55.8 3.82 1.15 5.98 1.15s4.43-.35 5.98-1.15zm0 5.75C17.65 16.95 15.55 17.75 12 17.75s-5.65-.8-5.98-1.25v-1.9c1.55.8 3.82 1.15 5.98 1.15s4.43-.35 5.98-1.15z"
     ],
@@ -4245,11 +2726,7 @@
   {
     "name": "server-filled",
     "category": "system",
-    "tags": [
-      "server",
-      "system",
-      "filled"
-    ],
+    "tags": ["server", "system", "filled"],
     "paths": [
       "M3 3.5h18v7H3zm3 2.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM3 13.5h18v7H3zm3 2.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"
     ],
@@ -4259,12 +2736,7 @@
   {
     "name": "cloud-filled",
     "category": "system",
-    "tags": [
-      "cloud",
-      "system",
-      "remote",
-      "filled"
-    ],
+    "tags": ["cloud", "system", "remote", "filled"],
     "paths": [
       "M6.2 19.5h11.2a4.6 4.6 0 0 0 .86-9.12A6.5 6.5 0 0 0 6.5 8.17 5.7 5.7 0 0 0 6.2 19.5z"
     ],
@@ -4274,12 +2746,7 @@
   {
     "name": "cloud-upload-filled",
     "category": "system",
-    "tags": [
-      "cloud-upload",
-      "system",
-      "upload",
-      "filled"
-    ],
+    "tags": ["cloud-upload", "system", "upload", "filled"],
     "paths": [
       "M6.2 19.5h11.2a4.6 4.6 0 0 0 .86-9.12A6.5 6.5 0 0 0 6.5 8.17 5.7 5.7 0 0 0 6.2 19.5zM10.75 13.25 12 12l1.25 1.25v4.25h-2.5zM10.75 13.25 12 12l1.25 1.25 1.75-1.75L12 8.72l-2.75 2.75z"
     ],
@@ -4289,12 +2756,7 @@
   {
     "name": "cloud-download-filled",
     "category": "system",
-    "tags": [
-      "cloud-download",
-      "system",
-      "download",
-      "filled"
-    ],
+    "tags": ["cloud-download", "system", "download", "filled"],
     "paths": [
       "M6.2 19.5h11.2a4.6 4.6 0 0 0 .86-9.12A6.5 6.5 0 0 0 6.5 8.17 5.7 5.7 0 0 0 6.2 19.5zM10.75 9.75h2.5V14L14.5 12.75l1.75 1.75L12 18.78 7.75 14.5l1.75-1.75L10.75 14z"
     ],
@@ -4304,14 +2766,9 @@
   {
     "name": "hard-drive-filled",
     "category": "system",
-    "tags": [
-      "hard-drive",
-      "system",
-      "drive",
-      "filled"
-    ],
+    "tags": ["hard-drive", "system", "drive", "filled"],
     "paths": [
-      "M3 5.5h18l2 13h-22zm3.25 6.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zm4.75 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zm4.75 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"
+      "M3.3 6.125h17.4l2.2 11.75H1.1zM5 12.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 1 0 0-2.2zM9 12.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 1 0 0-2.2zM13 12.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 1 0 0-2.2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4319,11 +2776,7 @@
   {
     "name": "cpu-filled",
     "category": "system",
-    "tags": [
-      "cpu",
-      "system",
-      "filled"
-    ],
+    "tags": ["cpu", "system", "filled"],
     "paths": [
       "M7 7h10v10H7zM3 8.5h3v2.5H3zM3 13h3v2.5H3zM18 8.5h3v2.5h-3zM18 13h3v2.5h-3zM8.5 3h2.5v3H8.5zM13 3h2.5v3H13zM8.5 18h2.5v3H8.5zM13 18h2.5v3H13z"
     ],
@@ -4333,11 +2786,7 @@
   {
     "name": "terminal-filled",
     "category": "system",
-    "tags": [
-      "terminal",
-      "system",
-      "filled"
-    ],
+    "tags": ["terminal", "system", "filled"],
     "paths": [
       "M3 4h18v16H3zm3.25 3.25L10.5 12l-4.25 4.75 1.9 1.7L13.9 12 8.15 5.55zM14 15.75h4.75v2.5H14z"
     ],
@@ -4347,11 +2796,7 @@
   {
     "name": "code-filled",
     "category": "system",
-    "tags": [
-      "code",
-      "system",
-      "filled"
-    ],
+    "tags": ["code", "system", "filled"],
     "paths": [
       "M9 4 2.5 12 9 20l1.9-1.55L5.65 12l5.25-6.45zM15 4l-1.9 1.55L18.35 12l-5.25 6.45L15 20l6.5-8z"
     ],
@@ -4361,11 +2806,7 @@
   {
     "name": "bug-filled",
     "category": "system",
-    "tags": [
-      "bug",
-      "system",
-      "filled"
-    ],
+    "tags": ["bug", "system", "filled"],
     "paths": [
       "M9.5 6.25a2.5 2.5 0 0 1 5 0v1.05A5.5 5.5 0 0 1 17.5 12v3a5.5 5.5 0 0 1-11 0v-3a5.5 5.5 0 0 1 3-4.7zM3 8.75h3v2.5H3zM18 8.75h3v2.5h-3zM3 15.25h3v2.5H3zM18 15.25h3v2.5h-3zM8.5 11h7v2.5h-7z"
     ],
@@ -4375,53 +2816,31 @@
   {
     "name": "zap-filled",
     "category": "system",
-    "tags": [
-      "zap",
-      "system",
-      "filled"
-    ],
-    "paths": [
-      "M13.25 2 4.5 13h6.25l-1 9 8.75-11H12.25z"
-    ],
+    "tags": ["zap", "system", "filled"],
+    "paths": ["M13.25 2 4.5 13h6.25l-1 9 8.75-11H12.25z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "activity-filled",
     "category": "system",
-    "tags": [
-      "activity",
-      "system",
-      "filled"
-    ],
-    "paths": [
-      "M2.5 10.75H6l2-6 4 14 2.2-8h7.3v2.5h-5.4L12 22.5l-4-14-1 3.75H2.5z"
-    ],
+    "tags": ["activity", "system", "filled"],
+    "paths": ["M3 12h4l2-6 4 12 2-6h6"],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "currentColor"
   },
   {
     "name": "chart-filled",
     "category": "system",
-    "tags": [
-      "chart",
-      "system",
-      "filled"
-    ],
-    "paths": [
-      "M3 19h18v2.5H3zM5 9h4v10H5zM10 4h4v15h-4zM15 11h4v8h-4z"
-    ],
+    "tags": ["chart", "system", "filled"],
+    "paths": ["M3 19h18v2.5H3zM5 9h4v10H5zM10 4h4v15h-4zM15 11h4v8h-4z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "analytics-filled",
     "category": "system",
-    "tags": [
-      "analytics",
-      "system",
-      "filled"
-    ],
+    "tags": ["analytics", "system", "filled"],
     "paths": [
       "M3 3h2.75v15.25H21V21H3zM7.25 15.1l3.35-4.47 3.1 2.32 5.4-6.75 2.15 1.72-6.9 8.63-3.2-2.4-2.25 3z"
     ],
@@ -4431,12 +2850,7 @@
   {
     "name": "file-plus-filled",
     "category": "file",
-    "tags": [
-      "file-plus",
-      "file",
-      "plus",
-      "filled"
-    ],
+    "tags": ["file-plus", "file", "plus", "filled"],
     "paths": [
       "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM10.75 12h2.5v2.75h2.75v2.5h-2.75V20h-2.5v-2.75H8v-2.5h2.75z"
     ],
@@ -4446,27 +2860,15 @@
   {
     "name": "file-minus-filled",
     "category": "file",
-    "tags": [
-      "file-minus",
-      "file",
-      "minus",
-      "filled"
-    ],
-    "paths": [
-      "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM8 14.75h8v2.5H8z"
-    ],
+    "tags": ["file-minus", "file", "minus", "filled"],
+    "paths": ["M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM8 14.75h8v2.5H8z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "file-check-filled",
     "category": "file",
-    "tags": [
-      "file-check",
-      "file",
-      "check",
-      "filled"
-    ],
+    "tags": ["file-check", "file", "check", "filled"],
     "paths": [
       "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM8.35 15.15l2.15 2.15 4.65-4.65 1.75 1.75-6.4 6.4-3.9-3.9z"
     ],
@@ -4476,14 +2878,9 @@
   {
     "name": "file-x-filled",
     "category": "file",
-    "tags": [
-      "file-x",
-      "file",
-      "x",
-      "filled"
-    ],
+    "tags": ["file-x", "file", "x", "filled"],
     "paths": [
-      "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM8.5 13l1.75-1.75 2.25 2.25 2.25-2.25L16.5 13l-2.25 2.25 2.25 2.25-1.75 1.75-2.25-2.25-2.25 2.25-1.75-1.75 2.25-2.25z"
+      "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM8.5 12.2 9.7 11l2.3 2.3 2.3-2.3 1.2 1.2-2.3 2.3 2.3 2.3-1.2 1.2-2.3-2.3L9.7 18l-1.2-1.2 2.3-2.3z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4491,12 +2888,7 @@
   {
     "name": "file-text-filled",
     "category": "file",
-    "tags": [
-      "file-text",
-      "file",
-      "text",
-      "filled"
-    ],
+    "tags": ["file-text", "file", "text", "filled"],
     "paths": [
       "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM8 12h8v2.25H8zM8 16h8v2.25H8z"
     ],
@@ -4506,12 +2898,7 @@
   {
     "name": "file-code-filled",
     "category": "file",
-    "tags": [
-      "file-code",
-      "file",
-      "code",
-      "filled"
-    ],
+    "tags": ["file-code", "file", "code", "filled"],
     "paths": [
       "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM10 12l-2.75 3L10 18l1.6-1.45L10.2 15l1.4-1.55zM14 12l-1.6 1.45 1.4 1.55-1.4 1.55L14 18l2.75-3z"
     ],
@@ -4521,12 +2908,7 @@
   {
     "name": "file-image-filled",
     "category": "file",
-    "tags": [
-      "file-image",
-      "file",
-      "image",
-      "filled"
-    ],
+    "tags": ["file-image", "file", "image", "filled"],
     "paths": [
       "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM7.5 18l3.1-3.1 2.15 2.15 1.75-1.75L16.5 18zM10 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"
     ],
@@ -4536,12 +2918,7 @@
   {
     "name": "file-video-filled",
     "category": "file",
-    "tags": [
-      "file-video",
-      "file",
-      "video",
-      "filled"
-    ],
+    "tags": ["file-video", "file", "video", "filled"],
     "paths": [
       "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM8 12h5.5v6H8zm5.5 1.5 3-1.5v6l-3-1.5z"
     ],
@@ -4551,14 +2928,9 @@
   {
     "name": "file-audio-filled",
     "category": "file",
-    "tags": [
-      "file-audio",
-      "file",
-      "audio",
-      "filled"
-    ],
+    "tags": ["file-audio", "file", "audio", "filled"],
     "paths": [
-      "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM10 12v5.5a2 2 0 1 1-1.75-2v-5l6-1.5v6.5a2 2 0 1 1-1.75-2V11z"
+      "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM14 9.5h2v.8c1.5.2 2.2 1.1 2.2 2.7-.7-.7-1.4-1.1-2.2-1.2v4.1c0 1.7-1.6 2.7-3.25 2.7-1.45 0-2.45-.8-2.45-1.95s1-1.95 2.45-1.95c.45 0 .85.05 1.25.2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4566,14 +2938,10 @@
   {
     "name": "file-archive-filled",
     "category": "file",
-    "tags": [
-      "file-archive",
-      "file",
-      "archive",
-      "filled"
-    ],
+    "tags": ["file-archive", "file", "archive", "filled"],
     "paths": [
-      "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM9 11h6v2H9zM9 14h6v2H9zM9 17h6v2H9z"
+      "M5 2.5h9l5 5V22H5zM14 4v4h4zM8 10.5h8v2H8zM9 13.5h6v5H9z",
+      "M11 15h2v1.5h-2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4581,14 +2949,9 @@
   {
     "name": "file-spreadsheet-filled",
     "category": "file",
-    "tags": [
-      "file-spreadsheet",
-      "file",
-      "spreadsheet",
-      "filled"
-    ],
+    "tags": ["file-spreadsheet", "file", "spreadsheet", "filled"],
     "paths": [
-      "M6 3.5h8l4 4v13H6zM14 3.5v4h4zM8.25 11h2v2h-2zM11 11h2v2h-2zM13.75 11h2v2h-2zM8.25 13.75h2v2h-2zM11 13.75h2v2h-2zM13.75 13.75h2v2h-2zM8.25 16.5h2v2h-2zM11 16.5h2v2h-2zM13.75 16.5h2v2h-2z"
+      "M5 2.5h9l5 5V22H5zM14 4v4h4zM8 10.5h2.5v2H8zM11.75 10.5H16v2h-4.25zM8 13.75h2.5v2H8zM11.75 13.75H16v2h-4.25zM8 17h2.5v2H8zM11.75 17H16v2h-4.25z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4596,28 +2959,17 @@
   {
     "name": "files-filled",
     "category": "file",
-    "tags": [
-      "files",
-      "file",
-      "filled"
-    ],
-    "paths": [
-      "M7 5h12v14H7zM4 4h11.5v2.5H6.5V16H4z"
-    ],
+    "tags": ["files", "file", "filled"],
+    "paths": ["M7 5h12v14H7zM4 4h11.5v2.5H6.5V16H4z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "folder-plus-filled",
     "category": "file",
-    "tags": [
-      "folder-plus",
-      "file",
-      "plus",
-      "filled"
-    ],
+    "tags": ["folder-plus", "file", "plus", "filled"],
     "paths": [
-      "M3.5 6h6l2 2h9v11h-17zM10.75 11h2.5v2.5h2.5V16h-2.5v2.5h-2.5V16h-2.5v-2.5h2.5z"
+      "M2.625 5.125h7.25l2 2h9.5v12.75H2.625zM11.125 10.5h1.75v2.125H15v1.75h-2.125V16.5h-1.75v-2.125H9v-1.75h2.125z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4625,29 +2977,17 @@
   {
     "name": "folder-minus-filled",
     "category": "file",
-    "tags": [
-      "folder-minus",
-      "file",
-      "minus",
-      "filled"
-    ],
-    "paths": [
-      "M3.5 6h6l2 2h9v11h-17zM9.5 12.25h5v2.5h-5z"
-    ],
+    "tags": ["folder-minus", "file", "minus", "filled"],
+    "paths": ["M2.625 5.125h7.25l2 2h9.5v12.75H2.625zM9 12.625h6v1.75H9z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "folder-check-filled",
     "category": "file",
-    "tags": [
-      "folder-check",
-      "file",
-      "check",
-      "filled"
-    ],
+    "tags": ["folder-check", "file", "check", "filled"],
     "paths": [
-      "M3.5 6h6l2 2h9v11h-17zM8.15 14.1l1.75 1.75 4-4 1.75 1.75-5.75 5.75-3.5-3.5z"
+      "M2.625 5.125h7.25l2 2h9.5v12.75H2.625zM7.3 14l1.4-1.4 1.5 1.5 4.1-4.1 1.4 1.4-5.5 5.8z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4655,14 +2995,9 @@
   {
     "name": "folder-x-filled",
     "category": "file",
-    "tags": [
-      "folder-x",
-      "file",
-      "x",
-      "filled"
-    ],
+    "tags": ["folder-x", "file", "x", "filled"],
     "paths": [
-      "M3.5 6h6l2 2h9v11h-17zM8.5 12.5l1.75-1.75 1.75 1.75 1.75-1.75 1.75 1.75-1.75 1.75 1.75 1.75-1.75 1.75L12 16l-1.75 1.75-1.75-1.75 1.75-1.75z"
+      "M2.625 5.125h7.25l2 2h9.5v12.75H2.625zM8.5 11.5l1.4-1.4 2.1 2.1 2.1-2.1 1.4 1.4-2.1 2.1 2.1 2.1-1.4 1.4-2.1-2.1-2.1 2.1-1.4-1.4 2.1-2.1z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4670,42 +3005,28 @@
   {
     "name": "folder-open-filled",
     "category": "file",
-    "tags": [
-      "folder-open",
-      "file",
-      "open",
-      "filled"
-    ],
-    "paths": [
-      "M3.5 6h6l2 2h9l-2 11h-15z"
-    ],
+    "tags": ["folder-open", "file", "open", "filled"],
+    "paths": ["M2.625 5.125h7.25l2 2h9.5L19 19.875H2.625z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "folder-tree-filled",
     "category": "file",
-    "tags": [
-      "folder-tree",
-      "file",
-      "tree",
-      "filled"
-    ],
+    "tags": ["folder-tree", "file", "tree", "filled"],
     "paths": [
-      "M4.25 4.25h7.5v6h-7.5zM12.25 13.75h7.5v6h-7.5zM7.25 10.25h2.5v2.25h4v1.5h2.5v-3.75h-6.5z"
+      "M2.625 3.625h4.25l1 1h4.5v5.75h-9.75z",
+      "M11.625 13.625h4.25l1 1h4.5v5.75h-9.75z",
+      "M6.625 10.375h1.75v1.25H17v2h-1.75v-.25H6.625z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "table-filled",
     "category": "file",
-    "tags": [
-      "table",
-      "file",
-      "data",
-      "filled"
-    ],
+    "tags": ["table", "file", "data", "filled"],
     "paths": [
       "M3.5 4.5h17v15h-17zM5.5 6.5h3v2h-3zM10.5 6.5h3v2h-3zM15.5 6.5h3v2h-3zM5.5 11h3v2h-3zM10.5 11h3v2h-3zM15.5 11h3v2h-3zM5.5 15.5h3v2h-3zM10.5 15.5h3v2h-3zM15.5 15.5h3v2h-3z"
     ],
@@ -4715,14 +3036,9 @@
   {
     "name": "list-check-filled",
     "category": "file",
-    "tags": [
-      "list-check",
-      "file",
-      "check",
-      "filled"
-    ],
+    "tags": ["list-check", "file", "check", "filled"],
     "paths": [
-      "M8 5h12v2H8zM8 11h12v2H8zM8 17h12v2H8zM3.25 5.5 4.75 7 7.25 4.5 8.75 6 4.75 10 1.75 7zM3.25 11.5 4.75 13l2.5-2.5 1.5 1.5-4 4-3-3zM3.25 17.5 4.75 19l2.5-2.5 1.5 1.5-4 4-3-3z"
+      "M9.5 5h10.5v2H9.5zM9.5 11h10.5v2H9.5zM9.5 17h10.5v2H9.5zM3.5 6.5 4.5 5.5 5 6l1.5-1.5 1 1L5 8zM3.5 12.5l1-1 0.5.5 1.5-1.5 1 1L5 14zM3.5 18.5l1-1 .5.5 1.5-1.5 1 1L5 20z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4730,14 +3046,9 @@
   {
     "name": "list-plus-filled",
     "category": "file",
-    "tags": [
-      "list-plus",
-      "file",
-      "plus",
-      "filled"
-    ],
+    "tags": ["list-plus", "file", "plus", "filled"],
     "paths": [
-      "M8 5h12v2H8zM8 11h12v2H8zM8 17h12v2H8zM3 5h2v2h2v2H5v2H3V9H1V7h2z"
+      "M7.125 4.75h13.75v2.5H7.125zM7.125 10.75h13.75v2.5H7.125zM7.125 16.75h13.75v2.5H7.125zM3 5h2v2h2v2H5v2H3V9H1V7h2z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4745,14 +3056,9 @@
   {
     "name": "list-minus-filled",
     "category": "file",
-    "tags": [
-      "list-minus",
-      "file",
-      "minus",
-      "filled"
-    ],
+    "tags": ["list-minus", "file", "minus", "filled"],
     "paths": [
-      "M8 5h12v2H8zM8 11h12v2H8zM8 17h12v2H8zM1 7h6v2H1z"
+      "M7.125 4.75h13.75v2.5H7.125zM7.125 10.75h13.75v2.5H7.125zM7.125 16.75h13.75v2.5H7.125zM1 7h6v2H1z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4760,12 +3066,7 @@
   {
     "name": "sort-descending-filled",
     "category": "file",
-    "tags": [
-      "sort-descending",
-      "file",
-      "descending",
-      "filled"
-    ],
+    "tags": ["sort-descending", "file", "descending", "filled"],
     "paths": [
       "M6 4h2v12l2.5-2.5 1.75 1.75L7 20.5l-5.25-5.25 1.75-1.75L6 16zM14 6h6v2.25h-6zM14 10.9h4v2.25h-4zM14 15.8h2v2.25h-2z"
     ],
@@ -4775,89 +3076,74 @@
   {
     "name": "funnel-filled",
     "category": "file",
-    "tags": [
-      "funnel",
-      "file",
-      "filter",
-      "filled"
-    ],
-    "paths": [
-      "M3.5 4.5h17L14 12.1v6.3l-4 1.75V12.1z"
-    ],
+    "tags": ["funnel", "file", "filter", "filled"],
+    "paths": ["M3.5 4.5h17L14 12.1v6.3l-4 1.75V12.1z"],
     "variant": "filled",
     "stroke": "none"
   },
   {
     "name": "calendar-plus-filled",
     "category": "file",
-    "tags": [
-      "calendar-plus",
-      "file",
-      "plus",
-      "filled"
-    ],
+    "tags": ["calendar-plus", "file", "plus", "filled"],
     "paths": [
-      "M4 4.5h16v16H4zM8 2h2v2.5H8zM14 2h2v2.5h-2zM6.5 10h11v8.5h-11zM10.75 12.5h2.5v2.25h2.25v2.5h-2.25v2.25h-2.5v-2.25H8.5v-2.5h2.25z"
+      "M4.125 4.125h15.75v16.75H4.125zM6 10h12v8.875H6z",
+      "M8.125 2.125h1.75v4.75h-1.75z",
+      "M14.125 2.125h1.75v4.75h-1.75z",
+      "M11.125 12.25h1.75v2.375h2.375v1.75h-2.375v2.125h-1.75v-2.125H8.75v-1.75h2.375z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "calendar-minus-filled",
     "category": "file",
-    "tags": [
-      "calendar-minus",
-      "file",
-      "minus",
-      "filled"
-    ],
+    "tags": ["calendar-minus", "file", "minus", "filled"],
     "paths": [
-      "M4 4.5h16v16H4zM8 2h2v2.5H8zM14 2h2v2.5h-2zM6.5 10h11v8.5h-11zM8.5 15.25h7v2.5h-7z"
+      "M4.125 4.125h15.75v16.75H4.125zM6 10h12v8.875H6z",
+      "M8.125 2.125h1.75v4.75h-1.75z",
+      "M14.125 2.125h1.75v4.75h-1.75z",
+      "M8.75 14.625h6.5v1.75h-6.5z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "calendar-check-filled",
     "category": "file",
-    "tags": [
-      "calendar-check",
-      "file",
-      "check",
-      "filled"
-    ],
+    "tags": ["calendar-check", "file", "check", "filled"],
     "paths": [
-      "M4 4.5h16v16H4zM8 2h2v2.5H8zM14 2h2v2.5h-2zM6.5 10h11v8.5h-11zM8.1 15.7l2 2 4.7-4.7 1.7 1.7-6.4 6.4-3.7-3.7z"
+      "M4.125 4.125h15.75v16.75H4.125zM6 10h12v8.875H6z",
+      "M8.125 2.125h1.75v4.75h-1.75z",
+      "M14.125 2.125h1.75v4.75h-1.75z",
+      "M7.9 15.2l1.25-1.25 2 2 3.7-3.7 1.25 1.25-4.95 4.95z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "calendar-x-filled",
     "category": "file",
-    "tags": [
-      "calendar-x",
-      "file",
-      "x",
-      "filled"
-    ],
+    "tags": ["calendar-x", "file", "x", "filled"],
     "paths": [
-      "M4 4.5h16v16H4zM8 2h2v2.5H8zM14 2h2v2.5h-2zM6.5 10h11v8.5h-11zM8.5 14l1.75-1.75 2.25 2.25 2.25-2.25L16.5 14l-2.25 2.25 2.25 2.25-1.75 1.75-2.25-2.25-2.25 2.25-1.75-1.75 2.25-2.25z"
+      "M4.125 4.125h15.75v16.75H4.125zM6 10h12v8.875H6z",
+      "M8.125 2.125h1.75v4.75h-1.75z",
+      "M14.125 2.125h1.75v4.75h-1.75z",
+      "M8.9 13.2l1.25-1.25L12 13.8l1.85-1.85 1.25 1.25-1.85 1.85 1.85 1.85-1.25 1.25L12 16.3l-1.85 1.85-1.25-1.25 1.85-1.85z"
     ],
     "variant": "filled",
-    "stroke": "none"
+    "stroke": "none",
+    "separatePaths": true
   },
   {
     "name": "clock-plus-filled",
     "category": "file",
-    "tags": [
-      "clock-plus",
-      "file",
-      "plus",
-      "filled"
-    ],
+    "tags": ["clock-plus", "file", "plus", "filled"],
     "paths": [
-      "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM10.75 8h2.5v4.3l3.15 1.9-1.3 2.1-4.35-2.7zM17.25 15.5h2v2.25h2.25v2h-2.25V22h-2v-2.25H15v-2h2.25z"
+      "M10.5 3A7.5 7.5 0 1 0 12 17.85C13 14 15 11.5 18 10.5A7.5 7.5 0 0 0 10.5 3zM9.4 6.7h2.2v4l2.5 1.6-1.2 1.8-3.5-2.2z",
+      "M17 14.75h2v2.25h2.25v2H19v2.25h-2V19h-2.25v-2H17z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -4865,14 +3151,120 @@
   {
     "name": "clock-x-filled",
     "category": "file",
-    "tags": [
-      "clock-x",
-      "file",
-      "x",
-      "filled"
-    ],
+    "tags": ["clock-x", "file", "x", "filled"],
     "paths": [
-      "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM10.75 8h2.5v4.3l3.15 1.9-1.3 2.1-4.35-2.7zM16.4 15l1.6-1.6 2.05 2.05 2.05-2.05 1.6 1.6-2.05 2.05 2.05 2.05-1.6 1.6-2.05-2.05-2.05 2.05-1.6-1.6 2.05-2.05z"
+      "M10.5 3A7.5 7.5 0 1 0 12 17.85C13 14 15 11.5 18 10.5A7.5 7.5 0 0 0 10.5 3zM9.4 6.7h2.2v4l2.5 1.6-1.2 1.8-3.5-2.2z",
+      "M15 16.4l1.4-1.4 1.6 1.6 1.6-1.6 1.4 1.4-1.6 1.6 1.6 1.6-1.4 1.4-1.6-1.6-1.6 1.6-1.4-1.4 1.6-1.6z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "bold-filled",
+    "category": "action",
+    "tags": ["format", "text weight", "filled"],
+    "paths": [
+      "M6 3.5h6.6c3.6 0 5.7 1.8 5.7 4.5 0 1.7-.9 3-2.35 3.7 1.9.6 3.05 2.05 3.05 4.15 0 3.05-2.25 4.65-5.85 4.65H6zM9 6.2v4.25h3.25c1.9 0 2.85-.8 2.85-2.15 0-1.4-.95-2.1-2.85-2.1zM9 13.2v4.6h3.75c2.05 0 3.05-.75 3.05-2.3 0-1.5-1-2.3-3.05-2.3z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "dollar-sign-filled",
+    "category": "system",
+    "tags": ["currency", "money", "filled"],
+    "paths": [
+      "M11 2.5h2v2.1c2.65.18 4.75 1.08 6.15 2.65l-2.05 1.8C16 7.85 14.3 7.2 12 7.2c-2.3 0-3.6.7-3.6 1.95 0 1.15 1.2 1.65 3.95 1.9 4.8.45 7.05 1.75 7.05 4.6 0 2.85-2.35 4.6-6.4 4.85v2H11v-2.05c-2.8-.2-5.1-1.25-6.55-3l2.1-1.75c1.3 1.5 3.15 2.3 5.5 2.3 2.75 0 4.2-.75 4.2-2.15 0-1.25-1.1-1.8-4.25-2.1-4.5-.45-6.75-1.8-6.75-4.55 0-2.75 2.15-4.45 5.75-4.65z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "eraser-filled",
+    "category": "action",
+    "tags": ["clear", "formatting", "filled"],
+    "paths": [
+      "M13.1 3.5a3 3 0 0 1 4.25 0l3.15 3.15a3 3 0 0 1 0 4.25L10.85 20.5H6.6l-3.1-3.1a3 3 0 0 1 0-4.25zM8.9 9.8l-3.45 3.45 5.3 5.3 3.45-3.45zM12 20.5h8.5v2H12z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "flip-horizontal-filled",
+    "category": "action",
+    "tags": ["mirror", "image", "filled"],
+    "paths": [
+      "M11 3.5h2v2.25h-2zM11 8.5h2v7h-2zM11 18.25h2v2.25h-2zM3.75 5.9 10 12l-6.25 6.1zM20.25 5.9 14 12l6.25 6.1z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "flip-vertical-filled",
+    "category": "action",
+    "tags": ["mirror", "image", "filled"],
+    "paths": [
+      "M3.5 11h2.25v2H3.5zM8.5 11h7v2h-7zM18.25 11h2.25v2h-2.25zM5.9 3.75 12 10l6.1-6.25zM5.9 20.25 12 14l6.1 6.25z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "image-filled",
+    "category": "system",
+    "tags": ["photo", "landscape", "filled"],
+    "paths": [
+      "M3.25 3.25h17.5v17.5H3.25zM5.75 5.75v12.5h12.5V5.75zM6.25 16.5l4.4-4.5 2.3 2.25 2.25-2.5 2.55 4.75zM8.75 8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 1 0 0-2.8z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "italic-filled",
+    "category": "action",
+    "tags": ["format", "text style", "filled"],
+    "paths": [
+      "M10.25 3.5h9.5V6h-3.25l-6.2 12h3.45v2.5h-9.5V18h3.25l6.2-12h-3.45z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "list-ordered-filled",
+    "category": "navigation",
+    "tags": ["numbered", "list", "filled"],
+    "paths": [
+      "M4 4l1.5-1v4M4 7h3M4 11a1.5 1.5 0 1 1 3 0c0 .7-.5 1.1-1 1.5L4 14h3M4.25 17.5H7l-1.5 1.5h1a1.25 1.25 0 0 1 0 2.5H4.25M10 5h10M10 12h10M10 19h10"
+    ],
+    "variant": "filled",
+    "stroke": "currentColor"
+  },
+  {
+    "name": "trending-down-filled",
+    "category": "system",
+    "tags": ["decrease", "chart", "filled"],
+    "paths": [
+      "M3.4 4 9 9.6l3.5-3.5 5.25 5.25V9h2.75v7.5H13v-2.75h2.9l-3.4-3.4L9 13.85 1.65 6.5z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "trending-up-filled",
+    "category": "system",
+    "tags": ["increase", "chart", "filled"],
+    "paths": [
+      "M1.65 17.5 9 10.15l3.5 3.5 3.4-3.4H13V7.5h7.5V15h-2.75v-2.35L12.5 17.9 9 14.4 3.4 20z"
+    ],
+    "variant": "filled",
+    "stroke": "none"
+  },
+  {
+    "name": "underline-filled",
+    "category": "action",
+    "tags": ["format", "text decoration", "filled"],
+    "paths": [
+      "M5.5 3.5h3v8c0 2.75 1.25 4 3.5 4s3.5-1.25 3.5-4v-8h3v8c0 4.5-2.45 6.75-6.5 6.75S5.5 16 5.5 11.5zM4 20h16v2H4z"
     ],
     "variant": "filled",
     "stroke": "none"

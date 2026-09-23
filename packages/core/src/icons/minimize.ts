@@ -4,5 +4,5 @@ export const iconMinimize = defineIcon({
   name: 'minimize',
   category: 'navigation',
   tags: ['minimize', 'navigation'],
-  paths: ['M4 9h7V4M20 9h-7V4M4 15h7v5M20 15h-7v5'],
+  paths: ['M4 6h16v12H4zM9 12h6'],
 });

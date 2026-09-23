@@ -4,9 +4,7 @@ export const iconShieldFilled = defineIcon({
   name: 'shield-filled',
   category: 'system',
   tags: ['shield', 'system', 'security', 'filled'],
-  paths: [
-    'M12 2.5 20.25 5v6.5c0 5.05-3.22 8.73-8.25 10.5-5.03-1.77-8.25-5.45-8.25-10.5V5z',
-  ],
+  paths: ['M12 3 19.5 5.5v6c0 4.5-2.8 7.7-7.5 9.5-4.7-1.8-7.5-5-7.5-9.5v-6z'],
   variant: 'filled',
   stroke: 'none',
 });

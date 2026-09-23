@@ -5,6 +5,6 @@ export const iconUserMinus = defineIcon({
   category: 'system',
   tags: ['user-minus', 'system', 'minus'],
   paths: [
-    'M15 20v-1a5 5 0 0 0-10 0v1M10 11a4 4 0 1 0 0-8a4 4 0 1 0 0 8zM16 12h6',
+    'M14.5 20v-1a5 5 0 0 0-10 0v1M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM16 12h5',
   ],
 });

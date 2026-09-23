@@ -5,7 +5,7 @@ export const iconQrCodeFilled = defineIcon({
   category: 'action',
   tags: ['qr-code', 'action', 'code', 'filled'],
   paths: [
-    'M3 3h8v8H3zM5.5 5.5h3v3h-3zM13 3h8v8h-8zM15.5 5.5h3v3h-3zM3 13h8v8H3zM5.5 15.5h3v3h-3zM13 13h3v3h-3zM18 13h3v5h-3zM15.5 18h2.5v3h-2.5zM18.5 18h2.5v3h-2.5z',
+    'M3 3h8v8H3zM5 5h4v4H5zM6 6h2v2H6zM13 3h8v8h-8zM15 5h4v4h-4zM16 6h2v2h-2zM3 13h8v8H3zM5 15h4v4H5zM6 16h2v2H6zM13 13h3v3h-3zM18 13h3v3h-3zM13 18h3v3h-3zM18 18h3v3h-3z',
   ],
   variant: 'filled',
   stroke: 'none',

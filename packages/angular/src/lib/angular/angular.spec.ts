@@ -80,4 +80,35 @@ describe('NeuralIcon', () => {
     expect(paths).toHaveLength(1);
     expect(paths[0]?.getAttribute('d')).toBe('M3 3h18v18H3z M8 8h8v8H8z');
   });
+
+  it('keeps independent Filled layers as separate paths', () => {
+    fixture.componentRef.setInput('icon', {
+      ...iconSearch,
+      name: 'layered-filled',
+      variant: 'filled',
+      separatePaths: true,
+      paths: ['M3 3h18v18H3z', 'M8 8h8v8H8z'],
+    });
+    fixture.detectChanges();
+
+    const paths = fixture.nativeElement.querySelectorAll('svg path');
+    expect(paths).toHaveLength(2);
+    expect(paths[0]?.getAttribute('d')).toBe('M3 3h18v18H3z');
+    expect(paths[1]?.getAttribute('d')).toBe('M8 8h8v8H8z');
+  });
+
+  it('keeps an intentionally stroked Filled glyph unfilled even with a closed path', () => {
+    fixture.componentRef.setInput('icon', {
+      ...iconSearch,
+      name: 'stroked-filled',
+      variant: 'filled',
+      stroke: 'currentColor',
+      paths: ['M4 4h16v16H4z'],
+    });
+    fixture.detectChanges();
+
+    const svg = fixture.nativeElement.querySelector('svg') as SVGElement;
+    expect(svg.getAttribute('fill')).toBe('none');
+    expect(svg.getAttribute('stroke')).toBe('currentColor');
+  });
 });

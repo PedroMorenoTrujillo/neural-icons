@@ -5,7 +5,7 @@ export const iconUnlinkFilled = defineIcon({
   category: 'navigation',
   tags: ['unlink', 'navigation', 'filled'],
   paths: [
-    'M4.5 3 21 19.5 19.5 21l-3.15-3.15A6 6 0 0 1 12.25 19h-3a6 6 0 0 1-4.42-10.05l1.95 1.95a3.25 3.25 0 0 0 2.47 5.35h3c.64 0 1.2-.18 1.7-.5l-2.2-2.2h-.5v-2.5h-2.5v-.5l-2.4-2.4L3 4.5zM15.25 5h3a6 6 0 0 1 4.42 10.05l-1.95-1.95a3.25 3.25 0 0 0-2.47-5.35h-3c-.64 0-1.2.18-1.7.5l-2.2-2.2c1.05-.7 2.34-1.05 3.95-1.05z',
+    'M9 5.5H7a6.5 6.5 0 0 0 0 13h2V16H7a4 4 0 0 1 0-8h2zM15 5.5h2a6.5 6.5 0 0 1 0 13h-2V16h2a4 4 0 0 0 0-8h-2z',
   ],
   variant: 'filled',
   stroke: 'none',

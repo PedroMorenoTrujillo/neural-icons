@@ -5,7 +5,7 @@ export const iconFolderCheckFilled = defineIcon({
   category: 'file',
   tags: ['folder-check', 'file', 'check', 'filled'],
   paths: [
-    'M3.5 6h6l2 2h9v11h-17zM8.15 14.1l1.75 1.75 4-4 1.75 1.75-5.75 5.75-3.5-3.5z',
+    'M2.625 5.125h7.25l2 2h9.5v12.75H2.625zM7.3 14l1.4-1.4 1.5 1.5 4.1-4.1 1.4 1.4-5.5 5.8z',
   ],
   variant: 'filled',
   stroke: 'none',

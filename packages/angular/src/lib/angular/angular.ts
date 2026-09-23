@@ -40,12 +40,12 @@ import {
       [attr.aria-label]="accessibleLabel()"
       [attr.aria-hidden]="accessibleLabel() ? null : 'true'"
     >
-      @if (icon().variant === 'filled' && canFill()) {
+      @if (icon().variant === 'filled' && canFill() && !icon().separatePaths) {
         <path [attr.d]="icon().paths.join(' ')" />
       } @else {
-      @for (path of icon().paths; track $index) {
-        <path [attr.d]="path" />
-      }
+        @for (path of icon().paths; track $index) {
+          <path [attr.d]="path" />
+        }
       }
     </svg>
   `,
@@ -82,8 +82,10 @@ export class NeuralIcon {
     () => strokeWidthValue(this.strokeWidth()) * 1.28,
   );
 
-  protected readonly canFill = computed(() =>
-    this.icon().paths.every((path) => path.trim().endsWith('z')),
+  protected readonly canFill = computed(
+    () =>
+      this.icon().stroke !== 'currentColor' &&
+      this.icon().paths.every((path) => path.trim().endsWith('z')),
   );
 }
 

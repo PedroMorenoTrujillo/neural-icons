@@ -5,7 +5,7 @@ export const iconVolumeOffFilled = defineIcon({
   category: 'communication',
   tags: ['volume-off', 'communication', 'off', 'filled'],
   paths: [
-    'M3 9.5h4.5l5-4v13l-5-4H3zM14.8 8.25l1.75-1.75 2.45 2.45 2.45-2.45 1.75 1.75-2.45 2.45 2.45 2.45-1.75 1.75-2.45-2.45-2.45 2.45-1.75-1.75 2.45-2.45z',
+    'M3 9h4l6-4v14l-6-4H3zM15.5 9l1.5-1.5 2 2 2-2L22.5 9l-2 2 2 2-1.5 1.5-2-2-2 2-1.5-1.5 2-2z',
   ],
   variant: 'filled',
   stroke: 'none',

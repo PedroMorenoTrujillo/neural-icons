@@ -45,6 +45,12 @@ for (const icon of specs) {
   ) {
     errors.push(`${icon.name}: stroke must be none or currentColor.`);
   }
+  if (
+    icon.separatePaths !== undefined &&
+    (icon.variant !== 'filled' || icon.separatePaths !== true)
+  ) {
+    errors.push(`${icon.name}: separatePaths is only valid for filled icons.`);
+  }
   if (!Array.isArray(icon.paths) || icon.paths.length === 0) {
     errors.push(`${icon.name}: at least one path is required.`);
     continue;

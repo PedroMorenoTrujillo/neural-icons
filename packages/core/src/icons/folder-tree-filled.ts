@@ -5,8 +5,11 @@ export const iconFolderTreeFilled = defineIcon({
   category: 'file',
   tags: ['folder-tree', 'file', 'tree', 'filled'],
   paths: [
-    'M4.25 4.25h7.5v6h-7.5zM12.25 13.75h7.5v6h-7.5zM7.25 10.25h2.5v2.25h4v1.5h2.5v-3.75h-6.5z',
+    'M2.625 3.625h4.25l1 1h4.5v5.75h-9.75z',
+    'M11.625 13.625h4.25l1 1h4.5v5.75h-9.75z',
+    'M6.625 10.375h1.75v1.25H17v2h-1.75v-.25H6.625z',
   ],
   variant: 'filled',
   stroke: 'none',
+  separatePaths: true,
 });

@@ -5,7 +5,7 @@ export const iconRouteFilled = defineIcon({
   category: 'navigation',
   tags: ['route', 'navigation', 'path', 'filled'],
   paths: [
-    'M4 21v-4.25c0-4.08 3.5-4.55 3.5-7.75S4 5.33 4 3.5V2h2.75v1.5c0 2.73 3.5 3.17 3.5 6.5 0 3.9-3.5 4.43-3.5 7.75V21zM9.5 3.5h8V1l4 4-4 4V6.5h-8z',
+    'M5 15.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM19 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM7 16.75h3.75v-11H17v2.5h-3.75v11H7z',
   ],
   variant: 'filled',
   stroke: 'none',

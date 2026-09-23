@@ -5,7 +5,7 @@ export const iconHardDriveFilled = defineIcon({
   category: 'system',
   tags: ['hard-drive', 'system', 'drive', 'filled'],
   paths: [
-    'M3 5.5h18l2 13h-22zm3.25 6.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zm4.75 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zm4.75 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z',
+    'M3.3 6.125h17.4l2.2 11.75H1.1zM5 12.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 1 0 0-2.2zM9 12.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 1 0 0-2.2zM13 12.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 1 0 0-2.2z',
   ],
   variant: 'filled',
   stroke: 'none',

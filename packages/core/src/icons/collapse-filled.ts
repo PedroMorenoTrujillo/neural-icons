@@ -4,9 +4,7 @@ export const iconCollapseFilled = defineIcon({
   name: 'collapse-filled',
   category: 'navigation',
   tags: ['collapse', 'navigation', 'filled'],
-  paths: [
-    'M4 4h5v2.5H6.5V9H4zM15 4h5v5h-2.5V6.5H15zM4 15h2.5v2.5H9V20H4zM17.5 15H20v5h-5v-2.5h2.5z',
-  ],
+  paths: ['M9 9H4V4M15 9h5V4M20 15h-5v5M4 15h5v5'],
   variant: 'filled',
-  stroke: 'none',
+  stroke: 'currentColor',
 });

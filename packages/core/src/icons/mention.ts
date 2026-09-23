@@ -5,6 +5,6 @@ export const iconMention = defineIcon({
   category: 'communication',
   tags: ['mention', 'communication'],
   paths: [
-    'M12 5a7 7 0 1 0 7 7v3a2 2 0 1 0 4 0v-3a11 11 0 1 0-3.2 7.8M16 12a4 4 0 1 1-8 0a4 4 0 1 1 8 0z',
+    'M18.3 18.3A9 9 0 1 1 21 12v2a2 2 0 0 1-4 0V8M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z',
   ],
 });

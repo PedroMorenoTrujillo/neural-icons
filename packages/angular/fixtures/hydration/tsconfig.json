@@ -1,0 +1,15 @@
+{
+  "extends": "../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../../../dist/out-tsc/angular-hydration",
+    "target": "es2022",
+    "module": "preserve",
+    "strict": true,
+    "types": ["node"]
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true,
+    "strictInjectionParameters": true
+  },
+  "include": ["*.ts"]
+}

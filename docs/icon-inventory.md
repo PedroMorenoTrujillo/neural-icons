@@ -192,6 +192,17 @@ Generated from `packages/core/icons/icons.json`. Do not edit by hand.
 | `calendar-x`               | file          | calendar-x, file, x                          |
 | `clock-plus`               | file          | clock-plus, file, plus                       |
 | `clock-x`                  | file          | clock-x, file, x                             |
+| `bold`                     | action        | format, text weight                          |
+| `dollar-sign`              | system        | currency, money                              |
+| `eraser`                   | action        | clear, formatting                            |
+| `flip-horizontal`          | action        | mirror, image                                |
+| `flip-vertical`            | action        | mirror, image                                |
+| `image`                    | system        | photo, landscape                             |
+| `italic`                   | action        | format, text style                           |
+| `list-ordered`             | navigation    | numbered, list                               |
+| `trending-down`            | system        | decrease, chart                              |
+| `trending-up`              | system        | increase, chart                              |
+| `underline`                | action        | format, text decoration                      |
 | `arrow-left-filled`        | navigation    | back, previous, filled                       |
 | `arrow-right-filled`       | navigation    | forward, next, filled                        |
 | `arrow-up-filled`          | navigation    | top, increase, filled                        |
@@ -380,5 +391,16 @@ Generated from `packages/core/icons/icons.json`. Do not edit by hand.
 | `calendar-x-filled`        | file          | calendar-x, file, x, filled                  |
 | `clock-plus-filled`        | file          | clock-plus, file, plus, filled               |
 | `clock-x-filled`           | file          | clock-x, file, x, filled                     |
+| `bold-filled`              | action        | format, text weight, filled                  |
+| `dollar-sign-filled`       | system        | currency, money, filled                      |
+| `eraser-filled`            | action        | clear, formatting, filled                    |
+| `flip-horizontal-filled`   | action        | mirror, image, filled                        |
+| `flip-vertical-filled`     | action        | mirror, image, filled                        |
+| `image-filled`             | system        | photo, landscape, filled                     |
+| `italic-filled`            | action        | format, text style, filled                   |
+| `list-ordered-filled`      | navigation    | numbered, list, filled                       |
+| `trending-down-filled`     | system        | decrease, chart, filled                      |
+| `trending-up-filled`       | system        | increase, chart, filled                      |
+| `underline-filled`         | action        | format, text decoration, filled              |
 
-Total: **376 icons**.
+Total: **398 icons**.

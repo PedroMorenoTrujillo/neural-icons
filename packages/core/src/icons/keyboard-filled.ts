@@ -5,7 +5,7 @@ export const iconKeyboardFilled = defineIcon({
   category: 'action',
   tags: ['keyboard', 'action', 'filled'],
   paths: [
-    'M2.5 4h19v16h-19zM5 7h2.5v2.5H5zM9 7h2.5v2.5H9zM13 7h2.5v2.5H13zM17 7h2.5v2.5H17zM5 11h2.5v2.5H5zM9 11h2.5v2.5H9zM13 11h2.5v2.5H13zM17 11h2.5v2.5H17zM5 15h14.5v2.5H5z',
+    'M3 5h18v14H3zM6.25 9.25h1.5v1.5h-1.5zM9.25 9.25h1.5v1.5h-1.5zM12.25 9.25h1.5v1.5h-1.5zM15.25 9.25h1.5v1.5h-1.5zM7 13.25h10v1.5H7z',
   ],
   variant: 'filled',
   stroke: 'none',

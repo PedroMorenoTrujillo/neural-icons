@@ -5,7 +5,7 @@ export const iconRssFilled = defineIcon({
   category: 'communication',
   tags: ['rss', 'communication', 'filled'],
   paths: [
-    'M4.5 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 10v3a8 8 0 0 1 8 8h3c0-6.08-4.92-11-11-11zm0-7v3c8.84 0 16 7.16 16 16h3C22 11.5 13.5 3 3 3z',
+    'M4 3a17 17 0 0 1 17 17h-2.5A14.5 14.5 0 0 0 4 5.5zM4 9a11 11 0 0 1 11 11h-2.5A8.5 8.5 0 0 0 4 11.5zM4.5 17.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4z',
   ],
   variant: 'filled',
   stroke: 'none',

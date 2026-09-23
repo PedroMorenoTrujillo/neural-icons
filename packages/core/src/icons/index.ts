@@ -186,6 +186,17 @@ import { iconCalendarCheck } from './calendar-check.js';
 import { iconCalendarX } from './calendar-x.js';
 import { iconClockPlus } from './clock-plus.js';
 import { iconClockX } from './clock-x.js';
+import { iconBold } from './bold.js';
+import { iconDollarSign } from './dollar-sign.js';
+import { iconEraser } from './eraser.js';
+import { iconFlipHorizontal } from './flip-horizontal.js';
+import { iconFlipVertical } from './flip-vertical.js';
+import { iconImage } from './image.js';
+import { iconItalic } from './italic.js';
+import { iconListOrdered } from './list-ordered.js';
+import { iconTrendingDown } from './trending-down.js';
+import { iconTrendingUp } from './trending-up.js';
+import { iconUnderline } from './underline.js';
 import { iconArrowLeftFilled } from './arrow-left-filled.js';
 import { iconArrowRightFilled } from './arrow-right-filled.js';
 import { iconArrowUpFilled } from './arrow-up-filled.js';
@@ -374,6 +385,17 @@ import { iconCalendarCheckFilled } from './calendar-check-filled.js';
 import { iconCalendarXFilled } from './calendar-x-filled.js';
 import { iconClockPlusFilled } from './clock-plus-filled.js';
 import { iconClockXFilled } from './clock-x-filled.js';
+import { iconBoldFilled } from './bold-filled.js';
+import { iconDollarSignFilled } from './dollar-sign-filled.js';
+import { iconEraserFilled } from './eraser-filled.js';
+import { iconFlipHorizontalFilled } from './flip-horizontal-filled.js';
+import { iconFlipVerticalFilled } from './flip-vertical-filled.js';
+import { iconImageFilled } from './image-filled.js';
+import { iconItalicFilled } from './italic-filled.js';
+import { iconListOrderedFilled } from './list-ordered-filled.js';
+import { iconTrendingDownFilled } from './trending-down-filled.js';
+import { iconTrendingUpFilled } from './trending-up-filled.js';
+import { iconUnderlineFilled } from './underline-filled.js';
 import type { NeuralIconDefinition } from '../lib/icon-definition.js';
 
 export { iconArrowLeft } from './arrow-left.js';
@@ -564,6 +586,17 @@ export { iconCalendarCheck } from './calendar-check.js';
 export { iconCalendarX } from './calendar-x.js';
 export { iconClockPlus } from './clock-plus.js';
 export { iconClockX } from './clock-x.js';
+export { iconBold } from './bold.js';
+export { iconDollarSign } from './dollar-sign.js';
+export { iconEraser } from './eraser.js';
+export { iconFlipHorizontal } from './flip-horizontal.js';
+export { iconFlipVertical } from './flip-vertical.js';
+export { iconImage } from './image.js';
+export { iconItalic } from './italic.js';
+export { iconListOrdered } from './list-ordered.js';
+export { iconTrendingDown } from './trending-down.js';
+export { iconTrendingUp } from './trending-up.js';
+export { iconUnderline } from './underline.js';
 export { iconArrowLeftFilled } from './arrow-left-filled.js';
 export { iconArrowRightFilled } from './arrow-right-filled.js';
 export { iconArrowUpFilled } from './arrow-up-filled.js';
@@ -752,6 +785,17 @@ export { iconCalendarCheckFilled } from './calendar-check-filled.js';
 export { iconCalendarXFilled } from './calendar-x-filled.js';
 export { iconClockPlusFilled } from './clock-plus-filled.js';
 export { iconClockXFilled } from './clock-x-filled.js';
+export { iconBoldFilled } from './bold-filled.js';
+export { iconDollarSignFilled } from './dollar-sign-filled.js';
+export { iconEraserFilled } from './eraser-filled.js';
+export { iconFlipHorizontalFilled } from './flip-horizontal-filled.js';
+export { iconFlipVerticalFilled } from './flip-vertical-filled.js';
+export { iconImageFilled } from './image-filled.js';
+export { iconItalicFilled } from './italic-filled.js';
+export { iconListOrderedFilled } from './list-ordered-filled.js';
+export { iconTrendingDownFilled } from './trending-down-filled.js';
+export { iconTrendingUpFilled } from './trending-up-filled.js';
+export { iconUnderlineFilled } from './underline-filled.js';
 
 export const neuralIcons = Object.freeze([
   iconArrowLeft,
@@ -942,6 +986,17 @@ export const neuralIcons = Object.freeze([
   iconCalendarX,
   iconClockPlus,
   iconClockX,
+  iconBold,
+  iconDollarSign,
+  iconEraser,
+  iconFlipHorizontal,
+  iconFlipVertical,
+  iconImage,
+  iconItalic,
+  iconListOrdered,
+  iconTrendingDown,
+  iconTrendingUp,
+  iconUnderline,
   iconArrowLeftFilled,
   iconArrowRightFilled,
   iconArrowUpFilled,
@@ -1130,6 +1185,17 @@ export const neuralIcons = Object.freeze([
   iconCalendarXFilled,
   iconClockPlusFilled,
   iconClockXFilled,
+  iconBoldFilled,
+  iconDollarSignFilled,
+  iconEraserFilled,
+  iconFlipHorizontalFilled,
+  iconFlipVerticalFilled,
+  iconImageFilled,
+  iconItalicFilled,
+  iconListOrderedFilled,
+  iconTrendingDownFilled,
+  iconTrendingUpFilled,
+  iconUnderlineFilled,
 ]) satisfies readonly NeuralIconDefinition[];
 
 export type NeuralIconName = (typeof neuralIcons)[number]['name'];

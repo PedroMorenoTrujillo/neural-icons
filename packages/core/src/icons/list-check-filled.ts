@@ -5,7 +5,7 @@ export const iconListCheckFilled = defineIcon({
   category: 'file',
   tags: ['list-check', 'file', 'check', 'filled'],
   paths: [
-    'M8 5h12v2H8zM8 11h12v2H8zM8 17h12v2H8zM3.25 5.5 4.75 7 7.25 4.5 8.75 6 4.75 10 1.75 7zM3.25 11.5 4.75 13l2.5-2.5 1.5 1.5-4 4-3-3zM3.25 17.5 4.75 19l2.5-2.5 1.5 1.5-4 4-3-3z',
+    'M9.5 5h10.5v2H9.5zM9.5 11h10.5v2H9.5zM9.5 17h10.5v2H9.5zM3.5 6.5 4.5 5.5 5 6l1.5-1.5 1 1L5 8zM3.5 12.5l1-1 0.5.5 1.5-1.5 1 1L5 14zM3.5 18.5l1-1 .5.5 1.5-1.5 1 1L5 20z',
   ],
   variant: 'filled',
   stroke: 'none',

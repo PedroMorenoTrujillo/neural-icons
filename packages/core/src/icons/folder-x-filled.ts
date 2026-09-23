@@ -5,7 +5,7 @@ export const iconFolderXFilled = defineIcon({
   category: 'file',
   tags: ['folder-x', 'file', 'x', 'filled'],
   paths: [
-    'M3.5 6h6l2 2h9v11h-17zM8.5 12.5l1.75-1.75 1.75 1.75 1.75-1.75 1.75 1.75-1.75 1.75 1.75 1.75-1.75 1.75L12 16l-1.75 1.75-1.75-1.75 1.75-1.75z',
+    'M2.625 5.125h7.25l2 2h9.5v12.75H2.625zM8.5 11.5l1.4-1.4 2.1 2.1 2.1-2.1 1.4 1.4-2.1 2.1 2.1 2.1-1.4 1.4-2.1-2.1-2.1 2.1-1.4-1.4 2.1-2.1z',
   ],
   variant: 'filled',
   stroke: 'none',

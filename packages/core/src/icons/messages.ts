@@ -4,5 +4,7 @@ export const iconMessages = defineIcon({
   name: 'messages',
   category: 'communication',
   tags: ['messages', 'communication'],
-  paths: ['M4 5h14v10H9l-5 3zM8 9h7M8 12h4M8 20h11l2-3V7'],
+  paths: [
+    'M8 4h10a3 3 0 0 1 3 3v9M6 7h9a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H9l-5 3v-4a3 3 0 0 1-1-2v-5a3 3 0 0 1 3-3zM7 11h7M7 14h4',
+  ],
 });

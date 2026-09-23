@@ -4,5 +4,7 @@ export const iconVideo = defineIcon({
   name: 'video',
   category: 'communication',
   tags: ['video', 'communication'],
-  paths: ['M4 7h11v10H4zM15 10l5-3v10l-5-3'],
+  paths: [
+    'M6 5h8a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3zM17 9l4-2v10l-4-2',
+  ],
 });

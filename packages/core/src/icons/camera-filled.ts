@@ -5,7 +5,7 @@ export const iconCameraFilled = defineIcon({
   category: 'communication',
   tags: ['camera', 'communication', 'filled'],
   paths: [
-    'M3 7h4l2-3h6l2 3h4v13H3zm9 2.25a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5z',
+    'M5 6h2.5L9 4h6l1.5 2H19a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3zm7 3.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z',
   ],
   variant: 'filled',
   stroke: 'none',

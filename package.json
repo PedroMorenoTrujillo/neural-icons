@@ -9,6 +9,7 @@
     "format": "nx format --write",
     "format:check": "nx format --check",
     "generate:icons": "node tools/icons.mjs",
+    "watch:icons": "node tools/watch-icons.mjs",
     "generate:filled": "node tools/add-filled.mjs && node tools/icons.mjs",
     "generate:variants": "node tools/add-filled.mjs && node tools/icons.mjs",
     "check:generated": "node tools/icons.mjs --check",

@@ -5,7 +5,7 @@ export const iconFileSpreadsheetFilled = defineIcon({
   category: 'file',
   tags: ['file-spreadsheet', 'file', 'spreadsheet', 'filled'],
   paths: [
-    'M6 3.5h8l4 4v13H6zM14 3.5v4h4zM8.25 11h2v2h-2zM11 11h2v2h-2zM13.75 11h2v2h-2zM8.25 13.75h2v2h-2zM11 13.75h2v2h-2zM13.75 13.75h2v2h-2zM8.25 16.5h2v2h-2zM11 16.5h2v2h-2zM13.75 16.5h2v2h-2z',
+    'M5 2.5h9l5 5V22H5zM14 4v4h4zM8 10.5h2.5v2H8zM11.75 10.5H16v2h-4.25zM8 13.75h2.5v2H8zM11.75 13.75H16v2h-4.25zM8 17h2.5v2H8zM11.75 17H16v2h-4.25z',
   ],
   variant: 'filled',
   stroke: 'none',

@@ -4,5 +4,5 @@ export const iconTerminal = defineIcon({
   name: 'terminal',
   category: 'system',
   tags: ['terminal', 'system'],
-  paths: ['M5 7l5 5-5 5M12 17h7'],
+  paths: ['M3.5 4.5h17v15h-17zM6.5 8l4 4-4 4M12.5 16h5'],
 });

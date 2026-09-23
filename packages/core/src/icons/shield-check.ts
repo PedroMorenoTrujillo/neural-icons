@@ -5,6 +5,6 @@ export const iconShieldCheck = defineIcon({
   category: 'system',
   tags: ['shield-check', 'system', 'check'],
   paths: [
-    'M12 3.5 19 6v5.5c0 4.3-2.8 7.6-7 9-4.2-1.4-7-4.7-7-9V6zM8.5 12l2.2 2.2 4.8-4.8',
+    'M12 4 19 6.5v5.2c0 4.2-2.8 7.3-7 8.8-4.2-1.5-7-4.6-7-8.8V6.5zM8 12.5l2.5 2.5 5-5',
   ],
 });

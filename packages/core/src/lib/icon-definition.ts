@@ -12,6 +12,7 @@ export interface NeuralIconDefinition {
   readonly tags: readonly string[];
   readonly variant: NeuralIconVariant;
   readonly stroke?: NeuralIconStroke;
+  readonly separatePaths?: boolean;
   readonly viewBox: typeof NEURAL_ICON_VIEW_BOX;
   readonly paths: readonly string[];
 }

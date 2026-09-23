@@ -5,6 +5,6 @@ export const iconWifiOff = defineIcon({
   category: 'communication',
   tags: ['wifi-off', 'communication', 'off'],
   paths: [
-    'M3 8a14 14 0 0 1 7-3M14 5a14 14 0 0 1 7 3M6 12a9 9 0 0 1 3-1M15 11a9 9 0 0 1 3 1M9 16a4 4 0 0 1 3-1M15 16a4 4 0 0 1 0 0M12 20h.01M4 4l16 16',
+    'M3 8a10 10 0 0 1 12 0M5 12a7 7 0 0 1 8 0M7.5 16a3 3 0 0 1 3 0M9 20h.01M16.5 9l5 5M21.5 9l-5 5',
   ],
 });

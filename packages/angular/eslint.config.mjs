@@ -11,13 +11,21 @@ export default [
       '@nx/dependency-checks': [
         'error',
         {
-          ignoredFiles: ['{projectRoot}/eslint.config.{js,cjs,mjs,ts,cts,mts}'],
+          ignoredFiles: [
+            '{projectRoot}/eslint.config.{js,cjs,mjs,ts,cts,mts}',
+            '{projectRoot}/fixtures/**',
+          ],
         },
       ],
     },
     languageOptions: {
       parser: await import('jsonc-eslint-parser'),
     },
+  },
+  {
+    files: ['packages/angular/fixtures/**/*.ts'],
+    // The hydration fixture deliberately imports the published package entry.
+    rules: { '@nx/enforce-module-boundaries': 'off' },
   },
   {
     files: ['**/*.ts'],

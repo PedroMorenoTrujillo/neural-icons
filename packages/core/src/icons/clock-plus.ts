@@ -5,6 +5,6 @@ export const iconClockPlus = defineIcon({
   category: 'file',
   tags: ['clock-plus', 'file', 'plus'],
   paths: [
-    'M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16zM12 8v4l3 2M18 16v5M15.5 18.5h5',
+    'M12 17.85A7.5 7.5 0 1 1 18 10.5M10.5 6.5v4l2.7 1.7M18 14.75v6.5M14.75 18h6.5',
   ],
 });

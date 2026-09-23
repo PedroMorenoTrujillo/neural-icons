@@ -5,7 +5,7 @@ export const iconShieldCheckFilled = defineIcon({
   category: 'system',
   tags: ['shield-check', 'system', 'check', 'filled'],
   paths: [
-    'M12 2.5 20.25 5v6.5c0 5.05-3.22 8.73-8.25 10.5-5.03-1.77-8.25-5.45-8.25-10.5V5zm-1.7 12.7-2.8-2.8-1.8 1.8 4.6 4.6 7.95-7.95-1.8-1.8z',
+    'M12 3 19.5 5.5v6c0 4.5-2.8 7.7-7.5 9.5-4.7-1.8-7.5-5-7.5-9.5v-6zm-1.5 13-3.2-3.2 1.5-1.5 1.7 1.7 4.7-4.7 1.5 1.5z',
   ],
   variant: 'filled',
   stroke: 'none',

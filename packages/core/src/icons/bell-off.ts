@@ -5,6 +5,6 @@ export const iconBellOff = defineIcon({
   category: 'communication',
   tags: ['bell-off', 'communication', 'off'],
   paths: [
-    'M18 9a6 6 0 0 0-10.5-3.9M6 9v4l-2 3h11M14 19a3 3 0 0 1-5 0M4 4l16 16',
+    'M9 4a4 4 0 0 0-4 4v5l-2 3h12l-2-3V8a4 4 0 0 0-4-4zM7.5 19a1.5 1.5 0 0 0 3 0M16.5 9l5 5M21.5 9l-5 5',
   ],
 });

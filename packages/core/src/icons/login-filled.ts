@@ -5,7 +5,7 @@ export const iconLoginFilled = defineIcon({
   category: 'system',
   tags: ['login', 'system', 'filled'],
   paths: [
-    'M3 3h9v2.75H5.75v12.5H12V21H3zM15.25 6l6 6-6 6-1.95-1.95 2.67-2.67H8v-2.75h7.97L13.3 7.95z',
+    'M6 3h5v2.5H6a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 .5.5h5V21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3zM9 10.75h7V8l4 4-4 4v-2.75H9z',
   ],
   variant: 'filled',
   stroke: 'none',

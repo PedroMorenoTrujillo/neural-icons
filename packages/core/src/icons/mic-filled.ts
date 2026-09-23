@@ -5,7 +5,7 @@ export const iconMicFilled = defineIcon({
   category: 'communication',
   tags: ['mic', 'communication', 'filled'],
   paths: [
-    'M8 3.5a4 4 0 0 1 8 0v7a4 4 0 0 1-8 0zM4.5 9.75H7v.75a5 5 0 0 0 10 0v-.75h2.5v.75a7.5 7.5 0 0 1-6.25 7.4v2.1H17V22H7v-2.5h3.75v-2.1A7.5 7.5 0 0 1 4.5 10.5z',
+    'M8 6a4 4 0 0 1 8 0v5a4 4 0 0 1-8 0zM5 10.5h2.5v.5a4.5 4.5 0 0 0 9 0v-.5H19V11a7 7 0 0 1-5.75 6.88V19.5H17V22H7v-2.5h3.75v-1.62A7 7 0 0 1 5 11z',
   ],
   variant: 'filled',
   stroke: 'none',

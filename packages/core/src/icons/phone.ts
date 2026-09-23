@@ -5,6 +5,6 @@ export const iconPhone = defineIcon({
   category: 'communication',
   tags: ['phone', 'communication'],
   paths: [
-    'M7 4h3l1.5 4-2 1.5a13 13 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2C10 19 5 14 5 6a2 2 0 0 1 2-2z',
+    'M6.5 3.5h3l1.5 4.2-1.8 1.4a14 14 0 0 0 5.7 5.7l1.4-1.8 4.2 1.5v2.8a3 3 0 0 1-3.3 3.2C9.2 20.2 3.8 14.8 3.5 6.8a3 3 0 0 1 3-3.3z',
   ],
 });

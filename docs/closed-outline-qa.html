@@ -1,0 +1,3669 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><title>Closed outline candidates</title
+  ><style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #e8edf5;
+      font:
+        13px system-ui,
+        sans-serif;
+      color: #172438;
+    }
+    header {
+      margin: 0 0 16px;
+    }
+    h1 {
+      font-size: 20px;
+      margin: 0 0 4px;
+    }
+    p {
+      margin: 0;
+      color: #4d5d75;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    article {
+      background: white;
+      border: 1px solid #cbd4e3;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    h2 {
+      font:
+        600 13px ui-monospace,
+        monospace;
+      margin: 0;
+      padding: 8px 12px;
+      border-bottom: 1px solid #dfe5ef;
+    }
+    .variants {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .variants > div + div {
+      border-left: 1px solid #dfe5ef;
+    }
+    .sample {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      min-height: 46px;
+      padding: 5px;
+      color: #20355d;
+    }
+    .sample.dark {
+      background: #19263d;
+      color: #f3f6ff;
+    }
+    .sample span {
+      min-width: 45px;
+      font-size: 9px;
+      color: #67788e;
+    }
+    .sample.dark span {
+      color: #aab8cb;
+    }
+    i {
+      min-width: 31px;
+      font-style: normal;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+    small {
+      font-size: 9px;
+      color: #8290a2;
+    }
+  </style>
+  <header>
+    <h1>Closed outline candidates</h1>
+    <p>
+      Outline and filled at 16, 20 and 24 px · light and dark surfaces · 24×24
+      viewBox
+    </p>
+  </header>
+  <main>
+    <article>
+      <h2>settings</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="settings"
+                data-size="16"
+              >
+                <path
+                  d="M10.75 2.8h2.5l.55 2.6 1.6.65 2.2-1.45 1.8 1.8-1.45 2.2.65 1.6 2.6.55v2.5l-2.6.55-.65 1.6 1.45 2.2-1.8 1.8-2.2-1.45-1.6.65-.55 2.6h-2.5l-.55-2.6-1.6-.65-2.2 1.45-1.8-1.8 1.45-2.2-.65-1.6-2.6-.55v-2.5l2.6-.55.65-1.6-1.45-2.2 1.8-1.8 2.2 1.45 1.6-.65zM12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 1 0 0-6.5z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="settings"
+                data-size="20"
+              >
+                <path
+                  d="M10.75 2.8h2.5l.55 2.6 1.6.65 2.2-1.45 1.8 1.8-1.45 2.2.65 1.6 2.6.55v2.5l-2.6.55-.65 1.6 1.45 2.2-1.8 1.8-2.2-1.45-1.6.65-.55 2.6h-2.5l-.55-2.6-1.6-.65-2.2 1.45-1.8-1.8 1.45-2.2-.65-1.6-2.6-.55v-2.5l2.6-.55.65-1.6-1.45-2.2 1.8-1.8 2.2 1.45 1.6-.65zM12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 1 0 0-6.5z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="settings"
+                data-size="24"
+              >
+                <path
+                  d="M10.75 2.8h2.5l.55 2.6 1.6.65 2.2-1.45 1.8 1.8-1.45 2.2.65 1.6 2.6.55v2.5l-2.6.55-.65 1.6 1.45 2.2-1.8 1.8-2.2-1.45-1.6.65-.55 2.6h-2.5l-.55-2.6-1.6-.65-2.2 1.45-1.8-1.8 1.45-2.2-.65-1.6-2.6-.55v-2.5l2.6-.55.65-1.6-1.45-2.2 1.8-1.8 2.2 1.45 1.6-.65zM12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 1 0 0-6.5z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="settings"
+                data-size="16"
+              >
+                <path
+                  d="M10.75 2.8h2.5l.55 2.6 1.6.65 2.2-1.45 1.8 1.8-1.45 2.2.65 1.6 2.6.55v2.5l-2.6.55-.65 1.6 1.45 2.2-1.8 1.8-2.2-1.45-1.6.65-.55 2.6h-2.5l-.55-2.6-1.6-.65-2.2 1.45-1.8-1.8 1.45-2.2-.65-1.6-2.6-.55v-2.5l2.6-.55.65-1.6-1.45-2.2 1.8-1.8 2.2 1.45 1.6-.65zM12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 1 0 0-6.5z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="settings"
+                data-size="20"
+              >
+                <path
+                  d="M10.75 2.8h2.5l.55 2.6 1.6.65 2.2-1.45 1.8 1.8-1.45 2.2.65 1.6 2.6.55v2.5l-2.6.55-.65 1.6 1.45 2.2-1.8 1.8-2.2-1.45-1.6.65-.55 2.6h-2.5l-.55-2.6-1.6-.65-2.2 1.45-1.8-1.8 1.45-2.2-.65-1.6-2.6-.55v-2.5l2.6-.55.65-1.6-1.45-2.2 1.8-1.8 2.2 1.45 1.6-.65zM12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 1 0 0-6.5z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="settings"
+                data-size="24"
+              >
+                <path
+                  d="M10.75 2.8h2.5l.55 2.6 1.6.65 2.2-1.45 1.8 1.8-1.45 2.2.65 1.6 2.6.55v2.5l-2.6.55-.65 1.6 1.45 2.2-1.8 1.8-2.2-1.45-1.6.65-.55 2.6h-2.5l-.55-2.6-1.6-.65-2.2 1.45-1.8-1.8 1.45-2.2-.65-1.6-2.6-.55v-2.5l2.6-.55.65-1.6-1.45-2.2 1.8-1.8 2.2 1.45 1.6-.65zM12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 1 0 0-6.5z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>folder</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder"
+                data-size="16"
+              >
+                <path d="M3.5 6h6l2 2h9v11h-17z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder"
+                data-size="20"
+              >
+                <path d="M3.5 6h6l2 2h9v11h-17z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder"
+                data-size="24"
+              >
+                <path d="M3.5 6h6l2 2h9v11h-17z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder"
+                data-size="16"
+              >
+                <path d="M3.5 6h6l2 2h9v11h-17z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder"
+                data-size="20"
+              >
+                <path d="M3.5 6h6l2 2h9v11h-17z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder"
+                data-size="24"
+              >
+                <path d="M3.5 6h6l2 2h9v11h-17z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>dashboard</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="dashboard"
+                data-size="16"
+              >
+                <path
+                  d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="dashboard"
+                data-size="20"
+              >
+                <path
+                  d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="dashboard"
+                data-size="24"
+              >
+                <path
+                  d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="dashboard"
+                data-size="16"
+              >
+                <path
+                  d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="dashboard"
+                data-size="20"
+              >
+                <path
+                  d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="dashboard"
+                data-size="24"
+              >
+                <path
+                  d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>grid</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="grid"
+                data-size="16"
+              >
+                <path
+                  d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="grid"
+                data-size="20"
+              >
+                <path
+                  d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="grid"
+                data-size="24"
+              >
+                <path
+                  d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="grid"
+                data-size="16"
+              >
+                <path
+                  d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="grid"
+                data-size="20"
+              >
+                <path
+                  d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="grid"
+                data-size="24"
+              >
+                <path
+                  d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>compass</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="compass"
+                data-size="16"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="compass"
+                data-size="20"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="compass"
+                data-size="24"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="compass"
+                data-size="16"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="compass"
+                data-size="20"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="compass"
+                data-size="24"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM15.5 8.5l-2 5-5 2 2-5z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>location</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="location"
+                data-size="16"
+              >
+                <path
+                  d="M12 4v4M12 16v4M4 12h4M16 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="location"
+                data-size="20"
+              >
+                <path
+                  d="M12 4v4M12 16v4M4 12h4M16 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="location"
+                data-size="24"
+              >
+                <path
+                  d="M12 4v4M12 16v4M4 12h4M16 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="location"
+                data-size="16"
+              >
+                <path
+                  d="M12 4v4M12 16v4M4 12h4M16 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="location"
+                data-size="20"
+              >
+                <path
+                  d="M12 4v4M12 16v4M4 12h4M16 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="location"
+                data-size="24"
+              >
+                <path
+                  d="M12 4v4M12 16v4M4 12h4M16 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>navigation</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="navigation"
+                data-size="16"
+              >
+                <path d="M3.5 11 20.5 3.5 13 20.5l-2-7.5z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="navigation"
+                data-size="20"
+              >
+                <path d="M3.5 11 20.5 3.5 13 20.5l-2-7.5z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="navigation"
+                data-size="24"
+              >
+                <path d="M3.5 11 20.5 3.5 13 20.5l-2-7.5z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="navigation"
+                data-size="16"
+              >
+                <path d="M3.5 11 20.5 3.5 13 20.5l-2-7.5z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="navigation"
+                data-size="20"
+              >
+                <path d="M3.5 11 20.5 3.5 13 20.5l-2-7.5z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="navigation"
+                data-size="24"
+              >
+                <path d="M3.5 11 20.5 3.5 13 20.5l-2-7.5z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>globe</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="globe"
+                data-size="16"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM3.8 12h16.4M12 3.5c2.2 2.3 3.3 5.1 3.3 8.5s-1.1 6.2-3.3 8.5c-2.2-2.3-3.3-5.1-3.3-8.5s1.1-6.2 3.3-8.5z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="globe"
+                data-size="20"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM3.8 12h16.4M12 3.5c2.2 2.3 3.3 5.1 3.3 8.5s-1.1 6.2-3.3 8.5c-2.2-2.3-3.3-5.1-3.3-8.5s1.1-6.2 3.3-8.5z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="globe"
+                data-size="24"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM3.8 12h16.4M12 3.5c2.2 2.3 3.3 5.1 3.3 8.5s-1.1 6.2-3.3 8.5c-2.2-2.3-3.3-5.1-3.3-8.5s1.1-6.2 3.3-8.5z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="globe"
+                data-size="16"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM3.8 12h16.4M12 3.5c2.2 2.3 3.3 5.1 3.3 8.5s-1.1 6.2-3.3 8.5c-2.2-2.3-3.3-5.1-3.3-8.5s1.1-6.2 3.3-8.5z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="globe"
+                data-size="20"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM3.8 12h16.4M12 3.5c2.2 2.3 3.3 5.1 3.3 8.5s-1.1 6.2-3.3 8.5c-2.2-2.3-3.3-5.1-3.3-8.5s1.1-6.2 3.3-8.5z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="globe"
+                data-size="24"
+              >
+                <path
+                  d="M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17zM3.8 12h16.4M12 3.5c2.2 2.3 3.3 5.1 3.3 8.5s-1.1 6.2-3.3 8.5c-2.2-2.3-3.3-5.1-3.3-8.5s1.1-6.2 3.3-8.5z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>save</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="save"
+                data-size="16"
+              >
+                <path d="M5 4h14v16H5zM8 4v5h8V4M8 14h8v4H8z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="save"
+                data-size="20"
+              >
+                <path d="M5 4h14v16H5zM8 4v5h8V4M8 14h8v4H8z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="save"
+                data-size="24"
+              >
+                <path d="M5 4h14v16H5zM8 4v5h8V4M8 14h8v4H8z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="save"
+                data-size="16"
+              >
+                <path d="M5 4h14v16H5zM8 4v5h8V4M8 14h8v4H8z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="save"
+                data-size="20"
+              >
+                <path d="M5 4h14v16H5zM8 4v5h8V4M8 14h8v4H8z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="save"
+                data-size="24"
+              >
+                <path d="M5 4h14v16H5zM8 4v5h8V4M8 14h8v4H8z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>play</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="play"
+                data-size="16"
+              >
+                <path d="M7 4.5 19 12 7 19.5z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="play"
+                data-size="20"
+              >
+                <path d="M7 4.5 19 12 7 19.5z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="play"
+                data-size="24"
+              >
+                <path d="M7 4.5 19 12 7 19.5z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="play"
+                data-size="16"
+              >
+                <path d="M7 4.5 19 12 7 19.5z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="play"
+                data-size="20"
+              >
+                <path d="M7 4.5 19 12 7 19.5z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="play"
+                data-size="24"
+              >
+                <path d="M7 4.5 19 12 7 19.5z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>skip-back</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-back"
+                data-size="16"
+              >
+                <path d="M6 5v14M9 12l9-7v14z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-back"
+                data-size="20"
+              >
+                <path d="M6 5v14M9 12l9-7v14z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-back"
+                data-size="24"
+              >
+                <path d="M6 5v14M9 12l9-7v14z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-back"
+                data-size="16"
+              >
+                <path d="M6 5v14M9 12l9-7v14z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-back"
+                data-size="20"
+              >
+                <path d="M6 5v14M9 12l9-7v14z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-back"
+                data-size="24"
+              >
+                <path d="M6 5v14M9 12l9-7v14z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>skip-forward</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-forward"
+                data-size="16"
+              >
+                <path d="M18 5v14M15 12 6 5v14z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-forward"
+                data-size="20"
+              >
+                <path d="M18 5v14M15 12 6 5v14z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-forward"
+                data-size="24"
+              >
+                <path d="M18 5v14M15 12 6 5v14z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-forward"
+                data-size="16"
+              >
+                <path d="M18 5v14M15 12 6 5v14z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-forward"
+                data-size="20"
+              >
+                <path d="M18 5v14M15 12 6 5v14z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="skip-forward"
+                data-size="24"
+              >
+                <path d="M18 5v14M15 12 6 5v14z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>rewind</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="rewind"
+                data-size="16"
+              >
+                <path d="M18 5 9 12l9 7zM9 5 4 12l5 7z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="rewind"
+                data-size="20"
+              >
+                <path d="M18 5 9 12l9 7zM9 5 4 12l5 7z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="rewind"
+                data-size="24"
+              >
+                <path d="M18 5 9 12l9 7zM9 5 4 12l5 7z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="rewind"
+                data-size="16"
+              >
+                <path d="M18 5 9 12l9 7zM9 5 4 12l5 7z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="rewind"
+                data-size="20"
+              >
+                <path d="M18 5 9 12l9 7zM9 5 4 12l5 7z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="rewind"
+                data-size="24"
+              >
+                <path d="M18 5 9 12l9 7zM9 5 4 12l5 7z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>fast-forward</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="fast-forward"
+                data-size="16"
+              >
+                <path d="M5 5l9 7-9 7zM14 5l6 7-6 7z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="fast-forward"
+                data-size="20"
+              >
+                <path d="M5 5l9 7-9 7zM14 5l6 7-6 7z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="fast-forward"
+                data-size="24"
+              >
+                <path d="M5 5l9 7-9 7zM14 5l6 7-6 7z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="fast-forward"
+                data-size="16"
+              >
+                <path d="M5 5l9 7-9 7zM14 5l6 7-6 7z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="fast-forward"
+                data-size="20"
+              >
+                <path d="M5 5l9 7-9 7zM14 5l6 7-6 7z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="fast-forward"
+                data-size="24"
+              >
+                <path d="M5 5l9 7-9 7zM14 5l6 7-6 7z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>cursor</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cursor"
+                data-size="16"
+              >
+                <path d="M6 4l3 16 3-6 6 3z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cursor"
+                data-size="20"
+              >
+                <path d="M6 4l3 16 3-6 6 3z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cursor"
+                data-size="24"
+              >
+                <path d="M6 4l3 16 3-6 6 3z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cursor"
+                data-size="16"
+              >
+                <path d="M6 4l3 16 3-6 6 3z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cursor"
+                data-size="20"
+              >
+                <path d="M6 4l3 16 3-6 6 3z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cursor"
+                data-size="24"
+              >
+                <path d="M6 4l3 16 3-6 6 3z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>wand</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="wand"
+                data-size="16"
+              >
+                <path
+                  d="M4.5 19.5l9-9M16 3.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9zM20 13.5l.625 1.875L22.5 16l-1.875.625L20 18.5l-.625-1.875L17.5 16l1.875-.625z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="wand"
+                data-size="20"
+              >
+                <path
+                  d="M4.5 19.5l9-9M16 3.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9zM20 13.5l.625 1.875L22.5 16l-1.875.625L20 18.5l-.625-1.875L17.5 16l1.875-.625z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="wand"
+                data-size="24"
+              >
+                <path
+                  d="M4.5 19.5l9-9M16 3.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9zM20 13.5l.625 1.875L22.5 16l-1.875.625L20 18.5l-.625-1.875L17.5 16l1.875-.625z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="wand"
+                data-size="16"
+              >
+                <path
+                  d="M4.5 19.5l9-9M16 3.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9zM20 13.5l.625 1.875L22.5 16l-1.875.625L20 18.5l-.625-1.875L17.5 16l1.875-.625z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="wand"
+                data-size="20"
+              >
+                <path
+                  d="M4.5 19.5l9-9M16 3.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9zM20 13.5l.625 1.875L22.5 16l-1.875.625L20 18.5l-.625-1.875L17.5 16l1.875-.625z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="wand"
+                data-size="24"
+              >
+                <path
+                  d="M4.5 19.5l9-9M16 3.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9zM20 13.5l.625 1.875L22.5 16l-1.875.625L20 18.5l-.625-1.875L17.5 16l1.875-.625z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>sparkles</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="sparkles"
+                data-size="16"
+              >
+                <path
+                  d="M8 3.5l1.2 4.3L13.5 9l-4.3 1.2L8 14.5l-1.2-4.3L2.5 9l4.3-1.2zM17 12l.8 2.2L20 15l-2.2.8L17 18l-.8-2.2L14 15l2.2-.8z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="sparkles"
+                data-size="20"
+              >
+                <path
+                  d="M8 3.5l1.2 4.3L13.5 9l-4.3 1.2L8 14.5l-1.2-4.3L2.5 9l4.3-1.2zM17 12l.8 2.2L20 15l-2.2.8L17 18l-.8-2.2L14 15l2.2-.8z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="sparkles"
+                data-size="24"
+              >
+                <path
+                  d="M8 3.5l1.2 4.3L13.5 9l-4.3 1.2L8 14.5l-1.2-4.3L2.5 9l4.3-1.2zM17 12l.8 2.2L20 15l-2.2.8L17 18l-.8-2.2L14 15l2.2-.8z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="sparkles"
+                data-size="16"
+              >
+                <path
+                  d="M8 3.5l1.2 4.3L13.5 9l-4.3 1.2L8 14.5l-1.2-4.3L2.5 9l4.3-1.2zM17 12l.8 2.2L20 15l-2.2.8L17 18l-.8-2.2L14 15l2.2-.8z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="sparkles"
+                data-size="20"
+              >
+                <path
+                  d="M8 3.5l1.2 4.3L13.5 9l-4.3 1.2L8 14.5l-1.2-4.3L2.5 9l4.3-1.2zM17 12l.8 2.2L20 15l-2.2.8L17 18l-.8-2.2L14 15l2.2-.8z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="sparkles"
+                data-size="24"
+              >
+                <path
+                  d="M8 3.5l1.2 4.3L13.5 9l-4.3 1.2L8 14.5l-1.2-4.3L2.5 9l4.3-1.2zM17 12l.8 2.2L20 15l-2.2.8L17 18l-.8-2.2L14 15l2.2-.8z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>qr-code</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="qr-code"
+                data-size="16"
+              >
+                <path
+                  d="M4 4h6v6H4zM6 6h2v2H6zM14 4h6v6h-6zM16 6h2v2h-2zM4 14h6v6H4zM6 16h2v2H6zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="qr-code"
+                data-size="20"
+              >
+                <path
+                  d="M4 4h6v6H4zM6 6h2v2H6zM14 4h6v6h-6zM16 6h2v2h-2zM4 14h6v6H4zM6 16h2v2H6zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="qr-code"
+                data-size="24"
+              >
+                <path
+                  d="M4 4h6v6H4zM6 6h2v2H6zM14 4h6v6h-6zM16 6h2v2h-2zM4 14h6v6H4zM6 16h2v2H6zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="qr-code"
+                data-size="16"
+              >
+                <path
+                  d="M4 4h6v6H4zM6 6h2v2H6zM14 4h6v6h-6zM16 6h2v2h-2zM4 14h6v6H4zM6 16h2v2H6zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="qr-code"
+                data-size="20"
+              >
+                <path
+                  d="M4 4h6v6H4zM6 6h2v2H6zM14 4h6v6h-6zM16 6h2v2h-2zM4 14h6v6H4zM6 16h2v2H6zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="qr-code"
+                data-size="24"
+              >
+                <path
+                  d="M4 4h6v6H4zM6 6h2v2H6zM14 4h6v6h-6zM16 6h2v2h-2zM4 14h6v6H4zM6 16h2v2H6zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>print</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="print"
+                data-size="16"
+              >
+                <path
+                  d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="print"
+                data-size="20"
+              >
+                <path
+                  d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="print"
+                data-size="24"
+              >
+                <path
+                  d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="print"
+                data-size="16"
+              >
+                <path
+                  d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="print"
+                data-size="20"
+              >
+                <path
+                  d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="print"
+                data-size="24"
+              >
+                <path
+                  d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>bookmark</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="bookmark"
+                data-size="16"
+              >
+                <path d="M6 4h12v16l-6-3-6 3z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="bookmark"
+                data-size="20"
+              >
+                <path d="M6 4h12v16l-6-3-6 3z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="bookmark"
+                data-size="24"
+              >
+                <path d="M6 4h12v16l-6-3-6 3z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="bookmark"
+                data-size="16"
+              >
+                <path d="M6 4h12v16l-6-3-6 3z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="bookmark"
+                data-size="20"
+              >
+                <path d="M6 4h12v16l-6-3-6 3z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="bookmark"
+                data-size="24"
+              >
+                <path d="M6 4h12v16l-6-3-6 3z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>paste</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="paste"
+                data-size="16"
+              >
+                <path d="M8 5h8v3H8zM6 6H4v14h12v-2M10 10h10v10H10z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="paste"
+                data-size="20"
+              >
+                <path d="M8 5h8v3H8zM6 6H4v14h12v-2M10 10h10v10H10z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="paste"
+                data-size="24"
+              >
+                <path d="M8 5h8v3H8zM6 6H4v14h12v-2M10 10h10v10H10z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="paste"
+                data-size="16"
+              >
+                <path d="M8 5h8v3H8zM6 6H4v14h12v-2M10 10h10v10H10z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="paste"
+                data-size="20"
+              >
+                <path d="M8 5h8v3H8zM6 6H4v14h12v-2M10 10h10v10H10z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="paste"
+                data-size="24"
+              >
+                <path d="M8 5h8v3H8zM6 6H4v14h12v-2M10 10h10v10H10z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>phone</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="phone"
+                data-size="16"
+              >
+                <path
+                  d="M6.5 3.5h3l1.5 4.2-1.8 1.4a14 14 0 0 0 5.7 5.7l1.4-1.8 4.2 1.5v2.8a3 3 0 0 1-3.3 3.2C9.2 20.2 3.8 14.8 3.5 6.8a3 3 0 0 1 3-3.3z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="phone"
+                data-size="20"
+              >
+                <path
+                  d="M6.5 3.5h3l1.5 4.2-1.8 1.4a14 14 0 0 0 5.7 5.7l1.4-1.8 4.2 1.5v2.8a3 3 0 0 1-3.3 3.2C9.2 20.2 3.8 14.8 3.5 6.8a3 3 0 0 1 3-3.3z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="phone"
+                data-size="24"
+              >
+                <path
+                  d="M6.5 3.5h3l1.5 4.2-1.8 1.4a14 14 0 0 0 5.7 5.7l1.4-1.8 4.2 1.5v2.8a3 3 0 0 1-3.3 3.2C9.2 20.2 3.8 14.8 3.5 6.8a3 3 0 0 1 3-3.3z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="phone"
+                data-size="16"
+              >
+                <path
+                  d="M6.5 3.5h3l1.5 4.2-1.8 1.4a14 14 0 0 0 5.7 5.7l1.4-1.8 4.2 1.5v2.8a3 3 0 0 1-3.3 3.2C9.2 20.2 3.8 14.8 3.5 6.8a3 3 0 0 1 3-3.3z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="phone"
+                data-size="20"
+              >
+                <path
+                  d="M6.5 3.5h3l1.5 4.2-1.8 1.4a14 14 0 0 0 5.7 5.7l1.4-1.8 4.2 1.5v2.8a3 3 0 0 1-3.3 3.2C9.2 20.2 3.8 14.8 3.5 6.8a3 3 0 0 1 3-3.3z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="phone"
+                data-size="24"
+              >
+                <path
+                  d="M6.5 3.5h3l1.5 4.2-1.8 1.4a14 14 0 0 0 5.7 5.7l1.4-1.8 4.2 1.5v2.8a3 3 0 0 1-3.3 3.2C9.2 20.2 3.8 14.8 3.5 6.8a3 3 0 0 1 3-3.3z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>camera</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="camera"
+                data-size="16"
+              >
+                <path
+                  d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM12 9.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="camera"
+                data-size="20"
+              >
+                <path
+                  d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM12 9.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="camera"
+                data-size="24"
+              >
+                <path
+                  d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM12 9.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="camera"
+                data-size="16"
+              >
+                <path
+                  d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM12 9.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="camera"
+                data-size="20"
+              >
+                <path
+                  d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM12 9.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="camera"
+                data-size="24"
+              >
+                <path
+                  d="M5 7h3l1.5-2h5L16 7h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM12 9.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>mention</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="mention"
+                data-size="16"
+              >
+                <path
+                  d="M18.3 18.3A9 9 0 1 1 21 12v2a2 2 0 0 1-4 0V8M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="mention"
+                data-size="20"
+              >
+                <path
+                  d="M18.3 18.3A9 9 0 1 1 21 12v2a2 2 0 0 1-4 0V8M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="mention"
+                data-size="24"
+              >
+                <path
+                  d="M18.3 18.3A9 9 0 1 1 21 12v2a2 2 0 0 1-4 0V8M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="mention"
+                data-size="16"
+              >
+                <path
+                  d="M18.3 18.3A9 9 0 1 1 21 12v2a2 2 0 0 1-4 0V8M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="mention"
+                data-size="20"
+              >
+                <path
+                  d="M18.3 18.3A9 9 0 1 1 21 12v2a2 2 0 0 1-4 0V8M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="mention"
+                data-size="24"
+              >
+                <path
+                  d="M18.3 18.3A9 9 0 1 1 21 12v2a2 2 0 0 1-4 0V8M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>shield</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="shield"
+                data-size="16"
+              >
+                <path
+                  d="M12 4 19 6.5v5.2c0 4.2-2.8 7.3-7 8.8-4.2-1.5-7-4.6-7-8.8V6.5z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="shield"
+                data-size="20"
+              >
+                <path
+                  d="M12 4 19 6.5v5.2c0 4.2-2.8 7.3-7 8.8-4.2-1.5-7-4.6-7-8.8V6.5z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="shield"
+                data-size="24"
+              >
+                <path
+                  d="M12 4 19 6.5v5.2c0 4.2-2.8 7.3-7 8.8-4.2-1.5-7-4.6-7-8.8V6.5z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="shield"
+                data-size="16"
+              >
+                <path
+                  d="M12 4 19 6.5v5.2c0 4.2-2.8 7.3-7 8.8-4.2-1.5-7-4.6-7-8.8V6.5z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="shield"
+                data-size="20"
+              >
+                <path
+                  d="M12 4 19 6.5v5.2c0 4.2-2.8 7.3-7 8.8-4.2-1.5-7-4.6-7-8.8V6.5z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="shield"
+                data-size="24"
+              >
+                <path
+                  d="M12 4 19 6.5v5.2c0 4.2-2.8 7.3-7 8.8-4.2-1.5-7-4.6-7-8.8V6.5z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>cloud</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cloud"
+                data-size="16"
+              >
+                <path
+                  d="M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cloud"
+                data-size="20"
+              >
+                <path
+                  d="M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cloud"
+                data-size="24"
+              >
+                <path
+                  d="M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cloud"
+                data-size="16"
+              >
+                <path
+                  d="M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10z"
+                /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cloud"
+                data-size="20"
+              >
+                <path
+                  d="M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10z"
+                /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="cloud"
+                data-size="24"
+              >
+                <path
+                  d="M6 18h11a4 4 0 0 0 .5-8A6 6 0 0 0 6 8a5 5 0 0 0 0 10z"
+                /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>zap</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="zap"
+                data-size="16"
+              >
+                <path d="m13 3-8 10h6l-1 8 8-10h-6z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="zap"
+                data-size="20"
+              >
+                <path d="m13 3-8 10h6l-1 8 8-10h-6z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="zap"
+                data-size="24"
+              >
+                <path d="m13 3-8 10h6l-1 8 8-10h-6z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="zap"
+                data-size="16"
+              >
+                <path d="m13 3-8 10h6l-1 8 8-10h-6z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="zap"
+                data-size="20"
+              >
+                <path d="m13 3-8 10h6l-1 8 8-10h-6z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="zap"
+                data-size="24"
+              >
+                <path d="m13 3-8 10h6l-1 8 8-10h-6z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>folder-open</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder-open"
+                data-size="16"
+              >
+                <path d="M3.5 6h6l2 2h9l-2 11h-15z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder-open"
+                data-size="20"
+              >
+                <path d="M3.5 6h6l2 2h9l-2 11h-15z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder-open"
+                data-size="24"
+              >
+                <path d="M3.5 6h6l2 2h9l-2 11h-15z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder-open"
+                data-size="16"
+              >
+                <path d="M3.5 6h6l2 2h9l-2 11h-15z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder-open"
+                data-size="20"
+              >
+                <path d="M3.5 6h6l2 2h9l-2 11h-15z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="folder-open"
+                data-size="24"
+              >
+                <path d="M3.5 6h6l2 2h9l-2 11h-15z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <h2>funnel</h2>
+      <div class="variants">
+        <div>
+          <div class="sample light">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="funnel"
+                data-size="16"
+              >
+                <path d="M4 5h16l-6 7v6l-4 2v-8z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="funnel"
+                data-size="20"
+              >
+                <path d="M4 5h16l-6 7v6l-4 2v-8z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="funnel"
+                data-size="24"
+              >
+                <path d="M4 5h16l-6 7v6l-4 2v-8z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+          <div class="sample dark">
+            <span>outline</span
+            ><i
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="funnel"
+                data-size="16"
+              >
+                <path d="M4 5h16l-6 7v6l-4 2v-8z" /></svg
+              ><small>16</small></i
+            ><i
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="funnel"
+                data-size="20"
+              >
+                <path d="M4 5h16l-6 7v6l-4 2v-8z" /></svg
+              ><small>20</small></i
+            ><i
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                data-icon="funnel"
+                data-size="24"
+              >
+                <path d="M4 5h16l-6 7v6l-4 2v-8z" /></svg
+              ><small>24</small></i
+            >
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</html>

@@ -30,13 +30,15 @@ export const ${exportName} = defineIcon(${JSON.stringify(icon, null, 2)});
 
   const filled = icon.variant === 'filled';
   const canFill =
-    filled && icon.paths.every((path) => path.trim().endsWith('z'));
-  // Filled icons may have several closed contours. Keep them in one compound
-  // path so even-odd cutouts stay visible instead of being painted over by a
-  // same-colour sibling path.
-  const paths = canFill
-    ? `  <path d="${icon.paths.join(' ')}"/>`
-    : icon.paths.map((path) => `  <path d="${path}"/>`).join('\n');
+    filled &&
+    icon.stroke !== 'currentColor' &&
+    icon.paths.every((path) => path.trim().endsWith('z'));
+  // Compound contours preserve cutouts; authored layers must instead paint
+  // separately so their overlaps do not become even-odd holes.
+  const paths =
+    canFill && !icon.separatePaths
+      ? `  <path d="${icon.paths.join(' ')}"/>`
+      : icon.paths.map((path) => `  <path d="${path}"/>`).join('\n');
   const strokeWidth = filled ? '2.24' : '1.75';
   const stroke = filled ? (icon.stroke ?? 'currentColor') : 'currentColor';
   expected.set(

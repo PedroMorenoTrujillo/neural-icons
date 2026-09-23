@@ -5,7 +5,8 @@ export const iconClockPlusFilled = defineIcon({
   category: 'file',
   tags: ['clock-plus', 'file', 'plus', 'filled'],
   paths: [
-    'M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM10.75 8h2.5v4.3l3.15 1.9-1.3 2.1-4.35-2.7zM17.25 15.5h2v2.25h2.25v2h-2.25V22h-2v-2.25H15v-2h2.25z',
+    'M10.5 3A7.5 7.5 0 1 0 12 17.85C13 14 15 11.5 18 10.5A7.5 7.5 0 0 0 10.5 3zM9.4 6.7h2.2v4l2.5 1.6-1.2 1.8-3.5-2.2z',
+    'M17 14.75h2v2.25h2.25v2H19v2.25h-2V19h-2.25v-2H17z',
   ],
   variant: 'filled',
   stroke: 'none',

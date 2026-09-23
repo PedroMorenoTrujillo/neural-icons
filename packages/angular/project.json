@@ -47,6 +47,26 @@
         "watch": false
       }
     },
+    "hydration-build": {
+      "executor": "@angular/build:application",
+      "outputs": ["{workspaceRoot}/dist/fixtures/angular-hydration"],
+      "options": {
+        "outputPath": "dist/fixtures/angular-hydration",
+        "browser": "packages/angular/fixtures/hydration/main.ts",
+        "index": "packages/angular/fixtures/hydration/index.html",
+        "tsConfig": "packages/angular/fixtures/hydration/tsconfig.json",
+        "server": "packages/angular/fixtures/hydration/main.server.ts",
+        "ssr": { "entry": "packages/angular/fixtures/hydration/server.ts" },
+        "prerender": false,
+        "outputMode": "server"
+      }
+    },
+    "hydration-test": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["hydration-build"],
+      "cache": false,
+      "options": { "command": "node tools/test-angular-hydration.mjs" }
+    },
     "lint": {
       "executor": "@nx/eslint:lint"
     }

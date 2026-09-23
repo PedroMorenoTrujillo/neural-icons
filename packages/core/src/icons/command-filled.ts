@@ -5,8 +5,8 @@ export const iconCommandFilled = defineIcon({
   category: 'action',
   tags: ['command', 'action', 'filled'],
   paths: [
-    'M8 2.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM8 5.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM16 2.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM16 5.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM8 12.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM8 15.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM16 12.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM16 15.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM10 10h4v4h-4z',
+    'M9 9h6v6H9zM9 9H6a3 3 0 1 1 3-3v3M15 9h3a3 3 0 1 0-3-3v3M9 15H6a3 3 0 1 0 3 3v-3M15 15h3a3 3 0 1 1-3 3v-3',
   ],
   variant: 'filled',
-  stroke: 'none',
+  stroke: 'currentColor',
 });

@@ -5,7 +5,7 @@ export const iconCircleCheckFilled = defineIcon({
   category: 'system',
   tags: ['circle-check', 'system', 'check', 'filled'],
   paths: [
-    'M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zm-1.75 13.8L5.8 11.85l1.95-1.95 2.5 2.5 5.95-5.95 1.95 1.95z',
+    'M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zm-1.5 14L6.9 12.9l1.5-1.5 2.1 2.1 5.3-5.3 1.5 1.5z',
   ],
   variant: 'filled',
   stroke: 'none',

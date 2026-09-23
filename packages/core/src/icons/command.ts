@@ -5,6 +5,6 @@ export const iconCommand = defineIcon({
   category: 'action',
   tags: ['command', 'action'],
   paths: [
-    'M8 4a3 3 0 1 0 0 6h2V8a3 3 0 1 0-2-4zM16 4a3 3 0 1 1 0 6h-2V8a3 3 0 1 1 2-4zM8 20a3 3 0 1 1 0-6h2v2a3 3 0 1 1-2 4zM16 20a3 3 0 1 0 0-6h-2v2a3 3 0 1 0 2 4zM10 10h4v4h-4z',
+    'M9 9h6v6H9zM9 9H6a3 3 0 1 1 3-3v3M15 9h3a3 3 0 1 0-3-3v3M9 15H6a3 3 0 1 0 3 3v-3M15 15h3a3 3 0 1 1-3 3v-3',
   ],
 });

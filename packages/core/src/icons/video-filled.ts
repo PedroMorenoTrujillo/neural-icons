@@ -4,7 +4,9 @@ export const iconVideoFilled = defineIcon({
   name: 'video-filled',
   category: 'communication',
   tags: ['video', 'communication', 'filled'],
-  paths: ['M3 6h13.5v12H3zM16.5 9.35 21 6.5v11l-4.5-2.85z'],
+  paths: [
+    'M6 4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4zM19 9l3-1.8v9.6L19 15z',
+  ],
   variant: 'filled',
   stroke: 'none',
 });

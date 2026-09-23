@@ -5,8 +5,12 @@ export const iconCalendarMinusFilled = defineIcon({
   category: 'file',
   tags: ['calendar-minus', 'file', 'minus', 'filled'],
   paths: [
-    'M4 4.5h16v16H4zM8 2h2v2.5H8zM14 2h2v2.5h-2zM6.5 10h11v8.5h-11zM8.5 15.25h7v2.5h-7z',
+    'M4.125 4.125h15.75v16.75H4.125zM6 10h12v8.875H6z',
+    'M8.125 2.125h1.75v4.75h-1.75z',
+    'M14.125 2.125h1.75v4.75h-1.75z',
+    'M8.75 14.625h6.5v1.75h-6.5z',
   ],
   variant: 'filled',
   stroke: 'none',
+  separatePaths: true,
 });
