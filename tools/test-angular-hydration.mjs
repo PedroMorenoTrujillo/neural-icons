@@ -7,7 +7,9 @@ import { pathToFileURL } from 'node:url';
 import playwright from 'playwright';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const dist = join(root, 'dist/fixtures/angular-hydration');
+const dist = process.argv[2]
+  ? resolve(process.argv[2])
+  : join(root, 'dist/fixtures/angular-hydration');
 const browserRoot = join(dist, 'browser');
 const { renderFixture } = await import(
   pathToFileURL(join(dist, 'server/server.mjs')).href
@@ -69,7 +71,11 @@ try {
   await page.locator('#ready').waitFor({ state: 'attached' });
   assert.equal(await page.locator('#ready').textContent(), 'false');
   assert.equal(await page.locator('#updates').textContent(), '0');
-  assert.equal(await page.locator('neural-icon svg').count(), 4);
+  assert.equal(await page.locator('neural-icon svg').count(), 5);
+  assert.equal(
+    await page.locator('#dynamic neural-icon').getAttribute('data-neural-icon'),
+    'save',
+  );
   const before = await page.evaluate(() => {
     window.__neuralIconsBefore = [...document.querySelectorAll('neural-icon')];
     window.__neuralSvgBefore = [
@@ -116,7 +122,7 @@ try {
     before,
     'Initial SVG attributes and geometry must be stable',
   );
-  assert.equal(await page.locator('neural-icon svg').count(), 4);
+  assert.equal(await page.locator('neural-icon svg').count(), 5);
   assert.equal(
     await page.locator('#decorative svg').getAttribute('aria-hidden'),
     'true',
@@ -138,6 +144,10 @@ try {
     await page.locator('#filled svg').getAttribute('stroke'),
     'none',
   );
+  assert.equal(
+    await page.locator('#registered-filled svg').getAttribute('fill'),
+    'currentColor',
+  );
   assert.equal(await page.locator('#updates').textContent(), '0');
 
   await page.locator('#change').click();
@@ -146,9 +156,9 @@ try {
   );
   assert.equal(
     await page.locator('#dynamic neural-icon').getAttribute('data-neural-icon'),
-    'x',
+    'download',
   );
-  assert.equal(await page.locator('neural-icon svg').count(), 4);
+  assert.equal(await page.locator('neural-icon svg').count(), 5);
   assert.equal(
     errors.filter((error) => /NG050\d/.test(error)).length,
     0,
@@ -156,7 +166,7 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    'Angular zoneless SSR/hydration passed: 4 SVG nodes reused, stable attributes, no NG050x, one signal update.',
+    'Angular zoneless SSR/hydration passed: 5 SVG nodes reused, registered names and direct definitions, no NG050x, one signal update.',
   );
 } finally {
   releaseScripts();

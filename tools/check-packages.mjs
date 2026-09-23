@@ -81,9 +81,13 @@ try {
   }
   const consumer = `
     import { Component } from '@angular/core';
-    import { NeuralIcon } from '@neural-icons/angular';
+    import { NeuralIcon, provideNeuralIcons, provideAllNeuralIcons } from '@neural-icons/angular';
     import { defineIcon } from '@neural-icons/core';
     import { iconSearch } from '@neural-icons/core/icons/search';
+    const registrations = provideNeuralIcons(iconSearch);
+    const allRegistrations = provideAllNeuralIcons;
+    void registrations;
+    void allRegistrations;
     const mutablePaths = ['M4 12h16'];
     const definition = defineIcon({name: 'custom', category: 'system', tags: ['custom'], paths: mutablePaths});
     // @ts-expect-error Public definitions must reject mutation, even when input arrays were mutable.
@@ -92,7 +96,7 @@ try {
     definition.tags.push('changed');
     @Component({
       selector: 'consumer-root', imports: [NeuralIcon],
-      template: '<neural-icon [icon]="search" [size]="20" label="Search" />',
+      template: '<neural-icon [icon]="search" [size]="20" label="Search" /><neural-icon icon="search" label="Search by name" />',
     })
     export class Consumer { readonly search = iconSearch; }
   `;

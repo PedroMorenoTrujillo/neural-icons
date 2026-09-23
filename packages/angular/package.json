@@ -1,6 +1,6 @@
 {
   "name": "@neural-icons/angular",
-  "version": "0.0.1",
+  "version": "0.0.1-next.1",
   "description": "Angular 22 standalone adapter for Neural Icons.",
   "peerDependencies": {
     "@angular/core": ">=22.0.0 <23.0.0"
@@ -8,6 +8,6 @@
   "sideEffects": false,
   "license": "UNLICENSED",
   "dependencies": {
-    "@neural-icons/core": "^0.0.1"
+    "@neural-icons/core": "0.0.1-next.0"
   }
 }

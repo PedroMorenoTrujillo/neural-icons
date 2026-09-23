@@ -5,11 +5,19 @@ import {
   signal,
 } from '@angular/core';
 import { NeuralIcon } from '@neural-icons/angular';
-import type { NeuralIconDefinition } from '@neural-icons/core';
 import { iconCheckFilled } from '@neural-icons/core/icons/check-filled';
+import { iconDownload } from '@neural-icons/core/icons/download';
 import { iconInfo } from '@neural-icons/core/icons/info';
+import { iconSave } from '@neural-icons/core/icons/save';
 import { iconSearch } from '@neural-icons/core/icons/search';
-import { iconX } from '@neural-icons/core/icons/x';
+import { provideNeuralIcons } from '@neural-icons/angular';
+
+export const hydrationIconProviders = provideNeuralIcons(
+  iconInfo,
+  iconCheckFilled,
+  iconSave,
+  iconDownload,
+);
 
 @Component({
   selector: 'neural-icon-hydration',
@@ -18,9 +26,12 @@ import { iconX } from '@neural-icons/core/icons/x';
   template: `
     <section id="decorative"><neural-icon [icon]="search" /></section>
     <section id="semantic">
-      <neural-icon [icon]="info" label="Information" />
+      <neural-icon icon="info" label="Information" />
     </section>
     <section id="filled"><neural-icon [icon]="checkFilled" /></section>
+    <section id="registered-filled">
+      <neural-icon icon="check-filled" />
+    </section>
     <section id="dynamic"><neural-icon [icon]="dynamicIcon()" /></section>
     <button id="change" type="button" (click)="changeIcon()">
       Change icon
@@ -31,9 +42,8 @@ import { iconX } from '@neural-icons/core/icons/x';
 })
 export class NeuralIconHydrationFixture {
   readonly search = iconSearch;
-  readonly info = iconInfo;
   readonly checkFilled = iconCheckFilled;
-  readonly dynamicIcon = signal<NeuralIconDefinition>(iconSearch);
+  readonly dynamicIcon = signal<'save' | 'download'>('save');
   readonly updates = signal(0);
   readonly ready = signal(false);
 
@@ -42,7 +52,7 @@ export class NeuralIconHydrationFixture {
   }
 
   changeIcon(): void {
-    this.dynamicIcon.set(iconX);
+    this.dynamicIcon.set('download');
     this.updates.update((value) => value + 1);
   }
 }

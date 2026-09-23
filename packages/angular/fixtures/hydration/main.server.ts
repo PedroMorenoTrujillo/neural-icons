@@ -5,7 +5,7 @@ import {
   provideClientHydration,
 } from '@angular/platform-browser';
 import { provideServerRendering } from '@angular/platform-server';
-import { NeuralIconHydrationFixture } from './app';
+import { NeuralIconHydrationFixture, hydrationIconProviders } from './app';
 
 export default (context: BootstrapContext) =>
   bootstrapApplication(
@@ -15,6 +15,7 @@ export default (context: BootstrapContext) =>
         provideZonelessChangeDetection(),
         provideClientHydration(),
         provideServerRendering(),
+        hydrationIconProviders,
       ],
     },
     context,

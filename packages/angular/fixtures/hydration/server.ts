@@ -14,7 +14,9 @@ export async function renderFixture(): Promise<void> {
   for (const evidence of [
     'ngh=',
     'data-neural-icon="search"',
+    'data-neural-icon="info"',
     'data-neural-icon="check-filled"',
+    'data-neural-icon="save"',
     'aria-label="Information"',
   ]) {
     if (!html.includes(evidence))

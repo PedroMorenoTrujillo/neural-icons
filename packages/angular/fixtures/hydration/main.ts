@@ -3,8 +3,12 @@ import {
   bootstrapApplication,
   provideClientHydration,
 } from '@angular/platform-browser';
-import { NeuralIconHydrationFixture } from './app';
+import { NeuralIconHydrationFixture, hydrationIconProviders } from './app';
 
 bootstrapApplication(NeuralIconHydrationFixture, {
-  providers: [provideZonelessChangeDetection(), provideClientHydration()],
+  providers: [
+    provideZonelessChangeDetection(),
+    provideClientHydration(),
+    hydrationIconProviders,
+  ],
 }).catch((error) => console.error(error));
