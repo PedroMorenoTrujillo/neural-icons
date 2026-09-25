@@ -1,74 +1,340 @@
-<main>
-  <header class="hero">
-    <div class="brand-mark" aria-hidden="true">N</div>
-    <div>
-      <p class="eyebrow">Neural design system</p>
-      <h1>Neural Icons</h1>
-      <p class="intro">
-        A precise, original 24-pixel icon language built for Neural UI 2.0.
-      </p>
+<div class="shell">
+  <header class="masthead" [attr.inert]="selected() && isNarrow() ? '' : null">
+    <div class="identity">
+      <span class="brand-mark" aria-hidden="true">N</span>
+      <div>
+        <h1>Neural Icons</h1>
+        <p>Icon library / catalog explorer</p>
+      </div>
     </div>
-    <span class="count"
-      >{{ total }} bases · 2 styles · {{ filledTotal }} filled</span
-    >
+    <div class="masthead-meta">
+      <span>{{ total }} families</span>
+      <span aria-hidden="true">/</span>
+      <span>{{ glyphTotal }} glyphs</span>
+      <span class="preview-label">Development preview</span>
+    </div>
+    <div class="theme-switch" role="group" aria-label="Color theme">
+      <button
+        type="button"
+        [attr.aria-pressed]="theme() === 'light'"
+        (click)="setTheme('light')"
+      >
+        Light
+      </button>
+      <button
+        type="button"
+        [attr.aria-pressed]="theme() === 'dark'"
+        (click)="setTheme('dark')"
+      >
+        Dark
+      </button>
+    </div>
   </header>
 
-  <section class="toolbar" aria-label="Icon filters">
-    <label for="icon-search">Search by name, category, or tag</label>
-    <div class="search-field">
-      <neural-icon [icon]="searchIcon" [size]="19" />
-      <input
-        id="icon-search"
-        type="search"
-        placeholder="Try “navigation” or “alert”"
-        [value]="query()"
-        (input)="updateQuery($event)"
-      />
-    </div>
-  </section>
+  <main class="workspace" [class.with-detail]="selected()">
+    <div
+      class="catalog-column"
+      [attr.inert]="selected() && isNarrow() ? '' : null"
+    >
+      <section class="catalog-intro" aria-labelledby="catalog-heading">
+        <div>
+          <h2 id="catalog-heading">Find the right mark.</h2>
+          <p>
+            One family, two considered variants. Select an icon to inspect its
+            geometry and use it in your framework.
+          </p>
+        </div>
+        <a href="#usage">Using the icons</a>
+      </section>
 
-  <section aria-live="polite" aria-atomic="true">
-    <p class="results">Showing {{ icons().length }} of {{ total }}</p>
-    <div class="grid">
-      @for (icon of icons(); track icon.outline.name) {
-      <article class="card">
-        <div class="variants" aria-label="Icon variants">
-          <div class="variant">
-            <div class="icon-stage">
-              <neural-icon
-                [icon]="icon.outline"
-                [size]="28"
-                [label]="iconLabel(icon.outline, 'outline')"
-              />
-            </div>
-            <span class="variant-label">Outline</span>
-          </div>
-          <div class="variant">
-            @if (icon.filled; as filled) {
-            <div class="icon-stage filled-stage">
-              <neural-icon
-                [icon]="filled"
-                [size]="28"
-                [label]="iconLabel(filled, 'filled')"
-              />
-            </div>
-            } @else {
-            <div
-              class="icon-stage unavailable-stage"
-              aria-label="Filled variant not available"
-            >
-              <span aria-hidden="true">—</span>
-            </div>
+      <section class="catalog-controls" aria-label="Explore icons">
+        <div class="search-control">
+          <label for="icon-search">Search icons</label>
+          <div class="search-input">
+            <neural-icon [icon]="searchIcon" [size]="19" />
+            <input
+              #searchInput
+              id="icon-search"
+              type="search"
+              autocomplete="off"
+              placeholder="Name, keyword, or category"
+              [value]="query()"
+              (input)="setQuery($event)"
+            />
+            @if (query()) {
+            <button type="button" class="clear-button" (click)="clearQuery()">
+              Clear
+            </button>
             }
-            <span class="variant-label">Filled</span>
           </div>
         </div>
-        <strong>{{ icon.outline.name }}</strong>
-        <span>{{ icon.outline.category }}</span>
-      </article>
-      } @empty {
-      <p class="empty">No icons match “{{ query() }}”.</p>
-      }
+        <div class="category-control">
+          <label for="category-filter">Category</label>
+          <select
+            id="category-filter"
+            [value]="category()"
+            (change)="setCategory($event)"
+          >
+            <option value="all">All categories</option>
+            @for (item of categories; track item) {
+            <option [value]="item">{{ item }}</option>
+            }
+          </select>
+        </div>
+        <div class="variant-control">
+          <span class="control-label" id="variant-label">Grid preview</span>
+          <div class="segmented" role="group" aria-labelledby="variant-label">
+            <button
+              type="button"
+              [attr.aria-pressed]="variantMode() === 'both'"
+              (click)="setVariantMode('both')"
+            >
+              Both
+            </button>
+            <button
+              type="button"
+              [attr.aria-pressed]="variantMode() === 'outline'"
+              (click)="setVariantMode('outline')"
+            >
+              Outline
+            </button>
+            <button
+              type="button"
+              [attr.aria-pressed]="variantMode() === 'filled'"
+              (click)="setVariantMode('filled')"
+            >
+              Filled
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="result-line" role="status" aria-live="polite">
+        <span>{{ icons().length }} of {{ total }} families</span>
+        @if (category() !== 'all' || query()) {
+        <span>Matching your filters</span>
+        } @else if (variantMode() === 'both') {
+        <span>Outline · Filled</span>
+        } @else {
+        <span>Catalog order</span>
+        }
+      </div>
+
+      <ul class="icon-grid" aria-label="Icon families">
+        @for (family of icons(); track family.name) {
+        <li>
+          <button
+            type="button"
+            class="family-tile"
+            [class.is-selected]="selectedName() === family.name"
+            [attr.id]="'family-' + family.name"
+            [attr.aria-current]="selectedName() === family.name ? 'true' : null"
+            [attr.aria-label]="'Inspect ' + family.name"
+            (click)="selectFamily(family.name)"
+          >
+            <span class="tile-preview" aria-hidden="true">
+              @if (variantMode() !== 'filled') {
+              <neural-icon
+                [icon]="family.outline"
+                [size]="variantMode() === 'both' ? 27 : 30"
+              />
+              } @if (variantMode() !== 'outline') {
+              <neural-icon
+                [icon]="family.filled"
+                [size]="variantMode() === 'both' ? 27 : 30"
+              />
+              }
+            </span>
+            <span class="tile-name">{{ family.name }}</span>
+          </button>
+        </li>
+        } @empty {
+        <li class="empty-state">
+          <h3>No matching icons</h3>
+          <p>Try another name, keyword, or category.</p>
+          <button type="button" (click)="clearQuery()">Clear search</button>
+        </li>
+        }
+      </ul>
+
+      <section id="usage" class="usage" aria-labelledby="usage-heading">
+        <div>
+          <h2 id="usage-heading">Use one. Keep one.</h2>
+          <p>
+            Import a definition from its own Core path, then render it with the
+            Angular, React, or Vue adapter. The normal consumer does not load
+            the catalog.
+          </p>
+        </div>
+        <pre><code>import &#123; iconSearch &#125; from '&#64;neural-icons/core/icons/search';</code></pre>
+        <p class="usage-note">
+          This explorer deliberately imports
+          <code>&#64;neural-icons/core/catalog</code> to search every family.
+          Use that entry only when your application genuinely needs the complete
+          catalog.
+        </p>
+      </section>
     </div>
-  </section>
-</main>
+
+    @if (selected(); as family) {
+    <div class="detail-scrim" (click)="closeDetail()" aria-hidden="true"></div>
+    <aside
+      #detailPanel
+      class="detail-panel"
+      aria-labelledby="detail-heading"
+      [attr.role]="isNarrow() ? 'dialog' : null"
+      [attr.aria-modal]="isNarrow() ? 'true' : null"
+    >
+      <div class="detail-topline">
+        <span>Family detail</span>
+        <button type="button" class="text-button" (click)="closeDetail()">
+          Close
+        </button>
+      </div>
+      <div class="detail-heading-row">
+        <div>
+          <span class="detail-category">{{ family.category }}</span>
+          <h2 id="detail-heading">{{ family.name }}</h2>
+        </div>
+        <button
+          type="button"
+          class="copy-name"
+          (click)="copy(family.name, 'Name')"
+        >
+          Copy name
+        </button>
+      </div>
+
+      <div
+        class="detail-variant-switch segmented"
+        role="group"
+        aria-label="Selected variant"
+      >
+        <button
+          type="button"
+          [attr.aria-pressed]="selectedVariant() === 'outline'"
+          (click)="setSelectedVariant('outline')"
+        >
+          Outline
+        </button>
+        <button
+          type="button"
+          [attr.aria-pressed]="selectedVariant() === 'filled'"
+          (click)="setSelectedVariant('filled')"
+        >
+          Filled
+        </button>
+      </div>
+
+      <div class="large-preview" [style.--preview-ink]="previewColor()">
+        @if (definition(); as icon) {
+        <neural-icon [icon]="icon" [size]="76" />
+        }
+        <span>{{ selectedVariant() }} / 76 px</span>
+      </div>
+
+      <div class="detail-section">
+        <div class="section-heading">
+          <h3>At real sizes</h3>
+          <span>16 / 20 / 24 / 32 px</span>
+        </div>
+        <div class="size-row" [style.--preview-ink]="previewColor()">
+          @for (size of sizes; track size) {
+          <div class="size-sample">
+            @if (definition(); as icon) {
+            <neural-icon [icon]="icon" [size]="size" />
+            }
+            <span>{{ size }}</span>
+          </div>
+          }
+        </div>
+      </div>
+
+      <div class="detail-section color-section">
+        <h3>Preview color</h3>
+        <div class="color-options" role="group" aria-label="Preview color">
+          @for (color of colors; track color) {
+          <button
+            type="button"
+            class="color-swatch"
+            [style.background]="color"
+            [attr.aria-label]="'Preview color ' + color"
+            [attr.aria-pressed]="previewColor() === color"
+            (click)="setPreviewColor(color)"
+          ></button>
+          }
+        </div>
+        <span>Rendered with currentColor</span>
+      </div>
+
+      <div class="detail-section">
+        <h3>Search terms</h3>
+        <p class="keywords">{{ family.keywords.join(' · ') }}</p>
+      </div>
+
+      <div class="detail-section code-section">
+        <div class="section-heading">
+          <h3>Granular import</h3>
+          <button type="button" (click)="copy(importStatement(), 'Import')">
+            Copy
+          </button>
+        </div>
+        <pre><code>{{ importStatement() }}</code></pre>
+        <p class="code-note">
+          Core supplies the definition; the adapter renders it.
+        </p>
+      </div>
+
+      <div class="detail-section code-section">
+        <h3>Framework usage</h3>
+        <div class="framework-tabs" role="tablist" aria-label="Framework">
+          <button
+            type="button"
+            role="tab"
+            [attr.aria-selected]="framework() === 'angular'"
+            (click)="setFramework('angular')"
+          >
+            Angular
+          </button>
+          <button
+            type="button"
+            role="tab"
+            [attr.aria-selected]="framework() === 'react'"
+            (click)="setFramework('react')"
+          >
+            React
+          </button>
+          <button
+            type="button"
+            role="tab"
+            [attr.aria-selected]="framework() === 'vue'"
+            (click)="setFramework('vue')"
+          >
+            Vue
+          </button>
+        </div>
+        <div class="snippet-heading">
+          <span>{{ framework() }} example</span
+          ><button type="button" (click)="copy(snippet(), 'Snippet')">
+            Copy snippet
+          </button>
+        </div>
+        <pre class="snippet"><code>{{ snippet() }}</code></pre>
+      </div>
+
+      <div class="detail-section a11y-note">
+        <h3>Accessibility</h3>
+        <p>
+          Decorative icons are hidden from assistive technology by default. When
+          the icon conveys meaning on its own, provide an accessible name:
+          Angular <code>[label]</code>; React or Vue <code>aria-label</code> (or
+          <code>title</code>).
+        </p>
+      </div>
+      <p class="copy-feedback" role="status" aria-live="polite">
+        {{ copyFeedback() }}
+      </p>
+    </aside>
+    }
+  </main>
+</div>

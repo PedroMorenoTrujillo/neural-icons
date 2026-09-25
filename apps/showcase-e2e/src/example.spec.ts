@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
-test('serves SVGs before JavaScript and preserves those nodes during hydration', async ({
+test('SSR renders the full family catalog and hydration preserves SVG nodes', async ({
   page,
   request,
 }) => {
@@ -8,14 +8,18 @@ test('serves SVGs before JavaScript and preserves those nodes during hydration',
   const html = await response.text();
   expect(response.ok()).toBe(true);
   expect(html).toContain('ngh=');
-  expect(html.match(/<article\b/g)).toHaveLength(197);
-  expect(html).toContain('data-neural-icon="search"');
+  expect(html.match(/class="family-tile"/g)).toHaveLength(197);
+  expect(html).toContain('197 families');
+  expect(html).toContain('394 glyphs');
+  expect(html).not.toContain('id="family-attach"');
+  expect(html).not.toContain('id="family-funnel"');
 
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   page.on('console', (message) => {
     if (message.type() === 'error') errors.push(message.text());
   });
+
   let allowScripts!: () => void;
   const scriptsAllowed = new Promise<void>((resolve) => {
     allowScripts = resolve;
@@ -26,69 +30,159 @@ test('serves SVGs before JavaScript and preserves those nodes during hydration',
   });
   try {
     await page.goto('/', { waitUntil: 'commit' });
-    await expect(page.locator('article.card')).toHaveCount(197);
+    await expect(page.locator('.family-tile')).toHaveCount(197);
     await page.evaluate(() => {
       Object.assign(window, {
         serverIconNodes: Array.from(
-          document.querySelectorAll('neural-icon svg'),
+          document.querySelectorAll('.tile-preview neural-icon svg'),
         ),
       });
     });
   } finally {
     allowScripts();
   }
-  // Retry interaction until the application is bootstrapped, without relying
-  // on debug APIs that production Angular does not expose.
+
   await expect(async () => {
-    await page.getByRole('searchbox').fill('');
-    await page.getByRole('searchbox').fill('alert');
-    await expect(page.locator('article.card')).toHaveCount(3);
+    await page.getByRole('searchbox', { name: 'Search icons' }).fill('alert');
+    await expect(page.locator('.family-tile')).toHaveCount(3);
   }).toPass({ timeout: 15_000 });
   expect(
     await page.evaluate(() => {
       const original = (window as unknown as { serverIconNodes: SVGElement[] })
         .serverIconNodes;
-      const current = Array.from(document.querySelectorAll('neural-icon svg'));
+      const current = Array.from(
+        document.querySelectorAll('.tile-preview neural-icon svg'),
+      );
       return current.every((svg) => original.includes(svg as SVGElement));
     }),
   ).toBe(true);
   expect(errors).toEqual([]);
 });
 
-test('renders and filters the icon catalog', async ({ page }) => {
-  await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-    'Neural Icons',
-  );
-  await expect(page.locator('article.card')).toHaveCount(197);
-  await page.getByRole('searchbox').fill('alert');
-  await expect(page.locator('article.card')).toHaveCount(3);
-});
-
-test('shows the approved icons and resolves removed names only as search terms', async ({
+test('search, approved aliases, category, empty state and variant preview', async ({
   page,
 }) => {
   await page.goto('/');
-  const search = page.getByRole('searchbox');
+  const search = page.getByRole('searchbox', { name: 'Search icons' });
+  await expect(page.locator('.family-tile')).toHaveCount(197);
+  await search.fill('attach');
+  await expect(page.locator('.tile-name')).toHaveText('paperclip');
+  await search.fill('funnel');
+  await expect(page.locator('.tile-name')).toHaveText('filter');
+  await search.fill('file');
+  await page.getByLabel('Category').selectOption('file');
+  await expect(page.locator('.family-tile')).not.toHaveCount(0);
+  await page
+    .getByRole('button', { name: 'Filled', exact: true })
+    .first()
+    .click();
+  await expect(page.locator('.tile-preview neural-icon')).toHaveCount(
+    await page.locator('.family-tile').count(),
+  );
+  await search.fill('not-an-icon');
+  await expect(page.getByText('No matching icons')).toBeVisible();
+  await page.getByRole('button', { name: 'Clear search' }).click();
+  await expect(search).toHaveValue('');
+});
 
-  await search.fill('file-text');
-  await expect(page.locator('article.card')).toHaveCount(1);
-  await expect(page.locator('article.card strong')).toHaveText('file-text');
+test('detail, snippets, copy, deep link, history and keyboard close', async ({
+  page,
+  context,
+}) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.goto('/?icon=file-text');
+  await expect(page.getByRole('heading', { name: 'file-text' })).toBeVisible();
+  await expect(page.locator('.size-sample')).toHaveCount(4);
+  await expect(page.locator('.size-sample neural-icon')).toHaveCount(4);
+  await expect(page.locator('.detail-panel')).toContainText(
+    'Core supplies the definition',
+  );
+  await expect(page.locator('.code-section').first()).toContainText(
+    '@neural-icons/core/icons/file-text',
+  );
+  await page
+    .getByRole('button', { name: 'Filled', exact: true })
+    .last()
+    .click();
+  await expect(page.locator('.large-preview neural-icon')).toHaveAttribute(
+    'data-neural-icon',
+    'file-text-filled',
+  );
+  await expect(page.locator('.code-section').first()).toContainText(
+    'iconFileTextFilled',
+  );
+  await page.getByRole('tab', { name: 'React' }).click();
+  await expect(page.locator('.snippet')).toContainText(
+    '<NeuIcon icon={iconFileTextFilled}',
+  );
+  await page.getByRole('tab', { name: 'Vue' }).click();
+  await expect(page.locator('.snippet')).toContainText(
+    ':icon="iconFileTextFilled"',
+  );
+  await page.getByRole('tab', { name: 'Angular' }).click();
+  await expect(page.locator('.snippet')).toContainText(
+    '<neural-icon [icon]="iconFileTextFilled"',
+  );
+  await page.getByRole('button', { name: 'Copy name' }).click();
+  await expect(page.getByRole('status').last()).toContainText('Name copied');
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
+    'file-text',
+  );
+
+  await page.keyboard.press('Escape');
+  await expect(page.locator('.detail-panel')).toHaveCount(0);
+  await expect(page).not.toHaveURL(/icon=/);
+  await page.goBack();
+  await expect(page.getByRole('heading', { name: 'file-text' })).toBeVisible();
+});
+
+test('mobile and dark theme retain a usable catalog and detail', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Dark', exact: true }).click();
+  await expect(page.locator('app-root')).toHaveClass(/theme-dark/);
+  await page.getByRole('button', { name: 'Inspect paperclip' }).click();
+  await expect(page.locator('.detail-panel')).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Close' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Close' })).toBeFocused();
+  await expect(page.locator('.catalog-column')).toHaveAttribute('inert', '');
+  await page.keyboard.press('Shift+Tab');
+  await expect(
+    page.getByRole('button', { name: 'Copy snippet' }),
+  ).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('button', { name: 'Close' })).toBeFocused();
+  await page.getByRole('button', { name: 'Close' }).click();
+  await expect(page.locator('.detail-panel')).toHaveCount(0);
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth),
+  ).toBeLessThanOrEqual(390);
+});
+
+test('certified families retain their distinct canonical SVG paths', async ({
+  page,
+}) => {
+  await page.goto('/');
+  for (const name of [
+    'file',
+    'file-text',
+    'login',
+    'logout',
+    'group',
+    'users',
+    'paperclip',
+    'filter',
+  ]) {
+    const tile = page.locator(`#family-${name}`);
+    await expect(tile).toHaveCount(1);
+    await expect(tile.locator('neural-icon')).toHaveCount(2);
+  }
   await expect(
     page.locator('neural-icon[data-neural-icon="file-text"] svg path'),
   ).toHaveAttribute('d', /M8\.5 11h7M12 11v7/);
   await expect(
-    page.locator('neural-icon[data-neural-icon="file-text-filled"] svg path'),
-  ).toHaveAttribute('d', /M8\.5 10\.5h7v2\.2H13v5\.5/);
-
-  await search.fill('login');
-  await expect(page.locator('article.card')).toHaveCount(1);
-  await expect(
     page.locator('neural-icon[data-neural-icon="login"] svg path'),
   ).toHaveAttribute('d', /M20 12H9M13 8l-4 4 4 4/);
-
-  await search.fill('funnel');
-  await expect(page.locator('article.card strong')).toHaveText('filter');
-  await search.fill('attach');
-  await expect(page.locator('article.card strong')).toHaveText('paperclip');
 });

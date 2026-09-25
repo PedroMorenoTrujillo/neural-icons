@@ -3,7 +3,7 @@ import { nxE2EPreset } from '@nx/playwright/preset';
 import { workspaceRoot } from '@nx/devkit';
 
 // This suite always checks the local production artifact.
-const baseURL = 'http://127.0.0.1:4301';
+const baseURL = 'http://127.0.0.1:4311';
 
 /**
  * Read environment variables from file.
@@ -33,7 +33,7 @@ export default defineConfig({
   webServer: {
     command:
       'npm exec nx build showcase && node dist/apps/showcase/server/server.mjs',
-    env: { PORT: '4301', NG_ALLOWED_HOSTS: '127.0.0.1' },
+    env: { PORT: '4311', NG_ALLOWED_HOSTS: '127.0.0.1' },
     url: baseURL,
     reuseExistingServer: false,
     timeout: 120_000,

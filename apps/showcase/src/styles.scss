@@ -1,20 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
 :root {
-  color-scheme: light;
-  --background: #f6f9fe;
-  --surface: #ffffff;
-  --line: #d9e3f2;
-  --text: #14213a;
-  --muted: #60708a;
-  --accent: #236ed8;
   font-family:
     Inter,
     ui-sans-serif,
     system-ui,
     -apple-system,
     sans-serif;
-  color: var(--text);
-  background: var(--background);
   font-synthesis: none;
 }
 
@@ -26,16 +16,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background:
-    radial-gradient(
-      circle at 20% -10%,
-      rgba(35, 110, 216, 0.08),
-      transparent 32rem
-    ),
-    var(--background);
+  background: #f7f8fa;
 }
 
-button,
-input {
-  font: inherit;
+::selection {
+  color: #fff;
+  background: #236ed8;
 }
