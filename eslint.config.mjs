@@ -36,6 +36,10 @@ export default [
               onlyDependOnLibsWithTags: ['scope:core'],
             },
             {
+              sourceTag: 'scope:react',
+              onlyDependOnLibsWithTags: ['scope:core'],
+            },
+            {
               sourceTag: 'scope:showcase',
               onlyDependOnLibsWithTags: [
                 'scope:core',

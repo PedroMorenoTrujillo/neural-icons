@@ -1,0 +1,37 @@
+{
+  "name": "react",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react/src",
+  "projectType": "library",
+  "tags": ["scope:react", "type:library", "platform:react"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "dependsOn": ["^build"],
+      "options": {
+        "outputPath": "dist/packages/react",
+        "main": "packages/react/src/index.ts",
+        "tsConfig": "packages/react/tsconfig.lib.json",
+        "assets": ["packages/react/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --noEmit --project packages/react/tsconfig.spec.json"
+      }
+    },
+    "verify-package": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build", "^build"],
+      "cache": false,
+      "options": {
+        "command": "node tools/verify-react-package.mjs"
+      }
+    }
+  }
+}
