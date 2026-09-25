@@ -1,0 +1,37 @@
+{
+  "name": "vue",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/vue/src",
+  "projectType": "library",
+  "tags": ["scope:vue", "type:library", "platform:vue"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "dependsOn": ["^build"],
+      "options": {
+        "outputPath": "dist/packages/vue",
+        "main": "packages/vue/src/index.ts",
+        "tsConfig": "packages/vue/tsconfig.lib.json",
+        "assets": ["packages/vue/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --noEmit --project packages/vue/tsconfig.spec.json"
+      }
+    },
+    "verify-package": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build", "^build"],
+      "cache": false,
+      "options": {
+        "command": "node tools/verify-vue-package.mjs"
+      }
+    }
+  }
+}

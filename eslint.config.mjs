@@ -40,6 +40,10 @@ export default [
               onlyDependOnLibsWithTags: ['scope:core'],
             },
             {
+              sourceTag: 'scope:vue',
+              onlyDependOnLibsWithTags: ['scope:core'],
+            },
+            {
               sourceTag: 'scope:showcase',
               onlyDependOnLibsWithTags: [
                 'scope:core',

@@ -1,0 +1,30 @@
+{
+  "name": "@neural-icons/vue",
+  "version": "0.0.1-next.0",
+  "type": "module",
+  "description": "Vue 3.5 adapter for Neural Icons.",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE.md",
+    "!**/*.tsbuildinfo"
+  ],
+  "peerDependencies": {
+    "vue": ">=3.5.0 <3.6.0"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@neural-icons/core": "0.0.1-next.0"
+  }
+}
