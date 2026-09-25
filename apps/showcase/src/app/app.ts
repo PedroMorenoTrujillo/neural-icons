@@ -1,5 +1,5 @@
 import { NeuralIcon } from '@neural-icons/angular';
-import { neuralIcons } from '@neural-icons/core';
+import { neuralIcons } from '@neural-icons/core/catalog';
 import type { NeuralIconDefinition } from '@neural-icons/core';
 import { iconSearch } from '@neural-icons/core/icons/search';
 import {

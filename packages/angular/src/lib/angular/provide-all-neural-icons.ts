@@ -1,4 +1,4 @@
-import { neuralIcons } from '@neural-icons/core';
+import { neuralIcons } from '@neural-icons/core/catalog';
 import type { Provider } from '@angular/core';
 import { provideNeuralIcons } from './provide-neural-icons';
 

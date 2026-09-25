@@ -12,7 +12,7 @@
     "watch:icons": "node tools/watch-icons.mjs",
     "generate:filled": "node tools/add-filled.mjs && node tools/icons.mjs",
     "generate:variants": "node tools/add-filled.mjs && node tools/icons.mjs",
-    "check:generated": "node tools/icons.mjs --check",
+    "check:generated": "node tools/icons.mjs --check && node tools/generate-catalog-review.mjs --check",
     "validate:icons": "node tools/validate-icons.mjs",
     "check": "npm run check:generated && npm run validate:icons && nx run-many -t lint,test,build && nx run angular:verify-package"
   },

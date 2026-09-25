@@ -1,2 +1,2 @@
 export * from './lib/icon-definition.js';
-export * from './icons/index.js';
+export type { NeuralIconFamily, NeuralIconName } from './icon-names.js';

@@ -4,5 +4,8 @@
 /.nx/cache
 /.nx/workspace-data
 .angular
+/.playwright-cli
+/docs/qa/contact-sheets
+/docs/qa/NI-02-NAMING-LEDGER.md
 
 .nx/self-healing

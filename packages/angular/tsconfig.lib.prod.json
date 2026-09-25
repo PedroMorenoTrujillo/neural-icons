@@ -4,6 +4,9 @@
     "declarationMap": false,
     "paths": {
       "@neural-icons/core": ["../../dist/packages/core/src/index.d.ts"],
+      "@neural-icons/core/catalog": [
+        "../../dist/packages/core/src/icons/index.d.ts"
+      ],
       "@neural-icons/core/icons/*": ["../../dist/packages/core/src/icons/*"]
     }
   },

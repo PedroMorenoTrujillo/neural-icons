@@ -698,13 +698,7 @@
   {
     "name": "paperclip",
     "category": "action",
-    "tags": ["paperclip", "action"],
-    "paths": ["m8 12 6.5-6.5a3.5 3.5 0 0 1 5 5L11 19a5 5 0 0 1-7-7l8-8"]
-  },
-  {
-    "name": "attach",
-    "category": "action",
-    "tags": ["attach", "action"],
+    "tags": ["paperclip", "action", "attach", "attachment", "file attachment"],
     "paths": ["m8 12 6.5-6.5a3.5 3.5 0 0 1 5 5L11 19a5 5 0 0 1-7-7l8-8"]
   },
   {
@@ -947,7 +941,7 @@
     "name": "login",
     "category": "system",
     "tags": ["login", "system"],
-    "paths": ["M11 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5M9 12h11M16 8l4 4-4 4"]
+    "paths": ["M11 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5M20 12H9M13 8l-4 4 4 4"]
   },
   {
     "name": "user-plus",
@@ -1111,7 +1105,7 @@
     "name": "file-text",
     "category": "file",
     "tags": ["file-text", "file", "text"],
-    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 12h6M9 16h6"]
+    "paths": ["M6 3.5h8l4 4v13H6zM14 3.5v4h4M8.5 11h7M12 11v7"]
   },
   {
     "name": "file-code",
@@ -1228,12 +1222,6 @@
     "category": "file",
     "tags": ["sort-descending", "file", "descending"],
     "paths": ["M7 5v14M4 16l3 3 3-3M14 7h6M14 12h4M14 17h2"]
-  },
-  {
-    "name": "funnel",
-    "category": "file",
-    "tags": ["funnel", "file", "filter"],
-    "paths": ["M4 5h16l-6 7v6l-4 2v-8z"]
   },
   {
     "name": "calendar-plus",
@@ -1763,7 +1751,7 @@
     "name": "file-filled",
     "category": "file",
     "tags": ["document", "page", "filled"],
-    "paths": ["M6 3h8l4 4v14H6zM14 3v5h5zM9 12h6v2.25H9zM9 16h6v2.25H9z"],
+    "paths": ["M6 3h8l4 4v14H6zM14 3v5h4zM9 12h6v2.25H9zM9 16h6v2.25H9z"],
     "variant": "filled",
     "stroke": "none"
   },
@@ -2324,17 +2312,7 @@
   {
     "name": "paperclip-filled",
     "category": "action",
-    "tags": ["paperclip", "action", "filled"],
-    "paths": [
-      "M14.5 3.25a4.75 4.75 0 0 1 6.72 6.72l-8.6 8.6a6.5 6.5 0 0 1-9.2-9.2l7.55-7.55 1.95 1.95-7.55 7.55a3.75 3.75 0 0 0 5.3 5.3l8.6-8.6a2 2 0 1 0-2.82-2.82l-8.6 8.6-1.95-1.95 8.6-8.6z"
-    ],
-    "variant": "filled",
-    "stroke": "none"
-  },
-  {
-    "name": "attach-filled",
-    "category": "action",
-    "tags": ["attach", "action", "filled"],
+    "tags": ["paperclip", "action", "attach", "attachment", "file attachment", "filled"],
     "paths": [
       "M14.5 3.25a4.75 4.75 0 0 1 6.72 6.72l-8.6 8.6a6.5 6.5 0 0 1-9.2-9.2l7.55-7.55 1.95 1.95-7.55 7.55a3.75 3.75 0 0 0 5.3 5.3l8.6-8.6a2 2 0 1 0-2.82-2.82l-8.6 8.6-1.95-1.95 8.6-8.6z"
     ],
@@ -2658,7 +2636,7 @@
     "category": "system",
     "tags": ["login", "system", "filled"],
     "paths": [
-      "M6 3h5v2.5H6a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 .5.5h5V21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3zM9 10.75h7V8l4 4-4 4v-2.75H9z"
+      "M6 3h5v2.5H6a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 .5.5h5V21H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3zM20 10.75h-7V8l-4 4 4 4v-2.75h7z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -2890,7 +2868,7 @@
     "category": "file",
     "tags": ["file-text", "file", "text", "filled"],
     "paths": [
-      "M5 2.5h9l5 5V22H5zm8 1.9v4.35h4.35zM8 12h8v2.25H8zM8 16h8v2.25H8z"
+      "M6 3h8l4 4v14H6zM14 3v5h4zM8.5 10.5h7v2.2H13v5.5h-2v-5.5H8.5z"
     ],
     "variant": "filled",
     "stroke": "none"
@@ -3070,14 +3048,6 @@
     "paths": [
       "M6 4h2v12l2.5-2.5 1.75 1.75L7 20.5l-5.25-5.25 1.75-1.75L6 16zM14 6h6v2.25h-6zM14 10.9h4v2.25h-4zM14 15.8h2v2.25h-2z"
     ],
-    "variant": "filled",
-    "stroke": "none"
-  },
-  {
-    "name": "funnel-filled",
-    "category": "file",
-    "tags": ["funnel", "file", "filter", "filled"],
-    "paths": ["M3.5 4.5h17L14 12.1v6.3l-4 1.75V12.1z"],
     "variant": "filled",
     "stroke": "none"
   },

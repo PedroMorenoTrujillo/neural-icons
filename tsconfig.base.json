@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "paths": {
       "@neural-icons/core": ["./packages/core/src/index.ts"],
+      "@neural-icons/core/catalog": ["./packages/core/src/icons/index.ts"],
       "@neural-icons/core/icons/*": ["./packages/core/src/icons/*"],
       "@neural-icons/angular": ["./packages/angular/src/index.ts"]
     }

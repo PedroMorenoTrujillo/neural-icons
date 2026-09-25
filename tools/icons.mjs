@@ -59,6 +59,18 @@ const exports = specs
   )
   .join('\n');
 const names = specs.map((icon) => `icon${pascal(icon.name)}`).join(',\n  ');
+const nameUnion = specs.map((icon) => `  | '${icon.name}'`).join('\n');
+const familyUnion = specs
+  .filter((icon) => icon.variant !== 'filled')
+  .map((icon) => `  | '${icon.name}'`)
+  .join('\n');
+expected.set(
+  'packages/core/src/icon-names.ts',
+  await format(
+    `// Generated from icons.json. Types only: importing Core root retains no glyphs.\nexport type NeuralIconName =\n${nameUnion};\n\nexport type NeuralIconFamily =\n${familyUnion};\n`,
+    { parser: 'typescript', singleQuote: true },
+  ),
+);
 const indexSource = await format(
   `${imports}
 import type { NeuralIconDefinition } from '../lib/icon-definition.js';
@@ -69,7 +81,7 @@ export const neuralIcons = Object.freeze([
   ${names},
 ]) satisfies readonly NeuralIconDefinition[];
 
-export type NeuralIconName = (typeof neuralIcons)[number]['name'];
+export type { NeuralIconName, NeuralIconFamily } from '../icon-names.js';
 `,
   { parser: 'typescript', singleQuote: true },
 );

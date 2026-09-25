@@ -8,7 +8,7 @@ test('serves SVGs before JavaScript and preserves those nodes during hydration',
   const html = await response.text();
   expect(response.ok()).toBe(true);
   expect(html).toContain('ngh=');
-  expect(html.match(/<article\b/g)).toHaveLength(200);
+  expect(html.match(/<article\b/g)).toHaveLength(197);
   expect(html).toContain('data-neural-icon="search"');
 
   const errors: string[] = [];
@@ -26,7 +26,7 @@ test('serves SVGs before JavaScript and preserves those nodes during hydration',
   });
   try {
     await page.goto('/', { waitUntil: 'commit' });
-    await expect(page.locator('article.card')).toHaveCount(200);
+    await expect(page.locator('article.card')).toHaveCount(197);
     await page.evaluate(() => {
       Object.assign(window, {
         serverIconNodes: Array.from(
@@ -60,7 +60,35 @@ test('renders and filters the icon catalog', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(
     'Neural Icons',
   );
-  await expect(page.locator('article.card')).toHaveCount(200);
+  await expect(page.locator('article.card')).toHaveCount(197);
   await page.getByRole('searchbox').fill('alert');
   await expect(page.locator('article.card')).toHaveCount(3);
+});
+
+test('shows the approved icons and resolves removed names only as search terms', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const search = page.getByRole('searchbox');
+
+  await search.fill('file-text');
+  await expect(page.locator('article.card')).toHaveCount(1);
+  await expect(page.locator('article.card strong')).toHaveText('file-text');
+  await expect(
+    page.locator('neural-icon[data-neural-icon="file-text"] svg path'),
+  ).toHaveAttribute('d', /M8\.5 11h7M12 11v7/);
+  await expect(
+    page.locator('neural-icon[data-neural-icon="file-text-filled"] svg path'),
+  ).toHaveAttribute('d', /M8\.5 10\.5h7v2\.2H13v5\.5/);
+
+  await search.fill('login');
+  await expect(page.locator('article.card')).toHaveCount(1);
+  await expect(
+    page.locator('neural-icon[data-neural-icon="login"] svg path'),
+  ).toHaveAttribute('d', /M20 12H9M13 8l-4 4 4 4/);
+
+  await search.fill('funnel');
+  await expect(page.locator('article.card strong')).toHaveText('filter');
+  await search.fill('attach');
+  await expect(page.locator('article.card strong')).toHaveText('paperclip');
 });

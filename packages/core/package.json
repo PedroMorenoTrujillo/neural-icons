@@ -15,6 +15,12 @@
       "import": "./src/index.js",
       "default": "./src/index.js"
     },
+    "./catalog": {
+      "types": "./src/icons/index.d.ts",
+      "import": "./src/icons/index.js",
+      "default": "./src/icons/index.js"
+    },
+    "./icons/index": null,
     "./icons/*": {
       "types": "./src/icons/*.d.ts",
       "import": "./src/icons/*.js",

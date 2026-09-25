@@ -16,11 +16,11 @@ apps/showcase       SSR + hydration integration and visual review
 
 ## Tree-shaking and package exports
 
-Every icon is emitted as its own module under `@neural-icons/core/icons/<name>`. Product code should use those entry points so a bundle includes only explicitly imported definitions. The root barrel and `neuralIcons` array are conveniences for tooling and the showcase; application components should not import the complete array.
+Every icon is emitted as its own module under `@neural-icons/core/icons/<name>`. Product code should use those entry points so a bundle includes only explicitly imported definitions. The root exports only types and small universal helpers; it never re-exports glyph definitions. `@neural-icons/core/catalog` explicitly opts into `neuralIcons` and all 398 definitions for tooling and the QA gallery. `provideAllNeuralIcons()` is the analogous explicit Angular opt-in.
 
 Both package manifests declare `sideEffects: false`. Core is built with TypeScript while preserving the module graph. Angular is built with ng-packagr in partial compilation mode, producing the Angular Package Format for Angular 22 consumers.
 
-The audit verifies both named root imports and per-icon imports with Vite 8 against unpacked build artifacts. Unused icon geometry is eliminated in both cases; the Angular adapter alone retains no catalog. Whole-catalog imports remain intentional for the showcase. Native Node ESM does not tree-shake: use per-icon entry points to avoid evaluating the root catalog in server-only consumers.
+The package check verifies root contracts and per-icon imports with Vite against unpacked build artifacts. A separate esbuild matrix verifies that root imports retain zero glyphs, per-icon imports retain only selected definitions, and the explicit catalog retains all 398. Native Node ESM does not tree-shake: use per-icon entry points to avoid evaluating unnecessary definitions in server-only consumers.
 
 Raw assets have explicit `./svg/*.svg` exports. Workspace TypeScript aliases mirror the JavaScript entry points; internal `core/lib/*` paths are not an application API. Core production compilation excludes DOM and Node ambient types, and lint rejects framework imports from core.
 
@@ -28,7 +28,7 @@ Raw assets have explicit `./svg/*.svg` exports. Workspace TypeScript aliases mir
 
 `NeuralIcon` is standalone and OnPush. Its inputs are:
 
-- `icon` (required): a `NeuralIconDefinition`.
+- `icon` (required): a direct `NeuralIconDefinition` or a registered `NeuralIconName`. Names resolve only through explicit `provideNeuralIcons(...definitions)`; unknown names render no SVG and warn once per name/instance in development.
 - `size`: CSS length or number; numbers become pixels. Default `1em`.
 - `strokeWidth`: numeric SVG stroke width. Default `1.75`.
 - `label`: accessible name, trimmed before rendering. Default `null`; blank labels also make the icon decorative.

@@ -1,9 +1,12 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
+import { createRequire } from 'node:module';
+import { gzipSync } from 'node:zlib';
 import {
   mkdtemp,
   mkdir,
   readFile,
+  readdir,
   rm,
   symlink,
   writeFile,
@@ -12,6 +15,11 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build } from 'vite';
+
+const angularBuildRequire = createRequire(
+  new URL('../node_modules/@angular/build/package.json', import.meta.url),
+);
+const { build: buildWithEsbuild } = angularBuildRequire('esbuild');
 
 // Exercise the actual tarballs outside the workspace: no source path aliases,
 // registry access, publication, or dependency installation is involved.
@@ -56,18 +64,46 @@ try {
   const specs = JSON.parse(
     await readFile(join(root, 'packages/core/icons/icons.json'), 'utf8'),
   );
+  const packedCore = join(temporary, 'node_modules/@neural-icons/core');
+  const expectedNames = specs.map(({ name }) => name).sort();
+  const packedSvgNames = (await readdir(join(packedCore, 'svg')))
+    .filter((name) => name.endsWith('.svg'))
+    .map((name) => name.slice(0, -4))
+    .sort();
+  const packedDefinitionNames = (await readdir(join(packedCore, 'src/icons')))
+    .filter((name) => name.endsWith('.js') && name !== 'index.js')
+    .map((name) => name.slice(0, -3))
+    .sort();
+  assert.deepEqual(packedSvgNames, expectedNames, 'Packed SVG names must match the manifest exactly');
+  assert.deepEqual(packedDefinitionNames, expectedNames, 'Packed definitions must match the manifest exactly');
+  for (const name of expectedNames) {
+    assert.deepEqual(
+      await readFile(join(packedCore, 'svg', `${name}.svg`)),
+      await readFile(join(root, 'packages/core/svg', `${name}.svg`)),
+      `${name}: packed SVG must equal the generated source SVG`,
+    );
+  }
   const nodeCheck = `
     import assert from 'node:assert/strict';
-    import { neuralIcons } from '@neural-icons/core';
+    import { readFile } from 'node:fs/promises';
+    import * as core from '@neural-icons/core';
+    import { neuralIcons } from '@neural-icons/core/catalog';
+    assert(!('iconSearch' in core));
+    assert(!('neuralIcons' in core));
     assert.equal(neuralIcons.length, ${specs.length});
     for (const expected of neuralIcons) {
       const module = await import('@neural-icons/core/icons/' + expected.name);
       const icon = Object.values(module)[0];
-      assert.deepEqual(icon, { ...expected, variant: expected.variant ?? 'outline' });
+      assert.deepEqual(icon, { ...expected, family: expected.variant === 'filled' ? expected.name.replace(/-filled$/, '') : expected.name, variant: expected.variant ?? 'outline' });
       assert(Object.isFrozen(icon.paths));
       assert(import.meta.resolve('@neural-icons/core/svg/' + icon.name + '.svg').endsWith('.svg'));
     }
     assert.throws(() => import.meta.resolve('@neural-icons/core/lib/icon-definition'));
+    assert.throws(() => import.meta.resolve('@neural-icons/core/icons/index'));
+    for (const removed of ['attach', 'attach-filled', 'funnel', 'funnel-filled']) {
+      await assert.rejects(import('@neural-icons/core/icons/' + removed), { code: 'ERR_MODULE_NOT_FOUND' });
+      await assert.rejects(readFile(new URL(import.meta.resolve('@neural-icons/core/svg/' + removed + '.svg'))), { code: 'ENOENT' });
+    }
   `;
   await writeFile(join(temporary, 'node-check.mjs'), nodeCheck);
   run(process.execPath, ['node-check.mjs']);
@@ -83,6 +119,7 @@ try {
     import { Component } from '@angular/core';
     import { NeuralIcon, provideNeuralIcons, provideAllNeuralIcons } from '@neural-icons/angular';
     import { defineIcon } from '@neural-icons/core';
+    import type { NeuralIconFamily, NeuralIconName } from '@neural-icons/core';
     import { iconSearch } from '@neural-icons/core/icons/search';
     const registrations = provideNeuralIcons(iconSearch);
     const allRegistrations = provideAllNeuralIcons;
@@ -90,6 +127,13 @@ try {
     void allRegistrations;
     const mutablePaths = ['M4 12h16'];
     const definition = defineIcon({name: 'custom', category: 'system', tags: ['custom'], paths: mutablePaths});
+    const family: NeuralIconFamily = 'search';
+    const name: NeuralIconName = 'search-filled';
+    void family;
+    void name;
+    // @ts-expect-error The family union must reject unknown names.
+    const unknownFamily: NeuralIconFamily = 'not-an-icon';
+    void unknownFamily;
     // @ts-expect-error Public definitions must reject mutation, even when input arrays were mutable.
     definition.paths.push('M0 0');
     // @ts-expect-error Tags are also readonly in the public API.
@@ -141,7 +185,10 @@ try {
       'per-icon',
       "import { iconSearch as value } from '@neural-icons/core/icons/search';",
     ],
-    ['root', "import { iconSearch as value } from '@neural-icons/core';"],
+    [
+      'root',
+      "import { NEURAL_ICON_VIEW_BOX as value } from '@neural-icons/core';",
+    ],
     [
       'constant',
       "import { NEURAL_ICON_STROKE_WIDTH as value } from '@neural-icons/core';",
@@ -191,6 +238,100 @@ try {
       `Tree-shaking ${name}: ${Buffer.byteLength(code)} bytes; no unrelated geometry.`,
     );
   }
+  const tenNames = specs
+    .filter(({ variant }) => variant !== 'filled')
+    .slice(0, 10)
+    .map(({ name }) => name);
+  const pascal = (name) =>
+    name
+      .split('-')
+      .map((part) => part[0].toUpperCase() + part.slice(1))
+      .join('');
+  const imports = (names) =>
+    names
+      .map(
+        (name) =>
+          `import { icon${pascal(name)} } from '@neural-icons/core/icons/${name}';`,
+      )
+      .join('\n');
+  const symbols = (names) => names.map((name) => `icon${pascal(name)}`);
+  const matrix = [
+    [
+      'CORE ROOT ONLY',
+      "import { NEURAL_ICON_VIEW_BOX } from '@neural-icons/core'; console.log(NEURAL_ICON_VIEW_BOX);",
+      [],
+    ],
+    [
+      'ONE ICON',
+      `${imports(['search'])}\nconsole.log(iconSearch);`,
+      ['search'],
+    ],
+    [
+      'ONE FAMILY WITH VARIANTS',
+      `${imports(['search', 'search-filled'])}\nconsole.log(iconSearch, iconSearchFilled);`,
+      ['search', 'search-filled'],
+    ],
+    [
+      '10 ICONS',
+      `${imports(tenNames)}\nconsole.log(${symbols(tenNames).join(', ')});`,
+      tenNames,
+    ],
+    [
+      'ANGULAR COMPONENT + ONE ICON',
+      `import { NeuralIcon, provideNeuralIcons } from '@neural-icons/angular';\n${imports(['search'])}\nconsole.log(NeuralIcon, provideNeuralIcons(iconSearch));`,
+      ['search'],
+    ],
+    [
+      'ANGULAR COMPONENT + 10 ICONS',
+      `import { NeuralIcon, provideNeuralIcons } from '@neural-icons/angular';\n${imports(tenNames)}\nconsole.log(NeuralIcon, provideNeuralIcons(${symbols(tenNames).join(', ')}));`,
+      tenNames,
+    ],
+    [
+      'FULL CATALOG',
+      "import { neuralIcons } from '@neural-icons/core/catalog'; console.log(neuralIcons);",
+      specs.map(({ name }) => name),
+    ],
+    ['ROOT UNUSED', "import '@neural-icons/core';", []],
+  ];
+  for (const [name, source, expectedNames] of matrix) {
+    const result = await buildWithEsbuild({
+      absWorkingDir: temporary,
+      stdin: {
+        contents: source,
+        resolveDir: temporary,
+        sourcefile: `${name.toLowerCase().replaceAll(' ', '-')}.mjs`,
+      },
+      bundle: true,
+      platform: 'browser',
+      format: 'esm',
+      minify: true,
+      write: false,
+      metafile: true,
+      external: ['@angular/*'],
+    });
+    const code = result.outputFiles[0]?.text ?? '';
+    const actualNames = Object.values(result.metafile.outputs)
+      .flatMap(({ inputs }) => Object.entries(inputs))
+      .filter(([, input]) => input.bytesInOutput > 0)
+      .map(
+        ([path]) =>
+          path.match(/@neural-icons\/core\/src\/icons\/([^/]+)\.js$/)?.[1],
+      )
+      .filter((iconName) => iconName && iconName !== 'index')
+      .sort();
+    assert.deepEqual(
+      actualNames,
+      [...expectedNames].sort(),
+      `${name}: unexpected glyph definitions in esbuild output`,
+    );
+    if (name === 'ROOT UNUSED') {
+      assert.equal(Buffer.byteLength(code), 0, 'Unused root must emit 0 bytes');
+    }
+    console.log(
+      `Esbuild ${name}: ${actualNames.length} glyphs, ${Buffer.byteLength(code)} raw bytes, ${gzipSync(code).length} gzip bytes.`,
+    );
+  }
+  console.log(run(process.execPath, [join(root, 'tools/verify-name-tree-shaking.mjs'), temporary]));
   console.log(
     `Verified ${specs.length} packaged icon exports, SVG exports, readonly types, and Angular AOT consumption.`,
   );

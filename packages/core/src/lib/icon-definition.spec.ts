@@ -4,13 +4,47 @@ import { defineIcon, NEURAL_ICON_VIEW_BOX } from './icon-definition.js';
 
 describe('Neural icon definitions', () => {
   it('ships the reviewed Neural UI 2.0 baseline', () => {
-    expect(neuralIcons).toHaveLength(398);
-    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(398);
+    expect(neuralIcons).toHaveLength(394);
+    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(394);
+  });
+
+  it('keeps attachment discovery on the canonical paperclip family', () => {
+    const paperclip = neuralIcons.find(({ name }) => name === 'paperclip');
+    const filled = neuralIcons.find(({ name }) => name === 'paperclip-filled');
+    expect(paperclip?.tags).toContain('attach');
+    expect(paperclip?.tags).toContain('file attachment');
+    expect(filled?.tags).toContain('attach');
+    expect(neuralIcons.some(({ family }) => family === 'attach')).toBe(false);
+  });
+
+  it('keeps funnel discovery on filter without a public funnel family', () => {
+    const filter = neuralIcons.find(({ name }) => name === 'filter');
+    const filled = neuralIcons.find(({ name }) => name === 'filter-filled');
+    expect(filter?.tags).toContain('funnel');
+    expect(filled?.tags).toContain('funnel');
+    expect(neuralIcons.some(({ family }) => family === 'funnel')).toBe(false);
+  });
+
+  it('preserves the approved file, file-text and login geometries', () => {
+    const path = (name: string) =>
+      neuralIcons.find((icon) => icon.name === name)?.paths[0];
+    expect(path('file-filled')).toContain('M14 3v5h4z');
+    expect(path('file-text')).toContain('M8.5 11h7M12 11v7');
+    expect(path('file-text-filled')).toContain(
+      'M8.5 10.5h7v2.2H13v5.5h-2v-5.5H8.5z',
+    );
+    expect(path('login')).toContain('M20 12H9M13 8l-4 4 4 4');
+    expect(path('login-filled')).toContain(
+      'M20 10.75h-7V8l-4 4 4 4v-2.75h7z',
+    );
   });
 
   it.each(neuralIcons)('$name has immutable, portable geometry', (icon) => {
     expect(icon.viewBox).toBe(NEURAL_ICON_VIEW_BOX);
     expect(icon.name).toMatch(/^[a-z]+(?:-[a-z]+)*$/);
+    expect(icon.family).toBe(
+      icon.variant === 'filled' ? icon.name.replace(/-filled$/, '') : icon.name,
+    );
     expect(icon.paths.length).toBeGreaterThan(0);
     expect(Object.isFrozen(icon)).toBe(true);
     expect(Object.isFrozen(icon.paths)).toBe(true);
@@ -39,6 +73,7 @@ describe('Neural icon definitions', () => {
     });
 
     expect(icon.variant).toBe('filled');
+    expect(icon.family).toBe('test');
   });
 
   it('preserves separate Filled layers', () => {

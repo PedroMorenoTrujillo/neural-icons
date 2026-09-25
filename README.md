@@ -1,6 +1,6 @@
 # Neural Icons
 
-Original, framework-agnostic iconography for Neural UI 2.0. The repository is private and the packages are intentionally not published yet.
+Original, framework-agnostic iconography for Neural UI 2.0. Core and Angular public prereleases exist; this repository still requires catalog design and licensing review before any stable release.
 
 ## Packages
 
@@ -10,7 +10,7 @@ Original, framework-agnostic iconography for Neural UI 2.0. The repository is pr
 
 ## Design status
 
-The current set contains 188 base icons with two coordinated treatments (376 entries) chosen to cover navigation, form controls, feedback, overlays, data tables, accounts, communication, and file interactions required by Neural UI 2.0. Every base icon has an outline and filled treatment. The visual language and source workflow are documented in [Iconography](docs/iconography.md); the complete generated list is in [Icon inventory](docs/icon-inventory.md).
+The current set contains 197 families with two treatments (394 entries) chosen to cover navigation, form controls, feedback, overlays, data tables, accounts, communication, and file interactions required by Neural UI 2.0. Every family has an outline and filled variant. `paperclip` is canonical for attachment; `attach`, `attachment` and `file attachment` are search tags. `filter` is canonical for filtering; `funnel` is a search tag. Neither removed name is a public icon family. The NI-02 catalog review is recorded in the [internal QA report](docs/qa/NI-02-CORE-DISTRIBUTION-AND-CATALOG-QA.md); it is not a mathematical pixel-identity claim. The visual language and source workflow are documented in [Iconography](docs/iconography.md); the complete generated list is in [Icon inventory](docs/icon-inventory.md).
 
 The geometry is original. No third-party SVG path data is included. Familiar semantic metaphors may be studied, but every path is rebuilt from the Neural grid and rules.
 
@@ -35,11 +35,13 @@ npx nx run angular:verify-package
 npx nx e2e showcase-e2e
 ```
 
-`npm run generate:icons` converts the canonical geometry manifest into individual TypeScript modules, standalone SVG files, and the inventory document. `npm run generate:variants` completes the filled companions before refreshing those artifacts. CI should use `npm run check:generated` to reject stale generated artifacts. The current catalog has 376 entries: 188 each of `outline` and `filled`.
+`npm run generate:icons` converts the canonical geometry manifest into individual TypeScript modules, standalone SVG files, name/family types, and the inventory document. `npm run generate:variants` completes the filled companions before refreshing those artifacts. CI should use `npm run check:generated` to reject stale generated artifacts. The current catalog has 394 entries: 197 each of `outline` and `filled`.
 
 Every core build also depends on validation. Renamed/removed icons must not leave orphaned generated files; the generator reports these for manual review. Dependency installation uses normal peer resolution; see the [audit](docs/architecture-audit.md) for the verified tooling contract.
 
 `angular:verify-package` packs and extracts both compiled packages into a temporary directory, checks their exports and tree-shaking, and compiles a consumer with Angular AOT without workspace aliases. This uses local tarballs only and does not publish or install anything. The browser suite runs the production showcase locally, checks prerendered SVG markup, and verifies DOM-node reuse during hydration.
+
+Internal catalog QA: `node tools/generate-catalog-review.mjs` generates the 197-family naming ledger and 20 contact sheets at 16/20/24/32 px. `node tools/serve-contact-sheets.mjs` serves only those internal sheets on loopback. These are review artifacts, not the public showcase.
 
 To inspect the production build locally:
 
@@ -57,6 +59,8 @@ Prefer per-icon imports in product code:
 ```ts
 import { iconSearch } from '@neural-icons/core/icons/search';
 ```
+
+The Core root contains contracts/types and small helpers only; it exports no icon definitions. Import `@neural-icons/core/catalog` explicitly when all 394 definitions are required. For one family with both variants, import its two per-icon subpaths.
 
 Angular 22 templates use the standalone component:
 
@@ -80,6 +84,6 @@ Labels are trimmed; empty or whitespace-only labels remain decorative. SVG asset
 
 ## Publishing
 
-Do not run `nx release publish` yet. Package manifests and independent release configuration are present only so packaging can be exercised before the first release. The repository and license status must be reviewed before any npm publication or public visibility change.
+Do not publish from this working tree. Public prereleases exist, but the Core root/catalog change is not published and must receive a new version only after review. The repository and `UNLICENSED` package status need an explicit licensing decision before any stable release.
 
 See [Architecture](docs/architecture.md), [Contributing](CONTRIBUTING.md), and the recorded [architecture decisions](docs/decisions/0001-original-source-and-package-boundaries.md).

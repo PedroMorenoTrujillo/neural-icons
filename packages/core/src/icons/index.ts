@@ -103,7 +103,6 @@ import { iconBookmark } from './bookmark.js';
 import { iconFlag } from './flag.js';
 import { iconTag } from './tag.js';
 import { iconPaperclip } from './paperclip.js';
-import { iconAttach } from './attach.js';
 import { iconClipboard } from './clipboard.js';
 import { iconPaste } from './paste.js';
 import { iconCrop } from './crop.js';
@@ -179,7 +178,6 @@ import { iconListCheck } from './list-check.js';
 import { iconListPlus } from './list-plus.js';
 import { iconListMinus } from './list-minus.js';
 import { iconSortDescending } from './sort-descending.js';
-import { iconFunnel } from './funnel.js';
 import { iconCalendarPlus } from './calendar-plus.js';
 import { iconCalendarMinus } from './calendar-minus.js';
 import { iconCalendarCheck } from './calendar-check.js';
@@ -302,7 +300,6 @@ import { iconBookmarkFilled } from './bookmark-filled.js';
 import { iconFlagFilled } from './flag-filled.js';
 import { iconTagFilled } from './tag-filled.js';
 import { iconPaperclipFilled } from './paperclip-filled.js';
-import { iconAttachFilled } from './attach-filled.js';
 import { iconClipboardFilled } from './clipboard-filled.js';
 import { iconPasteFilled } from './paste-filled.js';
 import { iconCropFilled } from './crop-filled.js';
@@ -378,7 +375,6 @@ import { iconListCheckFilled } from './list-check-filled.js';
 import { iconListPlusFilled } from './list-plus-filled.js';
 import { iconListMinusFilled } from './list-minus-filled.js';
 import { iconSortDescendingFilled } from './sort-descending-filled.js';
-import { iconFunnelFilled } from './funnel-filled.js';
 import { iconCalendarPlusFilled } from './calendar-plus-filled.js';
 import { iconCalendarMinusFilled } from './calendar-minus-filled.js';
 import { iconCalendarCheckFilled } from './calendar-check-filled.js';
@@ -503,7 +499,6 @@ export { iconBookmark } from './bookmark.js';
 export { iconFlag } from './flag.js';
 export { iconTag } from './tag.js';
 export { iconPaperclip } from './paperclip.js';
-export { iconAttach } from './attach.js';
 export { iconClipboard } from './clipboard.js';
 export { iconPaste } from './paste.js';
 export { iconCrop } from './crop.js';
@@ -579,7 +574,6 @@ export { iconListCheck } from './list-check.js';
 export { iconListPlus } from './list-plus.js';
 export { iconListMinus } from './list-minus.js';
 export { iconSortDescending } from './sort-descending.js';
-export { iconFunnel } from './funnel.js';
 export { iconCalendarPlus } from './calendar-plus.js';
 export { iconCalendarMinus } from './calendar-minus.js';
 export { iconCalendarCheck } from './calendar-check.js';
@@ -702,7 +696,6 @@ export { iconBookmarkFilled } from './bookmark-filled.js';
 export { iconFlagFilled } from './flag-filled.js';
 export { iconTagFilled } from './tag-filled.js';
 export { iconPaperclipFilled } from './paperclip-filled.js';
-export { iconAttachFilled } from './attach-filled.js';
 export { iconClipboardFilled } from './clipboard-filled.js';
 export { iconPasteFilled } from './paste-filled.js';
 export { iconCropFilled } from './crop-filled.js';
@@ -778,7 +771,6 @@ export { iconListCheckFilled } from './list-check-filled.js';
 export { iconListPlusFilled } from './list-plus-filled.js';
 export { iconListMinusFilled } from './list-minus-filled.js';
 export { iconSortDescendingFilled } from './sort-descending-filled.js';
-export { iconFunnelFilled } from './funnel-filled.js';
 export { iconCalendarPlusFilled } from './calendar-plus-filled.js';
 export { iconCalendarMinusFilled } from './calendar-minus-filled.js';
 export { iconCalendarCheckFilled } from './calendar-check-filled.js';
@@ -903,7 +895,6 @@ export const neuralIcons = Object.freeze([
   iconFlag,
   iconTag,
   iconPaperclip,
-  iconAttach,
   iconClipboard,
   iconPaste,
   iconCrop,
@@ -979,7 +970,6 @@ export const neuralIcons = Object.freeze([
   iconListPlus,
   iconListMinus,
   iconSortDescending,
-  iconFunnel,
   iconCalendarPlus,
   iconCalendarMinus,
   iconCalendarCheck,
@@ -1102,7 +1092,6 @@ export const neuralIcons = Object.freeze([
   iconFlagFilled,
   iconTagFilled,
   iconPaperclipFilled,
-  iconAttachFilled,
   iconClipboardFilled,
   iconPasteFilled,
   iconCropFilled,
@@ -1178,7 +1167,6 @@ export const neuralIcons = Object.freeze([
   iconListPlusFilled,
   iconListMinusFilled,
   iconSortDescendingFilled,
-  iconFunnelFilled,
   iconCalendarPlusFilled,
   iconCalendarMinusFilled,
   iconCalendarCheckFilled,
@@ -1198,4 +1186,4 @@ export const neuralIcons = Object.freeze([
   iconUnderlineFilled,
 ]) satisfies readonly NeuralIconDefinition[];
 
-export type NeuralIconName = (typeof neuralIcons)[number]['name'];
+export type { NeuralIconName, NeuralIconFamily } from '../icon-names.js';

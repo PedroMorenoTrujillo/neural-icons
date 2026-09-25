@@ -34,7 +34,7 @@ const cases = {
       console.log(NeuralIcon, provideAllNeuralIcons());`,
 };
 
-const expectedModules = { A: 1, B: 1, C: 2, D: 2, E: 0, F: 398 };
+const expectedModules = { A: 1, B: 1, C: 2, D: 2, E: 0, F: 394 };
 const results = [];
 for (const [name, contents] of Object.entries(cases)) {
   const result = await build({
