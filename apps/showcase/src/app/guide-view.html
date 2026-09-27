@@ -1,0 +1,114 @@
+<section
+  id="installation"
+  class="installation"
+  aria-labelledby="installation-heading"
+>
+  <span class="guide-eyebrow">{{ copy().getStarted }} / 01</span>
+  <h2 id="installation-heading">{{ copy().guideTitle }}</h2>
+  <p class="installation-lead">{{ copy().guide[framework()].lead }}</p>
+  <p class="installation-status">{{ copy().guide[framework()].status }}</p>
+  <p class="installation-lead">{{ copy().guide[framework()].requirements }}</p>
+  <div
+    class="installation-tabs segmented"
+    role="group"
+    [attr.aria-label]="copy().technology"
+  >
+    <button
+      type="button"
+      [attr.aria-pressed]="framework() === 'html'"
+      (click)="frameworkChange.emit('html')"
+    >
+      HTML
+    </button>
+    <button
+      type="button"
+      [attr.aria-pressed]="framework() === 'angular'"
+      (click)="frameworkChange.emit('angular')"
+    >
+      Angular
+    </button>
+    <button
+      type="button"
+      [attr.aria-pressed]="framework() === 'react'"
+      (click)="frameworkChange.emit('react')"
+    >
+      React
+    </button>
+    <button
+      type="button"
+      [attr.aria-pressed]="framework() === 'vue'"
+      (click)="frameworkChange.emit('vue')"
+    >
+      Vue
+    </button>
+  </div>
+  <div class="installation-steps">
+    <div class="installation-step">
+      <div>
+        <h3>{{ copy().guide[framework()].installTitle }}</h3>
+        <p>{{ copy().guide[framework()].installDescription }}</p>
+      </div>
+      <pre><code>{{ installSnippet() }}</code></pre>
+      @if (framework() === 'html') {
+      <a href="/icons/search.svg" download="search.svg"
+        >{{ copy().downloadSvg }}</a
+      >
+      }
+    </div>
+    <div id="usage" class="installation-step">
+      <div>
+        <h3>{{ copy().guide[framework()].useTitle }}</h3>
+        <p>{{ copy().guide[framework()].useDescription }}</p>
+      </div>
+      <pre><code>{{ setupSnippet() }}</code></pre>
+    </div>
+  </div>
+  <p class="installation-footnote">
+    {{ framework() === 'html' ? copy().htmlFootnote : copy().guideFootnote }}
+  </p>
+  <div class="installation-steps">
+    <div class="installation-step">
+      <div>
+        <h3>{{ copy().variantGuide }}</h3>
+        <p>{{ copy().guide[framework()].variantNote }}</p>
+      </div>
+    </div>
+    <div class="installation-step">
+      <div>
+        <h3>{{ copy().accessibilityGuide }}</h3>
+        <p>{{ copy().guide[framework()].a11yNote }}</p>
+      </div>
+      <pre><code>{{ accessibilitySnippet() }}</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="usage" aria-labelledby="about-heading">
+  <h2 id="about-heading">{{ copy().aboutTitle }}</h2>
+  <p>{{ copy().aboutDescription }}</p>
+  <p>{{ copy().packageStatus }}</p>
+  <p>
+    <a href="https://github.com/pedromorenotrujillo/neural-icons"
+      >{{ copy().repositoryLink }}</a
+    >
+    ·
+    <a
+      href="https://github.com/pedromorenotrujillo/neural-icons/blob/main/LICENSE"
+      >{{ copy().licenseLink }}</a
+    >
+    ·
+    <a
+      href="https://github.com/pedromorenotrujillo/neural-icons/tree/main/packages"
+      >{{ copy().apiLink }}</a
+    >
+  </p>
+</section>
+
+<section id="color" class="usage color-guide" aria-labelledby="color-heading">
+  <div>
+    <h2 id="color-heading">{{ copy().colorTitle }}</h2>
+    <p>{{ copy().guide[framework()].colorDescription }}</p>
+  </div>
+  <pre><code>{{ colorSnippet() }}</code></pre>
+  <p class="usage-note">{{ copy().guide[framework()].colorNote }}</p>
+</section>

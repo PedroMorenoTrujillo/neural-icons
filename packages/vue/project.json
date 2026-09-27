@@ -13,7 +13,7 @@
         "outputPath": "dist/packages/vue",
         "main": "packages/vue/src/index.ts",
         "tsConfig": "packages/vue/tsconfig.lib.json",
-        "assets": ["packages/vue/*.md"]
+        "assets": ["packages/vue/README.md", "packages/vue/LICENSE"]
       }
     },
     "lint": {
@@ -32,6 +32,9 @@
       "options": {
         "command": "node tools/verify-vue-package.mjs"
       }
+    },
+    "nx-release-publish": {
+      "options": { "packageRoot": "dist/packages/vue" }
     }
   }
 }

@@ -1,0 +1,98 @@
+<section class="catalog-intro" aria-labelledby="catalog-heading">
+  <div>
+    <h2 id="catalog-heading">{{ copy().heroTitle }}</h2>
+    <p>{{ copy().heroDescription }}</p>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    @for (icon of heroIcons(); track icon.name) {
+    <span class="hero-art-tile"><neural-icon [icon]="icon" [size]="38" /></span>
+    }
+  </div>
+  <a [attr.href]="guideHref()" (click)="navigateGuide.emit($event)"
+    >{{ copy().getStarted }} <span aria-hidden="true">↗</span></a
+  >
+</section>
+
+<section class="catalog-controls" [attr.aria-label]="copy().exploreIcons">
+  <div class="search-control">
+    <label for="icon-search">{{ copy().searchIcons }}</label>
+    <div class="search-input">
+      <neural-icon [icon]="searchIcon()" [size]="19" />
+      <input
+        #searchInput
+        id="icon-search"
+        type="search"
+        autocomplete="off"
+        [placeholder]="copy().searchPlaceholder"
+        [value]="query()"
+        (input)="onSearch($event)"
+      />
+      @if (query()) {
+      <button type="button" class="clear-button" (click)="clearQuery()">
+        {{ copy().clear }}
+      </button>
+      }
+    </div>
+  </div>
+</section>
+
+<div
+  class="category-list"
+  role="group"
+  [attr.aria-label]="copy().filterByCategory"
+>
+  <button
+    type="button"
+    [attr.aria-pressed]="category() === 'all'"
+    (click)="categoryChange.emit('all')"
+  >
+    {{ copy().allIcons }}
+  </button>
+  @for (item of categories(); track item) {
+  <button
+    type="button"
+    [attr.aria-pressed]="category() === item"
+    (click)="categoryChange.emit(item)"
+  >
+    {{ categoryLabel(item) }}
+  </button>
+  }
+</div>
+
+<div class="result-line" role="status" aria-live="polite">
+  <span>{{ resultCount(icons().length) }}</span>
+  @if (category() !== 'all' || query()) {
+  <span>{{ copy().matchingFilters }}</span>
+  } @else {
+  <span>{{ copy().openToCompare }}</span>
+  }
+</div>
+
+<ul class="icon-grid" [attr.aria-label]="copy().iconFamilies">
+  @for (family of icons(); track family.name) {
+  <li>
+    <a
+      class="family-tile"
+      [attr.href]="familyHref(family.name)"
+      [class.is-selected]="selectedName() === family.name"
+      [attr.id]="'family-' + family.name"
+      [attr.aria-current]="selectedName() === family.name ? 'true' : null"
+      [attr.aria-label]="inspectLabel(family.name)"
+      (click)="familySelected.emit({ event: $event, name: family.name })"
+    >
+      <span class="tile-preview" aria-hidden="true">
+        <neural-icon [icon]="family.outline" [size]="38" />
+      </span>
+      <span class="tile-name">{{ family.name }}</span>
+    </a>
+  </li>
+  } @empty {
+  <li class="empty-state">
+    <h3>{{ copy().noMatches }}</h3>
+    <p>{{ copy().tryAnotherSearch }}</p>
+    <button type="button" (click)="clearQuery()">
+      {{ copy().clearSearch }}
+    </button>
+  </li>
+  }
+</ul>

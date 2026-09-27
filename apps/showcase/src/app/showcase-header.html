@@ -1,0 +1,71 @@
+<header class="masthead" [attr.inert]="isModalOpen() ? '' : null">
+  <div class="identity">
+    <img class="brand-mark" src="favicon.svg" alt="" width="38" height="38" />
+    <div>
+      <h1>Neural Icons</h1>
+      <p>{{ copy().brandSubtitle }}</p>
+    </div>
+  </div>
+  <div class="header-actions">
+    <button
+      class="language-button"
+      type="button"
+      [attr.aria-label]="locale() === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish'"
+      [attr.title]="locale() === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish'"
+      (click)="localeChange.emit(locale() === 'es' ? 'en' : 'es')"
+    >
+      <neural-icon [icon]="iconGlobe" [size]="18" aria-hidden="true" />
+      <span>{{ locale() === 'es' ? 'ES' : 'EN' }}</span>
+    </button>
+    <button
+      class="theme-button"
+      type="button"
+      [attr.aria-label]="theme() === 'dark' ? (locale() === 'es' ? 'Cambiar a modo claro' : 'Switch to light mode') : (locale() === 'es' ? 'Cambiar a modo oscuro' : 'Switch to dark mode')"
+      [attr.title]="theme() === 'dark' ? (locale() === 'es' ? 'Cambiar a modo claro' : 'Switch to light mode') : (locale() === 'es' ? 'Cambiar a modo oscuro' : 'Switch to dark mode')"
+      (click)="themeChange.emit(theme() === 'dark' ? 'light' : 'dark')"
+    >
+      @if (theme() === 'dark') {
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+        />
+      </svg>
+      } @else {
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M20.7 13a8.5 8.5 0 0 1-9.7-9.7A8.5 8.5 0 1 0 20.7 13Z" />
+      </svg>
+      }
+    </button>
+  </div>
+</header>
+<nav class="primary-nav" [attr.aria-label]="copy().mainNavigation">
+  <a
+    [href]="catalogHref()"
+    [attr.aria-current]="view() === 'catalog' ? 'page' : null"
+    (click)="navigate.emit({ event: $event, view: 'catalog' })"
+    >{{ copy().icons }}</a
+  >
+  <a
+    [href]="guideHref()"
+    [attr.aria-current]="view() === 'guide' ? 'page' : null"
+    (click)="navigate.emit({ event: $event, view: 'guide' })"
+    >{{ copy().getStarted }}</a
+  >
+</nav>

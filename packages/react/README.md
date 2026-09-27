@@ -2,8 +2,10 @@
 
 React 19 adapter for `@neural-icons/core`. Core owns every icon definition; this package contains only the renderer.
 
+This published `0.0.1-next.2` adapter requires the matching 197-family Core `0.0.1-next.2` catalog. Install both prereleases explicitly:
+
 ```bash
-npm install @neural-icons/core @neural-icons/react
+npm install @neural-icons/core@0.0.1-next.2 @neural-icons/react@0.0.1-next.2
 ```
 
 ```tsx
@@ -24,3 +26,5 @@ Icons are decorative by default (`aria-hidden="true"`). Supply `aria-label`, `ar
 Geometry and semantic SVG attributes (`viewBox`, fill/stroke, stroke width, rules, line caps/joins, role, and `aria-hidden`) are controlled by the adapter. Other SVG props, including class, style, ID, data attributes, and dimensions, pass through. `NeuIcon` renders the SVG directly without an extra wrapper, DOM parser, runtime SVG string parsing, random IDs, browser globals, or hydration-specific logic.
 
 React `>=19 <20` is a peer dependency. Core is a normal package dependency. Neither adapter nor Core requires React DOM at runtime; React DOM is used only by the test and SSR/hydration consumer fixtures.
+
+Do not mix this adapter with older Core prereleases. MIT license; see [LICENSE](LICENSE).

@@ -19,6 +19,11 @@
           {
             "glob": "**/*",
             "input": "apps/showcase/public"
+          },
+          {
+            "glob": "*.svg",
+            "input": "packages/core/svg",
+            "output": "icons"
           }
         ],
         "styles": ["apps/showcase/src/styles.scss"],

@@ -2,6 +2,15 @@
 
 Standalone Angular 22 renderer for `@neural-icons/core` definitions.
 
+Install the matching prerelease packages in an Angular 22 application:
+
+```sh
+npm install @neural-icons/core@0.0.1-next.2 @neural-icons/angular@0.0.1-next.2
+```
+
+These versions use the 197-family catalog. Older Angular and Core prereleases
+contain an earlier catalog; do not mix them with the examples below.
+
 Register only the icons your application uses. String names resolve synchronously
 through Angular dependency injection, without bundling the full catalog:
 

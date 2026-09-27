@@ -1,7 +1,7 @@
 {
   "name": "neural-icons-workspace",
   "version": "0.0.0",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "build": "nx run-many -t build",
     "test": "nx run-many -t test",
@@ -14,7 +14,8 @@
     "generate:variants": "node tools/add-filled.mjs && node tools/icons.mjs",
     "check:generated": "node tools/icons.mjs --check && node tools/generate-catalog-review.mjs --check",
     "validate:icons": "node tools/validate-icons.mjs",
-    "check": "npm run check:generated && npm run validate:icons && nx run-many -t lint,test,build && nx run angular:verify-package"
+    "check": "npm run check:generated && npm run validate:icons && nx run-many -t lint,test,build && nx run angular:verify-package",
+    "verify:release": "npm run check && nx run react:typecheck && nx run vue:typecheck && nx run react:verify-package && nx run vue:verify-package && node tools/verify-release-candidate.mjs && node tools/verify-clean-angular-consumer.mjs && nx run showcase-e2e:e2e"
   },
   "private": true,
   "workspaces": [

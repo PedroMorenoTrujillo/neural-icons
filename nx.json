@@ -59,7 +59,7 @@
     }
   },
   "release": {
-    "projects": ["core", "angular"],
+    "projects": ["core", "angular", "react", "vue"],
     "projectsRelationship": "independent",
     "version": {
       "preVersionCommand": "npx nx run-many -t build"

@@ -5,6 +5,7 @@ import {
   writeResponseToNodeResponse,
 } from '@angular/ssr/node';
 import express from 'express';
+import { neuralIcons } from '@neural-icons/core/catalog';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -13,6 +14,24 @@ const browserDistFolder = resolve(serverDistFolder, '../browser');
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
+const publicOrigin = (req: express.Request): string =>
+  (process.env['NEURAL_ICONS_SITE_ORIGIN'] || `${req.protocol}://${req.get('host')}`).replace(/\/$/, '');
+
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain').send(`User-agent: *\nAllow: /\nSitemap: ${publicOrigin(req)}/sitemap.xml\n`);
+});
+
+app.get('/sitemap.xml', (req, res) => {
+  const origin = publicOrigin(req);
+  const names = neuralIcons.filter((icon) => icon.variant === 'outline').map((icon) => icon.name);
+  const paths = ['/', '/?view=guide', ...names.map((name) => `/?icon=${encodeURIComponent(name)}`)];
+  const urls = paths.flatMap((path) => [path, `${path}${path.includes('?') ? '&' : '?'}lang=es`]);
+  res.type('application/xml').send(
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls
+      .map((path) => `<url><loc>${origin}${path.replace(/&/g, '&amp;')}</loc></url>`)
+      .join('')}</urlset>`,
+  );
+});
 
 /**
  * Example Express Rest API endpoints can be defined here.

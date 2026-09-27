@@ -10,7 +10,7 @@ test('SSR renders the full family catalog and hydration preserves SVG nodes', as
   expect(html).toContain('ngh=');
   expect(html.match(/class="family-tile"/g)).toHaveLength(197);
   expect(html).toContain('197 families');
-  expect(html).toContain('394 glyphs');
+  expect(html).not.toContain('class="preview-label"');
   expect(html).not.toContain('id="family-attach"');
   expect(html).not.toContain('id="family-funnel"');
 
@@ -70,15 +70,16 @@ test('search, approved aliases, category, empty state and variant preview', asyn
   await search.fill('funnel');
   await expect(page.locator('.tile-name')).toHaveText('filter');
   await search.fill('file');
-  await page.getByLabel('Category').selectOption('file');
-  await expect(page.locator('.family-tile')).not.toHaveCount(0);
   await page
-    .getByRole('button', { name: 'Filled', exact: true })
-    .first()
+    .getByRole('group', { name: 'Filter by category' })
+    .getByRole('button', { name: 'File' })
     .click();
-  await expect(page.locator('.tile-preview neural-icon')).toHaveCount(
-    await page.locator('.family-tile').count(),
-  );
+  await expect(page.locator('.family-tile')).not.toHaveCount(0);
+  await expect(async () => {
+    expect(await page.locator('.tile-preview neural-icon').count()).toBe(
+      await page.locator('.family-tile').count(),
+    );
+  }).toPass();
   await search.fill('not-an-icon');
   await expect(page.getByText('No matching icons')).toBeVisible();
   await page.getByRole('button', { name: 'Clear search' }).click();
@@ -94,11 +95,8 @@ test('detail, snippets, copy, deep link, history and keyboard close', async ({
   await expect(page.getByRole('heading', { name: 'file-text' })).toBeVisible();
   await expect(page.locator('.size-sample')).toHaveCount(4);
   await expect(page.locator('.size-sample neural-icon')).toHaveCount(4);
-  await expect(page.locator('.detail-panel')).toContainText(
-    'Core supplies the definition',
-  );
   await expect(page.locator('.code-section').first()).toContainText(
-    '@neural-icons/core/icons/file-text',
+    '/icons/file-text.svg',
   );
   await page
     .getByRole('button', { name: 'Filled', exact: true })
@@ -109,17 +107,29 @@ test('detail, snippets, copy, deep link, history and keyboard close', async ({
     'file-text-filled',
   );
   await expect(page.locator('.code-section').first()).toContainText(
-    'iconFileTextFilled',
+    '/icons/file-text-filled.svg',
   );
-  await page.getByRole('tab', { name: 'React' }).click();
+  await page
+    .getByRole('group', { name: 'Technology for installation and use' })
+    .last()
+    .getByRole('button', { name: 'React' })
+    .click();
   await expect(page.locator('.snippet')).toContainText(
     '<NeuIcon icon={iconFileTextFilled}',
   );
-  await page.getByRole('tab', { name: 'Vue' }).click();
+  await page
+    .getByRole('group', { name: 'Technology for installation and use' })
+    .last()
+    .getByRole('button', { name: 'Vue' })
+    .click();
   await expect(page.locator('.snippet')).toContainText(
     ':icon="iconFileTextFilled"',
   );
-  await page.getByRole('tab', { name: 'Angular' }).click();
+  await page
+    .getByRole('group', { name: 'Technology for installation and use' })
+    .last()
+    .getByRole('button', { name: 'Angular' })
+    .click();
   await expect(page.locator('.snippet')).toContainText(
     '<neural-icon [icon]="iconFileTextFilled"',
   );
@@ -141,9 +151,9 @@ test('mobile and dark theme retain a usable catalog and detail', async ({
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
-  await page.getByRole('button', { name: 'Dark', exact: true }).click();
+  await page.getByRole('button', { name: 'Switch to dark mode' }).click();
   await expect(page.locator('app-root')).toHaveClass(/theme-dark/);
-  await page.getByRole('button', { name: 'Inspect paperclip' }).click();
+  await page.getByRole('link', { name: 'Inspect paperclip' }).click();
   await expect(page.locator('.detail-panel')).toBeVisible();
   await expect(page.getByRole('button', { name: 'Close' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Close' })).toBeFocused();
@@ -177,7 +187,7 @@ test('certified families retain their distinct canonical SVG paths', async ({
   ]) {
     const tile = page.locator(`#family-${name}`);
     await expect(tile).toHaveCount(1);
-    await expect(tile.locator('neural-icon')).toHaveCount(2);
+    await expect(tile.locator('neural-icon')).toHaveCount(1);
   }
   await expect(
     page.locator('neural-icon[data-neural-icon="file-text"] svg path'),

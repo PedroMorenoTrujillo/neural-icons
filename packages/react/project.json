@@ -13,7 +13,7 @@
         "outputPath": "dist/packages/react",
         "main": "packages/react/src/index.ts",
         "tsConfig": "packages/react/tsconfig.lib.json",
-        "assets": ["packages/react/*.md"]
+        "assets": ["packages/react/README.md", "packages/react/LICENSE"]
       }
     },
     "lint": {
@@ -32,6 +32,9 @@
       "options": {
         "command": "node tools/verify-react-package.mjs"
       }
+    },
+    "nx-release-publish": {
+      "options": { "packageRoot": "dist/packages/react" }
     }
   }
 }

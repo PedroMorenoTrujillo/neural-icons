@@ -1,11 +1,13 @@
 # Neural Icons
 
-Original, framework-agnostic iconography for Neural UI 2.0. Core and Angular public prereleases exist; this repository still requires catalog design and licensing review before any stable release.
+Original, framework-agnostic iconography for Neural UI 2.0. The 197-family `0.0.1-next.2` catalog and all three adapters are published on npm under the `next` tag. Stable 1.0 is in preparation.
 
 ## Packages
 
 - `@neural-icons/core`: immutable TypeScript icon definitions, SVG assets, and per-icon entry points. It has no DOM or framework dependency.
 - `@neural-icons/angular`: a standalone Angular 22 component that renders core definitions with deterministic SSR-safe markup.
+- `@neural-icons/react`: a React 19 renderer for granular Core definitions.
+- `@neural-icons/vue`: a Vue 3.5 renderer for granular Core definitions.
 - `showcase`: a zoneless Angular 22 SSR application that exercises the complete base set.
 
 ## Design status
@@ -39,7 +41,7 @@ npx nx e2e showcase-e2e
 
 Every core build also depends on validation. Renamed/removed icons must not leave orphaned generated files; the generator reports these for manual review. Dependency installation uses normal peer resolution; see the [audit](docs/architecture-audit.md) for the verified tooling contract.
 
-`angular:verify-package` packs and extracts both compiled packages into a temporary directory, checks their exports and tree-shaking, and compiles a consumer with Angular AOT without workspace aliases. This uses local tarballs only and does not publish or install anything. The browser suite runs the production showcase locally, checks prerendered SVG markup, and verifies DOM-node reuse during hydration.
+`angular:verify-package` packs and extracts both compiled packages into a temporary directory, checks their exports and tree-shaking, and compiles a consumer with Angular AOT without workspace aliases. `node tools/verify-clean-angular-consumer.mjs --registry-only` separately installs Core and Angular from npm and repeats the AOT consumer check. The browser suite runs the production showcase locally, checks prerendered SVG markup, and verifies DOM-node reuse during hydration.
 
 Internal catalog QA: `node tools/generate-catalog-review.mjs` generates the 197-family naming ledger and 20 contact sheets at 16/20/24/32 px. `node tools/serve-contact-sheets.mjs` serves only those internal sheets on loopback. These are review artifacts, not the public showcase.
 
@@ -84,6 +86,6 @@ Labels are trimmed; empty or whitespace-only labels remain decorative. SVG asset
 
 ## Publishing
 
-Do not publish from this working tree. Public prereleases exist, but the Core root/catalog change is not published and must receive a new version only after review. The repository and `UNLICENSED` package status need an explicit licensing decision before any stable release.
+This repository, its packages, and the SVG catalog are licensed under [MIT](LICENSE). Core, Angular, React, and Vue `0.0.1-next.2` are published prereleases. Install matching versions explicitly; older prereleases contain an earlier catalog. A stable release requires a reviewed source checkpoint, matching Core dependency ranges, a clean registry-consumer verification, and explicit approval. Publish Core before its adapters. Do not promote a prerelease to `latest` as a substitute for publishing stable packages.
 
 See [Architecture](docs/architecture.md), [Contributing](CONTRIBUTING.md), and the recorded [architecture decisions](docs/decisions/0001-original-source-and-package-boundaries.md).

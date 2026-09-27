@@ -34,7 +34,7 @@ test('records catalog load, grid and search costs without a synthetic benchmark 
   });
 
   expect(metrics.initialGridFamilies).toBe(197);
-  expect(metrics.initialGridGlyphs).toBe(394);
+  expect(metrics.initialGridGlyphs).toBe(197);
   expect(metrics.filteredGridFamilies).toBe(1);
   console.log(`NI-05 exploratory Chromium timings: ${JSON.stringify(metrics)}`);
 });

@@ -1,0 +1,137 @@
+.installation {
+  margin: 0;
+}
+
+.guide-eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+}
+
+.installation h2 {
+  font-size: clamp(2.25rem, 4vw, 3.6rem);
+  letter-spacing: -0.04em;
+}
+
+.installation > p {
+  max-width: 65ch;
+  margin: 8px 0 20px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.installation-status {
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: var(--accent-soft);
+}
+
+.installation-tabs {
+  margin-top: 10px;
+}
+
+.installation-step {
+  display: grid;
+  grid-template-columns: minmax(0, 0.55fr) minmax(0, 1fr);
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.installation-step:first-child {
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+}
+
+.installation-step h3 {
+  font-size: 0.9rem;
+}
+
+.installation-step p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.installation-step pre {
+  min-width: 0;
+  max-height: 360px;
+  overflow: auto;
+  margin: 0;
+  border: 1px solid var(--line);
+  padding: 15px;
+  color: var(--ink);
+  background: var(--surface-raised);
+  font-size: 0.74rem;
+  line-height: 1.6;
+}
+
+.installation-step .installation-unavailable {
+  align-self: start;
+  margin: 0;
+  border: 1px solid var(--line);
+  padding: 15px;
+  color: var(--ink);
+  background: var(--surface-raised);
+}
+
+.installation > .installation-footnote {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.usage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 1fr);
+  gap: 12px 28px;
+  margin-top: 56px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.usage h2 {
+  font-size: 1.22rem;
+  letter-spacing: -0.025em;
+}
+
+.usage p {
+  max-width: 65ch;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.usage pre,
+.code-section pre {
+  overflow-x: auto;
+  margin: 0;
+  border: 1px solid var(--line);
+  padding: 15px;
+  color: var(--ink);
+  background: var(--surface-raised);
+  font-size: 0.74rem;
+  line-height: 1.6;
+}
+
+.usage-note {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 720px) {
+  .usage {
+    grid-template-columns: 1fr;
+  }
+  .installation-step {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .usage-note {
+    grid-column: auto;
+  }
+}

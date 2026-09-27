@@ -1,0 +1,195 @@
+<div
+  class="detail-scrim"
+  (click)="closeRequested.emit()"
+  aria-hidden="true"
+></div>
+<aside
+  #panel
+  class="detail-panel"
+  aria-labelledby="detail-heading"
+  [attr.role]="isNarrow() ? 'dialog' : null"
+  [attr.aria-modal]="isNarrow() ? 'true' : null"
+>
+  <div class="detail-topline">
+    <span>{{ copy().familyDetail }}</span>
+    <button type="button" class="text-button" (click)="closeRequested.emit()">
+      {{ copy().close }}
+    </button>
+  </div>
+  <div class="detail-heading-row">
+    <div>
+      <span class="detail-category"
+        >{{ categoryLabel(family().category) }}</span
+      >
+      <h2 id="detail-heading">{{ family().name }}</h2>
+    </div>
+    <button
+      type="button"
+      class="copy-name"
+      (click)="copyRequested.emit({ value: family().name, item: 'name' })"
+    >
+      {{ copy().copyName }}
+    </button>
+  </div>
+
+  <div
+    class="detail-variant-switch segmented"
+    role="group"
+    [attr.aria-label]="copy().selectedVariant"
+  >
+    <button
+      type="button"
+      [attr.aria-pressed]="selectedVariant() === 'outline'"
+      (click)="variantChange.emit('outline')"
+    >
+      {{ copy().outline }}
+    </button>
+    <button
+      type="button"
+      [attr.aria-pressed]="selectedVariant() === 'filled'"
+      (click)="variantChange.emit('filled')"
+    >
+      {{ copy().filled }}
+    </button>
+  </div>
+
+  <div
+    class="large-preview"
+    [class.contrast-preview]="previewColor() === '#152033'"
+    [style.--preview-ink]="previewColor()"
+  >
+    @if (definition(); as icon) {
+    <neural-icon [icon]="icon" [size]="76" />
+    }
+    <span>{{ variantLabel(selectedVariant()) }} / 76 px</span>
+  </div>
+
+  <div class="detail-section">
+    <div class="section-heading">
+      <h3>{{ copy().realSizes }}</h3>
+      <span>16 / 20 / 24 / 32 px</span>
+    </div>
+    <div
+      class="size-row"
+      [class.contrast-preview]="previewColor() === '#152033'"
+      [style.--preview-ink]="previewColor()"
+    >
+      @for (size of sizes(); track size) {
+      <div class="size-sample">
+        @if (definition(); as icon) {
+        <neural-icon [icon]="icon" [size]="size" />
+        }
+        <span>{{ size }}</span>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="detail-section color-section">
+    <h3>{{ copy().previewColor }}</h3>
+    <div
+      class="color-options"
+      role="group"
+      [attr.aria-label]="copy().previewColor"
+    >
+      @for (color of colors(); track color) {
+      <button
+        type="button"
+        class="color-swatch"
+        [style.background]="color"
+        [attr.aria-label]="copy().previewColor + ' ' + color"
+        [attr.aria-pressed]="previewColor() === color"
+        (click)="colorChange.emit(color)"
+      ></button>
+      }
+    </div>
+    <span>{{ copy().previewColorNote }}</span>
+  </div>
+
+  <div class="detail-section">
+    <h3>{{ copy().searchTerms }}</h3>
+    <p class="keywords">{{ family().keywords.join(' · ') }}</p>
+  </div>
+
+  <div class="detail-section code-section">
+    <div class="section-heading">
+      <h3>
+        {{ framework() === 'html' ? copy().svgFile : copy().granularImport }}
+      </h3>
+      <button
+        type="button"
+        (click)="copyRequested.emit({ value: framework() === 'html' ? svgAssetPath() : importStatement(), item: framework() === 'html' ? 'asset' : 'import' })"
+      >
+        {{ copy().copy }}
+      </button>
+    </div>
+    <pre><code>{{ framework() === 'html' ? svgAssetPath() : importStatement() }}</code></pre>
+    @if (framework() === 'html') {
+    <a [href]="svgAssetPath()" [attr.download]="definition()?.name + '.svg'"
+      >{{ copy().downloadSvg }}</a
+    >
+    }
+    <p class="code-note">
+      {{ framework() === 'html' ? copy().svgFileNote : copy().importNote }}
+    </p>
+  </div>
+
+  <div class="detail-section code-section">
+    <h3>{{ copy().usage }}</h3>
+    <div
+      class="framework-tabs"
+      role="group"
+      [attr.aria-label]="copy().technology"
+    >
+      <button
+        type="button"
+        [attr.aria-pressed]="framework() === 'html'"
+        (click)="frameworkChange.emit('html')"
+      >
+        HTML
+      </button>
+      <button
+        type="button"
+        [attr.aria-pressed]="framework() === 'angular'"
+        (click)="frameworkChange.emit('angular')"
+      >
+        Angular
+      </button>
+      <button
+        type="button"
+        [attr.aria-pressed]="framework() === 'react'"
+        (click)="frameworkChange.emit('react')"
+      >
+        React
+      </button>
+      <button
+        type="button"
+        [attr.aria-pressed]="framework() === 'vue'"
+        (click)="frameworkChange.emit('vue')"
+      >
+        Vue
+      </button>
+    </div>
+    <div class="snippet-heading">
+      <span>{{ frameworkLabel() }} · {{ copy().example }}</span
+      ><button
+        type="button"
+        (click)="copyRequested.emit({ value: snippet(), item: 'snippet' })"
+      >
+        {{ copy().copySnippet }}
+      </button>
+    </div>
+    <pre class="snippet"><code>{{ snippet() }}</code></pre>
+    @if (framework() !== 'html') {
+      <p class="snippet-status">{{ copy().snippetPreviewStatus }}</p>
+    }
+  </div>
+
+  <div class="detail-section a11y-note">
+    <h3>{{ copy().accessibility }}</h3>
+    <p>{{ copy().accessibilityNote }}</p>
+  </div>
+  <p class="copy-feedback" role="status" aria-live="polite">
+    {{ copyFeedback() }}
+  </p>
+</aside>
