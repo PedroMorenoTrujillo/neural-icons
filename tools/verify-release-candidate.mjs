@@ -4,8 +4,28 @@ import { existsSync, lstatSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
-const version = '0.0.1-next.2';
 const packages = ['core', 'angular', 'react', 'vue'];
+const versions = Object.fromEntries(
+  packages.map((name) => [
+    name,
+    JSON.parse(readFileSync(resolve(root, 'packages', name, 'package.json'), 'utf8'))
+      .version,
+  ]),
+);
+
+function acceptsCoreVersion(range) {
+  if (range === versions.core) return true;
+  const minimum = /^\^(\d+)\.(\d+)\.(\d+)$/.exec(range ?? '');
+  const current = /^(\d+)\.(\d+)\.(\d+)$/.exec(versions.core);
+  if (!minimum || !current || Number(minimum[1]) < 1) return false;
+  if (minimum[1] !== current[1]) return false;
+  const [, , minMinor, minPatch] = minimum.map(Number);
+  const [, , currentMinor, currentPatch] = current.map(Number);
+  return (
+    currentMinor > minMinor ||
+    (currentMinor === minMinor && currentPatch >= minPatch)
+  );
+}
 
 for (const name of packages) {
   const directory = resolve(root, 'dist/packages', name);
@@ -38,7 +58,7 @@ for (const name of packages) {
   );
   const files = pack.files.map((file) => file.path);
   assert.equal(pack.name, `@neural-icons/${name}`);
-  assert.equal(pack.version, version);
+  assert.equal(pack.version, versions[name]);
   assert.equal(manifest.license, 'MIT');
   assert.ok(
     manifest.repository && manifest.homepage && manifest.bugs,
@@ -90,9 +110,8 @@ for (const name of packages) {
       assert.ok(files.includes(file), `core: missing ${file}`);
     }
   } else {
-    assert.equal(
-      manifest.dependencies?.['@neural-icons/core'],
-      version,
+    assert.ok(
+      acceptsCoreVersion(manifest.dependencies?.['@neural-icons/core']),
       `${name}: Core dependency mismatch`,
     );
     assert.equal(
@@ -115,6 +134,6 @@ for (const name of packages) {
     );
   }
   console.log(
-    `${pack.name}@${version}: ${files.length} packed files, MIT, compiled entries and declarations verified`,
+    `${pack.name}@${versions[name]}: ${files.length} packed files, MIT, compiled entries and declarations verified`,
   );
 }

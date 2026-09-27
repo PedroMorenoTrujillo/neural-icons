@@ -2,10 +2,10 @@
 
 Vue 3.5 adapter for `@neural-icons/core`. Core owns every icon definition; this package contains only the renderer.
 
-This published `0.0.1-next.2` adapter requires the matching 197-family Core `0.0.1-next.2` catalog. Install both prereleases explicitly:
+Version `1.0.0` uses the 197-family Core catalog. Install the matching stable packages:
 
 ```bash
-npm install @neural-icons/core@0.0.1-next.2 @neural-icons/vue@0.0.1-next.2
+npm install @neural-icons/core@1.0.0 @neural-icons/vue@1.0.0
 ```
 
 ```vue
@@ -29,4 +29,4 @@ Icons are decorative by default (`aria-hidden="true"`). Supply `aria-label`, `ar
 
 Vue SSR is supported with `createSSRApp()` and `renderToString()`; the same component hydrates without browser-only runtime code. There is no imperative SVG/ref API: this component deliberately exposes no methods or wrapper node. Vue `>=3.5 <3.6` is a peer dependency; Core is a normal dependency.
 
-Do not mix this adapter with older Core prereleases. MIT license; see [LICENSE](LICENSE).
+The adapter accepts compatible Core 1.x updates, including future icon additions. MIT license; see [LICENSE](LICENSE).

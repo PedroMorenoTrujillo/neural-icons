@@ -2,10 +2,10 @@
 
 React 19 adapter for `@neural-icons/core`. Core owns every icon definition; this package contains only the renderer.
 
-This published `0.0.1-next.2` adapter requires the matching 197-family Core `0.0.1-next.2` catalog. Install both prereleases explicitly:
+Version `1.0.0` uses the 197-family Core catalog. Install the matching stable packages:
 
 ```bash
-npm install @neural-icons/core@0.0.1-next.2 @neural-icons/react@0.0.1-next.2
+npm install @neural-icons/core@1.0.0 @neural-icons/react@1.0.0
 ```
 
 ```tsx
@@ -27,4 +27,4 @@ Geometry and semantic SVG attributes (`viewBox`, fill/stroke, stroke width, rule
 
 React `>=19 <20` is a peer dependency. Core is a normal package dependency. Neither adapter nor Core requires React DOM at runtime; React DOM is used only by the test and SSR/hydration consumer fixtures.
 
-Do not mix this adapter with older Core prereleases. MIT license; see [LICENSE](LICENSE).
+The adapter accepts compatible Core 1.x updates, including future icon additions. MIT license; see [LICENSE](LICENSE).

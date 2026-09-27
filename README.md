@@ -1,6 +1,6 @@
 # Neural Icons
 
-Original, framework-agnostic iconography for Neural UI 2.0. The 197-family `0.0.1-next.2` catalog and all three adapters are published on npm under the `next` tag. Stable 1.0 is in preparation.
+Original, framework-agnostic iconography for Neural UI 2.0. The 197-family `0.0.1-next.2` catalog and all three adapters are published on npm under the `next` tag. This source tree now prepares an unpublished `1.0.0` candidate with the icon catalog frozen.
 
 ## Packages
 
@@ -86,6 +86,6 @@ Labels are trimmed; empty or whitespace-only labels remain decorative. SVG asset
 
 ## Publishing
 
-This repository, its packages, and the SVG catalog are licensed under [MIT](LICENSE). Core, Angular, React, and Vue `0.0.1-next.2` are published prereleases. Install matching versions explicitly; older prereleases contain an earlier catalog. A stable release requires a reviewed source checkpoint, matching Core dependency ranges, a clean registry-consumer verification, and explicit approval. Publish Core before its adapters. Do not promote a prerelease to `latest` as a substitute for publishing stable packages.
+This repository, its packages, and the SVG catalog are licensed under [MIT](LICENSE). Core, Angular, React, and Vue `0.0.1-next.2` are published prereleases; the local `1.0.0` manifests are not published. Stable adapters declare `@neural-icons/core: ^1.0.0`, so future compatible Core icon additions do not require adapter releases. Before publishing stable packages, review this checkpoint, pass the full release gate and clean consumers, and obtain explicit approval. Publish Core before its adapters. Do not promote a prerelease to `latest` as a substitute for publishing stable packages.
 
 See [Architecture](docs/architecture.md), [Contributing](CONTRIBUTING.md), and the recorded [architecture decisions](docs/decisions/0001-original-source-and-package-boundaries.md).

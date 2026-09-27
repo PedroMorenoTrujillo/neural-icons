@@ -1,6 +1,6 @@
 {
   "name": "@neural-icons/angular",
-  "version": "0.0.1-next.2",
+  "version": "1.0.0",
   "description": "Angular 22 standalone adapter for Neural Icons.",
   "repository": { "type": "git", "url": "git+https://github.com/PedroMorenoTrujillo/neural-icons.git", "directory": "packages/angular" },
   "homepage": "https://github.com/PedroMorenoTrujillo/neural-icons#readme",
@@ -11,6 +11,6 @@
   "sideEffects": false,
   "license": "MIT",
   "dependencies": {
-    "@neural-icons/core": "0.0.1-next.2"
+    "@neural-icons/core": "^1.0.0"
   }
 }

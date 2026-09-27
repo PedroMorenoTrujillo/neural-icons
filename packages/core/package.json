@@ -1,6 +1,6 @@
 {
   "name": "@neural-icons/core",
-  "version": "0.0.1-next.2",
+  "version": "1.0.0",
   "type": "module",
   "description": "Framework-agnostic icon definitions for the Neural design system.",
   "repository": { "type": "git", "url": "git+https://github.com/PedroMorenoTrujillo/neural-icons.git", "directory": "packages/core" },

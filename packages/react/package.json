@@ -1,6 +1,6 @@
 {
   "name": "@neural-icons/react",
-  "version": "0.0.1-next.2",
+  "version": "1.0.0",
   "type": "module",
   "description": "React 19 adapter for Neural Icons.",
   "repository": { "type": "git", "url": "git+https://github.com/PedroMorenoTrujillo/neural-icons.git", "directory": "packages/react" },
@@ -28,6 +28,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@neural-icons/core": "0.0.1-next.2"
+    "@neural-icons/core": "^1.0.0"
   }
 }
