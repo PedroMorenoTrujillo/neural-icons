@@ -43,9 +43,9 @@ describe('Neural Icons public showcase', () => {
 
   it('shows one glyph per family and keeps the full catalog count', async () => {
     const { root } = await render();
-    expect(root.querySelectorAll('.family-tile')).toHaveLength(197);
+    expect(root.querySelectorAll('.family-tile')).toHaveLength(250);
     expect(root.querySelectorAll('.tile-preview neural-icon')).toHaveLength(
-      197,
+      250,
     );
     expect(root.querySelector('.masthead .primary-nav')).toBeNull();
     expect(root.querySelector('.preview-label')).toBeNull();
@@ -68,7 +68,7 @@ describe('Neural Icons public showcase', () => {
     await fixture.whenStable();
     const installation = required<HTMLElement>(root, '#installation');
     expect(root.querySelector('.catalog-column.guide-view')).not.toBeNull();
-    expect(installation?.textContent).toContain('current 197-family catalog');
+    expect(installation?.textContent).toContain('250 families');
     expect(installation?.querySelectorAll('.installation-step')).toHaveLength(
       4,
     );
@@ -87,7 +87,7 @@ describe('Neural Icons public showcase', () => {
       'plain HTML',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      '@neural-icons/core@0.0.1-next.2 share the current 197-family catalog',
+      'current npm release still has 197',
     );
     expect(
       root.querySelector('.installation-status')?.textContent,
@@ -220,7 +220,7 @@ describe('Neural Icons public showcase', () => {
       '/icons/search.svg',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      '@neural-icons/core@0.0.1-next.2 comparten el catálogo actual',
+      'La versión actual de npm aún tiene 197',
     );
     expect(
       root.querySelector('.installation-status')?.textContent,
@@ -326,7 +326,7 @@ describe('Neural Icons public showcase', () => {
   it('keeps the grid singular and compares variants in the detail panel', async () => {
     const { fixture, root } = await render();
     expect(root.querySelectorAll('.tile-preview neural-icon')).toHaveLength(
-      197,
+      250,
     );
     expect(
       root

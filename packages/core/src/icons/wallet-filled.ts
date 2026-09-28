@@ -1,0 +1,13 @@
+import { defineIcon } from '../lib/icon-definition.js';
+
+export const iconWalletFilled = defineIcon({
+  name: 'wallet-filled',
+  category: 'commerce',
+  tags: ['balance', 'purse', 'money', 'filled'],
+  paths: [
+    'M5 3h13v2H5a2 2 0 0 0-2 2v.25A4 4 0 0 1 5 7h14a3 3 0 0 1 3 3v1h-8a3 3 0 0 0-3 3v1a3 3 0 0 0 3 3h8v1a3 3 0 0 1-3 3H5a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zM14 12.5h9v4h-9a1.5 1.5 0 0 1-1.5-1.5v-1a1.5 1.5 0 0 1 1.5-1.5zm2 1.25a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5z',
+  ],
+  variant: 'filled',
+  stroke: 'none',
+  separatePaths: true,
+});

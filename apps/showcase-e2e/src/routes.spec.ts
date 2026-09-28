@@ -27,6 +27,18 @@ const routes = [
     heading: 'search',
     title: 'search',
   },
+  {
+    path: '/?icon=shopping-cart',
+    lang: 'en',
+    heading: 'shopping-cart',
+    title: 'shopping-cart',
+  },
+  {
+    path: '/?icon=shopping-cart&lang=es',
+    lang: 'es',
+    heading: 'shopping-cart',
+    title: 'shopping-cart',
+  },
 ] as const;
 
 for (const route of routes) {
@@ -52,6 +64,22 @@ test('guide SSR does not render the hidden catalog grid', async ({
   const html = await response.text();
   expect(html).toContain('Instalación y uso');
   expect(html).not.toContain('class="family-tile"');
+});
+
+test('new families have indexable SSR metadata and real catalog links', async ({
+  request,
+}) => {
+  const detail = await request.get('/?icon=shopping-cart&lang=es');
+  expect(detail.ok()).toBe(true);
+  const html = await detail.text();
+  expect(html).toContain('shopping-cart: Comercio · carrito, comprar.');
+  expect(html).toMatch(/<meta name="robots" content="index, follow"/);
+  const canonical = html.match(/<link[^>]*rel="canonical"[^>]*>/)?.[0] ?? '';
+  expect(canonical).toContain('https://');
+  expect(canonical).toContain('?icon=shopping-cart');
+  expect(canonical).toContain('lang=es');
+  const catalog = await request.get('/?lang=es');
+  expect(await catalog.text()).toContain('href="/?icon=shopping-cart&amp;lang=es"');
 });
 
 test('Spanish detail URLs preserve locale, variant and framework across reload', async ({
@@ -109,7 +137,11 @@ test('robots, sitemap and SVG download are served by the production app', async 
   expect(await robots.text()).toContain('Sitemap:');
   const sitemap = await request.get('/sitemap.xml');
   expect(sitemap.ok()).toBe(true);
-  expect(await sitemap.text()).toContain('?icon=search');
+  const sitemapXml = await sitemap.text();
+  expect(sitemapXml).toContain('?icon=search');
+  expect(sitemapXml).toContain('?icon=shopping-cart');
+  expect(sitemapXml).toContain('?icon=hash');
+  expect(sitemapXml.match(/<url>/g)).toHaveLength(504);
   const svg = await request.get('/icons/search.svg');
   expect(svg.ok()).toBe(true);
   expect(await svg.text()).toContain('<svg');

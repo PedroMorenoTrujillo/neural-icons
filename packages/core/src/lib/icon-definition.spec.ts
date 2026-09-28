@@ -3,9 +3,16 @@ import { neuralIcons } from '../icons/index.js';
 import { defineIcon, NEURAL_ICON_VIEW_BOX } from './icon-definition.js';
 
 describe('Neural icon definitions', () => {
-  it('ships the reviewed Neural UI 2.0 baseline', () => {
-    expect(neuralIcons).toHaveLength(394);
-    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(394);
+  it('ships 250 complete outline/filled families', () => {
+    expect(neuralIcons).toHaveLength(500);
+    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(500);
+    const outlines = neuralIcons.filter(({ variant }) => variant === 'outline');
+    const filled = neuralIcons.filter(({ variant }) => variant === 'filled');
+    expect(outlines).toHaveLength(250);
+    expect(filled).toHaveLength(250);
+    const families = new Set(outlines.map(({ family }) => family));
+    expect(families.size).toBe(250);
+    expect(filled.every(({ family }) => families.has(family))).toBe(true);
   });
 
   it('keeps attachment discovery on the canonical paperclip family', () => {
@@ -103,6 +110,7 @@ describe('Neural icon definitions', () => {
       'arrow-up-left-filled',
       'arrow-down-right-filled',
       'arrow-down-left-filled',
+      'hash-filled',
     ]);
     for (const icon of neuralIcons.filter(
       ({ variant }) => variant === 'filled',

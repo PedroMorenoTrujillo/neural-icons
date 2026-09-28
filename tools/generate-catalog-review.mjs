@@ -7,8 +7,14 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const specs = JSON.parse(
   await readFile(join(root, 'packages/core/icons/icons.json'), 'utf8'),
 );
-const byName = new Map(specs.map((icon) => [icon.name, icon]));
-const families = specs.filter((icon) => icon.variant !== 'filled');
+// NI-02 is a historical certification of the original 197 pairs. New NI-06
+// pairs have their own contact sheets and must not rewrite this evidence.
+if (specs[393]?.name !== 'underline-filled') {
+  throw new Error('The frozen NI-02 manifest prefix has changed.');
+}
+const ni02Specs = specs.slice(0, 394);
+const byName = new Map(ni02Specs.map((icon) => [icon.name, icon]));
+const families = ni02Specs.filter((icon) => icon.variant !== 'filled');
 const output = join(root, 'docs/qa/contact-sheets');
 const check = process.argv.includes('--check');
 const ledgersOnly = process.argv.includes('--ledgers-only');
@@ -46,7 +52,7 @@ const escape = (value) =>
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;');
 const svgCache = new Map();
-for (const icon of specs) {
+for (const icon of ni02Specs) {
   svgCache.set(
     icon.name,
     await readFile(join(root, 'packages/core/svg', `${icon.name}.svg`), 'utf8'),

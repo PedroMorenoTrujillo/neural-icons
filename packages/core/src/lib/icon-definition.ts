@@ -2,7 +2,14 @@ export const NEURAL_ICON_VIEW_BOX = '0 0 24 24' as const;
 export const NEURAL_ICON_STROKE_WIDTH = 1.75 as const;
 
 export type NeuralIconCategory =
-  'action' | 'communication' | 'file' | 'navigation' | 'status' | 'system';
+  | 'action'
+  | 'commerce'
+  | 'communication'
+  | 'file'
+  | 'media'
+  | 'navigation'
+  | 'status'
+  | 'system';
 export type NeuralIconVariant = 'outline' | 'filled';
 export type NeuralIconStroke = 'none' | 'currentColor';
 

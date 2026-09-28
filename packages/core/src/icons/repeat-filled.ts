@@ -1,0 +1,12 @@
+import { defineIcon } from '../lib/icon-definition.js';
+
+export const iconRepeatFilled = defineIcon({
+  name: 'repeat-filled',
+  category: 'media',
+  tags: ['loop', 'replay', 'player', 'filled'],
+  paths: [
+    'M6.5 3H16V.5l5 4-5 4V6H6.5A1.5 1.5 0 0 0 5 7.5V10H2V7.5A4.5 4.5 0 0 1 6.5 3zM18 14h3v2.5a4.5 4.5 0 0 1-4.5 4.5H8v2.5l-5-4 5-4V18h8.5a1.5 1.5 0 0 0 1.5-1.5z',
+  ],
+  variant: 'filled',
+  stroke: 'none',
+});

@@ -1,0 +1,12 @@
+import { defineIcon } from '../lib/icon-definition.js';
+
+export const iconStrikethroughFilled = defineIcon({
+  name: 'strikethrough-filled',
+  category: 'action',
+  tags: ['strike', 'text decoration', 'format', 'filled'],
+  paths: [
+    'M12 3.5c3.2 0 5.7.75 7.35 2.4l-1.6 2.1C16.5 6.7 14.7 6 12 6c-2.3 0-3.5.75-3.5 2.1 0 1.1.85 1.7 2.8 2.15H6.6C5.7 9.4 5.5 8.7 5.5 8c0-2.75 2.5-4.5 6.5-4.5zM3.5 11h17v2h-17zM15.5 13.75h3.1c.7.8 1 1.7 1 2.75 0 3.4-3.1 5-7.5 5-3.3 0-5.8-.8-7.8-2.4l1.65-2.15C7.6 18.35 9.6 19 12.1 19c2.9 0 4.5-.9 4.5-2.4 0-1.1-.35-1.8-1.1-2.85z',
+  ],
+  variant: 'filled',
+  stroke: 'none',
+});

@@ -17,8 +17,10 @@ const allowedFields = new Set([
 ]);
 const allowedCategories = new Set([
   'action',
+  'commerce',
   'communication',
   'file',
+  'media',
   'navigation',
   'status',
   'system',

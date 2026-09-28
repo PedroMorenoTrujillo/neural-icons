@@ -8,8 +8,8 @@ test('SSR renders the full family catalog and hydration preserves SVG nodes', as
   const html = await response.text();
   expect(response.ok()).toBe(true);
   expect(html).toContain('ngh=');
-  expect(html.match(/class="family-tile"/g)).toHaveLength(197);
-  expect(html).toContain('197 families');
+  expect(html.match(/class="family-tile"/g)).toHaveLength(250);
+  expect(html).toContain('250 families');
   expect(html).not.toContain('class="preview-label"');
   expect(html).not.toContain('id="family-attach"');
   expect(html).not.toContain('id="family-funnel"');
@@ -30,7 +30,7 @@ test('SSR renders the full family catalog and hydration preserves SVG nodes', as
   });
   try {
     await page.goto('/', { waitUntil: 'commit' });
-    await expect(page.locator('.family-tile')).toHaveCount(197);
+    await expect(page.locator('.family-tile')).toHaveCount(250);
     await page.evaluate(() => {
       Object.assign(window, {
         serverIconNodes: Array.from(
@@ -44,7 +44,7 @@ test('SSR renders the full family catalog and hydration preserves SVG nodes', as
 
   await expect(async () => {
     await page.getByRole('searchbox', { name: 'Search icons' }).fill('alert');
-    await expect(page.locator('.family-tile')).toHaveCount(3);
+    await expect(page.locator('.family-tile')).toHaveCount(4);
   }).toPass({ timeout: 15_000 });
   expect(
     await page.evaluate(() => {
@@ -64,7 +64,7 @@ test('search, approved aliases, category, empty state and variant preview', asyn
 }) => {
   await page.goto('/');
   const search = page.getByRole('searchbox', { name: 'Search icons' });
-  await expect(page.locator('.family-tile')).toHaveCount(197);
+  await expect(page.locator('.family-tile')).toHaveCount(250);
   await search.fill('attach');
   await expect(page.locator('.tile-name')).toHaveText('paperclip');
   await search.fill('funnel');

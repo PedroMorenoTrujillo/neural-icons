@@ -156,8 +156,8 @@ describe('NeuIcon', () => {
     app.unmount();
   });
 
-  it('renders all 394 Core glyphs with unchanged paths', async () => {
-    expect(neuralIcons).toHaveLength(394);
+  it('renders all 500 Core glyphs with unchanged paths', async () => {
+    expect(neuralIcons).toHaveLength(500);
     for (const icon of neuralIcons) {
       const definition: NeuralIconDefinition = icon;
       const node = svg(await markup(definition));

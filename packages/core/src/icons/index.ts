@@ -392,6 +392,112 @@ import { iconListOrderedFilled } from './list-ordered-filled.js';
 import { iconTrendingDownFilled } from './trending-down-filled.js';
 import { iconTrendingUpFilled } from './trending-up-filled.js';
 import { iconUnderlineFilled } from './underline-filled.js';
+import { iconChevronsLeft } from './chevrons-left.js';
+import { iconChevronsLeftFilled } from './chevrons-left-filled.js';
+import { iconChevronsRight } from './chevrons-right.js';
+import { iconChevronsRightFilled } from './chevrons-right-filled.js';
+import { iconArrowRightLeft } from './arrow-right-left.js';
+import { iconArrowRightLeftFilled } from './arrow-right-left-filled.js';
+import { iconSlidersHorizontal } from './sliders-horizontal.js';
+import { iconSlidersHorizontalFilled } from './sliders-horizontal-filled.js';
+import { iconFileSearch } from './file-search.js';
+import { iconFileSearchFilled } from './file-search-filled.js';
+import { iconFileLock } from './file-lock.js';
+import { iconFileLockFilled } from './file-lock-filled.js';
+import { iconQuote } from './quote.js';
+import { iconQuoteFilled } from './quote-filled.js';
+import { iconScissors } from './scissors.js';
+import { iconScissorsFilled } from './scissors-filled.js';
+import { iconStrikethrough } from './strikethrough.js';
+import { iconStrikethroughFilled } from './strikethrough-filled.js';
+import { iconLayers } from './layers.js';
+import { iconLayersFilled } from './layers-filled.js';
+import { iconPhoneCall } from './phone-call.js';
+import { iconPhoneCallFilled } from './phone-call-filled.js';
+import { iconPhoneOff } from './phone-off.js';
+import { iconPhoneOffFilled } from './phone-off-filled.js';
+import { iconHeadphones } from './headphones.js';
+import { iconHeadphonesFilled } from './headphones-filled.js';
+import { iconMailOpen } from './mail-open.js';
+import { iconMailOpenFilled } from './mail-open-filled.js';
+import { iconMegaphone } from './megaphone.js';
+import { iconMegaphoneFilled } from './megaphone-filled.js';
+import { iconGitBranch } from './git-branch.js';
+import { iconGitBranchFilled } from './git-branch-filled.js';
+import { iconGitMerge } from './git-merge.js';
+import { iconGitMergeFilled } from './git-merge-filled.js';
+import { iconGitPullRequest } from './git-pull-request.js';
+import { iconGitPullRequestFilled } from './git-pull-request-filled.js';
+import { iconGitCommit } from './git-commit.js';
+import { iconGitCommitFilled } from './git-commit-filled.js';
+import { iconBraces } from './braces.js';
+import { iconBracesFilled } from './braces-filled.js';
+import { iconHash } from './hash.js';
+import { iconHashFilled } from './hash-filled.js';
+import { iconShoppingCart } from './shopping-cart.js';
+import { iconShoppingCartFilled } from './shopping-cart-filled.js';
+import { iconShoppingBag } from './shopping-bag.js';
+import { iconShoppingBagFilled } from './shopping-bag-filled.js';
+import { iconCreditCard } from './credit-card.js';
+import { iconCreditCardFilled } from './credit-card-filled.js';
+import { iconWallet } from './wallet.js';
+import { iconWalletFilled } from './wallet-filled.js';
+import { iconReceipt } from './receipt.js';
+import { iconReceiptFilled } from './receipt-filled.js';
+import { iconBriefcase } from './briefcase.js';
+import { iconBriefcaseFilled } from './briefcase-filled.js';
+import { iconTruck } from './truck.js';
+import { iconTruckFilled } from './truck-filled.js';
+import { iconMusic } from './music.js';
+import { iconMusicFilled } from './music-filled.js';
+import { iconFilm } from './film.js';
+import { iconFilmFilled } from './film-filled.js';
+import { iconRecord } from './record.js';
+import { iconRecordFilled } from './record-filled.js';
+import { iconRepeat } from './repeat.js';
+import { iconRepeatFilled } from './repeat-filled.js';
+import { iconShuffle } from './shuffle.js';
+import { iconShuffleFilled } from './shuffle-filled.js';
+import { iconCaptions } from './captions.js';
+import { iconCaptionsFilled } from './captions-filled.js';
+import { iconMonitor } from './monitor.js';
+import { iconMonitorFilled } from './monitor-filled.js';
+import { iconSmartphone } from './smartphone.js';
+import { iconSmartphoneFilled } from './smartphone-filled.js';
+import { iconBattery } from './battery.js';
+import { iconBatteryFilled } from './battery-filled.js';
+import { iconBatteryCharging } from './battery-charging.js';
+import { iconBatteryChargingFilled } from './battery-charging-filled.js';
+import { iconPower } from './power.js';
+import { iconPowerFilled } from './power-filled.js';
+import { iconSun } from './sun.js';
+import { iconSunFilled } from './sun-filled.js';
+import { iconMoon } from './moon.js';
+import { iconMoonFilled } from './moon-filled.js';
+import { iconCar } from './car.js';
+import { iconCarFilled } from './car-filled.js';
+import { iconPlane } from './plane.js';
+import { iconPlaneFilled } from './plane-filled.js';
+import { iconTicket } from './ticket.js';
+import { iconTicketFilled } from './ticket-filled.js';
+import { iconLuggage } from './luggage.js';
+import { iconLuggageFilled } from './luggage-filled.js';
+import { iconFingerprint } from './fingerprint.js';
+import { iconFingerprintFilled } from './fingerprint-filled.js';
+import { iconShieldAlert } from './shield-alert.js';
+import { iconShieldAlertFilled } from './shield-alert-filled.js';
+import { iconBan } from './ban.js';
+import { iconBanFilled } from './ban-filled.js';
+import { iconBadgeCheck } from './badge-check.js';
+import { iconBadgeCheckFilled } from './badge-check-filled.js';
+import { iconTarget } from './target.js';
+import { iconTargetFilled } from './target-filled.js';
+import { iconBookOpen } from './book-open.js';
+import { iconBookOpenFilled } from './book-open-filled.js';
+import { iconPresentation } from './presentation.js';
+import { iconPresentationFilled } from './presentation-filled.js';
+import { iconKanban } from './kanban.js';
+import { iconKanbanFilled } from './kanban-filled.js';
 import type { NeuralIconDefinition } from '../lib/icon-definition.js';
 
 export { iconArrowLeft } from './arrow-left.js';
@@ -788,6 +894,112 @@ export { iconListOrderedFilled } from './list-ordered-filled.js';
 export { iconTrendingDownFilled } from './trending-down-filled.js';
 export { iconTrendingUpFilled } from './trending-up-filled.js';
 export { iconUnderlineFilled } from './underline-filled.js';
+export { iconChevronsLeft } from './chevrons-left.js';
+export { iconChevronsLeftFilled } from './chevrons-left-filled.js';
+export { iconChevronsRight } from './chevrons-right.js';
+export { iconChevronsRightFilled } from './chevrons-right-filled.js';
+export { iconArrowRightLeft } from './arrow-right-left.js';
+export { iconArrowRightLeftFilled } from './arrow-right-left-filled.js';
+export { iconSlidersHorizontal } from './sliders-horizontal.js';
+export { iconSlidersHorizontalFilled } from './sliders-horizontal-filled.js';
+export { iconFileSearch } from './file-search.js';
+export { iconFileSearchFilled } from './file-search-filled.js';
+export { iconFileLock } from './file-lock.js';
+export { iconFileLockFilled } from './file-lock-filled.js';
+export { iconQuote } from './quote.js';
+export { iconQuoteFilled } from './quote-filled.js';
+export { iconScissors } from './scissors.js';
+export { iconScissorsFilled } from './scissors-filled.js';
+export { iconStrikethrough } from './strikethrough.js';
+export { iconStrikethroughFilled } from './strikethrough-filled.js';
+export { iconLayers } from './layers.js';
+export { iconLayersFilled } from './layers-filled.js';
+export { iconPhoneCall } from './phone-call.js';
+export { iconPhoneCallFilled } from './phone-call-filled.js';
+export { iconPhoneOff } from './phone-off.js';
+export { iconPhoneOffFilled } from './phone-off-filled.js';
+export { iconHeadphones } from './headphones.js';
+export { iconHeadphonesFilled } from './headphones-filled.js';
+export { iconMailOpen } from './mail-open.js';
+export { iconMailOpenFilled } from './mail-open-filled.js';
+export { iconMegaphone } from './megaphone.js';
+export { iconMegaphoneFilled } from './megaphone-filled.js';
+export { iconGitBranch } from './git-branch.js';
+export { iconGitBranchFilled } from './git-branch-filled.js';
+export { iconGitMerge } from './git-merge.js';
+export { iconGitMergeFilled } from './git-merge-filled.js';
+export { iconGitPullRequest } from './git-pull-request.js';
+export { iconGitPullRequestFilled } from './git-pull-request-filled.js';
+export { iconGitCommit } from './git-commit.js';
+export { iconGitCommitFilled } from './git-commit-filled.js';
+export { iconBraces } from './braces.js';
+export { iconBracesFilled } from './braces-filled.js';
+export { iconHash } from './hash.js';
+export { iconHashFilled } from './hash-filled.js';
+export { iconShoppingCart } from './shopping-cart.js';
+export { iconShoppingCartFilled } from './shopping-cart-filled.js';
+export { iconShoppingBag } from './shopping-bag.js';
+export { iconShoppingBagFilled } from './shopping-bag-filled.js';
+export { iconCreditCard } from './credit-card.js';
+export { iconCreditCardFilled } from './credit-card-filled.js';
+export { iconWallet } from './wallet.js';
+export { iconWalletFilled } from './wallet-filled.js';
+export { iconReceipt } from './receipt.js';
+export { iconReceiptFilled } from './receipt-filled.js';
+export { iconBriefcase } from './briefcase.js';
+export { iconBriefcaseFilled } from './briefcase-filled.js';
+export { iconTruck } from './truck.js';
+export { iconTruckFilled } from './truck-filled.js';
+export { iconMusic } from './music.js';
+export { iconMusicFilled } from './music-filled.js';
+export { iconFilm } from './film.js';
+export { iconFilmFilled } from './film-filled.js';
+export { iconRecord } from './record.js';
+export { iconRecordFilled } from './record-filled.js';
+export { iconRepeat } from './repeat.js';
+export { iconRepeatFilled } from './repeat-filled.js';
+export { iconShuffle } from './shuffle.js';
+export { iconShuffleFilled } from './shuffle-filled.js';
+export { iconCaptions } from './captions.js';
+export { iconCaptionsFilled } from './captions-filled.js';
+export { iconMonitor } from './monitor.js';
+export { iconMonitorFilled } from './monitor-filled.js';
+export { iconSmartphone } from './smartphone.js';
+export { iconSmartphoneFilled } from './smartphone-filled.js';
+export { iconBattery } from './battery.js';
+export { iconBatteryFilled } from './battery-filled.js';
+export { iconBatteryCharging } from './battery-charging.js';
+export { iconBatteryChargingFilled } from './battery-charging-filled.js';
+export { iconPower } from './power.js';
+export { iconPowerFilled } from './power-filled.js';
+export { iconSun } from './sun.js';
+export { iconSunFilled } from './sun-filled.js';
+export { iconMoon } from './moon.js';
+export { iconMoonFilled } from './moon-filled.js';
+export { iconCar } from './car.js';
+export { iconCarFilled } from './car-filled.js';
+export { iconPlane } from './plane.js';
+export { iconPlaneFilled } from './plane-filled.js';
+export { iconTicket } from './ticket.js';
+export { iconTicketFilled } from './ticket-filled.js';
+export { iconLuggage } from './luggage.js';
+export { iconLuggageFilled } from './luggage-filled.js';
+export { iconFingerprint } from './fingerprint.js';
+export { iconFingerprintFilled } from './fingerprint-filled.js';
+export { iconShieldAlert } from './shield-alert.js';
+export { iconShieldAlertFilled } from './shield-alert-filled.js';
+export { iconBan } from './ban.js';
+export { iconBanFilled } from './ban-filled.js';
+export { iconBadgeCheck } from './badge-check.js';
+export { iconBadgeCheckFilled } from './badge-check-filled.js';
+export { iconTarget } from './target.js';
+export { iconTargetFilled } from './target-filled.js';
+export { iconBookOpen } from './book-open.js';
+export { iconBookOpenFilled } from './book-open-filled.js';
+export { iconPresentation } from './presentation.js';
+export { iconPresentationFilled } from './presentation-filled.js';
+export { iconKanban } from './kanban.js';
+export { iconKanbanFilled } from './kanban-filled.js';
 
 export const neuralIcons = Object.freeze([
   iconArrowLeft,
@@ -1184,6 +1396,112 @@ export const neuralIcons = Object.freeze([
   iconTrendingDownFilled,
   iconTrendingUpFilled,
   iconUnderlineFilled,
+  iconChevronsLeft,
+  iconChevronsLeftFilled,
+  iconChevronsRight,
+  iconChevronsRightFilled,
+  iconArrowRightLeft,
+  iconArrowRightLeftFilled,
+  iconSlidersHorizontal,
+  iconSlidersHorizontalFilled,
+  iconFileSearch,
+  iconFileSearchFilled,
+  iconFileLock,
+  iconFileLockFilled,
+  iconQuote,
+  iconQuoteFilled,
+  iconScissors,
+  iconScissorsFilled,
+  iconStrikethrough,
+  iconStrikethroughFilled,
+  iconLayers,
+  iconLayersFilled,
+  iconPhoneCall,
+  iconPhoneCallFilled,
+  iconPhoneOff,
+  iconPhoneOffFilled,
+  iconHeadphones,
+  iconHeadphonesFilled,
+  iconMailOpen,
+  iconMailOpenFilled,
+  iconMegaphone,
+  iconMegaphoneFilled,
+  iconGitBranch,
+  iconGitBranchFilled,
+  iconGitMerge,
+  iconGitMergeFilled,
+  iconGitPullRequest,
+  iconGitPullRequestFilled,
+  iconGitCommit,
+  iconGitCommitFilled,
+  iconBraces,
+  iconBracesFilled,
+  iconHash,
+  iconHashFilled,
+  iconShoppingCart,
+  iconShoppingCartFilled,
+  iconShoppingBag,
+  iconShoppingBagFilled,
+  iconCreditCard,
+  iconCreditCardFilled,
+  iconWallet,
+  iconWalletFilled,
+  iconReceipt,
+  iconReceiptFilled,
+  iconBriefcase,
+  iconBriefcaseFilled,
+  iconTruck,
+  iconTruckFilled,
+  iconMusic,
+  iconMusicFilled,
+  iconFilm,
+  iconFilmFilled,
+  iconRecord,
+  iconRecordFilled,
+  iconRepeat,
+  iconRepeatFilled,
+  iconShuffle,
+  iconShuffleFilled,
+  iconCaptions,
+  iconCaptionsFilled,
+  iconMonitor,
+  iconMonitorFilled,
+  iconSmartphone,
+  iconSmartphoneFilled,
+  iconBattery,
+  iconBatteryFilled,
+  iconBatteryCharging,
+  iconBatteryChargingFilled,
+  iconPower,
+  iconPowerFilled,
+  iconSun,
+  iconSunFilled,
+  iconMoon,
+  iconMoonFilled,
+  iconCar,
+  iconCarFilled,
+  iconPlane,
+  iconPlaneFilled,
+  iconTicket,
+  iconTicketFilled,
+  iconLuggage,
+  iconLuggageFilled,
+  iconFingerprint,
+  iconFingerprintFilled,
+  iconShieldAlert,
+  iconShieldAlertFilled,
+  iconBan,
+  iconBanFilled,
+  iconBadgeCheck,
+  iconBadgeCheckFilled,
+  iconTarget,
+  iconTargetFilled,
+  iconBookOpen,
+  iconBookOpenFilled,
+  iconPresentation,
+  iconPresentationFilled,
+  iconKanban,
+  iconKanbanFilled,
 ]) satisfies readonly NeuralIconDefinition[];
 
 export type { NeuralIconName, NeuralIconFamily } from '../icon-names.js';

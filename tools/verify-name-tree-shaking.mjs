@@ -18,6 +18,24 @@ if (!process.argv[2]) {
 const save = "import { iconSave } from '@neural-icons/core/icons/save';";
 const download =
   "import { iconDownload } from '@neural-icons/core/icons/download';";
+const sun = "import { iconSun } from '@neural-icons/core/icons/sun';";
+const mixedNames = [
+  'Save',
+  'Download',
+  'Sun',
+  'Moon',
+  'ShoppingCart',
+  'CreditCard',
+  'Fingerprint',
+  'BookOpen',
+  'Music',
+  'GitBranch',
+];
+const mixedImports = mixedNames
+  .map((name) =>
+    `import { icon${name} } from '@neural-icons/core/icons/${name.replace(/[A-Z]/g, (letter, index) => `${index ? '-' : ''}${letter.toLowerCase()}`)}';`,
+  )
+  .join('\n');
 const cases = {
   A: `import { NeuralIcon } from '@neural-icons/angular';
       ${save} console.log(NeuralIcon, iconSave);`,
@@ -32,9 +50,14 @@ const cases = {
   E: `import { NeuralIcon } from '@neural-icons/angular'; console.log(NeuralIcon);`,
   F: `import { NeuralIcon, provideAllNeuralIcons } from '@neural-icons/angular';
       console.log(NeuralIcon, provideAllNeuralIcons());`,
+  G: `import { NeuralIcon, provideNeuralIcons } from '@neural-icons/angular';
+      ${sun} console.log(NeuralIcon, provideNeuralIcons(iconSun));`,
+  H: `import { NeuralIcon, provideNeuralIcons } from '@neural-icons/angular';
+      ${mixedImports}
+      console.log(NeuralIcon, provideNeuralIcons(${mixedNames.map((name) => `icon${name}`).join(', ')}));`,
 };
 
-const expectedModules = { A: 1, B: 1, C: 2, D: 2, E: 0, F: 394 };
+const expectedModules = { A: 1, B: 1, C: 2, D: 2, E: 0, F: 500, G: 1, H: 10 };
 const results = [];
 for (const [name, contents] of Object.entries(cases)) {
   const result = await build({

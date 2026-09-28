@@ -14,7 +14,7 @@ const en = {
   language: 'Language',
   heroTitle: 'Find your icon.',
   heroDescription:
-    'Explore 197 icon families. Open one to compare outline and filled, inspect the details, and copy the code for your project.',
+    'Explore 250 icon families. Open one to compare outline and filled, inspect the details, and copy the code for your project.',
   exploreIcons: 'Explore icons',
   searchIcons: 'Search icons',
   searchPlaceholder: 'Name, keyword, or category',
@@ -32,7 +32,7 @@ const en = {
     html: {
       lead: 'Use the SVG files directly in plain HTML. No framework, JavaScript, or Neural UI is required.',
       status:
-        'This site and @neural-icons/core@0.0.1-next.2 share the current 197-family catalog. Download SVGs here or use the Core package.',
+        'This development preview has 250 families. The current npm release still has 197; the 53 new families are not published yet. You can inspect and download their SVGs here.',
       installTitle: 'Prepare the SVG file',
       installDescription:
         'No package is needed. Download search.svg and place it at /icons/search.svg in your site’s public files, or update the example path.',
@@ -53,7 +53,7 @@ const en = {
     angular: {
       lead: 'In Angular, Core supplies icon definitions and the Angular adapter renders them. Neural UI is not required.',
       status:
-        'Core and Angular 0.0.1-next.2 are published on npm with the next tag. They contain the 197-family catalog shown here.',
+        'Core and Angular are on npm under the latest tag with 197 families. This development preview includes 53 additional, unpublished families.',
       installTitle: 'Install for Angular',
       installDescription:
         'Install the matching Core and Angular prereleases in your Angular 22 application. Neural UI is not required.',
@@ -73,7 +73,7 @@ const en = {
     react: {
       lead: 'In React, pass an individual Core icon definition to the NeuIcon component. Neural UI is not required.',
       status:
-        'Core and React 0.0.1-next.2 are published on npm with the next tag. They contain the 197-family catalog shown here.',
+        'Core and React are on npm under the latest tag with 197 families. This development preview includes 53 additional, unpublished families.',
       installTitle: 'Install for React',
       installDescription:
         'Install the matching Core and React prereleases in your React 19 application. Neural UI is not required.',
@@ -93,7 +93,7 @@ const en = {
     vue: {
       lead: 'In Vue, pass an individual Core icon definition to the NeuIcon component. Neural UI is not required.',
       status:
-        'Core and Vue 0.0.1-next.2 are published on npm with the next tag. They contain the 197-family catalog shown here.',
+        'Core and Vue are on npm under the latest tag with 197 families. This development preview includes 53 additional, unpublished families.',
       installTitle: 'Install for Vue',
       installDescription:
         'Install the matching Core and Vue prereleases in your Vue 3.5 application. Neural UI is not required.',
@@ -122,9 +122,9 @@ const en = {
   guideCopy: 'Copy code',
   aboutTitle: 'About Neural Icons',
   aboutDescription:
-    '197 icon families, outline and filled. MIT licensed for public and commercial use. Granular imports keep ordinary applications free of the full catalog; Neural UI is not required.',
+    '250 icon families in this development preview, outline and filled. MIT licensed for public and commercial use. Granular imports keep ordinary applications free of the full catalog; Neural UI is not required.',
   packageStatus:
-    'Core, Angular, React, and Vue 0.0.1-next.2 are published npm prereleases. All four use the 197-family catalog shown here; the stable 1.0 release is still in preparation.',
+    'Core, Angular, React, and Vue are available on npm under the latest tag with 197 families. The 53 new families shown here are not published yet.',
   licenseLink: 'MIT license',
   repositoryLink: 'Repository',
   apiLink: 'Package API',
@@ -154,13 +154,15 @@ const en = {
   import: 'Import',
   asset: 'SVG path',
   snippet: 'Snippet',
-  snippetPreviewStatus: 'This example uses the published 0.0.1-next.2 prerelease catalog; earlier versions may not contain this icon.',
+  snippetPreviewStatus: 'New NI-06 icons are available only in this development preview; the current npm release does not contain them yet.',
   action: 'Action',
   communication: 'Communication',
   file: 'File',
   navigation: 'Navigation',
+  commerce: 'Commerce',
   status: 'Status',
   system: 'System',
+  media: 'Media',
 };
 
 const es: typeof en = {
@@ -195,7 +197,7 @@ const es: typeof en = {
     html: {
       lead: 'Usa los SVG directamente en HTML puro. No necesitas framework, JavaScript ni Neural UI.',
       status:
-        'Esta web y @neural-icons/core@0.0.1-next.2 comparten el catálogo actual de 197 familias. Descarga los SVG aquí o usa el paquete Core.',
+        'Esta vista previa de desarrollo tiene 250 familias. La versión actual de npm aún tiene 197; las 53 familias nuevas no están publicadas. Puedes revisar y descargar sus SVG aquí.',
       installTitle: 'Preparar el archivo SVG',
       installDescription:
         'No necesitas instalar un paquete. Descarga search.svg y guárdalo como /icons/search.svg entre los archivos públicos de tu web, o adapta la ruta del ejemplo.',
@@ -216,7 +218,7 @@ const es: typeof en = {
     angular: {
       lead: 'En Angular, Core aporta las definiciones de los iconos y el adaptador Angular las representa. No necesitas Neural UI.',
       status:
-        'Core y Angular 0.0.1-next.2 están publicados en npm con la etiqueta next. Incluyen el catálogo de 197 familias mostrado aquí.',
+        'Core y Angular están en npm con la etiqueta latest y 197 familias. Esta vista previa de desarrollo incluye 53 familias adicionales aún no publicadas.',
       installTitle: 'Instalar en Angular',
       installDescription:
         'Instala las versiones preliminares compatibles de Core y Angular en tu aplicación Angular 22. No necesitas Neural UI.',
@@ -236,7 +238,7 @@ const es: typeof en = {
     react: {
       lead: 'En React, pasa una definición individual de Core al componente NeuIcon. No necesitas Neural UI.',
       status:
-        'Core y React 0.0.1-next.2 están publicados en npm con la etiqueta next. Incluyen el catálogo de 197 familias mostrado aquí.',
+        'Core y React están en npm con la etiqueta latest y 197 familias. Esta vista previa de desarrollo incluye 53 familias adicionales aún no publicadas.',
       installTitle: 'Instalar en React',
       installDescription:
         'Instala las versiones preliminares compatibles de Core y React en tu aplicación React 19. No necesitas Neural UI.',
@@ -256,7 +258,7 @@ const es: typeof en = {
     vue: {
       lead: 'En Vue, pasa una definición individual de Core al componente NeuIcon. No necesitas Neural UI.',
       status:
-        'Core y Vue 0.0.1-next.2 están publicados en npm con la etiqueta next. Incluyen el catálogo de 197 familias mostrado aquí.',
+        'Core y Vue están en npm con la etiqueta latest y 197 familias. Esta vista previa de desarrollo incluye 53 familias adicionales aún no publicadas.',
       installTitle: 'Instalar en Vue',
       installDescription:
         'Instala las versiones preliminares compatibles de Core y Vue en tu aplicación Vue 3.5. No necesitas Neural UI.',
@@ -287,7 +289,7 @@ const es: typeof en = {
   aboutDescription:
     '197 familias, contorno y relleno. Licencia MIT para uso público y comercial. Las importaciones individuales evitan cargar el catálogo completo; no necesitas Neural UI.',
   packageStatus:
-    'Core, Angular, React y Vue 0.0.1-next.2 son versiones preliminares publicadas en npm. Las cuatro usan el catálogo de 197 familias mostrado aquí; la versión estable 1.0 sigue en preparación.',
+    'Core, Angular, React y Vue están disponibles en npm con la etiqueta latest y 197 familias. Las 53 familias nuevas de esta vista previa aún no están publicadas.',
   licenseLink: 'Licencia MIT',
   repositoryLink: 'Repositorio',
   apiLink: 'API del paquete',
@@ -319,7 +321,7 @@ const es: typeof en = {
   import: 'Importación',
   asset: 'Ruta SVG',
   snippet: 'Ejemplo',
-  snippetPreviewStatus: 'Este ejemplo usa el catálogo preliminar 0.0.1-next.2 publicado; las versiones anteriores pueden no incluir este icono.',
+  snippetPreviewStatus: 'Los iconos nuevos de NI-06 sólo están disponibles en esta vista previa de desarrollo; la versión actual de npm aún no los incluye.',
   action: 'Acción',
   communication: 'Comunicación',
   file: 'Archivo',
@@ -327,5 +329,7 @@ const es: typeof en = {
   status: 'Estado',
   system: 'Sistema',
 };
+  commerce: 'Comercio',
 
 export const showcaseCopy = { en, es };
+  media: 'Multimedia',
