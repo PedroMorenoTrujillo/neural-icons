@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { createServer } from 'node:http';
+import { lstatSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -15,6 +16,7 @@ const require = createRequire(
   new URL('../node_modules/@angular/build/package.json', import.meta.url),
 );
 const { build } = require('esbuild');
+const registryOnly = process.argv.includes('--registry-only');
 const temp = await mkdtemp(join(tmpdir(), 'neural-icons-vue-consumer-'));
 const run = (file, args, cwd = temp) =>
   execFileSync(file, args, {
@@ -30,31 +32,44 @@ try {
     join(temp, 'package.json'),
     JSON.stringify({ private: true, type: 'module' }),
   );
-  const tarballs = [];
+  const packageSpecs = [];
   for (const name of ['core', 'vue']) {
-    const packed = JSON.parse(
-      run(
-        'npm',
-        ['pack', '--json', '--ignore-scripts', '--pack-destination', temp],
-        join(root, 'dist/packages', name),
-      ),
-    )[0];
-    assert(
-      !packed.files.some(({ path }) => /\.(spec|test|typecheck)\./.test(path)),
-      `${name}: test file leaked`,
-    );
-    tarballs.push(join(temp, packed.filename));
+    if (registryOnly) {
+      const manifest = JSON.parse(await readFile(join(root, 'packages', name, 'package.json')));
+      packageSpecs.push(`@neural-icons/${name}@${manifest.version}`);
+    } else {
+      const packed = JSON.parse(
+        run(
+          'npm',
+          ['pack', '--json', '--ignore-scripts', '--pack-destination', temp],
+          join(root, 'dist/packages', name),
+        ),
+      )[0];
+      assert(!packed.files.some(({ path }) => /\.(spec|test|typecheck)\./.test(path)), `${name}: test file leaked`);
+      packageSpecs.push(join(temp, packed.filename));
+    }
   }
   run('npm', [
     'install',
-    '--offline',
+    ...(registryOnly ? ['--registry=https://registry.npmjs.org/', '--prefer-online'] : ['--offline']),
     '--no-audit',
     '--no-fund',
     '--save-exact',
-    ...tarballs,
+    ...packageSpecs,
     'vue@3.5.43',
     'typescript@6.0.3',
   ]);
+  if (registryOnly) {
+    const lock = JSON.parse(await readFile(join(temp, 'package-lock.json')));
+    for (const name of ['core', 'vue']) {
+      const installed = lock.packages[`node_modules/@neural-icons/${name}`];
+      assert.equal(installed.version, packageSpecs.find((spec) => spec.startsWith(`@neural-icons/${name}@`)).split('@').at(-1));
+      assert(installed.resolved?.startsWith('https://registry.npmjs.org/'));
+      assert(installed.integrity?.startsWith('sha512-'));
+      assert(!lstatSync(join(temp, 'node_modules/@neural-icons', name)).isSymbolicLink());
+    }
+    console.log('Core and Vue registry-only install: PASS');
+  }
 
   const ssrSource = `
     import assert from 'node:assert/strict';
@@ -164,6 +179,11 @@ try {
       `import { h } from 'vue'; import { NeuIcon } from '@neural-icons/vue'; import { neuralIcons } from '@neural-icons/core/catalog'; export const nodes = neuralIcons.map(icon => h(NeuIcon, { icon }));`,
       null,
     ],
+    [
+      'F NI-06 one icon',
+      `import { h } from 'vue'; import { NeuIcon } from '@neural-icons/vue'; import { iconSun } from '@neural-icons/core/icons/sun'; export const node = h(NeuIcon, { icon: iconSun });`,
+      ['sun'],
+    ],
     ['ROOT UNUSED', `export {};`, []],
   ];
   const results = [];
@@ -199,7 +219,7 @@ try {
     else
       assert.equal(
         retained.length,
-        394,
+        500,
         'Full catalog must be explicit and complete',
       );
     results.push({

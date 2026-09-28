@@ -7,7 +7,14 @@ import { SITE_ORIGIN } from './site-origin';
 const serverConfig: ApplicationConfig = {
   providers: [
     provideServerRendering(withRoutes(serverRoutes)),
-    { provide: SITE_ORIGIN, useValue: process.env['NEURAL_ICONS_SITE_ORIGIN'] ?? '' },
+    {
+      provide: SITE_ORIGIN,
+      useValue:
+        process.env['NEURAL_ICONS_SITE_ORIGIN'] ||
+        (process.env['VERCEL_PROJECT_PRODUCTION_URL']
+          ? `https://${process.env['VERCEL_PROJECT_PRODUCTION_URL']}`
+          : ''),
+    },
   ],
 };
 

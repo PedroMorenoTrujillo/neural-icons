@@ -3,6 +3,7 @@
 # compiled output
 dist
 tmp
+.vercel
 out-tsc
 
 # dependencies

@@ -2,7 +2,7 @@
 
 ## 1. Status
 
-**NI-06 CATALOG EXPANSION PASS** for the local, unpublished candidate. This certifies the checks below, not a deployed site or an npm release. The 53-family selection was recorded before geometry work in [`NI-06-CATALOG-EXPANSION-PROPOSAL.md`](../../NI-06-CATALOG-EXPANSION-PROPOSAL.md).
+**NI-06 CATALOG EXPANSION PASS** for the local, unpublished candidate. NI-06B verified that Batch 1 already meets its exact 250-family target, so Batch 2 correctly selected zero additional families. This certifies the checks below, not a deployment or a new npm release. The 53-family selection was recorded before geometry work in [`NI-06-CATALOG-EXPANSION-PROPOSAL.md`](../../NI-06-CATALOG-EXPANSION-PROPOSAL.md); Batch 2 inventory and zero-addition decision are recorded in [`NI-06B-POST-BATCH1-INVENTORY.md`](NI-06B-POST-BATCH1-INVENTORY.md) and [`../../NI-06B-CATALOG-PROPOSAL.md`](../../NI-06B-CATALOG-PROPOSAL.md).
 
 ## 2. Starting commit
 
@@ -143,7 +143,7 @@ A **minor** Core version increment is appropriate when release is later authoriz
 
 ## 31. Git state
 
-Branch `codex/ni-06-catalog-expansion`, HEAD `a9245b0564658985b0ad55e98e16557606638606`. NI-06 remains unstaged and uncommitted. `git diff --check` passes. No push, pull, rebase, tag, release, deploy or npm publication occurred. The branch inherited unrelated pre-existing uncommitted work, including the `1.0.1` manifests; this must be separated in any later review/commit. At the local tracking snapshot, `main` is 7 commits ahead of `origin/main` and 0 behind; NI-06 did not change this divergence or fetch the remote.
+Branch `codex/ni-06-catalog-expansion`, Batch 1 commit `3e9bd23ae140aaf4f8712f619314b8e23e9cbbda` (`feat(icons): expand catalog to 250 families`), parent `a9245b0564658985b0ad55e98e16557606638606`. The commit contains the catalog expansion and its dedicated generated assets, QA, and count-related tests. Earlier unrelated website/README/version work was preserved outside that commit. NI-06B's inventory and proposal/report addendum remain uncommitted for review. `git diff --check` passes. No push, tag, release, deploy or npm publication occurred. At the existing local tracking snapshot (not freshly fetched), `HEAD` is 8 commits ahead of `origin/main` and 0 behind.
 
 ## 32. Stash integrity
 
@@ -156,3 +156,46 @@ No blocking catalog, visual, package or SEO check remains in the **local candida
 ## 34. Recommendation
 
 **NI-06 CATALOG EXPANSION PASS** locally. Keep the branch for design/code review; approve concepts and visual sheets before deciding versions or publication. Do not present the 53 new families as available on npm or the live website yet.
+
+## NI-06B — Batch 2 continuation (target already complete)
+
+NI-06B's exact target is 250 families / 500 glyphs. The committed Batch 1 catalog already equals that target; `REMAINING_FAMILIES = 250 - 250 = 0` and `REMAINING_GLYPHS = 500 - 500 = 0`. No Batch 2 icon, geometry, alias, route, package, or contact sheet was added. This prevents exceeding the approved count. Full inventory: [`NI-06B-POST-BATCH1-INVENTORY.md`](NI-06B-POST-BATCH1-INVENTORY.md); concept/rejection ledger: [`../../NI-06B-CATALOG-PROPOSAL.md`](../../NI-06B-CATALOG-PROPOSAL.md).
+
+| NI-06B report area | Result |
+|---|---|
+| 1. Starting checkpoint | Batch 1 commit `3e9bd23ae140aaf4f8712f619314b8e23e9cbbda`; parent `a9245b0564658985b0ad55e98e16557606638606`. |
+| 2. Post-Batch-1 counts | 250 families, 250 outline, 250 filled, 500 glyphs. |
+| 3. Remaining calculation | 0 families / 0 glyphs; invariant passes. |
+| 4. Gap analysis | Existing NI-06 concept comparison carried forward; current 250-family names/tags checked against the Batch 2 product-gap list and official catalog concept sources. No demand inferred from telemetry. |
+| 5. Rejected/duplicate concepts | Recorded in the NI-06B proposal; includes existing alias ownership such as `attachment` → `paperclip`, `funnel` → `filter`, and `invoice` → `receipt`. |
+| 6. Selected remaining families | 0, exactly the calculated remainder. |
+| 7. Category distribution | No category delta. |
+| 8. Geometry method | N/A; no new glyphs. |
+| 9. Outline QA | N/A for Batch 2; Batch 1 visual checks remain applicable. |
+| 10. Filled QA | N/A for Batch 2; Batch 1 visual checks remain applicable. |
+| 11. Pair QA | N/A for Batch 2; no new pairs. |
+| 12. Core integration | No Batch 2 Core changes. |
+| 13. Angular | `npm run verify:release` PASS; Angular package/AOT checks included. |
+| 14. React | PASS; packed package, SSR/hydration, Vite/Rollup and granular probe included. |
+| 15. Vue | PASS; packed package, SSR/hydration, Vite/Rollup and granular probe included. |
+| 16. Raw SVG/HTML | 500 catalog SVGs and Core definitions remain in parity; no Batch 2 files. |
+| 17. Search aliases | No alias changes. Core uses tags rather than a distinct aliases field; exact counts are in the inventory. |
+| 18. Showcase | Showcase build PASS; 250 families. |
+| 19. SEO/routes/sitemap | E2E PASS, including canonical/indexable icon route and sitemap assertions; 504 URLs for the current routing model. Existing Search Console verification was not changed or submitted. |
+| 20. Related icons | No Batch 2 related-icon changes. |
+| 21. Catalog invariants | PASS: 250 / 250 / 250 / 500, complete pairs, unique canonical names and existing alias/category checks. |
+| 22. Existing-geometry freeze | PASS: all 394 pre-existing records, generated SVGs and definition modules byte-identical to the parent checkpoint. |
+| 23. Contact sheets | No Batch 2 sheets because Batch 2 has no families; six Batch 1 sheets retained. |
+| 24. Visual outliers | No new glyphs to assess; Batch 1 QA remains recorded above. |
+| 25. Tree shaking | PASS: root-only 0 glyphs; one glyph 1; family variants 2; ten icons 10; Angular one/ten 1/10; React and Vue new-icon probes 1 each; root-unused 0 raw bytes. |
+| 26. Package verification | Core, Angular, React and Vue package checks PASS; no package manifest/version changes by NI-06B. |
+| 27. Full checks | `npm run check` PASS; `npm run verify:release` PASS; Chromium E2E 45/45. |
+| 28. Size | Batch 2 adds 0 source/bundle bytes. Latest explicit full-catalog probe: 106,934 raw / 27,036 gzip bytes; single-icon granularity remains intact. |
+| 29. Final counts | 250 families / 250 outline / 250 filled / 500 glyphs. |
+| 30. SemVer | Additive Batch 1 catalog growth normally warrants a Core minor increment at a separately authorized release; no version was changed here. |
+| 31. Git | Branch/commit above; local tracking snapshot 8 ahead, 0 behind; no network fetch/push/tag/release. NI-06B documentation stays uncommitted. |
+| 32. Stash | PASS: `stash@{0}` / `e36c545e59247efa964833e5d1d8a77fcc0bb93a`, sole file as specified, SHA-256 matches; untouched. |
+
+### NI-06B recommendation
+
+**NI-06 CATALOG EXPANSION PASS.** Batch 2 is a verified no-op because the target was already met. Do not add more icons without a separately approved target.

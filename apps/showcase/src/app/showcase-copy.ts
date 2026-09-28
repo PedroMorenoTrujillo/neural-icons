@@ -56,12 +56,12 @@ const en = {
         'Core and Angular are on npm under the latest tag with 197 families. This development preview includes 53 additional, unpublished families.',
       installTitle: 'Install for Angular',
       installDescription:
-        'Install the matching Core and Angular prereleases in your Angular 22 application. Neural UI is not required.',
+        'Install the latest Core and Angular packages in your Angular 22 application. Neural UI is not required.',
       requirements: 'Angular >=22 <23. Core has no framework peer dependency.',
       variantNote:
         'Import iconSearchFilled from @neural-icons/core/icons/search-filled for filled. Set [size] in pixels or CSS units.',
       a11yNote:
-        'Direct definitions need no registry. For icon="search", register selected definitions with provideNeuralIcons(iconSearch). Use label for an informative icon, or name its parent button.',
+        'NeuralIcon is decorative by default. Set [label] for a meaningful SVG; give an icon-only button its own accessible name.',
       useTitle: 'Use an icon in Angular',
       useDescription:
         'Import iconSearch from its individual Core path, add NeuralIcon to your component imports, and pass the definition to [icon].',
@@ -76,12 +76,12 @@ const en = {
         'Core and React are on npm under the latest tag with 197 families. This development preview includes 53 additional, unpublished families.',
       installTitle: 'Install for React',
       installDescription:
-        'Install the matching Core and React prereleases in your React 19 application. Neural UI is not required.',
+        'Install the latest Core and React packages in your React 19 application. Neural UI is not required.',
       requirements: 'React >=19 <20. Core has no framework peer dependency.',
       variantNote:
         'Import iconSearchFilled from @neural-icons/core/icons/search-filled for filled. Set size to pixels or CSS units.',
       a11yNote:
-        'Use aria-label, aria-labelledby or title for an informative standalone icon. An icon-only button needs a name on the button.',
+        'In React, NeuIcon is decorative by default. Give a meaningful SVG aria-label, aria-labelledby or title; name an icon-only button on the button itself.',
       useTitle: 'Use an icon in React',
       useDescription:
         'Import iconSearch from its individual Core path and pass it to the icon prop of NeuIcon.',
@@ -96,12 +96,12 @@ const en = {
         'Core and Vue are on npm under the latest tag with 197 families. This development preview includes 53 additional, unpublished families.',
       installTitle: 'Install for Vue',
       installDescription:
-        'Install the matching Core and Vue prereleases in your Vue 3.5 application. Neural UI is not required.',
+        'Install the latest Core and Vue packages in your Vue 3.5 application. Neural UI is not required.',
       requirements: 'Vue >=3.5 <3.6. Core has no framework peer dependency.',
       variantNote:
         'Import iconSearchFilled from @neural-icons/core/icons/search-filled for filled. Set :size to pixels or CSS units.',
       a11yNote:
-        'Use aria-label, aria-labelledby or title for an informative standalone icon. An icon-only button needs a name on the button.',
+        'In a Vue template, NeuIcon is decorative by default. Add aria-label or aria-labelledby to a meaningful SVG, or pass title; name an icon-only button on the button itself.',
       useTitle: 'Use an icon in Vue',
       useDescription:
         'Import iconSearch in <script setup> from its individual Core path and pass it to the icon prop of NeuIcon.',
@@ -125,9 +125,6 @@ const en = {
     '250 icon families in this development preview, outline and filled. MIT licensed for public and commercial use. Granular imports keep ordinary applications free of the full catalog; Neural UI is not required.',
   packageStatus:
     'Core, Angular, React, and Vue are available on npm under the latest tag with 197 families. The 53 new families shown here are not published yet.',
-  licenseLink: 'MIT license',
-  repositoryLink: 'Repository',
-  apiLink: 'Package API',
   colorTitle: 'Use any color.',
   familyDetail: 'Family detail',
   close: 'Close',
@@ -148,21 +145,27 @@ const en = {
   example: 'example',
   copySnippet: 'Copy snippet',
   accessibility: 'Accessibility',
-  accessibilityNote:
-    'Decorative icons are hidden from assistive technology. For meaning, Angular uses label, React/Vue use aria-label or title, and HTML uses <img alt> or inline SVG role="img" with aria-label and without aria-hidden. Name icon-only buttons on the button.',
+  accessibilityNote: {
+    html: 'For decoration, use <img alt="">. For meaning, write descriptive alt text, or use an inline SVG with role="img" and aria-label (without aria-hidden). Give icon-only buttons their own accessible name.',
+    angular:
+      'NeuralIcon hides decorative SVGs from assistive technology by default. For a meaningful icon, pass [label] to give the SVG an accessible name. Give icon-only buttons their own accessible name.',
+    react:
+      'React NeuIcon hides decorative SVGs by default. Pass aria-label or aria-labelledby to the component, or use its title prop, for a meaningful icon. Label icon-only buttons on the button.',
+    vue: 'In Vue templates, NeuIcon hides decorative SVGs by default. Add aria-label or aria-labelledby to the component, or bind its title prop, for a meaningful icon. Label icon-only buttons on the button.',
+  },
   name: 'Name',
   import: 'Import',
   asset: 'SVG path',
   snippet: 'Snippet',
   snippetPreviewStatus: 'New NI-06 icons are available only in this development preview; the current npm release does not contain them yet.',
   action: 'Action',
+  commerce: 'Commerce',
   communication: 'Communication',
   file: 'File',
+  media: 'Media',
   navigation: 'Navigation',
-  commerce: 'Commerce',
   status: 'Status',
   system: 'System',
-  media: 'Media',
 };
 
 const es: typeof en = {
@@ -179,7 +182,7 @@ const es: typeof en = {
   language: 'Idioma',
   heroTitle: 'Encuentra tu icono.',
   heroDescription:
-    'Explora 197 familias de iconos. Abre una para comparar contorno y relleno, ver los detalles y copiar el código para tu proyecto.',
+    'Explora 250 familias de iconos. Abre una para comparar contorno y relleno, ver los detalles y copiar el código para tu proyecto.',
   exploreIcons: 'Explorar iconos',
   searchIcons: 'Buscar iconos',
   searchPlaceholder: 'Nombre, palabra clave o categoría',
@@ -221,12 +224,12 @@ const es: typeof en = {
         'Core y Angular están en npm con la etiqueta latest y 197 familias. Esta vista previa de desarrollo incluye 53 familias adicionales aún no publicadas.',
       installTitle: 'Instalar en Angular',
       installDescription:
-        'Instala las versiones preliminares compatibles de Core y Angular en tu aplicación Angular 22. No necesitas Neural UI.',
+        'Instala los paquetes más recientes de Core y Angular en tu aplicación Angular 22. No necesitas Neural UI.',
       requirements: 'Angular >=22 <23. Core no necesita ningún framework.',
       variantNote:
         'Importa iconSearchFilled desde @neural-icons/core/icons/search-filled para relleno. [size] admite píxeles o unidades CSS.',
       a11yNote:
-        'Las definiciones directas no necesitan registro. Para icon="search", registra las seleccionadas con provideNeuralIcons(iconSearch). Usa label para un icono informativo o nombra el botón que lo contiene.',
+        'NeuralIcon es decorativo por defecto. Usa [label] si el SVG aporta información; da un nombre accesible al botón si solo contiene el icono.',
       useTitle: 'Usar un icono en Angular',
       useDescription:
         'Importa iconSearch desde su ruta individual de Core, añade NeuralIcon a imports del componente y pasa la definición a [icon].',
@@ -241,12 +244,12 @@ const es: typeof en = {
         'Core y React están en npm con la etiqueta latest y 197 familias. Esta vista previa de desarrollo incluye 53 familias adicionales aún no publicadas.',
       installTitle: 'Instalar en React',
       installDescription:
-        'Instala las versiones preliminares compatibles de Core y React en tu aplicación React 19. No necesitas Neural UI.',
+        'Instala los paquetes más recientes de Core y React en tu aplicación React 19. No necesitas Neural UI.',
       requirements: 'React >=19 <20. Core no necesita ningún framework.',
       variantNote:
         'Importa iconSearchFilled desde @neural-icons/core/icons/search-filled para relleno. size admite píxeles o unidades CSS.',
       a11yNote:
-        'Usa aria-label, aria-labelledby o title para un icono informativo independiente. Si un botón solo contiene un icono, nombra el botón.',
+        'En React, NeuIcon es decorativo por defecto. Usa aria-label, aria-labelledby o title si el SVG aporta información; nombra el botón si solo contiene el icono.',
       useTitle: 'Usar un icono en React',
       useDescription:
         'Importa iconSearch desde su ruta individual de Core y pásalo a la propiedad icon de NeuIcon.',
@@ -261,12 +264,12 @@ const es: typeof en = {
         'Core y Vue están en npm con la etiqueta latest y 197 familias. Esta vista previa de desarrollo incluye 53 familias adicionales aún no publicadas.',
       installTitle: 'Instalar en Vue',
       installDescription:
-        'Instala las versiones preliminares compatibles de Core y Vue en tu aplicación Vue 3.5. No necesitas Neural UI.',
+        'Instala los paquetes más recientes de Core y Vue en tu aplicación Vue 3.5. No necesitas Neural UI.',
       requirements: 'Vue >=3.5 <3.6. Core no necesita ningún framework.',
       variantNote:
         'Importa iconSearchFilled desde @neural-icons/core/icons/search-filled para relleno. :size admite píxeles o unidades CSS.',
       a11yNote:
-        'Usa aria-label, aria-labelledby o title para un icono informativo independiente. Si un botón solo contiene un icono, nombra el botón.',
+        'En una plantilla Vue, NeuIcon es decorativo por defecto. Añade aria-label o aria-labelledby al SVG, o pasa title, si aporta información; nombra el botón si solo contiene el icono.',
       useTitle: 'Usar un icono en Vue',
       useDescription:
         'Importa iconSearch en <script setup> desde su ruta individual de Core y pásalo a la propiedad icon de NeuIcon.',
@@ -287,12 +290,9 @@ const es: typeof en = {
   guideCopy: 'Copiar código',
   aboutTitle: 'Acerca de Neural Icons',
   aboutDescription:
-    '197 familias, contorno y relleno. Licencia MIT para uso público y comercial. Las importaciones individuales evitan cargar el catálogo completo; no necesitas Neural UI.',
+    '250 familias en esta vista previa de desarrollo, contorno y relleno. Licencia MIT para uso público y comercial. Las importaciones individuales evitan cargar el catálogo completo; no necesitas Neural UI.',
   packageStatus:
     'Core, Angular, React y Vue están disponibles en npm con la etiqueta latest y 197 familias. Las 53 familias nuevas de esta vista previa aún no están publicadas.',
-  licenseLink: 'Licencia MIT',
-  repositoryLink: 'Repositorio',
-  apiLink: 'API del paquete',
   colorTitle: 'Usa cualquier color.',
   familyDetail: 'Detalle de la familia',
   close: 'Cerrar',
@@ -315,21 +315,27 @@ const es: typeof en = {
   example: 'ejemplo',
   copySnippet: 'Copiar ejemplo',
   accessibility: 'Accesibilidad',
-  accessibilityNote:
-    'Los iconos decorativos se ocultan a las tecnologías de asistencia. Para un icono informativo, Angular usa label, React/Vue usan aria-label o title, y HTML usa <img alt> o SVG inline con role="img" y aria-label sin aria-hidden. Si un botón solo contiene un icono, nombra el botón.',
+  accessibilityNote: {
+    html: 'Para decoración, usa <img alt="">. Si el icono aporta información, escribe un alt descriptivo o usa un SVG inline con role="img" y aria-label (sin aria-hidden). Da nombre accesible a los botones que solo contienen un icono.',
+    angular:
+      'NeuralIcon oculta por defecto los SVG decorativos a las tecnologías de asistencia. Si el icono aporta información, pasa [label] para darle un nombre accesible. Da nombre accesible a los botones que solo contienen un icono.',
+    react:
+      'En React, NeuIcon oculta por defecto los SVG decorativos. Pasa aria-label o aria-labelledby al componente, o usa su prop title, si el icono aporta información. Nombra el botón si solo contiene el icono.',
+    vue: 'En plantillas Vue, NeuIcon oculta por defecto los SVG decorativos. Añade aria-label o aria-labelledby al componente, o vincula su prop title, si el icono aporta información. Nombra el botón si solo contiene el icono.',
+  },
   name: 'Nombre',
   import: 'Importación',
   asset: 'Ruta SVG',
   snippet: 'Ejemplo',
   snippetPreviewStatus: 'Los iconos nuevos de NI-06 sólo están disponibles en esta vista previa de desarrollo; la versión actual de npm aún no los incluye.',
   action: 'Acción',
+  commerce: 'Comercio',
   communication: 'Comunicación',
   file: 'Archivo',
+  media: 'Multimedia',
   navigation: 'Navegación',
   status: 'Estado',
   system: 'Sistema',
 };
-  commerce: 'Comercio',
 
 export const showcaseCopy = { en, es };
-  media: 'Multimedia',

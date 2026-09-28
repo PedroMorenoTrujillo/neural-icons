@@ -2,13 +2,15 @@
 
 Standalone Angular 22 renderer for `@neural-icons/core` definitions.
 
+[Browse all icons](https://neural-icons.vercel.app/) · [Installation and usage](https://neural-icons.vercel.app/?view=guide)
+
 Install the matching stable packages in an Angular 22 application:
 
 ```sh
-npm install @neural-icons/core@1.0.0 @neural-icons/angular@1.0.0
+npm install @neural-icons/core@1.1.0 @neural-icons/angular@1.1.0
 ```
 
-These versions use the 197-family catalog. Angular accepts compatible Core 1.x
+These versions use the 250-family catalog. Angular accepts compatible Core 1.x
 updates, including future icon additions, without an adapter release.
 
 Register only the icons your application uses. String names resolve synchronously

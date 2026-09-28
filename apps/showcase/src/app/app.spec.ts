@@ -115,16 +115,16 @@ describe('Neural Icons public showcase', () => {
     tabs[1].click();
     await fixture.whenStable();
     expect(installation.querySelector('.installation-step:first-child code')?.textContent).toBe(
-      'npm install @neural-icons/core@0.0.1-next.2 @neural-icons/angular@0.0.1-next.2',
+      'npm install @neural-icons/core@latest @neural-icons/angular@latest',
     );
     expect(root.querySelector('.installation-lead')?.textContent).toContain(
       'In Angular',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'Core and Angular 0.0.1-next.2 are published on npm',
+      'Core and Angular are on npm under the latest tag',
     );
     expect(root.querySelector('.installation-step')?.textContent).toContain(
-      'Install the matching Core and Angular prereleases',
+      'Install the latest Core and Angular packages',
     );
     expect(root.querySelector('.installation-step h3')?.textContent).toBe(
       'Install for Angular',
@@ -143,13 +143,13 @@ describe('Neural Icons public showcase', () => {
     tabs[2].click();
     await fixture.whenStable();
     expect(installation.querySelector('.installation-step:first-child code')?.textContent).toBe(
-      'npm install @neural-icons/core@0.0.1-next.2 @neural-icons/react@0.0.1-next.2',
+      'npm install @neural-icons/core@latest @neural-icons/react@latest',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'Core and React 0.0.1-next.2 are published on npm',
+      'Core and React are on npm under the latest tag',
     );
     expect(root.querySelector('.installation-step')?.textContent).toContain(
-      'Install the matching Core and React prereleases',
+      'Install the latest Core and React packages',
     );
     expect(root.querySelector('.installation-step h3')?.textContent).toContain(
       'Install for React',
@@ -163,10 +163,10 @@ describe('Neural Icons public showcase', () => {
     tabs[3].click();
     await fixture.whenStable();
     expect(installation.querySelector('.installation-step:first-child code')?.textContent).toBe(
-      'npm install @neural-icons/core@0.0.1-next.2 @neural-icons/vue@0.0.1-next.2',
+      'npm install @neural-icons/core@latest @neural-icons/vue@latest',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'Core and Vue 0.0.1-next.2 are published on npm',
+      'Core and Vue are on npm under the latest tag',
     );
     expect(root.querySelector('#usage h3')?.textContent).toBe(
       'Use an icon in Vue',
@@ -180,6 +180,23 @@ describe('Neural Icons public showcase', () => {
     expect(root.querySelector('#color')?.textContent).toContain(
       'This fragment uses iconSearch from the example above',
     );
+    expect(root.querySelector('#installation')?.textContent).toContain(
+      'In a Vue template, NeuIcon is decorative by default',
+    );
+    expect(root.querySelector('.usage.about-section a')).toBeNull();
+    required<HTMLAnchorElement>(root, '.primary-nav a[href="/"]').click();
+    await fixture.whenStable();
+    required<HTMLAnchorElement>(
+      root,
+      '.primary-nav a[href="/?view=guide"]',
+    ).click();
+    await fixture.whenStable();
+    expect(
+      root
+        .querySelector('.installation-tabs button')
+        ?.getAttribute('aria-pressed'),
+    ).toBe('true');
+    expect(window.location.search).not.toContain('framework=');
   });
 
   it('offers the whole guide and catalog interface in Spanish', async () => {

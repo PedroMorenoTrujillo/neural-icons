@@ -89,8 +89,26 @@ test('search, approved aliases, category, empty state and variant preview', asyn
 test('detail, snippets, copy, deep link, history and keyboard close', async ({
   page,
   context,
+  browserName,
 }) => {
-  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  if (browserName === 'chromium') {
+    await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  } else {
+    // Firefox/WebKit do not expose Playwright's clipboard permissions.
+    // Keep the copy interaction observable without changing the app behavior.
+    await page.addInitScript(() => {
+      let copiedText = '';
+      Object.defineProperty(navigator, 'clipboard', {
+        configurable: true,
+        value: {
+          writeText: async (text: string) => {
+            copiedText = text;
+          },
+          readText: async () => copiedText,
+        },
+      });
+    });
+  }
   await page.goto('/?icon=file-text');
   await expect(page.getByRole('heading', { name: 'file-text' })).toBeVisible();
   await expect(page.locator('.size-sample')).toHaveCount(4);

@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "nx run-many -t build",
+    "build:vercel": "npm exec -- nx run showcase:build && node tools/build-vercel-output.mjs",
     "test": "nx run-many -t test",
     "lint": "nx run-many -t lint",
     "format": "nx format --write",

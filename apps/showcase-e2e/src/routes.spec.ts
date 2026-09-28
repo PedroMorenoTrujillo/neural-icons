@@ -101,6 +101,136 @@ test('Spanish detail URLs preserve locale, variant and framework across reload',
   await expect(page.locator('html')).toHaveAttribute('lang', 'es');
 });
 
+for (const width of [1280, 900, 390, 320]) {
+  test(`icon detail stays within its panel at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 800 });
+    await page.goto('/?icon=arrow-down&lang=es&framework=vue');
+    await expect(page.locator('.detail-panel')).toBeVisible();
+    const layout = await page.evaluate(() => {
+      const panel = document.querySelector<HTMLElement>('.detail-panel');
+      const codeBlocks = Array.from(
+        panel?.querySelectorAll<HTMLElement>('.code-section pre') ?? [],
+      );
+      return {
+        panelOverflow: (panel?.scrollWidth ?? 0) - (panel?.clientWidth ?? 0),
+        pageOverflow:
+          document.documentElement.scrollWidth -
+          document.documentElement.clientWidth,
+        codeOverflow: Math.max(
+          0,
+          ...codeBlocks.map((code) => code.scrollWidth - code.clientWidth),
+        ),
+      };
+    });
+    expect(layout.panelOverflow).toBeLessThanOrEqual(1);
+    expect(layout.pageOverflow).toBeLessThanOrEqual(1);
+    expect(layout.codeOverflow).toBeLessThanOrEqual(1);
+  });
+}
+
+test('detail close is an accessible X and the purple swatch remains visible', async ({
+  page,
+}) => {
+  await page.goto('/?lang=es');
+  await page.getByRole('button', { name: 'Cambiar a modo oscuro' }).click();
+  await page.goto('/?icon=arrow-down&lang=es');
+  const close = page.getByRole('button', { name: 'Cerrar' });
+  await expect(close).toHaveText('×');
+  const purpleSwatch = page.getByRole('button', {
+    name: 'Color de muestra #8b5cf6',
+  });
+  await expect(purpleSwatch).toHaveCSS('background-color', 'rgb(139, 92, 246)');
+  await purpleSwatch.click();
+  await expect(purpleSwatch).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.large-preview')).toHaveCSS('--preview-ink', '#8b5cf6');
+  await close.click();
+  await expect(page.locator('.detail-panel')).toHaveCount(0);
+});
+
+test('detail guidance and code follow the selected technology', async ({
+  page,
+}) => {
+  await page.goto('/?icon=search&lang=es');
+  const note = page.locator('.detail-panel .a11y-note');
+  const tabs = page.locator('.detail-panel .framework-tabs');
+  await expect(note).toContainText('<img alt="">');
+  await expect(note).not.toContainText('Angular');
+  await tabs.getByRole('button', { name: 'Angular' }).click();
+  await expect(note).toContainText('[label]');
+  await expect(note).not.toContainText('React');
+  await tabs.getByRole('button', { name: 'React' }).click();
+  await expect(note).toContainText('En React');
+  await expect(note).toContainText('aria-labelledby');
+  await expect(note).not.toContainText('[label]');
+  await tabs.getByRole('button', { name: 'Vue' }).click();
+  await expect(note).toContainText('En plantillas Vue');
+  await expect(note).not.toContainText('Angular');
+  await expect(page.locator('.code-section pre').first()).toHaveCSS(
+    'background-color',
+    'rgb(14, 23, 38)',
+  );
+  await expect(page.locator('.code-section pre').last()).toHaveCSS(
+    'background-color',
+    'rgb(14, 23, 38)',
+  );
+});
+
+test('guide opens in HTML and omits private repository links', async ({ page }) => {
+  await page.goto('/?icon=wand&framework=react&lang=es');
+  await page.locator('.primary-nav').getByRole('link', { name: 'Primeros pasos' }).click();
+  await expect(
+    page.locator('.installation-tabs').getByRole('button', { name: 'HTML' }),
+  ).toHaveAttribute('aria-pressed', 'true');
+  await expect(page).not.toHaveURL(/framework=/);
+  await expect(page.locator('.about-section a')).toHaveCount(0);
+  await expect(page.locator('.about-section')).toHaveCSS('border-top-width', '0px');
+});
+
+test('catalog never retains a framework query outside guide or icon detail', async ({ page }) => {
+  await page.goto('/?lang=es&framework=angular');
+  await expect(page.getByRole('heading', { name: 'Encuentra tu icono.' })).toBeVisible();
+  await expect(page).not.toHaveURL(/framework=/);
+
+  await page.locator('.primary-nav').getByRole('link', { name: 'Primeros pasos' }).click();
+  await page.locator('.installation-tabs').getByRole('button', { name: 'Angular' }).click();
+  await expect(page).toHaveURL(/framework=angular/);
+
+  await page.locator('.primary-nav').getByRole('link', { name: 'Iconos' }).click();
+  await expect(page).not.toHaveURL(/framework=/);
+  await page.goBack();
+  await expect(page).toHaveURL(/framework=angular/);
+  await page.goForward();
+  await expect(page).not.toHaveURL(/framework=/);
+});
+
+test('SVG download is separated from its code block', async ({ page }) => {
+  await page.goto('/?icon=wand');
+  const margin = await page.locator('.code-section a[download]').evaluate((link) =>
+    Number.parseFloat(window.getComputedStyle(link).marginTop),
+  );
+  expect(margin).toBeGreaterThanOrEqual(12);
+});
+
+test('reopening the detail resets usage to HTML', async ({ page }) => {
+  await page.goto('/?icon=search&lang=es&framework=vue');
+  await expect(
+    page.locator('.detail-panel .framework-tabs').getByRole('button', {
+      name: 'Vue',
+    }),
+  ).toHaveAttribute('aria-pressed', 'true');
+  await page.getByRole('button', { name: 'Cerrar' }).click();
+  await expect(page).not.toHaveURL(/framework=/);
+  await page.locator('#family-search').click();
+  await expect(
+    page.locator('.detail-panel .framework-tabs').getByRole('button', {
+      name: 'HTML',
+    }),
+  ).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.detail-panel .a11y-note')).toContainText(
+    '<img alt="">',
+  );
+});
+
 for (const width of [1280, 1024, 900, 820, 769, 720, 640, 390, 358]) {
   test(`Spanish header has no horizontal overflow at ${width}px`, async ({
     page,
@@ -126,6 +256,44 @@ for (const width of [1280, 1024, 900, 820, 769, 720, 640, 390, 358]) {
         ),
     }));
     expect(layout.overflow, layout.offenders.join(', ')).toBeLessThanOrEqual(1);
+  });
+}
+
+test('header surfaces span the viewport while controls keep the content width', async ({ page }) => {
+  await page.setViewportSize({ width: 1920, height: 900 });
+  await page.goto('/?lang=es');
+  const layout = await page.evaluate(() => {
+    const rect = (selector: string) =>
+      document.querySelector<HTMLElement>(selector)?.getBoundingClientRect();
+    const masthead = rect('.masthead');
+    const nav = rect('.primary-nav');
+    const shell = rect('.shell');
+    const brand = rect('.identity');
+    const actions = rect('.header-actions');
+    return {
+      mastheadWidth: masthead?.width,
+      navWidth: nav?.width,
+      brandInset: (brand?.left ?? 0) - (shell?.left ?? 0),
+      actionsInset: (shell?.right ?? 0) - (actions?.right ?? 0),
+    };
+  });
+  expect(layout.mastheadWidth).toBe(1920);
+  expect(layout.navWidth).toBe(1920);
+  expect(layout.brandInset).toBeCloseTo(32, 0);
+  expect(layout.actionsInset).toBeCloseTo(32, 0);
+});
+
+for (const width of [390, 820, 1280]) {
+  test(`guide code wraps instead of scrolling horizontally at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 800 });
+    await page.goto('/?view=guide&lang=es');
+    const overflow = await page.evaluate(() => ({
+      page: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      blocks: Array.from(document.querySelectorAll<HTMLElement>('.installation-step pre, .usage pre'))
+        .map((block) => block.scrollWidth - block.clientWidth),
+    }));
+    expect(overflow.page).toBeLessThanOrEqual(1);
+    expect(Math.max(...overflow.blocks)).toBeLessThanOrEqual(1);
   });
 }
 
@@ -160,10 +328,10 @@ for (const width of [390, 358]) {
       page.getByRole('heading', { name: 'Instalación y uso' }),
     ).toBeVisible();
     await expect(page.locator('.installation-status')).toContainText(
-      'Core y Vue 0.0.1-next.2 están publicados en npm',
+      'Core y Vue están en npm con la etiqueta latest',
     );
     await expect(page.locator('.installation-step').first().locator('code')).toContainText(
-      'npm install @neural-icons/core@0.0.1-next.2 @neural-icons/vue@0.0.1-next.2',
+      'npm install @neural-icons/core@latest @neural-icons/vue@latest',
     );
     await page.getByRole('button', { name: 'Cambiar a modo oscuro' }).click();
     await expect(page.locator('app-root')).toHaveClass(/theme-dark/);

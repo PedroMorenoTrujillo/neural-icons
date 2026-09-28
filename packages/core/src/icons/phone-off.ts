@@ -5,6 +5,6 @@ export const iconPhoneOff = defineIcon({
   category: 'communication',
   tags: ['hang up', 'call ended', 'disabled'],
   paths: [
-    'M3.5 3.5l17 17M7 4h2l1 4-1.5 1.25M6 12c2.4 4.5 6 7.1 12 8a2 2 0 0 0 2-2v-2l-4-1-1.5 2M4.5 6c0 1.1.1 2.2.4 3.3',
+    'M6.5 3.5h3l1.5 4.2-1.8 1.4a14 14 0 0 0 5.7 5.7l1.4-1.8 4.2 1.5v2.8a3 3 0 0 1-3.3 3.2C9.2 20.2 3.8 14.8 3.5 6.8a3 3 0 0 1 3-3.3zM15.5 3.5l5 5M20.5 3.5l-5 5',
   ],
 });

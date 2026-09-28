@@ -4,7 +4,10 @@ export const iconFilesFilled = defineIcon({
   name: 'files-filled',
   category: 'file',
   tags: ['files', 'file', 'filled'],
-  paths: ['M7 5h12v14H7zM4 4h11.5v2.5H6.5V16H4z'],
+  paths: [
+    'M4 3h9l3 3H7v12H4z',
+    'M8 6.5h8l4 4v10.5H8zM16 7.75v2.75h2.75zM10.5 13.25H16v1.75h-5.5zM10.5 16.75H16v1.75h-5.5z',
+  ],
   variant: 'filled',
   stroke: 'none',
 });

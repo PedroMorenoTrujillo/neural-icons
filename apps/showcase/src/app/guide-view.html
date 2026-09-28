@@ -48,12 +48,14 @@
         <h3>{{ copy().guide[framework()].installTitle }}</h3>
         <p>{{ copy().guide[framework()].installDescription }}</p>
       </div>
-      <pre><code>{{ installSnippet() }}</code></pre>
-      @if (framework() === 'html') {
-      <a href="/icons/search.svg" download="search.svg"
-        >{{ copy().downloadSvg }}</a
-      >
-      }
+      <div class="installation-code">
+        <pre><code>{{ installSnippet() }}</code></pre>
+        @if (framework() === 'html') {
+        <a href="/icons/search.svg" download="search.svg"
+          >{{ copy().downloadSvg }}</a
+        >
+        }
+      </div>
     </div>
     <div id="usage" class="installation-step">
       <div>
@@ -83,25 +85,12 @@
   </div>
 </section>
 
-<section class="usage" aria-labelledby="about-heading">
+<section class="usage about-section" aria-labelledby="about-heading">
   <h2 id="about-heading">{{ copy().aboutTitle }}</h2>
-  <p>{{ copy().aboutDescription }}</p>
-  <p>{{ copy().packageStatus }}</p>
-  <p>
-    <a href="https://github.com/pedromorenotrujillo/neural-icons"
-      >{{ copy().repositoryLink }}</a
-    >
-    ·
-    <a
-      href="https://github.com/pedromorenotrujillo/neural-icons/blob/main/LICENSE"
-      >{{ copy().licenseLink }}</a
-    >
-    ·
-    <a
-      href="https://github.com/pedromorenotrujillo/neural-icons/tree/main/packages"
-      >{{ copy().apiLink }}</a
-    >
-  </p>
+  <div>
+    <p>{{ copy().aboutDescription }}</p>
+    <p>{{ copy().packageStatus }}</p>
+  </div>
 </section>
 
 <section id="color" class="usage color-guide" aria-labelledby="color-heading">

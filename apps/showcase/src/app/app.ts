@@ -39,6 +39,12 @@ import {
 type CopyItem = 'name' | 'import' | 'asset' | 'snippet';
 
 function frameworkFromUrl(url: URL): Framework {
+  if (
+    viewFromUrl(url) !== 'guide' &&
+    !familyByName.has(url.searchParams.get('icon') ?? '')
+  ) {
+    return 'html';
+  }
   const value = url.searchParams.get('framework');
   return value === 'angular' || value === 'react' || value === 'vue'
     ? value
@@ -109,7 +115,7 @@ export class App {
   protected readonly sizes = [16, 20, 24, 32] as const;
   protected readonly colors = [
     '#236ed8',
-    '#152033',
+    '#8b5cf6',
     '#de5e47',
     '#228b70',
   ] as const;
@@ -118,7 +124,6 @@ export class App {
     const params = new URLSearchParams();
     if (view === 'guide') params.set('view', 'guide');
     if (this.locale() === 'es') params.set('lang', 'es');
-    if (this.framework() !== 'html') params.set('framework', this.framework());
     const query = params.toString();
     return query ? `/?${query}` : '/';
   }
@@ -162,7 +167,7 @@ export class App {
     const framework = this.framework();
     return framework === 'html'
       ? '/icons/search.svg'
-      : `npm install @neural-icons/core@0.0.1-next.2 @neural-icons/${framework}@0.0.1-next.2`;
+      : `npm install @neural-icons/core@latest @neural-icons/${framework}@latest`;
   });
   protected readonly setupSnippet = computed(() =>
     this.framework() === 'html'
@@ -210,10 +215,14 @@ export class App {
     switch (category) {
       case 'action':
         return labels.action;
+      case 'commerce':
+        return labels.commerce;
       case 'communication':
         return labels.communication;
       case 'file':
         return labels.file;
+      case 'media':
+        return labels.media;
       case 'navigation':
         return labels.navigation;
       case 'status':
@@ -303,12 +312,14 @@ export class App {
     if (this.view() === view) return;
     this.view.set(view);
     this.selectedName.set(null);
+    this.framework.set('html');
     this.copyFeedback.set('');
     const url = new URL(window.location.href);
     if (view === 'guide') url.searchParams.set('view', 'guide');
     else url.searchParams.delete('view');
     url.searchParams.delete('icon');
     url.searchParams.delete('variant');
+    url.searchParams.delete('framework');
     url.hash = '';
     window.history.pushState({}, '', url);
     this.updateSeo(url);
@@ -349,6 +360,7 @@ export class App {
     const name = this.selectedName();
     if (!name) return;
     this.selectedName.set(null);
+    this.framework.set('html');
     this.copyFeedback.set('');
     this.writeUrl(null);
     window.setTimeout(() => {
@@ -410,8 +422,14 @@ export class App {
     const locale: Locale = url.searchParams.get('lang') === 'es' ? 'es' : 'en';
     this.locale.set(locale);
     const name = url.searchParams.get('icon');
-    this.view.set(viewFromUrl(url));
-    this.selectedName.set(name && familyByName.has(name) ? name : null);
+    const view = viewFromUrl(url);
+    const selectedName = name && familyByName.has(name) ? name : null;
+    if (view === 'catalog' && !selectedName && url.searchParams.has('framework')) {
+      url.searchParams.delete('framework');
+      window.history.replaceState({}, '', url);
+    }
+    this.view.set(view);
+    this.selectedName.set(selectedName);
     this.selectedVariant.set(
       url.searchParams.get('variant') === 'filled' ? 'filled' : 'outline',
     );
@@ -423,7 +441,10 @@ export class App {
   private writeUrl(name: string | null): void {
     const url = new URL(window.location.href);
     if (name) url.searchParams.set('icon', name);
-    else url.searchParams.delete('icon');
+    else {
+      url.searchParams.delete('icon');
+      url.searchParams.delete('framework');
+    }
     url.searchParams.delete('variant');
     window.history.pushState({}, '', url);
     this.updateSeo(url);
@@ -444,17 +465,25 @@ export class App {
         : locale === 'es'
           ? 'Catálogo de iconos — Neural Icons'
           : 'Icon catalog — Neural Icons';
+    const family = name ? familyByName.get(name) : undefined;
+    const searchTerms: readonly string[] = family
+      ? (locale === 'es' && name ? spanishSearchTerms[name] : undefined) ??
+        family.keywords
+      : [];
+    const detail = family
+      ? `${this.categoryLabel(family.category)} · ${searchTerms.filter((term) => term !== 'filled').slice(0, 2).join(', ')}. `
+      : '';
     const description = name
       ? locale === 'es'
-        ? `Compara ${name} en contorno y relleno, copia el SVG o úsalo en HTML, Angular, React y Vue.`
-        : `Compare ${name} in outline and filled, copy its SVG, or use it in HTML, Angular, React and Vue.`
+        ? `${name}: ${detail}Compara contorno y relleno, copia el SVG o úsalo en HTML, Angular, React y Vue.`
+        : `${name}: ${detail}Compare outline and filled, copy its SVG, or use it in HTML, Angular, React and Vue.`
       : guide
         ? locale === 'es'
           ? 'Instala Neural Icons y aprende a usar sus SVG en HTML, Angular, React y Vue sin Neural UI.'
           : 'Install Neural Icons and use its SVGs in HTML, Angular, React and Vue without Neural UI.'
         : locale === 'es'
-          ? 'Explora 197 familias de Neural Icons con variantes de contorno y relleno para HTML, Angular, React y Vue.'
-          : 'Explore 197 Neural Icons families with outline and filled variants for HTML, Angular, React and Vue.';
+          ? 'Explora 250 familias de Neural Icons con variantes de contorno y relleno para HTML, Angular, React y Vue.'
+          : 'Explore 250 Neural Icons families with outline and filled variants for HTML, Angular, React and Vue.';
     this.document.documentElement.lang = locale;
     this.title.setTitle(title);
     this.meta.updateTag({ name: 'description', content: description });

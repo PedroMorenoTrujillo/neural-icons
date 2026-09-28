@@ -12,8 +12,13 @@
 >
   <div class="detail-topline">
     <span>{{ copy().familyDetail }}</span>
-    <button type="button" class="text-button" (click)="closeRequested.emit()">
-      {{ copy().close }}
+    <button
+      type="button"
+      class="detail-close"
+      [attr.aria-label]="copy().close"
+      (click)="closeRequested.emit()"
+    >
+      <span aria-hidden="true">×</span>
     </button>
   </div>
   <div class="detail-heading-row">
@@ -55,7 +60,6 @@
 
   <div
     class="large-preview"
-    [class.contrast-preview]="previewColor() === '#152033'"
     [style.--preview-ink]="previewColor()"
   >
     @if (definition(); as icon) {
@@ -71,7 +75,6 @@
     </div>
     <div
       class="size-row"
-      [class.contrast-preview]="previewColor() === '#152033'"
       [style.--preview-ink]="previewColor()"
     >
       @for (size of sizes(); track size) {
@@ -187,7 +190,7 @@
 
   <div class="detail-section a11y-note">
     <h3>{{ copy().accessibility }}</h3>
-    <p>{{ copy().accessibilityNote }}</p>
+    <p>{{ copy().accessibilityNote[framework()] }}</p>
   </div>
   <p class="copy-feedback" role="status" aria-live="polite">
     {{ copyFeedback() }}

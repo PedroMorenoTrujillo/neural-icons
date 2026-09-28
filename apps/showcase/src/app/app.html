@@ -1,17 +1,17 @@
-<div class="shell">
-  <app-showcase-header
-    [copy]="t()"
-    [view]="view()"
-    [locale]="locale()"
-    [theme]="theme()"
-    [isModalOpen]="!!selected() && isNarrow()"
-    [catalogHref]="viewHref('catalog')"
-    [guideHref]="viewHref('guide')"
-    (navigate)="setView($event.event, $event.view)"
-    (localeChange)="setLocale($event)"
-    (themeChange)="setTheme($event)"
-  />
+<app-showcase-header
+  [copy]="t()"
+  [view]="view()"
+  [locale]="locale()"
+  [theme]="theme()"
+  [isModalOpen]="!!selected() && isNarrow()"
+  [catalogHref]="viewHref('catalog')"
+  [guideHref]="viewHref('guide')"
+  (navigate)="setView($event.event, $event.view)"
+  (localeChange)="setLocale($event)"
+  (themeChange)="setTheme($event)"
+/>
 
+<div class="shell">
   <main class="workspace" [class.with-detail]="selected()">
     <div
       class="catalog-column"

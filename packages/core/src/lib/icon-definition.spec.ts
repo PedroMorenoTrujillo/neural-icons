@@ -103,7 +103,6 @@ describe('Neural icon definitions', () => {
       'collapse-filled',
       'rotate-cw-filled',
       'rotate-ccw-filled',
-      'paste-filled',
       'mention-filled',
       'list-ordered-filled',
       'arrow-up-right-filled',

@@ -13,9 +13,22 @@ const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
 
 const app = express();
-const angularApp = new AngularNodeAppEngine();
+const allowedHosts = [
+  'localhost',
+  '127.0.0.1',
+  process.env['VERCEL_URL'],
+  process.env['VERCEL_BRANCH_URL'],
+  process.env['VERCEL_PROJECT_PRODUCTION_URL'],
+  process.env['NEURAL_ICONS_SITE_ORIGIN'] && new URL(process.env['NEURAL_ICONS_SITE_ORIGIN']).hostname,
+].filter((host): host is string => Boolean(host));
+const angularApp = new AngularNodeAppEngine({ allowedHosts });
 const publicOrigin = (req: express.Request): string =>
-  (process.env['NEURAL_ICONS_SITE_ORIGIN'] || `${req.protocol}://${req.get('host')}`).replace(/\/$/, '');
+  (
+    process.env['NEURAL_ICONS_SITE_ORIGIN'] ||
+    (process.env['VERCEL_PROJECT_PRODUCTION_URL'] &&
+      `https://${process.env['VERCEL_PROJECT_PRODUCTION_URL']}`) ||
+    `${req.protocol}://${req.get('host')}`
+  ).replace(/\/$/, '');
 
 app.get('/robots.txt', (req, res) => {
   res.type('text/plain').send(`User-agent: *\nAllow: /\nSitemap: ${publicOrigin(req)}/sitemap.xml\n`);

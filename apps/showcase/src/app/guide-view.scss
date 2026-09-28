@@ -42,7 +42,7 @@
   border-bottom: 1px solid var(--line);
 }
 
-.installation-step:first-child {
+.installation-tabs + .installation-steps .installation-step:first-child {
   border-top: 1px solid var(--line);
   margin-top: 18px;
 }
@@ -61,7 +61,8 @@
 .installation-step pre {
   min-width: 0;
   max-height: 360px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin: 0;
   border: 1px solid var(--line);
   padding: 15px;
@@ -69,6 +70,17 @@
   background: var(--surface-raised);
   font-size: 0.74rem;
   line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.installation-code {
+  min-width: 0;
+}
+
+.installation-code a[download] {
+  display: inline-block;
+  margin-top: 14px;
 }
 
 .installation-step .installation-unavailable {
@@ -94,6 +106,12 @@
   border-top: 1px solid var(--line);
 }
 
+.installation + .about-section {
+  margin-top: 30px;
+  padding-top: 0;
+  border-top: 0;
+}
+
 .usage h2 {
   font-size: 1.22rem;
   letter-spacing: -0.025em;
@@ -109,7 +127,6 @@
 
 .usage pre,
 .code-section pre {
-  overflow-x: auto;
   margin: 0;
   border: 1px solid var(--line);
   padding: 15px;
@@ -117,6 +134,12 @@
   background: var(--surface-raised);
   font-size: 0.74rem;
   line-height: 1.6;
+}
+
+.usage pre {
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 .usage-note {

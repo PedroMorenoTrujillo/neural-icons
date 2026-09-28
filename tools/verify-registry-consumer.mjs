@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { existsSync, lstatSync, readFileSync } from 'node:fs';
 import { copyFile, mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
@@ -8,6 +8,8 @@ import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const fixture = join(root, 'packages/angular/fixtures/hydration');
+const coreVersion = JSON.parse(readFileSync(join(root, 'packages/core/package.json'), 'utf8')).version;
+const angularVersion = JSON.parse(readFileSync(join(root, 'packages/angular/package.json'), 'utf8')).version;
 const requested = process.argv[2];
 if (!requested) {
   throw new Error('Pass an Angular tarball path or an npm version.');
@@ -40,7 +42,7 @@ try {
       '@angular/platform-server': '22.1.6',
       '@angular/router': '22.1.6',
       '@angular/ssr': '22.1.6',
-      '@neural-icons/core': '0.0.1-next.0',
+      '@neural-icons/core': coreVersion,
       '@neural-icons/angular': angularSpec,
       rxjs: '~7.8.0',
       tslib: '^2.3.0',
@@ -125,7 +127,12 @@ try {
     await copyFile(join(fixture, file), join(temporary, 'src', file));
   }
 
-  run('npm', ['install', '--no-audit', '--no-fund']);
+  run('npm', [
+    'install',
+    '--no-audit',
+    '--no-fund',
+    ...(!tarball ? ['--registry=https://registry.npmjs.org/', '--prefer-online'] : []),
+  ]);
   const installed = JSON.parse(
     run('npm', [
       'ls',
@@ -137,12 +144,22 @@ try {
   );
   assert.equal(
     installed.dependencies['@neural-icons/core'].version,
-    '0.0.1-next.0',
+    coreVersion,
   );
   assert.equal(
     installed.dependencies['@neural-icons/angular'].version,
-    '0.0.1-next.1',
+    angularVersion,
   );
+  if (!tarball) {
+    const lock = JSON.parse(readFileSync(join(temporary, 'package-lock.json'), 'utf8'));
+    for (const name of ['core', 'angular']) {
+      const installedPackage = lock.packages[`node_modules/@neural-icons/${name}`];
+      assert.equal(installedPackage.version, name === 'core' ? coreVersion : angularVersion);
+      assert(installedPackage.resolved?.startsWith('https://registry.npmjs.org/'));
+      assert(installedPackage.integrity?.startsWith('sha512-'));
+      assert(!lstatSync(join(temporary, 'node_modules/@neural-icons', name)).isSymbolicLink());
+    }
+  }
 
   run(join(temporary, 'node_modules/.bin/ng'), [
     'build',

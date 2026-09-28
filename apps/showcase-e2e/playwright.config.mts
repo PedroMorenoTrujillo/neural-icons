@@ -33,7 +33,11 @@ export default defineConfig({
   webServer: {
     command:
       'npm exec nx build showcase && node dist/apps/showcase/server/server.mjs',
-    env: { PORT: '4311', NG_ALLOWED_HOSTS: '127.0.0.1' },
+    env: {
+      PORT: '4311',
+      NG_ALLOWED_HOSTS: '127.0.0.1',
+      NEURAL_ICONS_SITE_ORIGIN: 'https://neural-icons.vercel.app',
+    },
     url: baseURL,
     reuseExistingServer: false,
     timeout: 120_000,
@@ -44,5 +48,13 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+    ...(process.env['NEURAL_ICONS_CROSS_BROWSER'] === '1'
+      ? [
+          { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
+          { name: 'webkit', use: { ...devices['Desktop Safari'] } },
+          { name: 'iphone-webkit', use: { ...devices['iPhone 13'] } },
+          { name: 'ipad-webkit', use: { ...devices['iPad Pro 11'] } },
+        ]
+      : []),
   ],
 });
