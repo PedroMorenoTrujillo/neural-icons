@@ -2,7 +2,7 @@
 
 ## Status
 
-Release candidate verified locally; Git delivery, npm publication, registry consumers, and production deployment remain pending. This report must not be marked as a final release pass until those checks have evidence below.
+Release complete: 250 families / 500 glyphs, four stable `1.1.0` npm packages, registry-only consumers, and the production SSR showcase have passed the gates below. The `next` dist-tag remains on `0.0.1-next.2` for all four packages.
 
 ## Scope and provenance
 
@@ -40,13 +40,13 @@ The package sources have no documented API breaking change. The adapters continu
 | Package and clean tarball consumers | PASS — `npm run verify:release` |
 | Angular/React/Vue and tree-shaking | PASS — packaged verification |
 | Showcase / SEO local E2E | PASS — 45/45 Chromium tests; 504 sitemap URLs |
-| Version collision | PASS — npm reported no `1.1.0` for any of the four packages |
-| Diff hygiene / stash | Pending final pre-commit check; preserve `stash@{0}` (`e36c545e59247efa964833e5d1d8a77fcc0bb93a`) |
-| Git commit / main push | PENDING |
-| npm publish / dist-tags | PENDING — npm login and any required 2FA must be completed by the owner |
-| Registry-installed consumers | PENDING until npm publication |
-| Public showcase and Search Console preservation | PENDING production verification; do not alter verification or submit manual indexing requests |
+| Version collision | PASS — none of the four `1.1.0` versions existed before publication |
+| Diff hygiene / stash | PASS — `git diff --check`; protected `stash@{0}` (`e36c545e59247efa964833e5d1d8a77fcc0bb93a`) remains untouched |
+| Git commit / main push | PASS — catalog release `3acf3b505c27874658771812de6021c4e7ed9d3b` and showcase copy `34d0988` pushed to `origin/main` |
+| npm publish / dist-tags | PASS — Core, Angular, React and Vue `1.1.0` are public under `latest`; `next` remains `0.0.1-next.2`. All four registry records expose MIT license, tarball and integrity metadata; adapters depend on Core `^1.1.0` |
+| Registry-installed consumers | PASS — Angular 22.1.6 AOT, SSR, Chromium hydration, zoneless and tree-shaking; React/Vue TypeScript, SSR, Chromium hydration, Vite/Rollup and one-icon bundles. Lockfiles resolve npm URLs with integrity hashes and no package symlinks |
+| Public showcase and Search Console preservation | PASS — production deployment `dpl_8xKcJNYx4kBXC3DDRHSpVkaWLNUC` is READY at `https://neural-icons.vercel.app/`. Public SSR serves 250 catalog tiles, new icon routes, Spanish guide, SVG assets, robots and 504 sitemap URLs; titles, descriptions, canonicals and hreflang are present. Search Console settings were not changed |
 
 ## Remaining risks and recommendation
 
-Do not publish if the final Git diff reveals unrelated material, if a package artifact changes after verification without rerunning its gates, or if npm authentication fails. Do not claim Firefox, WebKit, iPhone or iPad hardware coverage from Chromium tests. After registry publication, update the showcase's temporary 197-family npm warnings, deploy, and verify the live sitemap and routes. Final recommendation remains **PENDING RELEASE** until every post-publication gate is recorded.
+The release gates are complete. The published 1.1.0 packages retain one glyph for one-icon consumers; only explicit catalog opt-in retains all 500. The showcase no longer claims that the added families are unpublished. Firefox, WebKit, iPhone and iPad hardware compatibility remain separate checks and are not claimed from Chromium evidence. Google indexing is controlled by the search engine; the live sitemap and metadata being served do not by themselves prove indexing. Final recommendation: **NI-07 CATALOG CERTIFIED — RELEASED**.
