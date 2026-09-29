@@ -328,7 +328,7 @@ for (const width of [390, 358]) {
       page.getByRole('heading', { name: 'Instalación y uso' }),
     ).toBeVisible();
     await expect(page.locator('.installation-status')).toContainText(
-      'Core y Vue están en npm con la etiqueta latest',
+      'Core y Vue 1.1.0 están publicados en npm con la etiqueta latest',
     );
     await expect(page.locator('.installation-step').first().locator('code')).toContainText(
       'npm install @neural-icons/core@latest @neural-icons/vue@latest',

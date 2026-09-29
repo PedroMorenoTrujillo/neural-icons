@@ -1,6 +1,6 @@
 # Neural Icons
 
-Original, framework-agnostic iconography for Neural UI 2.0. Core and the Angular, React, and Vue adapters are published on npm as stable packages. This repository contains a 250-family / 500-glyph `1.1.0` release candidate; npm `latest` remains at `1.0.1` until publication. `0.0.1-next.2` remains available under `next`.
+Original, framework-agnostic iconography for Neural UI 2.0. Core and the Angular, React, and Vue adapters are published on npm as stable `1.1.0` packages with 250 families / 500 glyphs. `0.0.1-next.2` remains available under `next`.
 
 Browse the [icon catalog](https://neural-icons.vercel.app/) and [installation and usage guide](https://neural-icons.vercel.app/?view=guide). Both are also available in Spanish from the language switcher.
 
@@ -90,6 +90,6 @@ Labels are trimmed; empty or whitespace-only labels remain decorative. SVG asset
 
 ## Publishing
 
-This repository, its packages, and the SVG catalog are licensed under [MIT](LICENSE). Core, Angular, React, and Vue `1.0.1` are currently published under `latest`; `1.1.0` is the coordinated, unpublished 250-family release candidate. Its adapters declare `@neural-icons/core: ^1.1.0`. The `next` tag remains on `0.0.1-next.2`; it has not been promoted to `latest`.
+This repository, its packages, and the SVG catalog are licensed under [MIT](LICENSE). Core, Angular, React, and Vue `1.1.0` are published under `latest` with the 250-family catalog. The adapters declare `@neural-icons/core: ^1.1.0`. The `next` tag remains on `0.0.1-next.2`; it has not been promoted to `latest`.
 
 See [Architecture](docs/architecture.md), [Contributing](CONTRIBUTING.md), and the recorded [architecture decisions](docs/decisions/0001-original-source-and-package-boundaries.md).

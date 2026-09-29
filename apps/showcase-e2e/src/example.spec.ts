@@ -9,7 +9,7 @@ test('SSR renders the full family catalog and hydration preserves SVG nodes', as
   expect(response.ok()).toBe(true);
   expect(html).toContain('ngh=');
   expect(html.match(/class="family-tile"/g)).toHaveLength(250);
-  expect(html).toContain('250 families');
+  expect(html).toContain('250 icon families');
   expect(html).not.toContain('class="preview-label"');
   expect(html).not.toContain('id="family-attach"');
   expect(html).not.toContain('id="family-funnel"');

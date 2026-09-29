@@ -68,7 +68,7 @@ describe('Neural Icons public showcase', () => {
     await fixture.whenStable();
     const installation = required<HTMLElement>(root, '#installation');
     expect(root.querySelector('.catalog-column.guide-view')).not.toBeNull();
-    expect(installation?.textContent).toContain('250 families');
+    expect(installation?.textContent).toContain('250 icon families');
     expect(installation?.querySelectorAll('.installation-step')).toHaveLength(
       4,
     );
@@ -87,7 +87,7 @@ describe('Neural Icons public showcase', () => {
       'plain HTML',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'current npm release still has 197',
+      'All 250 icon families are available here',
     );
     expect(
       root.querySelector('.installation-status')?.textContent,
@@ -121,7 +121,7 @@ describe('Neural Icons public showcase', () => {
       'In Angular',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'Core and Angular are on npm under the latest tag',
+      'Core and Angular 1.1.0 are published on npm under the latest tag',
     );
     expect(root.querySelector('.installation-step')?.textContent).toContain(
       'Install the latest Core and Angular packages',
@@ -146,7 +146,7 @@ describe('Neural Icons public showcase', () => {
       'npm install @neural-icons/core@latest @neural-icons/react@latest',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'Core and React are on npm under the latest tag',
+      'Core and React 1.1.0 are published on npm under the latest tag',
     );
     expect(root.querySelector('.installation-step')?.textContent).toContain(
       'Install the latest Core and React packages',
@@ -166,7 +166,7 @@ describe('Neural Icons public showcase', () => {
       'npm install @neural-icons/core@latest @neural-icons/vue@latest',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'Core and Vue are on npm under the latest tag',
+      'Core and Vue 1.1.0 are published on npm under the latest tag',
     );
     expect(root.querySelector('#usage h3')?.textContent).toBe(
       'Use an icon in Vue',
@@ -237,7 +237,7 @@ describe('Neural Icons public showcase', () => {
       '/icons/search.svg',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'La versión actual de npm aún tiene 197',
+      'Las 250 familias de iconos están disponibles aquí',
     );
     expect(
       root.querySelector('.installation-status')?.textContent,
