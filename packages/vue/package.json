@@ -1,6 +1,6 @@
 {
   "name": "@neural-icons/vue",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "description": "Vue 3.5 adapter for Neural Icons.",
   "repository": { "type": "git", "url": "git+https://github.com/PedroMorenoTrujillo/neural-icons.git", "directory": "packages/vue" },

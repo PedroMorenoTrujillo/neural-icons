@@ -22,4 +22,10 @@ Each of the **four packages** needs its own npm trusted publisher. On npmjs.com 
 
 The workflow uses OIDC and grants `id-token: write` only to the publish job; no npm token is stored. Configuring one package does not authorize the other three. Do not push a release tag until these four npm settings have been verified. Merging this workflow or changing the showcase does not publish any package.
 
+A new trusted publisher must complete its first successful publish within two days. If it expires before that first publish, delete the expired connection and create it again. Existing published package versions remain available. The first successful publish validates the connection and binds it to the repository's immutable identity.
+
+## 1.1.1 — Cloudflare migration
+
+All four packages update their README and homepage links to `https://icons.neuralui.org/`, including the new guide address. Releases use the verified GitHub Actions workflow and npm trusted publishing. Framework compatibility and the adapters' existing `^1.1.0` Core dependency ranges are preserved. Publish `core@1.1.1` first, then `angular@1.1.1`, `react@1.1.1`, and `vue@1.1.1`.
+
 References: [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/) and [Nx independent releases](https://nx.dev/docs/guides/nx-release/release-projects-independently).
