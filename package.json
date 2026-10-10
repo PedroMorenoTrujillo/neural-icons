@@ -16,7 +16,8 @@
     "check:generated": "node tools/icons.mjs --check && node tools/generate-catalog-review.mjs --check && node tools/generate-ni06-review.mjs --check",
     "validate:icons": "node tools/validate-icons.mjs",
     "check": "npm run check:generated && npm run validate:icons && nx run-many -t lint,test,build && nx run angular:verify-package",
-    "verify:release": "npm run check && nx run react:typecheck && nx run vue:typecheck && nx run react:verify-package && nx run vue:verify-package && node tools/verify-release-candidate.mjs && node tools/verify-clean-angular-consumer.mjs && nx run showcase-e2e:e2e"
+    "verify:release": "npm run check && nx run react:typecheck && nx run vue:typecheck && nx run react:verify-package && nx run vue:verify-package && node tools/verify-release-candidate.mjs && node tools/verify-clean-angular-consumer.mjs && nx run showcase-e2e:e2e",
+    "build:cloudflare": "node tools/build-cloudflare-output.mjs"
   },
   "private": true,
   "workspaces": [

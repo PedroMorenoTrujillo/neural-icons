@@ -59,11 +59,11 @@ describe('Neural Icons public showcase', () => {
     const { fixture, root } = await render();
     expect(root.querySelector('.catalog-column.guide-view')).toBeNull();
     expect(root.querySelector('.catalog-intro a')?.getAttribute('href')).toBe(
-      '/?view=guide',
+      '/guide/',
     );
     required<HTMLAnchorElement>(
       root,
-      '.primary-nav a[href="/?view=guide"]',
+      '.primary-nav a[href="/guide/"]',
     ).click();
     await fixture.whenStable();
     const installation = required<HTMLElement>(root, '#installation');
@@ -188,7 +188,7 @@ describe('Neural Icons public showcase', () => {
     await fixture.whenStable();
     required<HTMLAnchorElement>(
       root,
-      '.primary-nav a[href="/?view=guide"]',
+      '.primary-nav a[href="/guide/"]',
     ).click();
     await fixture.whenStable();
     expect(
@@ -209,7 +209,7 @@ describe('Neural Icons public showcase', () => {
     await fixture.whenStable();
 
     expect(document.documentElement.lang).toBe('es');
-    expect(window.location.search).toContain('lang=es');
+    expect(window.location.pathname).toBe('/es/');
     expect(root.querySelector('#catalog-heading')?.textContent).toBe(
       'Encuentra tu icono.',
     );
@@ -270,7 +270,7 @@ describe('Neural Icons public showcase', () => {
     languageButton.click();
     await fixture.whenStable();
     expect(document.documentElement.lang).toBe('en');
-    expect(window.location.search).not.toContain('lang=es');
+    expect(window.location.pathname).toBe('/');
   });
 
   it('provides the selected SVG asset and an inline HTML example for each variant', async () => {
@@ -356,7 +356,7 @@ describe('Neural Icons public showcase', () => {
     expect(root.querySelector('#detail-heading')?.textContent).toBe(
       'file-text',
     );
-    expect(window.location.search).toContain('icon=file-text');
+    expect(window.location.pathname).toBe('/icon/file-text/');
     expect(root.querySelector('.detail-panel')).not.toBeNull();
     const filled = [
       ...root.querySelectorAll<HTMLButtonElement>(
