@@ -36,7 +36,7 @@ export default defineConfig({
     env: {
       PORT: '4311',
       NG_ALLOWED_HOSTS: '127.0.0.1',
-      NEURAL_ICONS_SITE_ORIGIN: 'https://neural-icons.vercel.app',
+      NEURAL_ICONS_SITE_ORIGIN: 'https://icons.neuralui.org',
     },
     url: baseURL,
     reuseExistingServer: false,
