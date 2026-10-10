@@ -2,7 +2,7 @@
 
 React 19 adapter for `@neural-icons/core`. Core owns every icon definition; this package contains only the renderer.
 
-[Browse all icons](https://neural-icons.vercel.app/) · [Installation and usage](https://neural-icons.vercel.app/?view=guide)
+[Browse all icons](https://icons.neuralui.org/) · [Installation and usage](https://icons.neuralui.org/guide/)
 
 Version `1.1.0` uses the 250-family Core catalog. Install the matching stable packages:
 
