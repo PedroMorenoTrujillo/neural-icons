@@ -33,12 +33,6 @@ await writeFile(
   JSON.stringify({
     version: 3,
     routes: [
-      {
-        src: '/(.*)',
-        has: [{ type: 'host', value: 'neural-icons.vercel.app' }],
-        status: 308,
-        headers: { Location: 'https://icons.neuralui.org/$1' },
-      },
       { handle: 'filesystem' },
       { src: '/(.*)', dest: '/showcase' },
     ],
