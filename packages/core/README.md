@@ -2,7 +2,7 @@
 
 Framework-agnostic, immutable icon definitions for Neural. Import individual icons for the strongest tree-shaking boundary:
 
-[Browse all icons](https://neural-icons.vercel.app/) · [Installation and usage](https://neural-icons.vercel.app/?view=guide)
+[Browse all icons](https://icons.neuralui.org/) · [Installation and usage](https://icons.neuralui.org/guide/)
 
 ```ts
 import { iconCheck } from '@neural-icons/core/icons/check';

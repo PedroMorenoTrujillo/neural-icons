@@ -2,7 +2,7 @@
 
 Standalone Angular 22 renderer for `@neural-icons/core` definitions.
 
-[Browse all icons](https://neural-icons.vercel.app/) · [Installation and usage](https://neural-icons.vercel.app/?view=guide)
+[Browse all icons](https://icons.neuralui.org/) · [Installation and usage](https://icons.neuralui.org/guide/)
 
 Install the matching stable packages in an Angular 22 application:
 

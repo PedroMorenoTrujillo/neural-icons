@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Framework-agnostic icon definitions for the Neural design system.",
   "repository": { "type": "git", "url": "git+https://github.com/PedroMorenoTrujillo/neural-icons.git", "directory": "packages/core" },
-  "homepage": "https://neural-icons.vercel.app/",
+  "homepage": "https://icons.neuralui.org/",
   "bugs": "https://github.com/PedroMorenoTrujillo/neural-icons/issues",
   "sideEffects": false,
   "main": "./src/index.js",

@@ -51,7 +51,9 @@ try {
   }
   run('npm', [
     'install',
-    ...(registryOnly ? ['--registry=https://registry.npmjs.org/', '--prefer-online'] : ['--offline']),
+    ...(process.argv.includes('--offline') && !registryOnly
+      ? ['--offline']
+      : ['--registry=https://registry.npmjs.org/', '--prefer-online']),
     '--no-audit',
     '--no-fund',
     '--save-exact',

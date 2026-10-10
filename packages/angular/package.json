@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Angular 22 standalone adapter for Neural Icons.",
   "repository": { "type": "git", "url": "git+https://github.com/PedroMorenoTrujillo/neural-icons.git", "directory": "packages/angular" },
-  "homepage": "https://neural-icons.vercel.app/",
+  "homepage": "https://icons.neuralui.org/",
   "bugs": "https://github.com/PedroMorenoTrujillo/neural-icons/issues",
   "peerDependencies": {
     "@angular/core": ">=22.0.0 <23.0.0"

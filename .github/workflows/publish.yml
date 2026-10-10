@@ -1,0 +1,68 @@
+name: Verify and publish Icons
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ['core@*', 'angular@*', 'react@*', 'vue@*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: icons-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NX_DAEMON: 'false'
+      NX_NO_CLOUD: 'true'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - run: npm ci
+      - run: npm exec -- playwright install --with-deps chromium
+      - run: npm run verify:release
+      - name: Check release tag against compiled package
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          git merge-base --is-ancestor HEAD origin/main
+          node tools/publish-tagged-package.mjs --check
+      - uses: actions/upload-artifact@v7
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          name: icons-packages
+          path: dist/packages/
+          if-no-files-found: error
+          retention-days: 3
+
+  publish:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+      - run: npm install --global npm@11.19.0
+      - uses: actions/download-artifact@v8
+        with:
+          name: icons-packages
+          path: dist/packages/
+      - name: Publish the tagged package using npm trusted publishing
+        run: node tools/publish-tagged-package.mjs --publish
