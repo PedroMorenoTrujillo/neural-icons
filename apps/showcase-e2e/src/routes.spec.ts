@@ -1,6 +1,9 @@
 import { expect, test } from '@playwright/test';
 
 const routes = [
+  { path: '/es/icon/search/', lang: 'es', heading: 'search', title: 'search' },
+  { path: '/icon/arrow-right/', lang: 'en', heading: 'arrow-right', title: 'arrow-right' },
+  { path: '/es/guide/', lang: 'es', heading: 'Instalación y uso', title: 'Instalación y uso' },
   { path: '/', lang: 'en', heading: 'Find your icon.', title: 'Icon catalog' },
   {
     path: '/?lang=es',
@@ -76,10 +79,9 @@ test('new families have indexable SSR metadata and real catalog links', async ({
   expect(html).toMatch(/<meta name="robots" content="index, follow"/);
   const canonical = html.match(/<link[^>]*rel="canonical"[^>]*>/)?.[0] ?? '';
   expect(canonical).toContain('https://');
-  expect(canonical).toContain('?icon=shopping-cart');
-  expect(canonical).toContain('lang=es');
+  expect(canonical).toContain('/es/icon/shopping-cart/');
   const catalog = await request.get('/?lang=es');
-  expect(await catalog.text()).toContain('href="/?icon=shopping-cart&amp;lang=es"');
+  expect(await catalog.text()).toContain('href="/es/icon/shopping-cart/"');
 });
 
 test('Spanish detail URLs preserve locale, variant and framework across reload', async ({
@@ -306,9 +308,9 @@ test('robots, sitemap and SVG download are served by the production app', async 
   const sitemap = await request.get('/sitemap.xml');
   expect(sitemap.ok()).toBe(true);
   const sitemapXml = await sitemap.text();
-  expect(sitemapXml).toContain('?icon=search');
-  expect(sitemapXml).toContain('?icon=shopping-cart');
-  expect(sitemapXml).toContain('?icon=hash');
+  expect(sitemapXml).toContain('/icon/search/');
+  expect(sitemapXml).toContain('/icon/shopping-cart/');
+  expect(sitemapXml).toContain('/icon/hash/');
   expect(sitemapXml.match(/<url>/g)).toHaveLength(504);
   const svg = await request.get('/icons/search.svg');
   expect(svg.ok()).toBe(true);

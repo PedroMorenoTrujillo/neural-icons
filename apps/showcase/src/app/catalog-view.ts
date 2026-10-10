@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import { showcaseCopy, type Locale } from './showcase-copy';
 import type { Framework, IconFamily } from './showcase-model';
+import { showcasePath } from './showcase-url';
 
 @Component({
   selector: 'app-catalog-view',
@@ -55,10 +56,10 @@ export class CatalogView {
   }
 
   familyHref(name: string): string {
-    const params = new URLSearchParams({ icon: name });
-    if (this.locale() === 'es') params.set('lang', 'es');
+    const params = new URLSearchParams();
     if (this.framework() !== 'html') params.set('framework', this.framework());
-    return `/?${params.toString()}`;
+    const query = params.toString();
+    return showcasePath(this.locale(), name, 'catalog') + (query ? `?${query}` : '');
   }
 
   resultCount(count: number): string {

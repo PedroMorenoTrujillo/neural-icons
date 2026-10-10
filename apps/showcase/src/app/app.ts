@@ -4,6 +4,7 @@ import { iconMessage } from '@neural-icons/core/icons/message';
 import { iconSparkles } from '@neural-icons/core/icons/sparkles';
 import { showcaseCopy, type Locale } from './showcase-copy';
 import { SITE_ORIGIN } from './site-origin';
+import { iconFromUrl, localeFromUrl, showcasePath, viewFromUrl, writeShowcasePath } from './showcase-url';
 import { ShowcaseHeader } from './showcase-header';
 import { GuideView } from './guide-view';
 import { CatalogView } from './catalog-view';
@@ -41,7 +42,7 @@ type CopyItem = 'name' | 'import' | 'asset' | 'snippet';
 function frameworkFromUrl(url: URL): Framework {
   if (
     viewFromUrl(url) !== 'guide' &&
-    !familyByName.has(url.searchParams.get('icon') ?? '')
+    !familyByName.has(iconFromUrl(url) ?? '')
   ) {
     return 'html';
   }
@@ -49,14 +50,6 @@ function frameworkFromUrl(url: URL): Framework {
   return value === 'angular' || value === 'react' || value === 'vue'
     ? value
     : 'html';
-}
-
-function viewFromUrl(url: URL): View {
-  return !url.searchParams.has('icon') &&
-    (url.searchParams.get('view') === 'guide' ||
-      ['#installation', '#usage', '#color'].includes(url.hash))
-    ? 'guide'
-    : 'catalog';
 }
 
 @Component({
@@ -87,15 +80,15 @@ export class App {
   protected readonly searchIcon = iconSearch;
   protected readonly heroIcons = [iconHome, iconMessage, iconSparkles] as const;
   protected readonly locale = signal<Locale>(
-    this.initialUrl.searchParams.get('lang') === 'es' ? 'es' : 'en',
+    localeFromUrl(this.initialUrl),
   );
   protected readonly t = computed(() => showcaseCopy[this.locale()]);
   protected readonly query = signal('');
   protected readonly view = signal<View>(viewFromUrl(this.initialUrl));
   protected readonly category = signal('all');
   protected readonly selectedName = signal<string | null>(
-    familyByName.has(this.initialUrl.searchParams.get('icon') ?? '')
-      ? this.initialUrl.searchParams.get('icon')
+    familyByName.has(iconFromUrl(this.initialUrl) ?? '')
+      ? iconFromUrl(this.initialUrl)
       : null,
   );
   protected readonly selectedVariant = signal<'outline' | 'filled'>(
@@ -121,11 +114,7 @@ export class App {
   ] as const;
 
   protected viewHref(view: View): string {
-    const params = new URLSearchParams();
-    if (view === 'guide') params.set('view', 'guide');
-    if (this.locale() === 'es') params.set('lang', 'es');
-    const query = params.toString();
-    return query ? `/?${query}` : '/';
+    return showcasePath(this.locale(), null, view);
   }
 
   protected readonly icons = computed(() => {
@@ -293,8 +282,7 @@ export class App {
     this.locale.set(locale);
     this.copyFeedback.set('');
     const url = new URL(window.location.href);
-    if (locale === 'es') url.searchParams.set('lang', 'es');
-    else url.searchParams.delete('lang');
+    writeShowcasePath(url, locale, this.selectedName(), this.view());
     window.history.pushState({}, '', url);
     this.updateSeo(url);
   }
@@ -315,9 +303,7 @@ export class App {
     this.framework.set('html');
     this.copyFeedback.set('');
     const url = new URL(window.location.href);
-    if (view === 'guide') url.searchParams.set('view', 'guide');
-    else url.searchParams.delete('view');
-    url.searchParams.delete('icon');
+    writeShowcasePath(url, this.locale(), null, view);
     url.searchParams.delete('variant');
     url.searchParams.delete('framework');
     url.hash = '';
@@ -419,9 +405,9 @@ export class App {
 
   private readUrl(): void {
     const url = new URL(window.location.href);
-    const locale: Locale = url.searchParams.get('lang') === 'es' ? 'es' : 'en';
+    const locale = localeFromUrl(url);
     this.locale.set(locale);
-    const name = url.searchParams.get('icon');
+    const name = iconFromUrl(url);
     const view = viewFromUrl(url);
     const selectedName = name && familyByName.has(name) ? name : null;
     if (view === 'catalog' && !selectedName && url.searchParams.has('framework')) {
@@ -440,11 +426,8 @@ export class App {
 
   private writeUrl(name: string | null): void {
     const url = new URL(window.location.href);
-    if (name) url.searchParams.set('icon', name);
-    else {
-      url.searchParams.delete('icon');
-      url.searchParams.delete('framework');
-    }
+    writeShowcasePath(url, this.locale(), name, this.view());
+    if (!name) url.searchParams.delete('framework');
     url.searchParams.delete('variant');
     window.history.pushState({}, '', url);
     this.updateSeo(url);
@@ -491,22 +474,18 @@ export class App {
     this.meta.updateTag({ property: 'og:description', content: description });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
 
-    const canonical = new URL('/', this.siteOrigin || url.origin);
-    if (name) canonical.searchParams.set('icon', name);
-    else if (guide) canonical.searchParams.set('view', 'guide');
-    if (locale === 'es') canonical.searchParams.set('lang', 'es');
+    const canonical = new URL(showcasePath(locale, name, guide ? 'guide' : 'catalog'), this.siteOrigin || url.origin);
     this.meta.updateTag({ property: 'og:url', content: canonical.href });
     this.setHeadLink('canonical', canonical.href);
     for (const language of ['en', 'es'] as const) {
       const alternate = new URL(canonical);
-      if (language === 'es') alternate.searchParams.set('lang', 'es');
-      else alternate.searchParams.delete('lang');
+      alternate.pathname = showcasePath(language, name, guide ? 'guide' : 'catalog');
       this.setHeadLink('alternate', alternate.href, language);
     }
     this.meta.updateTag({
       name: 'robots',
       content:
-        url.searchParams.has('icon') && !name
+        iconFromUrl(url) && !name
           ? 'noindex, follow'
           : 'index, follow',
     });
