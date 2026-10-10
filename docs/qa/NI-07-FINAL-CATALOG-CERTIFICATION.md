@@ -45,7 +45,7 @@ The package sources have no documented API breaking change. The adapters continu
 | Git commit / main push | PASS — catalog release `3acf3b505c27874658771812de6021c4e7ed9d3b` and showcase copy `34d0988` pushed to `origin/main` |
 | npm publish / dist-tags | PASS — Core, Angular, React and Vue `1.1.0` are public under `latest`; `next` remains `0.0.1-next.2`. All four registry records expose MIT license, tarball and integrity metadata; adapters depend on Core `^1.1.0` |
 | Registry-installed consumers | PASS — Angular 22.1.6 AOT, SSR, Chromium hydration, zoneless and tree-shaking; React/Vue TypeScript, SSR, Chromium hydration, Vite/Rollup and one-icon bundles. Lockfiles resolve npm URLs with integrity hashes and no package symlinks |
-| Public showcase and Search Console preservation | PASS — production deployment `dpl_8xKcJNYx4kBXC3DDRHSpVkaWLNUC` is READY at `https://neural-icons.vercel.app/`. Public SSR serves 250 catalog tiles, new icon routes, Spanish guide, SVG assets, robots and 504 sitemap URLs; titles, descriptions, canonicals and hreflang are present. Search Console settings were not changed |
+| Public showcase and Search Console preservation | PASS — production deployment `dpl_8xKcJNYx4kBXC3DDRHSpVkaWLNUC` is READY at `https://icons.neuralui.org/`. Public SSR serves 250 catalog tiles, new icon routes, Spanish guide, SVG assets, robots and 504 sitemap URLs; titles, descriptions, canonicals and hreflang are present. Search Console settings were not changed |
 
 ## Remaining risks and recommendation
 
