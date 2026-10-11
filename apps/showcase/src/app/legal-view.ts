@@ -26,6 +26,10 @@ export function legalKindFromUrl(url: URL): LegalPageType | null {
         <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google</a>
         <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare</a>
         <a href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer">AEPD</a>
+        <a href="https://business.safety.google/adsprocessorterms/" target="_blank" rel="noopener noreferrer">Google DPA</a>
+        <a href="https://www.cloudflare.com/cloudflare-customer-dpa/" target="_blank" rel="noopener noreferrer">Cloudflare DPA</a>
+        <a href="https://www.cloudflare.com/cloudflare-customer-scc/" target="_blank" rel="noopener noreferrer">Cloudflare SCC</a>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google / Gmail</a>
       </nav>
     </article>
   `,

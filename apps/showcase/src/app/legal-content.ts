@@ -30,7 +30,7 @@ export const LEGAL_CONTENT: Record<Lang, Record<LegalPageType, LegalContent>> = 
           "El sitio presenta documentación y demostraciones de iconos. Los contenidos se ofrecen con fines informativos. El usuario debe utilizar el sitio de forma lícita y respetar los derechos de terceros.",
         ] },
         { heading: "Propiedad intelectual y enlaces", paragraphs: [
-          "Los textos, diseños y materiales del showcase pertenecen a sus titulares respectivos. La presencia de enlaces externos no implica control ni respaldo de sus contenidos. Antes de publicar, el titular debe confirmar licencias, marcas y permisos de todos los recursos mostrados.",
+          "Los textos, diseños y materiales del showcase pertenecen a sus titulares respectivos y se rigen por sus licencias. Las marcas de terceros pertenecen a sus titulares. La publicación de documentación no concede derechos adicionales sobre esos materiales. La presencia de enlaces externos no implica control ni respaldo de sus contenidos.",
         ] },
         { heading: "Responsabilidad y ley aplicable", paragraphs: [
           "El titular procurará mantener la información actualizada y el servicio disponible, sin garantizar ausencia absoluta de errores o interrupciones. La normativa española y de la Unión Europea se aplicará en lo que corresponda, sin limitar los derechos imperativos de los consumidores.",
@@ -43,11 +43,13 @@ export const LEGAL_CONTENT: Record<Lang, Record<LegalPageType, LegalContent>> = 
       notice: "Política común de los sitio de Neural Icons en icons.neuralui.org. Google Analytics solo se carga con tu consentimiento; rechazar no limita la documentación.",
       sections: [
         { heading: "Responsable y contacto", paragraphs: [
-          "Responsable del tratamiento: Pedro Moreno Trujillo. Domicilio: Calle Azahar 26, Coín, 29100, Málaga, España. Email para privacidad y ejercicio de derechos: developmenttester.apps@gmail.com. No hay delegado de protección de datos designado, al no resultar aplicable a esta actividad.",
+          "Responsable del tratamiento: Pedro Moreno Trujillo. Domicilio: Calle Azahar 26, Coín, 29100, Málaga, España. Email para privacidad y ejercicio de derechos: developmenttester.apps@gmail.com. No se ha designado delegado de protección de datos; puedes dirigirte directamente al responsable.",
         ] },
         { heading: "Datos, finalidades y bases jurídicas", paragraphs: [
-          "Para entregar el sitio y protegerlo frente a abusos, el proveedor de alojamiento puede tratar dirección IP, datos técnicos de la petición y registros de seguridad. Base jurídica: interés legítimo del titular en prestar y proteger el servicio, sujeto a la evaluación y configuración reales del alojamiento; cuando exista obligación legal, cumplimiento de esa obligación.",
-          "El tema elegido se guarda en el navegador para recordar preferencias del usuario. No se envía al titular para crear perfiles. Base jurídica del tratamiento de datos personales, si llegaran a existir en esas preferencias: prestación de la funcionalidad solicitada o interés legítimo, según la evaluación final del titular.",
+          "El correo de contacto se gestiona mediante Gmail, un servicio de Google. Si escribes voluntariamente, utilizamos el mensaje y los datos que facilites para atender tu consulta, sobre la base del interés legítimo o de las medidas precontractuales que correspondan. Se conservan durante el tiempo necesario para atenderla y cumplir las obligaciones legales aplicables. No se vinculan con los valores de las demostraciones.",
+          "El titular no adopta decisiones automatizadas con efectos jurídicos o de importancia similar sobre las personas visitantes. Puedes solicitar información sobre las garantías aplicables a las transferencias internacionales y, cuando corresponda, una copia de ellas al correo de privacidad.",
+          "Para entregar el sitio y protegerlo frente a abusos, el proveedor de alojamiento puede tratar dirección IP, datos técnicos de la petición y registros de seguridad. Base jurídica: interés legítimo del titular en prestar y proteger el servicio, respetando los derechos de las personas visitantes; cuando exista obligación legal, cumplimiento de esa obligación.",
+          "El tema elegido se guarda en el navegador para recordar preferencias del usuario. No se envía al titular para crear perfiles. Estas preferencias proporcionan la funcionalidad solicitada y no se utilizan para decisiones sobre personas.",
           "Google Analytics 4 (ID G-N1HFRNYZ0C) se carga solo tras aceptar analítica. Recoge identificadores de cookies, datos técnicos de navegador y dispositivo, y visitas a páginas para mejorar la documentación. Base jurídica: consentimiento. No enviamos parámetros de consulta ni fragmentos de las URL o del referente. No enviamos valores escritos en las demostraciones, ni activamos Google Signals o personalización publicitaria. La medición mejorada automática se desactiva para usar las visitas filtradas de la aplicación.",
           "El sitio no ofrece formulario de contacto. Si el usuario escribe voluntariamente a la dirección de contacto indicada, se tratarán los datos incluidos en su mensaje para atender la solicitud. Base jurídica: interés legítimo o medidas precontractuales, según el contenido, y cumplimiento de obligaciones legales cuando corresponda.",
         ] },
@@ -90,14 +92,14 @@ export const LEGAL_CONTENT: Record<Lang, Record<LegalPageType, LegalContent>> = 
       notice: "Site ownership and contact information.",
       sections: [
         { heading: "Website owner", paragraphs: [
-          "Owner/controller: Pedro Moreno Trujillo, an individual. Tax ID: 31735784Q. Postal address: Calle Azahar 26, Coín, 29100, Málaga, Spain. Legal contact email: developmenttester.apps@gmail.com. No company or professional register entry applies.",
+          "Owner/controller: Pedro Moreno Trujillo, an individual. Tax ID: 31735784Q. Postal address: Calle Azahar 26, Coín, 29100, Málaga, Spain. Legal contact email: developmenttester.apps@gmail.com. This is a personal project.",
           "This notice covers the Neural Icons website at icons.neuralui.org. Terms for @neural-icons/core and other products require separate review.",
         ] },
         { heading: "Purpose and use", paragraphs: [
           "The site provides documentation and icon demonstrations. Content is informational. Visitors must use the site lawfully and respect third-party rights.",
         ] },
         { heading: "Intellectual property and links", paragraphs: [
-          "The showcase text, designs, and materials belong to their respective owners. External links do not imply control or endorsement. Before publication, the owner must confirm licences, trademarks, and permissions for all displayed resources.",
+          "The showcase text, designs, and materials belong to their respective owners and are governed by their licences. Third-party trademarks belong to their owners. Publishing documentation does not grant additional rights to these materials. External links do not imply control or endorsement.",
         ] },
         { heading: "Liability and applicable law", paragraphs: [
           "The owner aims to keep information current and the service available, without guaranteeing uninterrupted or error-free operation. Applicable Spanish and EU law governs without limiting mandatory consumer rights.",
@@ -110,11 +112,13 @@ export const LEGAL_CONTENT: Record<Lang, Record<LegalPageType, LegalContent>> = 
       notice: "Policy for Neural Icons at icons.neuralui.org. Google Analytics loads only with your consent; rejecting does not restrict documentation.",
       sections: [
         { heading: "Controller and contact", paragraphs: [
-          "Controller: Pedro Moreno Trujillo. Address: Calle Azahar 26, Coín, 29100, Málaga, Spain. Email for privacy requests and rights: developmenttester.apps@gmail.com. No data protection officer has been designated, as one is not applicable to this activity.",
+          "Controller: Pedro Moreno Trujillo. Address: Calle Azahar 26, Coín, 29100, Málaga, Spain. Email for privacy requests and rights: developmenttester.apps@gmail.com. No data protection officer has been appointed; you can contact the controller directly.",
         ] },
         { heading: "Data, purposes, and legal bases", paragraphs: [
-          "To deliver and protect the site, the hosting provider may process IP addresses, technical request data, and security logs. Legal basis: the owner's legitimate interest in providing and securing the service, subject to the real hosting configuration and balancing assessment; legal obligation where applicable.",
-          "The chosen theme is stored in the browser to remember user preferences. They are not sent to the owner to build profiles. If those preferences contain personal data, the legal basis is the requested functionality or legitimate interest, subject to the owner's final assessment.",
+          "The contact mailbox uses Gmail, a Google service. If you voluntarily write to us, we use the message and information you provide to handle your enquiry, under the relevant legitimate interest or precontractual steps. We retain it for as long as necessary to address it and meet applicable legal obligations. It is not linked to values entered in demonstrations.",
+          "The owner does not make automated decisions producing legal or similarly significant effects on visitors. Contact the privacy email for information about applicable international-transfer safeguards and, where appropriate, a copy of them.",
+          "To deliver and protect the site, the hosting provider may process IP addresses, technical request data, and security logs. Legal basis: the owner's legitimate interest in providing and securing the service, while respecting visitors’ rights; legal obligation where applicable.",
+          "The chosen theme is stored in the browser to remember user preferences. They are not sent to the owner to build profiles. These preferences provide the requested functionality and are not used to make decisions about individuals.",
           "Google Analytics 4 (ID G-N1HFRNYZ0C) loads only after analytics is accepted. It collects cookie identifiers, technical browser and device data, and page visits to improve documentation. Legal basis: consent. We omit URL and referrer query parameters and fragments. We do not send values entered in demonstrations or enable Google Signals or advertising personalization. Automatic enhanced measurement is disabled in favor of the application's filtered page views.",
           "The site has no contact form. If a visitor voluntarily emails the listed contact address, the message data is used to handle the request. Legal basis: legitimate interest or precontractual steps depending on the request, and legal obligation where applicable.",
         ] },

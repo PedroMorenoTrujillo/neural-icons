@@ -15,7 +15,7 @@ function setup(hostname = 'icons.neuralui.org', stored?: string, platform = 'bro
   const win = {
     location: { hostname, origin: `https://${hostname}`, pathname: '/es/', reload: vi.fn() },
     localStorage: { getItem: vi.fn((k: string) => storage.get(k) ?? null), setItem: vi.fn((k: string, v: string) => storage.set(k, v)), removeItem: vi.fn((k: string) => storage.delete(k)) },
-    dataLayer: [] as unknown[][],
+    dataLayer: [] as Array<ArrayLike<unknown>>,
   };
   const doc = {
     defaultView: win, title: 'Neural UI', referrer: 'https://example.org/docs?email=private#secret',
@@ -95,6 +95,12 @@ describe('Production analytics privacy contract', () => {
     expect(cookies.every(x => !x.startsWith('theme='))).toBe(true);
     events.next(new NavigationEnd(2, '/private', '/private'));
     expect(win.dataLayer).toEqual([]);
+  });
+  it('uses the canonical Google command queue instead of plain arrays', () => {
+    const { service, win } = setup();
+    service.start(); service.accept();
+    expect(win.dataLayer.length).toBeGreaterThan(0);
+    expect(win.dataLayer.every(command => Object.prototype.toString.call(command) === '[object Arguments]')).toBe(true);
   });
   it('remains usable when local storage is blocked', () => {
     const { service, win, doc } = setup();

@@ -12,7 +12,7 @@ import { filter, Subscription } from "rxjs";
 type AnalyticsConsent = "pending" | "granted" | "denied";
 
 interface AnalyticsWindow extends Window {
-  dataLayer?: unknown[][];
+  dataLayer?: unknown[];
   gtag?: (...args: unknown[]) => void;
 }
 
@@ -180,7 +180,11 @@ export class IconsAnalyticsService {
 
   private callGtag(win: AnalyticsWindow, ...args: unknown[]): void {
     win.dataLayer ??= [];
-    win.gtag ??= (...values: unknown[]) => win.dataLayer?.push(values);
+    // Google consumes Arguments commands, not ordinary array messages.
+    win.gtag ??= function () {
+      // eslint-disable-next-line prefer-rest-params -- Google's command queue requires an Arguments object.
+      win.dataLayer?.push(arguments);
+    };
     win.gtag(...args);
   }
 
