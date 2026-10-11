@@ -4,6 +4,9 @@ import { iconMessage } from '@neural-icons/core/icons/message';
 import { iconSparkles } from '@neural-icons/core/icons/sparkles';
 import { showcaseCopy, type Locale } from './showcase-copy';
 import { SITE_ORIGIN } from './site-origin';
+import { IconsAnalyticsService } from './analytics.service';
+import { LegalView, legalKindFromUrl } from './legal-view';
+import { LEGAL_CONTENT } from './legal-content';
 import { iconFromUrl, localeFromUrl, showcasePath, viewFromUrl, writeShowcasePath } from './showcase-url';
 import { ShowcaseHeader } from './showcase-header';
 import { GuideView } from './guide-view';
@@ -53,7 +56,7 @@ function frameworkFromUrl(url: URL): Framework {
 }
 
 @Component({
-  imports: [ShowcaseHeader, GuideView, CatalogView, DetailPanel],
+  imports: [ShowcaseHeader, GuideView, CatalogView, DetailPanel, LegalView],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
@@ -64,6 +67,7 @@ function frameworkFromUrl(url: URL): Framework {
   },
 })
 export class App {
+  protected readonly analytics = inject(IconsAnalyticsService);
   private readonly destroyRef = inject(DestroyRef);
   private readonly document = inject(DOCUMENT);
   private readonly request = inject(REQUEST, { optional: true });
@@ -85,6 +89,7 @@ export class App {
   protected readonly t = computed(() => showcaseCopy[this.locale()]);
   protected readonly query = signal('');
   protected readonly view = signal<View>(viewFromUrl(this.initialUrl));
+  protected readonly legalKind = signal(legalKindFromUrl(this.initialUrl));
   protected readonly category = signal('all');
   protected readonly selectedName = signal<string | null>(
     familyByName.has(iconFromUrl(this.initialUrl) ?? '')
@@ -227,6 +232,7 @@ export class App {
     this.updateSeo(this.initialUrl);
     afterNextRender(() => {
       this.readUrl();
+      this.analytics.start();
       try {
         const saved = window.localStorage.getItem('neural-icons-theme');
         this.theme.set(
@@ -279,6 +285,11 @@ export class App {
 
   protected setLocale(locale: Locale): void {
     if (this.locale() === locale) return;
+    const legal = this.legalKind();
+    if (legal) {
+      window.location.assign(`${locale === 'es' ? '/es' : ''}/${legal}/`);
+      return;
+    }
     this.locale.set(locale);
     this.copyFeedback.set('');
     const url = new URL(window.location.href);
@@ -297,7 +308,8 @@ export class App {
     )
       return;
     event.preventDefault();
-    if (this.view() === view) return;
+    if (this.view() === view && !this.legalKind()) return;
+    this.legalKind.set(null);
     this.view.set(view);
     this.selectedName.set(null);
     this.framework.set('html');
@@ -405,6 +417,7 @@ export class App {
 
   private readUrl(): void {
     const url = new URL(window.location.href);
+    this.legalKind.set(legalKindFromUrl(url));
     const locale = localeFromUrl(url);
     this.locale.set(locale);
     const name = iconFromUrl(url);
@@ -437,7 +450,8 @@ export class App {
     const locale = this.locale();
     const name = this.selectedName();
     const guide = this.view() === 'guide' && !name;
-    const title = name
+    const legal = this.legalKind();
+    const title = legal ? `${LEGAL_CONTENT[locale][legal].title} — Neural Icons` : name
       ? locale === 'es'
         ? `${name} — Icono de Neural Icons`
         : `${name} — Neural Icons icon`
@@ -456,7 +470,7 @@ export class App {
     const detail = family
       ? `${this.categoryLabel(family.category)} · ${searchTerms.filter((term) => term !== 'filled').slice(0, 2).join(', ')}. `
       : '';
-    const description = name
+    const description = legal ? LEGAL_CONTENT[locale][legal].notice : name
       ? locale === 'es'
         ? `${name}: ${detail}Compara contorno y relleno, copia el SVG o úsalo en HTML, Angular, React y Vue.`
         : `${name}: ${detail}Compare outline and filled, copy its SVG, or use it in HTML, Angular, React and Vue.`
@@ -474,12 +488,12 @@ export class App {
     this.meta.updateTag({ property: 'og:description', content: description });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
 
-    const canonical = new URL(showcasePath(locale, name, guide ? 'guide' : 'catalog'), this.siteOrigin || url.origin);
+    const canonical = new URL(legal ? `${locale === 'es' ? '/es' : ''}/${legal}/` : showcasePath(locale, name, guide ? 'guide' : 'catalog'), this.siteOrigin || url.origin);
     this.meta.updateTag({ property: 'og:url', content: canonical.href });
     this.setHeadLink('canonical', canonical.href);
     for (const language of ['en', 'es'] as const) {
       const alternate = new URL(canonical);
-      alternate.pathname = showcasePath(language, name, guide ? 'guide' : 'catalog');
+      alternate.pathname = legal ? `${language === 'es' ? '/es' : ''}/${legal}/` : showcasePath(language, name, guide ? 'guide' : 'catalog');
       this.setHeadLink('alternate', alternate.href, language);
     }
     this.meta.updateTag({
@@ -489,6 +503,7 @@ export class App {
           ? 'noindex, follow'
           : 'index, follow',
     });
+    this.analytics.trackCurrentPage();
   }
 
   private setHeadLink(rel: string, href: string, hreflang?: string): void {

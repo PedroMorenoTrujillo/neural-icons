@@ -37,7 +37,7 @@ app.get('/robots.txt', (req, res) => {
 app.get('/sitemap.xml', (req, res) => {
   const origin = publicOrigin(req);
   const names = neuralIcons.filter((icon) => icon.variant === 'outline').map((icon) => icon.name);
-  const paths = ['/', '/guide/', ...names.map((name) => `/icon/${encodeURIComponent(name)}/`)];
+  const paths = ['/', '/guide/', '/legal-notice/', '/privacy/', '/cookies/', ...names.map((name) => `/icon/${encodeURIComponent(name)}/`)];
   const urls = paths.flatMap((path) => [path, `/es${path}`]);
   res.type('application/xml').send(
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls

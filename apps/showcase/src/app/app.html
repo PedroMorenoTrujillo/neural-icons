@@ -12,6 +12,9 @@
 />
 
 <div class="shell">
+  @if (legalKind(); as kind) {
+    <main><app-legal-view [kind]="kind" [locale]="locale()" /></main>
+  } @else {
   <main class="workspace" [class.with-detail]="selected()">
     <div
       class="catalog-column"
@@ -74,4 +77,24 @@
     />
     }
   </main>
+  }
+  <footer class="privacy-footer">
+    <a [href]="locale() === 'es' ? '/es/legal-notice/' : '/legal-notice/'">{{ locale() === 'es' ? 'Aviso legal' : 'Legal notice' }}</a>
+    <a [href]="locale() === 'es' ? '/es/privacy/' : '/privacy/'">{{ locale() === 'es' ? 'Privacidad' : 'Privacy' }}</a>
+    <a [href]="locale() === 'es' ? '/es/cookies/' : '/cookies/'">Cookies</a>
+    @if (analytics.enabled()) { <button type="button" (click)="analytics.openSettings()">{{ locale() === 'es' ? 'Cambiar preferencias de privacidad' : 'Change privacy preferences' }}</button> }
+  </footer>
 </div>
+
+@if (analytics.enabled() && analytics.consent() === 'pending') {
+  <aside class="analytics-consent" role="dialog" aria-modal="false" [attr.aria-label]="locale() === 'es' ? 'Preferencias de analítica' : 'Analytics preferences'">
+    <div><strong>{{ locale() === 'es' ? 'Analítica con tu permiso' : 'Analytics with your permission' }}</strong>
+      <p>{{ locale() === 'es' ? 'Google Analytics nos ayuda a mejorar el catálogo. Solo se carga si aceptas; no usamos publicidad personalizada.' : 'Google Analytics helps improve the catalog. It loads only if you accept; we do not use personalized advertising.' }}</p>
+      <a [href]="locale() === 'es' ? '/es/privacy/' : '/privacy/'">{{ locale() === 'es' ? 'Privacidad' : 'Privacy' }}</a> · <a [href]="locale() === 'es' ? '/es/cookies/' : '/cookies/'">Cookies</a>
+    </div>
+    <div class="analytics-consent__actions">
+      <button type="button" (click)="analytics.reject()">{{ locale() === 'es' ? 'Rechazar' : 'Reject' }}</button>
+      <button type="button" (click)="analytics.accept()">{{ locale() === 'es' ? 'Aceptar analítica' : 'Accept analytics' }}</button>
+    </div>
+  </aside>
+}

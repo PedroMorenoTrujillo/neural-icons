@@ -54,6 +54,15 @@ a:focus-visible {
   margin: 0 auto;
 }
 
+.privacy-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; padding: 1.5rem; border-top: 1px solid var(--line); }
+.privacy-footer a, .privacy-footer button { color: var(--accent); background: none; border: 0; font: inherit; }
+.analytics-consent { position: fixed; inset: auto 1rem 1rem; z-index: 100; display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 880px; max-height: calc(100dvh - 2rem); overflow-y: auto; margin-inline: auto; padding: 1rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); box-shadow: 0 12px 44px #0003; }
+.analytics-consent p { line-height: 1.5; font-size: .9rem; margin-block: .5rem; }
+.analytics-consent a { color: var(--accent); }
+.analytics-consent__actions { display: flex; gap: .75rem; flex-shrink: 0; }
+.analytics-consent__actions button { min-height: 44px; padding: .65rem .9rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-raised); color: var(--ink); font: inherit; }
+@media (max-width: 640px) { .analytics-consent { flex-direction: column; align-items: stretch; } .analytics-consent__actions { display: grid; grid-template-columns: 1fr 1fr; } }
+
 app-showcase-header,
 app-catalog-view,
 app-guide-view,
