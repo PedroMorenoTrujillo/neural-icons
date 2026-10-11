@@ -40,7 +40,7 @@ export const LEGAL_CONTENT: Record<Lang, Record<LegalPageType, LegalContent>> = 
     privacy: {
       title: "Política de privacidad",
       updated: "Actualizado: 11 de octubre de 2026",
-      notice: "Política común de los sitio de Neural Icons en icons.neuralui.org. Google Analytics solo se carga con tu consentimiento; rechazar no limita la documentación.",
+      notice: "Política del sitio de Neural Icons en icons.neuralui.org. Google Analytics solo se carga con tu consentimiento; rechazar no limita la documentación.",
       sections: [
         { heading: "Responsable y contacto", paragraphs: [
           "Responsable del tratamiento: Pedro Moreno Trujillo. Domicilio: Calle Azahar 26, Coín, 29100, Málaga, España. Email para privacidad y ejercicio de derechos: developmenttester.apps@gmail.com. No se ha designado delegado de protección de datos; puedes dirigirte directamente al responsable.",
