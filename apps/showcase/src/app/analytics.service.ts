@@ -54,6 +54,9 @@ export class IconsAnalyticsService {
     this.enabled.set(true);
     this.prepareConsentMode(win);
     const storedConsent = this.readConsent(win);
+    // A departing Google tag can rewrite its session cookie during reload.
+    // Clean any residual identifiers before starting a non-consenting page.
+    if (storedConsent !== "granted") this.clearAnalyticsCookies();
     if (storedConsent === "granted") {
       this.consent.set("granted");
       this.enableTracking(win);

@@ -96,6 +96,14 @@ describe('Production analytics privacy contract', () => {
     events.next(new NavigationEnd(2, '/private', '/private'));
     expect(win.dataLayer).toEqual([]);
   });
+  it.each([undefined, consent('denied')])('cleans residual cookies on a non-consenting page: %s', stored => {
+    const { service, cookies, doc } = setup('icons.neuralui.org', stored);
+    service.start();
+    expect(cookies.some(value => value.startsWith('_ga=; Max-Age=0'))).toBe(true);
+    expect(cookies.some(value => value.startsWith('_ga_') && value.includes('Max-Age=0'))).toBe(true);
+    expect(cookies.every(value => !value.startsWith('theme='))).toBe(true);
+    expect(doc.head.appendChild).not.toHaveBeenCalled();
+  });
   it('uses the canonical Google command queue instead of plain arrays', () => {
     const { service, win } = setup();
     service.start(); service.accept();
