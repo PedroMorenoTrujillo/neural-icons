@@ -311,7 +311,22 @@ test('robots, sitemap and SVG download are served by the production app', async 
   expect(sitemapXml).toContain('/icon/search/');
   expect(sitemapXml).toContain('/icon/shopping-cart/');
   expect(sitemapXml).toContain('/icon/hash/');
-  expect(sitemapXml.match(/<url>/g)).toHaveLength(504);
+  expect(sitemapXml.match(/<url>/g)).toHaveLength(510);
+  for (const [path, title] of [
+    ['/legal-notice/', 'Legal notice'],
+    ['/privacy/', 'Privacy policy'],
+    ['/cookies/', 'Cookies and local storage policy'],
+    ['/es/legal-notice/', 'Aviso legal'],
+    ['/es/privacy/', 'Política de privacidad'],
+    ['/es/cookies/', 'Política de cookies y almacenamiento local'],
+  ]) {
+    expect(sitemapXml).toContain(path);
+    const legal = await request.get(path);
+    expect(legal.ok()).toBe(true);
+    const html = await legal.text();
+    expect(html).toContain(`<title>${title} — Neural Icons</title>`);
+    expect(html).toContain('Cloudflare');
+  }
   const svg = await request.get('/icons/search.svg');
   expect(svg.ok()).toBe(true);
   expect(await svg.text()).toContain('<svg');
