@@ -1,4 +1,6 @@
 import { iconSearch } from '@neural-icons/core/icons/search';
+import { iconExternalLink } from '@neural-icons/core/icons/external-link';
+import { NeuralIcon } from '@neural-icons/angular';
 import { iconHome } from '@neural-icons/core/icons/home';
 import { iconMessage } from '@neural-icons/core/icons/message';
 import { iconSparkles } from '@neural-icons/core/icons/sparkles';
@@ -56,7 +58,7 @@ function frameworkFromUrl(url: URL): Framework {
 }
 
 @Component({
-  imports: [ShowcaseHeader, GuideView, CatalogView, DetailPanel, LegalView],
+  imports: [ShowcaseHeader, GuideView, CatalogView, DetailPanel, LegalView, NeuralIcon],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
@@ -82,6 +84,7 @@ export class App {
   );
   protected readonly detailPanel = viewChild(DetailPanel);
   protected readonly searchIcon = iconSearch;
+  protected readonly externalLinkIcon = iconExternalLink;
   protected readonly heroIcons = [iconHome, iconMessage, iconSparkles] as const;
   protected readonly locale = signal<Locale>(
     localeFromUrl(this.initialUrl),

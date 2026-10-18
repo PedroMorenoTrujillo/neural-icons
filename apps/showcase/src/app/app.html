@@ -79,6 +79,8 @@
   </main>
   }
   <footer class="privacy-footer">
+    <a class="social-link" href="https://www.linkedin.com/company/neuralui" target="_blank" rel="noopener noreferrer" [attr.aria-label]="locale() === 'es' ? 'Neural UI en LinkedIn · Se abre en una pestaña nueva' : 'Neural UI on LinkedIn · Opens in a new tab'">LinkedIn <neural-icon [icon]="externalLinkIcon" size="14" aria-hidden="true" /></a>
+    <a class="social-link" href="https://x.com/NeuralUI" target="_blank" rel="noopener noreferrer" [attr.aria-label]="locale() === 'es' ? 'Neural UI en X · Se abre en una pestaña nueva' : 'Neural UI on X · Opens in a new tab'">X <neural-icon [icon]="externalLinkIcon" size="14" aria-hidden="true" /></a>
     <a [href]="locale() === 'es' ? '/es/legal-notice/' : '/legal-notice/'">{{ locale() === 'es' ? 'Aviso legal' : 'Legal notice' }}</a>
     <a [href]="locale() === 'es' ? '/es/privacy/' : '/privacy/'">{{ locale() === 'es' ? 'Privacidad' : 'Privacy' }}</a>
     <a [href]="locale() === 'es' ? '/es/cookies/' : '/cookies/'">Cookies</a>
