@@ -77,6 +77,40 @@
     />
     }
   </main>
+
+  <section class="ecosystem" aria-labelledby="ecosystem-title" [attr.inert]="selected() && isNarrow() ? '' : null">
+    <header class="ecosystem__heading">
+      <p>{{ locale() === 'es' ? 'EL ECOSISTEMA NEURAL' : 'THE NEURAL ECOSYSTEM' }}</p>
+      <h2 id="ecosystem-title">{{ locale() === 'es' ? 'De los detalles a la interfaz completa.' : 'From the details to the whole interface.' }}</h2>
+    </header>
+    <div class="ecosystem__grid">
+      <article class="ecosystem__card">
+        <div class="ecosystem__visual ecosystem__visual--ui">
+          <picture>
+            <img [src]="theme() === 'dark' ? '/assets/ecosystem/core-card-dark.png' : '/assets/ecosystem/core-card-light.png'" alt="Neural UI Core" width="602" height="412" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="ecosystem__body">
+          <span>{{ locale() === 'es' ? 'COMPONENTES WEB' : 'WEB COMPONENTS' }}</span>
+          <h3>Neural UI Core</h3>
+          <p>{{ locale() === 'es' ? 'Formularios, navegación y datos con componentes Angular que puedes adaptar a tu producto.' : 'Forms, navigation and data with Angular components you can adapt to your product.' }}</p>
+          <a href="https://ui.neuralui.org/v2/">{{ locale() === 'es' ? 'Explorar Neural UI' : 'Explore Neural UI' }} <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="ecosystem__card">
+        <figure class="ecosystem__visual ecosystem__visual--native">
+          <div class="ecosystem__phone"><img src="/assets/ecosystem/native-card-ios.png" alt="Neural Native · iOS" width="1206" height="2622" loading="lazy" decoding="async"></div>
+          <figcaption>{{ locale() === 'es' ? 'Neural Native en iOS' : 'Neural Native running on iOS' }}</figcaption>
+        </figure>
+        <div class="ecosystem__body">
+          <span>{{ locale() === 'es' ? 'INTERFACES MÓVILES' : 'MOBILE INTERFACES' }}</span>
+          <h3>Neural Native</h3>
+          <p>{{ locale() === 'es' ? 'Componentes para iOS y Android con Angular Native y la identidad visual de Neural. Disponible en beta pública.' : 'Components for iOS and Android with Angular Native and the Neural visual identity. Available in public beta.' }}</p>
+          <a href="https://native.neuralui.org/">{{ locale() === 'es' ? 'Explorar Neural Native' : 'Explore Neural Native' }} <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
   }
   <footer class="privacy-footer">
     <a class="social-link" href="https://www.linkedin.com/company/neuralui" target="_blank" rel="noopener noreferrer" [attr.aria-label]="locale() === 'es' ? 'Neural UI en LinkedIn · Se abre en una pestaña nueva' : 'Neural UI on LinkedIn · Opens in a new tab'">LinkedIn <neural-icon [icon]="externalLinkIcon" size="14" aria-hidden="true" /></a>
