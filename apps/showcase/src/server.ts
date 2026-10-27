@@ -8,6 +8,7 @@ import express from 'express';
 import { neuralIcons } from '@neural-icons/core/catalog';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { isPublicShowcasePath, missingPage, publicShowcasePaths } from './public-routes';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
@@ -22,6 +23,7 @@ const allowedHosts = [
   process.env['NEURAL_ICONS_SITE_ORIGIN'] && new URL(process.env['NEURAL_ICONS_SITE_ORIGIN']).hostname,
 ].filter((host): host is string => Boolean(host));
 const angularApp = new AngularNodeAppEngine({ allowedHosts });
+const supportedPaths = publicShowcasePaths(neuralIcons.filter(icon => icon.variant === 'outline').map(icon => icon.name));
 const publicOrigin = (req: express.Request): string =>
   (
     process.env['NEURAL_ICONS_SITE_ORIGIN'] ||
@@ -73,6 +75,10 @@ app.use(
  * Handle all other requests by rendering the Angular application.
  */
 app.use('/{*splat}', (req, res, next) => {
+  if (!isPublicShowcasePath(req.path, supportedPaths)) {
+    res.status(404).set('X-Robots-Tag', 'noindex, follow').type('html').send(missingPage(req.path === '/es' || req.path.startsWith('/es/')));
+    return;
+  }
   angularApp
     .handle(req)
     .then((response) =>
