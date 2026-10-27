@@ -75,8 +75,10 @@ app.use(
  * Handle all other requests by rendering the Angular application.
  */
 app.use('/{*splat}', (req, res, next) => {
-  if (!isPublicShowcasePath(req.path, supportedPaths)) {
-    res.status(404).set('X-Robots-Tag', 'noindex, follow').type('html').send(missingPage(req.path === '/es' || req.path.startsWith('/es/')));
+  // Express strips this middleware's matched mount path from req.path.
+  const pathname = req.originalUrl.split(/[?#]/)[0] || '/';
+  if (!isPublicShowcasePath(pathname, supportedPaths)) {
+    res.status(404).set('X-Robots-Tag', 'noindex, follow').type('html').send(missingPage(pathname === '/es' || pathname.startsWith('/es/')));
     return;
   }
   angularApp
