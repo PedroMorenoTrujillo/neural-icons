@@ -110,6 +110,18 @@
           <a href="https://native.neuralui.org/">{{ locale() === 'es' ? 'Explorar Neural Native' : 'Explore Neural Native' }} <span aria-hidden="true">↗</span></a>
         </div>
       </article>
+      <article class="ecosystem__card">
+        <figure class="ecosystem__visual ecosystem__visual--ai">
+          <div class="ecosystem__contract"><span>get_api</span><strong>NeuButtonComponent</strong><dl><dt>Web v2</dt><dd><code>(neuClick)</code></dd><dt>Native</dt><dd><code>(pressed)</code></dd></dl></div>
+          <figcaption>{{ locale() === 'es' ? 'Referencias de las APIs públicas' : 'Public API references' }}</figcaption>
+        </figure>
+        <div class="ecosystem__body">
+          <span>{{ locale() === 'es' ? 'SKILLS Y MCP' : 'SKILLS AND MCP' }}</span>
+          <h3>Neural AI</h3>
+          <p>{{ locale() === 'es' ? 'Skills para Neural UI v2 y Neural Native, con referencias verificadas y un MCP local opcional para tus agentes de programación.' : 'Skills for Neural UI v2 and Neural Native, with verified references and an optional local MCP for your coding agents.' }}</p>
+          <a [href]="locale() === 'es' ? 'https://ui.neuralui.org/v2/es/getting-started/ai-development' : 'https://ui.neuralui.org/v2/en/getting-started/ai-development'">{{ locale() === 'es' ? 'Empezar con Neural AI' : 'Start with Neural AI' }} <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
     </div>
   </section>
   }

@@ -96,6 +96,13 @@ app-detail-panel {
 .ecosystem__heading > p, .ecosystem__body > span { color: var(--muted); font-size: 11px; font-weight: 650; letter-spacing: .08em; }
 .ecosystem__heading > h2 { margin: 12px 0 0; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; letter-spacing: -.035em; }
 .ecosystem__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+@media (min-width: 1100px) { .ecosystem__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.ecosystem__contract { display: grid; gap: 18px; width: 100%; max-width: 300px; padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-sizing: border-box; }
+.ecosystem__contract > span { width: fit-content; padding: 4px 8px; border-radius: 6px; background: var(--surface-raised); color: var(--text); font: 12px ui-monospace, monospace; }
+.ecosystem__contract > strong { font-size: 16px; overflow-wrap: anywhere; }
+.ecosystem__contract dl { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; margin: 0; font-size: 12px; }
+.ecosystem__contract dt { color: var(--muted); }
+.ecosystem__contract dd { margin: 0; color: var(--text); }
 .ecosystem__card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
 .ecosystem__visual { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; min-width: 0; height: 290px; margin: 0; padding: 20px; background: var(--surface-raised); box-sizing: border-box; }
 .ecosystem__visual picture { display: block; width: min(100%, 310px); overflow: hidden; border-radius: 16px; }
