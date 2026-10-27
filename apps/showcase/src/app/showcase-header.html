@@ -2,7 +2,11 @@
   <div class="identity">
     <img class="brand-mark" src="favicon.svg" alt="" width="38" height="38" />
     <div>
-      <h1>Neural Icons</h1>
+      @if (pageHeading()) {
+        <h1 class="brand-title">Neural Icons</h1>
+      } @else {
+        <p class="brand-title">Neural Icons</p>
+      }
       <p>{{ copy().brandSubtitle }}</p>
     </div>
   </div>

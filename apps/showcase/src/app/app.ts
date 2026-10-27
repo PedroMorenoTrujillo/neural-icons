@@ -490,6 +490,17 @@ export class App {
     this.meta.updateTag({ property: 'og:title', content: title });
     this.meta.updateTag({ property: 'og:description', content: description });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
+    const socialImage = new URL('/social-card.png', this.siteOrigin || url.origin).href;
+    const imageAlt = locale === 'es' ? 'Catálogo de Neural Icons con variantes de contorno y relleno' : 'Neural Icons catalog with outline and filled variants';
+    this.meta.updateTag({ property: 'og:image', content: socialImage });
+    this.meta.updateTag({ property: 'og:image:width', content: '1200' });
+    this.meta.updateTag({ property: 'og:image:height', content: '630' });
+    this.meta.updateTag({ property: 'og:image:alt', content: imageAlt });
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.meta.updateTag({ name: 'twitter:title', content: title });
+    this.meta.updateTag({ name: 'twitter:description', content: description });
+    this.meta.updateTag({ name: 'twitter:image', content: socialImage });
+    this.meta.updateTag({ name: 'twitter:image:alt', content: imageAlt });
 
     const canonical = new URL(legal ? `${locale === 'es' ? '/es' : ''}/${legal}/` : showcasePath(locale, name, guide ? 'guide' : 'catalog'), this.siteOrigin || url.origin);
     this.meta.updateTag({ property: 'og:url', content: canonical.href });

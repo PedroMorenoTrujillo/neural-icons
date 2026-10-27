@@ -4,6 +4,7 @@
   [locale]="locale()"
   [theme]="theme()"
   [isModalOpen]="!!selected() && isNarrow()"
+  [pageHeading]="!legalKind()"
   [catalogHref]="viewHref('catalog')"
   [guideHref]="viewHref('guide')"
   (navigate)="setView($event.event, $event.view)"

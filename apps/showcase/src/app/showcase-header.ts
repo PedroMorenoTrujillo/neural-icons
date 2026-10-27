@@ -28,6 +28,7 @@ export class ShowcaseHeader {
   readonly locale = input.required<Locale>();
   readonly theme = input.required<Theme>();
   readonly isModalOpen = input.required<boolean>();
+  readonly pageHeading = input(true);
   readonly catalogHref = input.required<string>();
   readonly guideHref = input.required<string>();
   readonly navigate = output<{ event: MouseEvent; view: View }>();
