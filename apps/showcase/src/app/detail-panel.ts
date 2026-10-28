@@ -74,10 +74,14 @@ export class DetailPanel {
     switch (category) {
       case 'action':
         return labels.action;
+      case 'commerce':
+        return labels.commerce;
       case 'communication':
         return labels.communication;
       case 'file':
         return labels.file;
+      case 'media':
+        return labels.media;
       case 'navigation':
         return labels.navigation;
       case 'status':

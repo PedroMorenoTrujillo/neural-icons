@@ -49,7 +49,7 @@
         <p>{{ copy().guide[framework()].installDescription }}</p>
       </div>
       <div class="installation-code">
-        <pre><code>{{ installSnippet() }}</code></pre>
+        <pre tabindex="0" [attr.aria-label]="copy().guide[framework()].installTitle"><code>{{ installSnippet() }}</code></pre>
         @if (framework() === 'html') {
         <a href="/icons/search.svg" download="search.svg"
           >{{ copy().downloadSvg }}</a
@@ -62,7 +62,7 @@
         <h3>{{ copy().guide[framework()].useTitle }}</h3>
         <p>{{ copy().guide[framework()].useDescription }}</p>
       </div>
-      <pre><code>{{ setupSnippet() }}</code></pre>
+      <pre tabindex="0" [attr.aria-label]="copy().guide[framework()].useTitle"><code>{{ setupSnippet() }}</code></pre>
     </div>
   </div>
   <p class="installation-footnote">
@@ -80,7 +80,7 @@
         <h3>{{ copy().accessibilityGuide }}</h3>
         <p>{{ copy().guide[framework()].a11yNote }}</p>
       </div>
-      <pre><code>{{ accessibilitySnippet() }}</code></pre>
+      <pre tabindex="0" [attr.aria-label]="copy().accessibilityGuide"><code>{{ accessibilitySnippet() }}</code></pre>
     </div>
   </div>
 </section>
@@ -98,6 +98,6 @@
     <h2 id="color-heading">{{ copy().colorTitle }}</h2>
     <p>{{ copy().guide[framework()].colorDescription }}</p>
   </div>
-  <pre><code>{{ colorSnippet() }}</code></pre>
+  <pre tabindex="0" [attr.aria-label]="copy().colorTitle"><code>{{ colorSnippet() }}</code></pre>
   <p class="usage-note">{{ copy().guide[framework()].colorNote }}</p>
 </section>
