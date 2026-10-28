@@ -86,11 +86,12 @@
     </header>
     <div class="ecosystem__grid">
       <article class="ecosystem__card">
-        <div class="ecosystem__visual ecosystem__visual--ui">
+        <figure class="ecosystem__visual ecosystem__visual--ui">
           <picture>
             <img [src]="theme() === 'dark' ? '/assets/ecosystem/core-card-dark.png' : '/assets/ecosystem/core-card-light.png'" alt="Neural UI Core" width="602" height="412" loading="lazy" decoding="async">
           </picture>
-        </div>
+          <figcaption>{{ locale() === 'es' ? 'Neural UI · Captura en inglés' : 'Neural UI · Screenshot in English' }}</figcaption>
+        </figure>
         <div class="ecosystem__body">
           <span>{{ locale() === 'es' ? 'COMPONENTES WEB' : 'WEB COMPONENTS' }}</span>
           <h3>Neural UI Core</h3>
@@ -101,7 +102,7 @@
       <article class="ecosystem__card">
         <figure class="ecosystem__visual ecosystem__visual--native">
           <div class="ecosystem__phone"><img src="/assets/ecosystem/native-card-ios.png" alt="Neural Native · iOS" width="1206" height="2622" loading="lazy" decoding="async"></div>
-          <figcaption>{{ locale() === 'es' ? 'Neural Native en iOS' : 'Neural Native running on iOS' }}</figcaption>
+          <figcaption>{{ locale() === 'es' ? 'Neural Native en iOS · Captura en inglés' : 'Neural Native on iOS · Screenshot in English' }}</figcaption>
         </figure>
         <div class="ecosystem__body">
           <span>{{ locale() === 'es' ? 'INTERFACES MÓVILES' : 'MOBILE INTERFACES' }}</span>
