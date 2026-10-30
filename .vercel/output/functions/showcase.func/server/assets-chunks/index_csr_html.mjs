@@ -1,0 +1,16 @@
+export default `<!doctype html>
+<html lang="en" data-beasties-container="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="F-N0bg6BanOXJ7QJKxG9JzYlP1bbn4hN85sw8UVj3H8">
+    <title>Neural Icons — Catalog explorer</title>
+    <meta name="description" content="Explore 250 Neural Icons families, compare outline and filled variants, and copy granular imports for Angular, React, and Vue.">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;font-synthesis:none}*{box-sizing:border-box}body{min-width:320px;min-height:100vh;margin:0;background:#f7f8fa}</style><link rel="stylesheet" href="styles-PY34VJ2C.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-PY34VJ2C.css"></noscript></head>
+  <body ngcm="">
+    <app-root></app-root>
+  <script src="main-S6EPZTZ7.js" type="module"></script></body>
+</html>
+`;

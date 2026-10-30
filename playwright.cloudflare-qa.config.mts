@@ -1,0 +1,2 @@
+import {defineConfig, devices} from '@playwright/test';
+export default defineConfig({testDir:'./apps/showcase-e2e/src',outputDir:'../icons-browser-test-results',workers:1,retries:0,use:{baseURL:'http://127.0.0.1:4311'},webServer:{command:'node dist/apps/showcase/server/server.mjs',env:{PORT:'4311',NEURAL_ICONS_SITE_ORIGIN:'https://icons.neuralui.org'},url:'http://127.0.0.1:4311',reuseExistingServer:false,timeout:30000},projects:[{name:'chromium',use:{...devices['Desktop Chrome'],channel:'chrome'}}]});
