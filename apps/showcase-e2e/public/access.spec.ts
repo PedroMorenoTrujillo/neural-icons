@@ -18,7 +18,7 @@ const cases = [
 ] as const;
 
 for (const [path, canonicalPath, heading] of cases) {
-  test(`anonymous public access: ${path}`, async ({ page, context }, testInfo) => {
+  test(`anonymous public access: ${path}`, async ({ page, context }) => {
     expect(await context.cookies()).toEqual([]);
     const response = await page.goto(path, { waitUntil: 'domcontentloaded' });
     expect(response?.status()).toBe(200);
@@ -32,14 +32,24 @@ for (const [path, canonicalPath, heading] of cases) {
     expect(current.hash).toBe('');
     // Existing query links may keep their address while rendering the canonical
     // view. Requiring an invented redirect would break this supported contract.
-    if (path.includes('variant=filled')) {
-      await expect(page.locator('.large-preview neural-icon')).toHaveAttribute('data-neural-icon', 'search-filled');
-      await expect(page.locator('.snippet')).toContainText('@neural-icons/react');
-      expect(current.searchParams.get('variant')).toBe('filled');
-      expect(current.searchParams.get('framework')).toBe('react');
-    }
-    if (path === '/es/' && testInfo.project.name === 'mobile-public') {
-      await page.screenshot({ path: resolve(process.cwd(), 'test-results/public-access/icons-mobile.png') });
-    }
+
   });
 }
+
+test('legacy filled React view preserves query state', async ({ page }) => {
+  await page.goto('/?icon=search&lang=es&variant=filled&framework=react');
+  await expect(page.getByRole('heading', { name: 'search', exact: true })).toBeVisible();
+  await expect(page.locator('.large-preview neural-icon')).toHaveAttribute('data-neural-icon', 'search-filled');
+  await expect(page.locator('.snippet')).toContainText('@neural-icons/react');
+  const current = new URL(page.url());
+  expect(current.origin).toBe(origin);
+  expect(current.searchParams.get('variant')).toBe('filled');
+  expect(current.searchParams.get('framework')).toBe('react');
+});
+
+test('capture the published catalogue version', async ({ page }, testInfo) => {
+  await page.goto('/es/');
+  await expect(page.locator('.release-version')).toHaveText('v' + version);
+  await expect(page.getByRole('heading', { name: 'Encuentra tu icono.', exact: true })).toBeVisible();
+  await page.screenshot({ path: resolve(process.cwd(), 'test-results/public-access/icons-' + testInfo.project.name + '.png') });
+});
