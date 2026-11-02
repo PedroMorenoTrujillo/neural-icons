@@ -1,4 +1,5 @@
-import { ICONS_VERSION } from '../../showcase/src/app/release-version';
+import { readFileSync } from 'node:fs';
+const ICONS_VERSION: string = JSON.parse(readFileSync(new URL('../../../packages/core/package.json', import.meta.url), 'utf8')).version;
 import { expect, test } from '@playwright/test';
 
 const routes = [
