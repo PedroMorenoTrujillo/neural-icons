@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import { resolve } from 'node:path';
 
-const output = resolve(import.meta.dirname, '../../..', 'test-results/public-access');
+const output = resolve(import.meta.dirname, '../..', 'test-results/public-access');
 export default defineConfig({
   testDir: './public',
   outputDir: output,
