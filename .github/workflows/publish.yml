@@ -4,18 +4,24 @@ on:
   pull_request:
   push:
     branches: [main]
-    tags: ['core@*', 'angular@*', 'react@*', 'vue@*']
+    tags: ['core@*']
+  workflow_dispatch:
+    inputs:
+      verify_only:
+        description: Verify and build without publishing or deploying
+        type: boolean
+        default: true
 
 permissions:
   contents: read
 
 concurrency:
-  group: icons-release-${{ github.ref }}
+  group: icons-release-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
   cancel-in-progress: false
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
       NX_DAEMON: 'false'
@@ -29,40 +35,102 @@ jobs:
           node-version-file: .nvmrc
           package-manager-cache: false
       - run: npm ci
+      - name: Verify the publisher and Core tag before any release work
+        if: startsWith(github.ref, 'refs/tags/') || (github.event_name == 'workflow_dispatch' && inputs.verify_only != true)
+        run: node tools/release-batch.mjs --identity
       - run: npm exec -- playwright install --with-deps chromium
       - run: npm run verify:release
-      - name: Check release tag against compiled package
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Pack all four exact release artifacts
+        run: npm run release:pack
+      - name: Build the showcase and preserve every published URL
         run: |
-          git merge-base --is-ancestor HEAD origin/main
-          node tools/publish-tagged-package.mjs --check
+          npm run build:cloudflare
+          node tools/verify-showcase-release.mjs
       - uses: actions/upload-artifact@v7
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           name: icons-packages
-          path: dist/packages/
+          path: dist/release/
           if-no-files-found: error
-          retention-days: 3
+          retention-days: 14
+          overwrite: true
+      - uses: actions/upload-artifact@v7
+        with:
+          name: icons-showcase
+          path: dist/cloudflare/
+          if-no-files-found: error
+          retention-days: 14
+          overwrite: true
 
   publish:
-    if: startsWith(github.ref, 'refs/tags/')
+    if: github.repository == 'PedroMorenoTrujillo/neural-icons' && github.actor == 'PedroMorenoTrujillo' && github.triggering_actor == 'PedroMorenoTrujillo' && startsWith(github.ref, 'refs/tags/core@') && inputs.verify_only != true
     needs: verify
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
     permissions:
       contents: read
       id-token: write
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           registry-url: https://registry.npmjs.org
           package-manager-cache: false
-      - run: npm install --global npm@11.19.0
+      - run: npm install --global npm@11.21.0
       - uses: actions/download-artifact@v8
         with:
           name: icons-packages
-          path: dist/packages/
-      - name: Publish the tagged package using npm trusted publishing
-        run: node tools/publish-tagged-package.mjs --publish
+          path: dist/release/
+      - name: Publish Core, then Angular, React and Vue; verify exact public npm archives
+        run: node tools/release-batch.mjs --publish
+      - name: Install and exercise the published Angular package in a clean consumer
+        run: |
+          npm ci
+          npm exec -- playwright install --with-deps chromium
+          node tools/verify-clean-angular-consumer.mjs --registry-only
+      - uses: actions/upload-artifact@v7
+        with:
+          name: icons-registry-verification
+          path: dist/release/registry-verified.json
+          if-no-files-found: error
+          retention-days: 14
+          overwrite: true
+
+  deploy-showcase:
+    needs: [verify, publish]
+    if: github.repository == 'PedroMorenoTrujillo/neural-icons' && github.actor == 'PedroMorenoTrujillo' && github.triggering_actor == 'PedroMorenoTrujillo' && !contains(github.ref_name, '-') && inputs.verify_only != true
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    env:
+      CLOUDFLARE_ACCOUNT_ID: 6bf1e991f54c538982e902a1a06b947e
+      CLOUDFLARE_PAGES_PROJECT: neuraliconsweb
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - run: npm ci
+      - uses: actions/download-artifact@v8
+        with:
+          name: icons-showcase
+          path: dist/cloudflare/
+      - uses: actions/download-artifact@v8
+        with:
+          name: icons-registry-verification
+          path: dist/release/
+      - name: Bind the showcase to the four verified npm packages
+        run: node tools/verify-showcase-release.mjs --published
+      - name: Deploy Icons production
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN_ICONS }}
+        run: npm exec -- wrangler pages deploy dist/cloudflare --project-name neuraliconsweb --branch main --commit-hash "$GITHUB_SHA"
+      - name: Verify the served release and every previously published URL
+        run: node tools/verify-showcase-release.mjs --live

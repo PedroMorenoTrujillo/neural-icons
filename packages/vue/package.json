@@ -1,9 +1,13 @@
 {
   "name": "@neural-icons/vue",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "type": "module",
   "description": "Vue 3.5 adapter for Neural Icons.",
-  "repository": { "type": "git", "url": "git+https://github.com/PedroMorenoTrujillo/neural-icons.git", "directory": "packages/vue" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroMorenoTrujillo/neural-icons.git",
+    "directory": "packages/vue"
+  },
   "homepage": "https://icons.neuralui.org/",
   "bugs": "https://github.com/PedroMorenoTrujillo/neural-icons/issues",
   "sideEffects": false,
@@ -28,6 +32,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@neural-icons/core": "^1.1.0"
+    "@neural-icons/core": "1.1.2"
   }
 }
