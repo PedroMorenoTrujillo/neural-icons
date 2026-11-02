@@ -5,8 +5,9 @@ import {
   PROJECTS,
   REPOSITORY,
   OWNER,
-  ACCOUNT_ID,
-  PAGES_PROJECT,
+  VERCEL_TEAM_ID,
+  VERCEL_PROJECT_ID,
+  verifyWebsiteActor,
   releaseVersion,
   compareReleases,
   verifyManifests,
@@ -138,17 +139,25 @@ test('an existing registry version can only be reused when the exact verified ar
 });
 
 test('a prerelease or a v1/v2 showcase target cannot replace Icons production', () => {
-  verifyProductionTarget('1.2.3', ACCOUNT_ID, PAGES_PROJECT);
+  verifyProductionTarget('1.2.3', VERCEL_TEAM_ID, VERCEL_PROJECT_ID);
   assert.throws(() =>
-    verifyProductionTarget('1.2.3-next.1', ACCOUNT_ID, PAGES_PROJECT),
+    verifyProductionTarget('1.2.3-next.1', VERCEL_TEAM_ID, VERCEL_PROJECT_ID),
   );
   assert.throws(() =>
-    verifyProductionTarget('1.2.3', 'another-account', PAGES_PROJECT),
+    verifyProductionTarget('1.2.3', 'another-account', VERCEL_PROJECT_ID),
   );
   for (const project of [
     'neuralicons',
     'neuraluicomponents',
     'neuraluicomponents-v2',
   ])
-    assert.throws(() => verifyProductionTarget('1.2.3', ACCOUNT_ID, project));
+    assert.throws(() => verifyProductionTarget('1.2.3', VERCEL_TEAM_ID, project));
+});
+
+test('only the owner can promote a stable verified Core tag or manually rebuild main on Vercel', () => {
+  verifyWebsiteActor(env, '1.2.3');
+  const manual = { ...env, GITHUB_EVENT_NAME: 'workflow_dispatch', GITHUB_REF_TYPE: 'branch', GITHUB_REF: 'refs/heads/main' };
+  verifyWebsiteActor(manual, '1.2.3');
+  for (const change of [{ GITHUB_ACTOR: 'contributor' }, { GITHUB_TRIGGERING_ACTOR: 'contributor' }, { GITHUB_REPOSITORY: 'fork/neural-icons' }, { GITHUB_EVENT_NAME: 'pull_request' }, { GITHUB_REF: 'refs/heads/feature' }]) assert.throws(() => verifyWebsiteActor({ ...manual, ...change }, '1.2.3'));
+  assert.throws(() => verifyWebsiteActor(manual, '1.2.3-beta.1'));
 });
