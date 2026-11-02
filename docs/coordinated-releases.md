@@ -20,7 +20,7 @@ Stable releases use `latest`; prereleases use `next` and do not replace producti
 
 ## Showcase and existing URLs
 
-After registry verification and the clean published Angular consumer pass, deploy the verified output to **neuraliconsweb**, account `6bf1e991f54c538982e902a1a06b947e`, with `CLOUDFLARE_API_TOKEN_ICONS`. Other Neural deployment targets are rejected.
+After registry verification and the clean published Angular consumer pass, the owner-triggered workflow advances deploy/icons to the verified source commit. The existing neural-icons Vercel project publishes that production branch at https://icons.neuralui.org/. Source commits and PRs do not advance the deployment branch.
 
 The public address remains `https://icons.neuralui.org/`. Catalog, guide, icon and legal routes, both languages, query parameters, redirect rules and canonicals are preserved. `docs/deployment/published-urls.json` records the 510 URLs published before this automation. Builds must contain them all. After deployment CI checks each existing URL remains HTTP 200 with the same canonical and current badge. Both the Cloudflare origin and public domain must serve the exact registry-verified `/release.json`.
 

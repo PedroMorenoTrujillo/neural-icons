@@ -8,7 +8,7 @@ import { generateReleaseVersion } from './generate-release-version.mjs';
 import {
   PROJECTS,
   REPOSITORY,
-  PAGES_PROJECT,
+  VERCEL_PROJECT_ID,
   compareReleases,
   verifyManifests,
   verifyReleaseActor,
@@ -135,7 +135,7 @@ if (process.argv.includes('--identity')) {
     repository: REPOSITORY,
     version,
     commit: git(['rev-parse', 'HEAD']),
-    project: PAGES_PROJECT,
+    project: VERCEL_PROJECT_ID,
     channel: version.includes('-') ? 'next' : 'latest',
     packages,
   };
@@ -192,6 +192,9 @@ if (process.argv.includes('--identity')) {
 } else if (process.argv.includes('--verify-registry')) {
   const release = readRelease();
   for (const artifact of release.packages) await waitForRegistry(artifact);
+  writeFileSync(resolve(directory, 'registry-verified.json'), JSON.stringify({
+    ...release, registryVerified: true, workflowRun: process.env.GITHUB_RUN_ID || null,
+  }, null, 2) + '\n');
   console.log(
     `All four npm archives match the verified candidate ${release.version}`,
   );

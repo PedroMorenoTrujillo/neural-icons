@@ -11,6 +11,10 @@ on:
         description: Verify and build without publishing or deploying
         type: boolean
         default: true
+      deploy_current:
+        description: Deploy the already published current packages from main without publishing npm
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -36,7 +40,7 @@ jobs:
           package-manager-cache: false
       - run: npm ci
       - name: Verify the publisher and Core tag before any release work
-        if: startsWith(github.ref, 'refs/tags/') || (github.event_name == 'workflow_dispatch' && inputs.verify_only != true)
+        if: startsWith(github.ref, 'refs/tags/')
         run: node tools/release-batch.mjs --identity
       - run: npm exec -- playwright install --with-deps chromium
       - run: npm run verify:release
@@ -45,6 +49,7 @@ jobs:
       - name: Build the showcase and preserve every published URL
         run: |
           npm run build:cloudflare
+          npm run build:vercel
           node tools/verify-showcase-release.mjs
       - uses: actions/upload-artifact@v7
         with:
@@ -99,25 +104,53 @@ jobs:
           retention-days: 14
           overwrite: true
 
-  deploy-showcase:
-    needs: [verify, publish]
-    if: github.repository == 'PedroMorenoTrujillo/neural-icons' && github.actor == 'PedroMorenoTrujillo' && github.triggering_actor == 'PedroMorenoTrujillo' && !contains(github.ref_name, '-') && inputs.verify_only != true
+  verify-published:
+    needs: verify
+    if: github.repository == 'PedroMorenoTrujillo/neural-icons' && github.actor == 'PedroMorenoTrujillo' && github.triggering_actor == 'PedroMorenoTrujillo' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.deploy_current == true && inputs.verify_only != true
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 25
     permissions:
       contents: read
-    env:
-      CLOUDFLARE_ACCOUNT_ID: 6bf1e991f54c538982e902a1a06b947e
-      CLOUDFLARE_PAGES_PROJECT: neuraliconsweb
     steps:
       - uses: actions/checkout@v7
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           package-manager-cache: false
-      - run: npm ci
+      - uses: actions/download-artifact@v8
+        with:
+          name: icons-packages
+          path: dist/release/
+      - run: node tools/release-batch.mjs --verify-registry
+      - uses: actions/upload-artifact@v7
+        with:
+          name: icons-registry-verification
+          path: dist/release/registry-verified.json
+          if-no-files-found: error
+          retention-days: 14
+          overwrite: true
+
+  deploy-showcase:
+    needs: [verify, publish, verify-published]
+    if: always() && needs.verify.result == 'success' && (needs.publish.result == 'success' || needs.verify-published.result == 'success') && github.repository == 'PedroMorenoTrujillo/neural-icons' && github.actor == 'PedroMorenoTrujillo' && github.triggering_actor == 'PedroMorenoTrujillo' && !contains(github.ref_name, '-') && inputs.verify_only != true
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    env:
+      VERCEL_ORG_ID: team_5yMmfudZR826vI2MXwbYfXUY
+      VERCEL_PROJECT_ID: prj_YRhAzLJ7xoNXOPS6KE5GVj2V5ZpE
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
       - uses: actions/download-artifact@v8
         with:
           name: icons-showcase
@@ -126,11 +159,9 @@ jobs:
         with:
           name: icons-registry-verification
           path: dist/release/
-      - name: Bind the showcase to the four verified npm packages
+      - name: Bind the website to all four verified public npm archives
         run: node tools/verify-showcase-release.mjs --published
-      - name: Deploy Icons production
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN_ICONS }}
-        run: npm exec -- wrangler pages deploy dist/cloudflare --project-name neuraliconsweb --branch main --commit-hash "$GITHUB_SHA"
-      - name: Verify the served release and every previously published URL
+      - name: Promote the verified source to the existing Vercel production branch
+        run: node tools/promote-vercel-source.mjs
+      - name: Verify the served Vercel receipt, badge and all existing public URLs
         run: node tools/verify-showcase-release.mjs --live

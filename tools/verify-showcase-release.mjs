@@ -3,8 +3,8 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
 import {
-  ACCOUNT_ID,
-  PAGES_PROJECT,
+  VERCEL_TEAM_ID,
+  VERCEL_PROJECT_ID,
   REPOSITORY,
   verifyProductionTarget,
 } from './release-policy.mjs';
@@ -24,7 +24,7 @@ const release = JSON.parse(
   ),
 );
 assert.equal(release.repository, REPOSITORY);
-assert.equal(release.project, PAGES_PROJECT);
+assert.equal(release.project, VERCEL_PROJECT_ID);
 const baseline = JSON.parse(
   readFileSync(resolve(root, 'docs/deployment/published-urls.json'), 'utf8'),
 );
@@ -57,8 +57,8 @@ for (const url of routes)
 if (process.argv.includes('--published') || process.argv.includes('--live')) {
   verifyProductionTarget(
     release.version,
-    process.env.CLOUDFLARE_ACCOUNT_ID || ACCOUNT_ID,
-    process.env.CLOUDFLARE_PAGES_PROJECT || PAGES_PROJECT,
+    process.env.VERCEL_ORG_ID || VERCEL_TEAM_ID,
+    process.env.VERCEL_PROJECT_ID || VERCEL_PROJECT_ID,
   );
   assert.equal(
     release.registryVerified,
@@ -84,10 +84,10 @@ writeFileSync(
 );
 
 if (process.argv.includes('--live')) {
-  const origins = ['https://neuraliconsweb.pages.dev', baseline.origin];
+  const origins = [baseline.origin];
   for (const origin of origins) {
     let verified = false;
-    for (let attempt = 0; attempt < 18; attempt++) {
+    for (let attempt = 0; attempt < 180; attempt++) {
       try {
         const response = await fetch(
           `${origin}/release.json?run=${release.workflowRun}`,
@@ -100,7 +100,6 @@ if (process.argv.includes('--live')) {
           'commit',
           'repository',
           'project',
-          'workflowRun',
           'registryVerified',
         ])
           assert.equal(live[field], release[field]);
@@ -108,7 +107,7 @@ if (process.argv.includes('--live')) {
         verified = true;
         break;
       } catch (error) {
-        if (attempt === 17) throw error;
+        if (attempt === 179) throw error;
         await delay(5_000);
       }
     }

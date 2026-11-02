@@ -4,8 +4,9 @@ import { createHash } from 'node:crypto';
 export const PROJECTS = ['core', 'angular', 'react', 'vue'];
 export const REPOSITORY = 'PedroMorenoTrujillo/neural-icons';
 export const OWNER = 'PedroMorenoTrujillo';
-export const PAGES_PROJECT = 'neuraliconsweb';
-export const ACCOUNT_ID = '6bf1e991f54c538982e902a1a06b947e';
+export const VERCEL_PROJECT_ID = 'prj_YRhAzLJ7xoNXOPS6KE5GVj2V5ZpE';
+export const VERCEL_TEAM_ID = 'team_5yMmfudZR826vI2MXwbYfXUY';
+export const DEPLOYMENT_BRANCH = 'deploy/icons';
 
 export function releaseVersion(value) {
   assert.equal(typeof value, 'string');
@@ -133,6 +134,20 @@ export function verifyProductionTarget(version, account, project) {
     !version.includes('-'),
     'Prereleases cannot replace the production showcase',
   );
-  assert.equal(account, ACCOUNT_ID);
-  assert.equal(project, PAGES_PROJECT);
+  assert.equal(account, VERCEL_TEAM_ID);
+  assert.equal(project, VERCEL_PROJECT_ID);
+}
+
+export function verifyWebsiteActor(env, version) {
+  releaseVersion(version);
+  assert.ok(!version.includes('-'), 'Only stable packages can deploy the public website');
+  assert.equal(env.GITHUB_ACTIONS, 'true');
+  assert.equal(env.GITHUB_REPOSITORY, REPOSITORY);
+  assert.equal(env.GITHUB_ACTOR, OWNER);
+  assert.equal(env.GITHUB_TRIGGERING_ACTOR, OWNER);
+  if (env.GITHUB_REF_TYPE === 'tag') assert.equal(verifyReleaseActor(env), version);
+  else {
+    assert.equal(env.GITHUB_EVENT_NAME, 'workflow_dispatch');
+    assert.equal(env.GITHUB_REF, 'refs/heads/main');
+  }
 }

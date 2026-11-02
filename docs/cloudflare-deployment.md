@@ -1,17 +1,13 @@
-# Static showcase deployment
+# Showcase hosting
 
-Cloudflare Pages connects to `PedroMorenoTrujillo/neural-icons` for pull-request previews. Production is deployed to the existing `neuraliconsweb` project by `publish.yml`, after the four npm packages have been published and verified. Automatic Git production deployments must be disabled to avoid a source commit deploying an unpublished version.
+Production remains on the existing Vercel project **neural-icons**, at **https://icons.neuralui.org/**. No DNS change, proxy or origin migration is required. The coordinated release workflow promotes an already verified source commit to **deploy/icons** only after all four npm archives are public and verified. Vercel's existing Git integration builds that branch with `npm run build:vercel:published`. The host independently verifies the four immutable registry archives, records their hashes and source commit in `release.json`, and retains the existing Angular SSR function and static assets.
 
-- Build: `npm ci && npm exec -- nx run showcase:test && npm run build:cloudflare`
-- Output: `dist/cloudflare`
-- Node: `24.15.0`
-- Set `SKIP_DEPENDENCY_INSTALL=1` and `NX_DAEMON=false`.
-- Production domain: `https://icons.neuralui.org/`
+Other source branches are ignored by the production project. A main push or PR cannot publish the public showcase. The workflow waits for the public release receipt, version badge and all 510 existing canonical URLs before reporting success. The same project and domain retain their existing protection settings. No additional Vercel publishing token is stored in GitHub.
 
-The build renders all catalog, guide and icon pages in English and Spanish, and verifies their canonical URLs and content. The deployed output contains static files only, with a real 404 and no Pages Functions or Worker. Preview domains send `X-Robots-Tag: noindex, nofollow`.
+## Existing Cloudflare previews
 
-Canonical detail URLs are `/icon/{name}/` and `/es/icon/{name}/`. Guide URLs are `/guide/` and `/es/guide/`. Query parameters such as `variant` and `framework` remain supported. Cloudflare zone Redirect Rules must forward old root query URLs to these paths while preserving the query string. Restrict the rules to `icons.neuralui.org` and `/` to avoid redirect loops. Configure Spanish icon and guide rules before their English counterparts, followed by the Spanish catalog rule.
+The separate Pages projects remain previews of the source repository. Their existing Git build settings are independent of production Vercel. Preview build: `npm run build:cloudflare`; output: `dist/cloudflare`. Preview hosts carry noindex headers. They do not control icons.neuralui.org.
 
-The four npm packages and the production showcase share the Core release version. A source commit or PR does not publish npm packages or deploy production; Pedro's Core tag starts the coordinated release. Existing paths and canonical URLs remain unchanged. Do not deploy `.vercel/output` or `dist/apps/showcase/server` to Cloudflare. See [coordinated releases](coordinated-releases.md).
+Canonical paths remain /icon/{name}/, /es/icon/{name}/, /guide/ and /es/guide/. The production SSR handler preserves legacy root query links and query parameters such as variant, framework and lang.
 
-`icons.neuralui.org` belongs to the existing Vercel project `neural-icons`. Its one-time, host-restricted project rewrite is recorded in [deployment/vercel-origin-route.json](deployment/vercel-origin-route.json). It proxies paths and query parameters to `neuraliconsweb.pages.dev` without redirecting visitors or changing canonical URLs. The public host overrides the Pages preview noindex header, while the other Vercel project domains and their authentication remain unchanged. Initial activation requires the owner’s explicit routing approval. Thereafter the Core-tag workflow only needs its existing Cloudflare secret; do not publish another standalone Vercel copy.
+See [coordinated releases](coordinated-releases.md). Manual recovery of the currently published version uses publish.yml with verify_only=false and deploy_current=true on main; it verifies existing npm archives and does not republish npm.
