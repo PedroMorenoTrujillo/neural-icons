@@ -119,16 +119,23 @@ if (process.argv.includes('--live')) {
     Array.from({ length: concurrency }, async () => {
       while (index < baseline.urls.length) {
         const url = baseline.urls[index++];
-        const response = await fetch(url, {
-          redirect: 'manual',
-          signal: AbortSignal.timeout(20_000),
-        });
-        assert.equal(
-          response.status,
-          200,
-          `Published URL changed status: ${url}`,
-        );
-        page(await response.text(), url);
+        // The receipt and HTML can reach different CDN edges during cutover.
+        // Retry the original canonical URL briefly; never accept a redirect,
+        // old badge, changed canonical or access challenge as a passing page.
+        for (let attempt = 0; attempt < 12; attempt++) {
+          try {
+            const response = await fetch(url, {
+              redirect: 'manual', cache: 'no-store',
+              signal: AbortSignal.timeout(20_000),
+            });
+            assert.equal(response.status, 200, `Published URL changed status: ${url}`);
+            page(await response.text(), url);
+            break;
+          } catch (error) {
+            if (attempt === 11) throw error;
+            await delay(2500);
+          }
+        }
       }
     }),
   );
