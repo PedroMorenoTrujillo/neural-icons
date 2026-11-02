@@ -2,7 +2,7 @@
 
 Original, framework-agnostic iconography for Neural UI 2.0. Core and the Angular, React, and Vue adapters are published on npm with 250 families / 500 glyphs and share one coordinated release version. `0.0.1-next.2` remains available under `next`.
 
-Browse the [icon catalog](https://icons.neuralui.org/) and [installation and usage guide](https://icons.neuralui.org/guide/). Both are also available in Spanish from the language switcher. Cloudflare serves the production showcase as static pages; see [deployment settings](docs/cloudflare-deployment.md).
+Browse the [icon catalog](https://icons.neuralui.org/) and [installation and usage guide](https://icons.neuralui.org/guide/). Both are also available in Spanish from the language switcher. Vercel serves the production showcase from the verified `deploy/icons` branch; see [deployment settings](docs/cloudflare-deployment.md).
 
 ## Packages
 
