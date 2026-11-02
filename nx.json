@@ -60,7 +60,10 @@
   },
   "release": {
     "projects": ["core", "angular", "react", "vue"],
-    "projectsRelationship": "independent",
+    "projectsRelationship": "fixed",
+    "releaseTag": {
+      "pattern": "core@{version}"
+    },
     "version": {
       "preVersionCommand": "npx nx run-many -t build"
     }

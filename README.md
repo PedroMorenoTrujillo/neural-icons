@@ -1,6 +1,6 @@
 # Neural Icons
 
-Original, framework-agnostic iconography for Neural UI 2.0. Core and the Angular, React, and Vue adapters are published on npm as stable `1.1.0` packages with 250 families / 500 glyphs. `0.0.1-next.2` remains available under `next`.
+Original, framework-agnostic iconography for Neural UI 2.0. Core and the Angular, React, and Vue adapters are published on npm with 250 families / 500 glyphs and share one coordinated release version. `0.0.1-next.2` remains available under `next`.
 
 Browse the [icon catalog](https://icons.neuralui.org/) and [installation and usage guide](https://icons.neuralui.org/guide/). Both are also available in Spanish from the language switcher. Cloudflare serves the production showcase as static pages; see [deployment settings](docs/cloudflare-deployment.md).
 
@@ -90,8 +90,8 @@ Labels are trimmed; empty or whitespace-only labels remain decorative. SVG asset
 
 ## Publishing
 
-This repository, its packages, and the SVG catalog are licensed under [MIT](LICENSE). Core, Angular, React, and Vue `1.1.0` are published under `latest` with the 250-family catalog. The adapters declare `@neural-icons/core: ^1.1.0`. The `next` tag remains on `0.0.1-next.2`; it has not been promoted to `latest`.
+This repository, its packages, and the SVG catalog are licensed under [MIT](LICENSE). Stable Core, Angular, React, and Vue releases are published under `latest` with the 250-family catalog. Their versions and the showcase are prepared together using `npm run release:prepare -- <version>`. The `next` tag remains on `0.0.1-next.2`; it has not been promoted to `latest`.
 
-See [npm releases](docs/npm-releases.md) for the independent package tags, release checks, Core-first order, and the four required npm trusted publishers.
+See [coordinated releases](docs/coordinated-releases.md) for the single Core tag, release checks, Core-first order, four npm trusted publishers and automatic showcase deployment.
 
 See [Architecture](docs/architecture.md), [Contributing](CONTRIBUTING.md), and the recorded [architecture decisions](docs/decisions/0001-original-source-and-package-boundaries.md).

@@ -7,7 +7,7 @@ Standalone Angular 22 renderer for `@neural-icons/core` definitions.
 Install the matching stable packages in an Angular 22 application:
 
 ```sh
-npm install @neural-icons/core@1.1.0 @neural-icons/angular@1.1.0
+npm install @neural-icons/core@latest @neural-icons/angular@latest
 ```
 
 These versions use the 250-family catalog. Angular accepts compatible Core 1.x

@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import type { Locale } from './showcase-copy';
 import { showcaseCopy } from './showcase-copy';
+import { ICONS_VERSION } from './release-version';
 
 type View = 'catalog' | 'guide';
 type Theme = 'light' | 'dark';
@@ -22,6 +23,7 @@ type Theme = 'light' | 'dark';
   encapsulation: ViewEncapsulation.None,
 })
 export class ShowcaseHeader {
+  protected readonly version = ICONS_VERSION;
   protected readonly iconGlobe = iconGlobe;
   readonly copy = input.required<typeof showcaseCopy.en>();
   readonly view = input.required<View>();

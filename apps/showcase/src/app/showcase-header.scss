@@ -30,6 +30,13 @@ p {
   margin: 0;
 }
 
+.brand-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+
 .identity .brand-title {
   font-size: 1.25rem;
   font-weight: 750;
@@ -37,7 +44,20 @@ p {
   line-height: 1.1;
 }
 
-.identity p {
+.identity .release-version {
+  flex: 0 0 auto;
+  padding: 3px 6px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--muted);
+  background: var(--surface-raised);
+  font-size: 0.65rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.identity p:not(.brand-title) {
   color: var(--muted);
   font-size: 0.76rem;
   margin-top: 3px;
@@ -167,7 +187,7 @@ p {
 }
 
 @media (max-width: 420px) {
-  .identity p {
+  .identity p:not(.brand-title) {
     display: none;
   }
 }

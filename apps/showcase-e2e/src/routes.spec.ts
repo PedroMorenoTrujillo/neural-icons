@@ -1,9 +1,22 @@
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+const ICONS_VERSION: string = JSON.parse(readFileSync(resolve(__dirname, '../../../packages/core/package.json'), 'utf8')).version;
 import { expect, test } from '@playwright/test';
 
 const routes = [
   { path: '/es/icon/search/', lang: 'es', heading: 'search', title: 'search' },
-  { path: '/icon/arrow-right/', lang: 'en', heading: 'arrow-right', title: 'arrow-right' },
-  { path: '/es/guide/', lang: 'es', heading: 'Instalación y uso', title: 'Instalación y uso' },
+  {
+    path: '/icon/arrow-right/',
+    lang: 'en',
+    heading: 'arrow-right',
+    title: 'arrow-right',
+  },
+  {
+    path: '/es/guide/',
+    lang: 'es',
+    heading: 'Instalación y uso',
+    title: 'Instalación y uso',
+  },
   { path: '/', lang: 'en', heading: 'Find your icon.', title: 'Icon catalog' },
   {
     path: '/?lang=es',
@@ -144,7 +157,10 @@ test('detail close is an accessible X and the purple swatch remains visible', as
   await expect(purpleSwatch).toHaveCSS('background-color', 'rgb(139, 92, 246)');
   await purpleSwatch.click();
   await expect(purpleSwatch).toHaveAttribute('aria-pressed', 'true');
-  await expect(page.locator('.large-preview')).toHaveCSS('--preview-ink', '#8b5cf6');
+  await expect(page.locator('.large-preview')).toHaveCSS(
+    '--preview-ink',
+    '#8b5cf6',
+  );
   await close.click();
   await expect(page.locator('.detail-panel')).toHaveCount(0);
 });
@@ -177,27 +193,48 @@ test('detail guidance and code follow the selected technology', async ({
   );
 });
 
-test('guide opens in HTML and omits private repository links', async ({ page }) => {
+test('guide opens in HTML and omits private repository links', async ({
+  page,
+}) => {
   await page.goto('/?icon=wand&framework=react&lang=es');
-  await page.locator('.primary-nav').getByRole('link', { name: 'Primeros pasos' }).click();
+  await page
+    .locator('.primary-nav')
+    .getByRole('link', { name: 'Primeros pasos' })
+    .click();
   await expect(
     page.locator('.installation-tabs').getByRole('button', { name: 'HTML' }),
   ).toHaveAttribute('aria-pressed', 'true');
   await expect(page).not.toHaveURL(/framework=/);
   await expect(page.locator('.about-section a')).toHaveCount(0);
-  await expect(page.locator('.about-section')).toHaveCSS('border-top-width', '0px');
+  await expect(page.locator('.about-section')).toHaveCSS(
+    'border-top-width',
+    '0px',
+  );
 });
 
-test('catalog never retains a framework query outside guide or icon detail', async ({ page }) => {
+test('catalog never retains a framework query outside guide or icon detail', async ({
+  page,
+}) => {
   await page.goto('/?lang=es&framework=angular');
-  await expect(page.getByRole('heading', { name: 'Encuentra tu icono.' })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Encuentra tu icono.' }),
+  ).toBeVisible();
   await expect(page).not.toHaveURL(/framework=/);
 
-  await page.locator('.primary-nav').getByRole('link', { name: 'Primeros pasos' }).click();
-  await page.locator('.installation-tabs').getByRole('button', { name: 'Angular' }).click();
+  await page
+    .locator('.primary-nav')
+    .getByRole('link', { name: 'Primeros pasos' })
+    .click();
+  await page
+    .locator('.installation-tabs')
+    .getByRole('button', { name: 'Angular' })
+    .click();
   await expect(page).toHaveURL(/framework=angular/);
 
-  await page.locator('.primary-nav').getByRole('link', { name: 'Iconos' }).click();
+  await page
+    .locator('.primary-nav')
+    .getByRole('link', { name: 'Iconos' })
+    .click();
   await expect(page).not.toHaveURL(/framework=/);
   await page.goBack();
   await expect(page).toHaveURL(/framework=angular/);
@@ -207,9 +244,11 @@ test('catalog never retains a framework query outside guide or icon detail', asy
 
 test('SVG download is separated from its code block', async ({ page }) => {
   await page.goto('/?icon=wand');
-  const margin = await page.locator('.code-section a[download]').evaluate((link) =>
-    Number.parseFloat(window.getComputedStyle(link).marginTop),
-  );
+  const margin = await page
+    .locator('.code-section a[download]')
+    .evaluate((link) =>
+      Number.parseFloat(window.getComputedStyle(link).marginTop),
+    );
   expect(margin).toBeGreaterThanOrEqual(12);
 });
 
@@ -261,7 +300,9 @@ for (const width of [1280, 1024, 900, 820, 769, 720, 640, 390, 358]) {
   });
 }
 
-test('header surfaces span the viewport while controls keep the content width', async ({ page }) => {
+test('header surfaces span the viewport while controls keep the content width', async ({
+  page,
+}) => {
   await page.setViewportSize({ width: 1920, height: 900 });
   await page.goto('/?lang=es');
   const layout = await page.evaluate(() => {
@@ -286,13 +327,20 @@ test('header surfaces span the viewport while controls keep the content width', 
 });
 
 for (const width of [390, 820, 1280]) {
-  test(`guide code wraps instead of scrolling horizontally at ${width}px`, async ({ page }) => {
+  test(`guide code wraps instead of scrolling horizontally at ${width}px`, async ({
+    page,
+  }) => {
     await page.setViewportSize({ width, height: 800 });
     await page.goto('/?view=guide&lang=es');
     const overflow = await page.evaluate(() => ({
-      page: document.documentElement.scrollWidth - document.documentElement.clientWidth,
-      blocks: Array.from(document.querySelectorAll<HTMLElement>('.installation-step pre, .usage pre'))
-        .map((block) => block.scrollWidth - block.clientWidth),
+      page:
+        document.documentElement.scrollWidth -
+        document.documentElement.clientWidth,
+      blocks: Array.from(
+        document.querySelectorAll<HTMLElement>(
+          '.installation-step pre, .usage pre',
+        ),
+      ).map((block) => block.scrollWidth - block.clientWidth),
     }));
     expect(overflow.page).toBeLessThanOrEqual(1);
     expect(Math.max(...overflow.blocks)).toBeLessThanOrEqual(1);
@@ -345,9 +393,11 @@ for (const width of [390, 358]) {
       page.getByRole('heading', { name: 'Instalación y uso' }),
     ).toBeVisible();
     await expect(page.locator('.installation-status')).toContainText(
-      'Core y Vue 1.1.0 están publicados en npm con la etiqueta latest',
+      `Core y Vue ${ICONS_VERSION} están publicados en npm con la etiqueta latest`,
     );
-    await expect(page.locator('.installation-step').first().locator('code')).toContainText(
+    await expect(
+      page.locator('.installation-step').first().locator('code'),
+    ).toContainText(
       'npm install @neural-icons/core@latest @neural-icons/vue@latest',
     );
     await page.getByRole('button', { name: 'Cambiar a modo oscuro' }).click();

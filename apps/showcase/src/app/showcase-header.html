@@ -2,11 +2,14 @@
   <div class="identity">
     <img class="brand-mark" src="favicon.svg" alt="" width="38" height="38" />
     <div>
-      @if (pageHeading()) {
+      <div class="brand-heading">
+        @if (pageHeading()) {
         <h1 class="brand-title">Neural Icons</h1>
-      } @else {
+        } @else {
         <p class="brand-title">Neural Icons</p>
-      }
+        }
+        <span class="release-version">v{{ version }}</span>
+      </div>
       <p>{{ copy().brandSubtitle }}</p>
     </div>
   </div>

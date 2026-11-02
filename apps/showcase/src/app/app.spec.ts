@@ -1,3 +1,4 @@
+import { ICONS_VERSION } from './release-version';
 import { ApplicationRef } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { vi } from 'vitest';
@@ -121,7 +122,7 @@ describe('Neural Icons public showcase', () => {
       'In Angular',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'Core and Angular 1.1.0 are published on npm under the latest tag',
+      `Core and Angular ${ICONS_VERSION} are published on npm under the latest tag`,
     );
     expect(root.querySelector('.installation-step')?.textContent).toContain(
       'Install the latest Core and Angular packages',
@@ -146,7 +147,7 @@ describe('Neural Icons public showcase', () => {
       'npm install @neural-icons/core@latest @neural-icons/react@latest',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'Core and React 1.1.0 are published on npm under the latest tag',
+      `Core and React ${ICONS_VERSION} are published on npm under the latest tag`,
     );
     expect(root.querySelector('.installation-step')?.textContent).toContain(
       'Install the latest Core and React packages',
@@ -166,7 +167,7 @@ describe('Neural Icons public showcase', () => {
       'npm install @neural-icons/core@latest @neural-icons/vue@latest',
     );
     expect(root.querySelector('.installation-status')?.textContent).toContain(
-      'Core and Vue 1.1.0 are published on npm under the latest tag',
+      `Core and Vue ${ICONS_VERSION} are published on npm under the latest tag`,
     );
     expect(root.querySelector('#usage h3')?.textContent).toBe(
       'Use an icon in Vue',

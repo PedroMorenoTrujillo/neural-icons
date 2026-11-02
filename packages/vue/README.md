@@ -4,10 +4,10 @@ Vue 3.5 adapter for `@neural-icons/core`. Core owns every icon definition; this 
 
 [Browse all icons](https://icons.neuralui.org/) · [Installation and usage](https://icons.neuralui.org/guide/)
 
-Version `1.1.0` uses the 250-family Core catalog. Install the matching stable packages:
+Stable releases from `1.1.0` onward use the 250-family Core catalog. Install the matching stable packages:
 
 ```bash
-npm install @neural-icons/core@1.1.0 @neural-icons/vue@1.1.0
+npm install @neural-icons/core@latest @neural-icons/vue@latest
 ```
 
 ```vue
