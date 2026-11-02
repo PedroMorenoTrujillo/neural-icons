@@ -70,9 +70,12 @@ async function registry(artifact) {
 }
 
 async function waitForRegistry(artifact) {
-  for (let attempt = 0; attempt < 24; attempt++) {
+  // npm can accept an OIDC publication while its security processing still
+  // hides the version from consumers. A CLI success alone is not publication.
+  for (let attempt = 0; attempt < 80; attempt++) {
     if (await registry(artifact)) return;
-    if (attempt < 23) await delay(15_000);
+    if (attempt % 4 === 0) console.log(`Waiting for npm to expose ${artifact.name}@${artifact.version} (${attempt + 1}/80)`);
+    if (attempt < 79) await delay(15_000);
   }
   throw new Error(
     `${artifact.name}@${artifact.version} is not publicly available; no showcase deployment is allowed`,
@@ -168,11 +171,12 @@ if (process.argv.includes('--identity')) {
         '--registry=https://registry.npmjs.org/',
       ]);
     }
-    await waitForRegistry(artifact);
-    console.log(
-      `Verified public archive: ${artifact.name}@${artifact.version}`,
-    );
+    // Adapters depend on Core. Once Core is publicly verified, submit all
+    // adapters before waiting for their independent registry processing.
+    if (artifact.name === '@neural-icons/core') await waitForRegistry(artifact);
   }
+  await Promise.all(release.packages.slice(1).map(waitForRegistry));
+  for (const artifact of release.packages) console.log(`Verified public archive: ${artifact.name}@${artifact.version}`);
   writeFileSync(
     resolve(directory, 'registry-verified.json'),
     JSON.stringify(

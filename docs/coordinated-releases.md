@@ -27,3 +27,5 @@ The public address remains `https://icons.neuralui.org/`. Catalog, guide, icon a
 Keep Cloudflare PR previews. Disable automatic Git production builds so source commits cannot announce npm versions before publication; production is controlled by this release workflow.
 
 Use `verify_only` dispatch to check a branch without publication or deployment. To recover a partial release, dispatch `publish.yml` on the same Core tag with `verify_only=false`. Immutable digests protect completed publications.
+
+The npm CLI can accept an OIDC publication before registry security processing makes it public. The release waits up to 20 minutes for the exact Core archive, then submits the three adapters and verifies their propagation concurrently. Nothing deploys until all four public archives match the verified bytes. A retry reuses immutable archives and checks already-published versions instead of overwriting them.

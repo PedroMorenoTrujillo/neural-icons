@@ -65,7 +65,7 @@ jobs:
     if: github.repository == 'PedroMorenoTrujillo/neural-icons' && github.actor == 'PedroMorenoTrujillo' && github.triggering_actor == 'PedroMorenoTrujillo' && startsWith(github.ref, 'refs/tags/core@') && inputs.verify_only != true
     needs: verify
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 55
     permissions:
       contents: read
       id-token: write
