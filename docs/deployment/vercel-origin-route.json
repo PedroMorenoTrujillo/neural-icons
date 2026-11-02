@@ -1,0 +1,20 @@
+{
+  "projectId": "prj_YRhAzLJ7xoNXOPS6KE5GVj2V5ZpE",
+  "teamId": "team_5yMmfudZR826vI2MXwbYfXUY",
+  "requestBody": {
+    "position": { "placement": "start" },
+    "route": {
+      "name": "Serve verified Icons releases from Cloudflare",
+      "description": "Keep existing Icons URLs and queries; serve the Core-tag-verified Pages production artifact.",
+      "enabled": true,
+      "srcSyntax": "regex",
+      "route": {
+        "src": "^/(.*)$",
+        "dest": "https://neuraliconsweb.pages.dev/$1",
+        "has": [{ "type": "host", "value": "icons.neuralui.org" }],
+        "headers": { "X-Robots-Tag": "index, follow" },
+        "respectOriginCacheControl": true
+      }
+    }
+  }
+}
