@@ -359,7 +359,8 @@ test('robots, sitemap and SVG download are served by the production app', async 
   expect(sitemapXml).toContain('/icon/search/');
   expect(sitemapXml).toContain('/icon/shopping-cart/');
   expect(sitemapXml).toContain('/icon/hash/');
-  expect(sitemapXml.match(/<url>/g)).toHaveLength(510);
+  expect(sitemapXml).toContain('/icon/chart-candlestick/');
+  expect(sitemapXml.match(/<url>/g)).toHaveLength(546);
   for (const [path, title] of [
     ['/legal-notice/', 'Legal notice'],
     ['/privacy/', 'Privacy policy'],

@@ -3,15 +3,15 @@ import { neuralIcons } from '../icons/index.js';
 import { defineIcon, NEURAL_ICON_VIEW_BOX } from './icon-definition.js';
 
 describe('Neural icon definitions', () => {
-  it('ships 250 complete outline/filled families', () => {
-    expect(neuralIcons).toHaveLength(500);
-    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(500);
+  it('ships 268 complete outline/filled families', () => {
+    expect(neuralIcons).toHaveLength(536);
+    expect(new Set(neuralIcons.map(({ name }) => name)).size).toBe(536);
     const outlines = neuralIcons.filter(({ variant }) => variant === 'outline');
     const filled = neuralIcons.filter(({ variant }) => variant === 'filled');
-    expect(outlines).toHaveLength(250);
-    expect(filled).toHaveLength(250);
+    expect(outlines).toHaveLength(268);
+    expect(filled).toHaveLength(268);
     const families = new Set(outlines.map(({ family }) => family));
-    expect(families.size).toBe(250);
+    expect(families.size).toBe(268);
     expect(filled.every(({ family }) => families.has(family))).toBe(true);
   });
 

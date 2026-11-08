@@ -138,8 +138,8 @@ describe('NeuIcon', () => {
     });
   });
 
-  it('renders all 500 Core definitions without changing their paths', () => {
-    expect(neuralIcons).toHaveLength(500);
+  it('renders all 536 Core definitions without changing their paths', () => {
+    expect(neuralIcons).toHaveLength(536);
     for (const icon of neuralIcons) {
       const definition: NeuralIconDefinition = icon;
       const node = svg(renderToStaticMarkup(<NeuIcon icon={icon} />));

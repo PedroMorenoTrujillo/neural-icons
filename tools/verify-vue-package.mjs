@@ -221,7 +221,7 @@ try {
     else
       assert.equal(
         retained.length,
-        500,
+        536,
         'Full catalog must be explicit and complete',
       );
     results.push({

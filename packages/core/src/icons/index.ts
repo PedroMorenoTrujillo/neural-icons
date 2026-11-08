@@ -498,6 +498,42 @@ import { iconPresentation } from './presentation.js';
 import { iconPresentationFilled } from './presentation-filled.js';
 import { iconKanban } from './kanban.js';
 import { iconKanbanFilled } from './kanban-filled.js';
+import { iconChartBar } from './chart-bar.js';
+import { iconChartBarFilled } from './chart-bar-filled.js';
+import { iconChartArea } from './chart-area.js';
+import { iconChartAreaFilled } from './chart-area-filled.js';
+import { iconChartPie } from './chart-pie.js';
+import { iconChartPieFilled } from './chart-pie-filled.js';
+import { iconChartDonut } from './chart-donut.js';
+import { iconChartDonutFilled } from './chart-donut-filled.js';
+import { iconChartScatter } from './chart-scatter.js';
+import { iconChartScatterFilled } from './chart-scatter-filled.js';
+import { iconChartBubble } from './chart-bubble.js';
+import { iconChartBubbleFilled } from './chart-bubble-filled.js';
+import { iconChartHistogram } from './chart-histogram.js';
+import { iconChartHistogramFilled } from './chart-histogram-filled.js';
+import { iconChartTreemap } from './chart-treemap.js';
+import { iconChartTreemapFilled } from './chart-treemap-filled.js';
+import { iconChartGauge } from './chart-gauge.js';
+import { iconChartGaugeFilled } from './chart-gauge-filled.js';
+import { iconChartVenn } from './chart-venn.js';
+import { iconChartVennFilled } from './chart-venn-filled.js';
+import { iconChartNetwork } from './chart-network.js';
+import { iconChartNetworkFilled } from './chart-network-filled.js';
+import { iconChartHeatmap } from './chart-heatmap.js';
+import { iconChartHeatmapFilled } from './chart-heatmap-filled.js';
+import { iconChartWaterfall } from './chart-waterfall.js';
+import { iconChartWaterfallFilled } from './chart-waterfall-filled.js';
+import { iconChartBoxPlot } from './chart-box-plot.js';
+import { iconChartBoxPlotFilled } from './chart-box-plot-filled.js';
+import { iconChartRadar } from './chart-radar.js';
+import { iconChartRadarFilled } from './chart-radar-filled.js';
+import { iconChartSankey } from './chart-sankey.js';
+import { iconChartSankeyFilled } from './chart-sankey-filled.js';
+import { iconChartTimeline } from './chart-timeline.js';
+import { iconChartTimelineFilled } from './chart-timeline-filled.js';
+import { iconChartCandlestick } from './chart-candlestick.js';
+import { iconChartCandlestickFilled } from './chart-candlestick-filled.js';
 import type { NeuralIconDefinition } from '../lib/icon-definition.js';
 
 export { iconArrowLeft } from './arrow-left.js';
@@ -1000,6 +1036,42 @@ export { iconPresentation } from './presentation.js';
 export { iconPresentationFilled } from './presentation-filled.js';
 export { iconKanban } from './kanban.js';
 export { iconKanbanFilled } from './kanban-filled.js';
+export { iconChartBar } from './chart-bar.js';
+export { iconChartBarFilled } from './chart-bar-filled.js';
+export { iconChartArea } from './chart-area.js';
+export { iconChartAreaFilled } from './chart-area-filled.js';
+export { iconChartPie } from './chart-pie.js';
+export { iconChartPieFilled } from './chart-pie-filled.js';
+export { iconChartDonut } from './chart-donut.js';
+export { iconChartDonutFilled } from './chart-donut-filled.js';
+export { iconChartScatter } from './chart-scatter.js';
+export { iconChartScatterFilled } from './chart-scatter-filled.js';
+export { iconChartBubble } from './chart-bubble.js';
+export { iconChartBubbleFilled } from './chart-bubble-filled.js';
+export { iconChartHistogram } from './chart-histogram.js';
+export { iconChartHistogramFilled } from './chart-histogram-filled.js';
+export { iconChartTreemap } from './chart-treemap.js';
+export { iconChartTreemapFilled } from './chart-treemap-filled.js';
+export { iconChartGauge } from './chart-gauge.js';
+export { iconChartGaugeFilled } from './chart-gauge-filled.js';
+export { iconChartVenn } from './chart-venn.js';
+export { iconChartVennFilled } from './chart-venn-filled.js';
+export { iconChartNetwork } from './chart-network.js';
+export { iconChartNetworkFilled } from './chart-network-filled.js';
+export { iconChartHeatmap } from './chart-heatmap.js';
+export { iconChartHeatmapFilled } from './chart-heatmap-filled.js';
+export { iconChartWaterfall } from './chart-waterfall.js';
+export { iconChartWaterfallFilled } from './chart-waterfall-filled.js';
+export { iconChartBoxPlot } from './chart-box-plot.js';
+export { iconChartBoxPlotFilled } from './chart-box-plot-filled.js';
+export { iconChartRadar } from './chart-radar.js';
+export { iconChartRadarFilled } from './chart-radar-filled.js';
+export { iconChartSankey } from './chart-sankey.js';
+export { iconChartSankeyFilled } from './chart-sankey-filled.js';
+export { iconChartTimeline } from './chart-timeline.js';
+export { iconChartTimelineFilled } from './chart-timeline-filled.js';
+export { iconChartCandlestick } from './chart-candlestick.js';
+export { iconChartCandlestickFilled } from './chart-candlestick-filled.js';
 
 export const neuralIcons = Object.freeze([
   iconArrowLeft,
@@ -1502,6 +1574,42 @@ export const neuralIcons = Object.freeze([
   iconPresentationFilled,
   iconKanban,
   iconKanbanFilled,
+  iconChartBar,
+  iconChartBarFilled,
+  iconChartArea,
+  iconChartAreaFilled,
+  iconChartPie,
+  iconChartPieFilled,
+  iconChartDonut,
+  iconChartDonutFilled,
+  iconChartScatter,
+  iconChartScatterFilled,
+  iconChartBubble,
+  iconChartBubbleFilled,
+  iconChartHistogram,
+  iconChartHistogramFilled,
+  iconChartTreemap,
+  iconChartTreemapFilled,
+  iconChartGauge,
+  iconChartGaugeFilled,
+  iconChartVenn,
+  iconChartVennFilled,
+  iconChartNetwork,
+  iconChartNetworkFilled,
+  iconChartHeatmap,
+  iconChartHeatmapFilled,
+  iconChartWaterfall,
+  iconChartWaterfallFilled,
+  iconChartBoxPlot,
+  iconChartBoxPlotFilled,
+  iconChartRadar,
+  iconChartRadarFilled,
+  iconChartSankey,
+  iconChartSankeyFilled,
+  iconChartTimeline,
+  iconChartTimelineFilled,
+  iconChartCandlestick,
+  iconChartCandlestickFilled,
 ]) satisfies readonly NeuralIconDefinition[];
 
 export type { NeuralIconName, NeuralIconFamily } from '../icon-names.js';
