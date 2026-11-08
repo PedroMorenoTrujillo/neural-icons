@@ -4,7 +4,7 @@ React 19 adapter for `@neural-icons/core`. Core owns every icon definition; this
 
 [Browse all icons](https://icons.neuralui.org/) · [Installation and usage](https://icons.neuralui.org/guide/)
 
-Stable releases from `1.1.0` onward use the 250-family Core catalog. Install the matching stable packages:
+Version `1.2.0` uses the matching 268-family Core catalog. Install the matching stable packages:
 
 ```bash
 npm install @neural-icons/core@latest @neural-icons/react@latest
