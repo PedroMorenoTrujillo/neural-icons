@@ -482,8 +482,8 @@ export class App {
           ? 'Instala Neural Icons y aprende a usar sus SVG en HTML, Angular, React y Vue sin Neural UI.'
           : 'Install Neural Icons and use its SVGs in HTML, Angular, React and Vue without Neural UI.'
         : locale === 'es'
-          ? 'Explora 250 familias de Neural Icons con variantes de contorno y relleno para HTML, Angular, React y Vue.'
-          : 'Explore 250 Neural Icons families with outline and filled variants for HTML, Angular, React and Vue.';
+          ? `Explora ${families.length} familias de Neural Icons con variantes de contorno y relleno para HTML, Angular, React y Vue.`
+          : `Explore ${families.length} Neural Icons families with outline and filled variants for HTML, Angular, React and Vue.`;
     this.document.documentElement.lang = locale;
     this.title.setTitle(title);
     this.meta.updateTag({ name: 'description', content: description });

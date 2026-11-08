@@ -8,11 +8,11 @@ const specs = JSON.parse(
 ) as Array<{ name: string; variant?: 'filled' }>;
 const additions = specs.slice(394);
 
-test('all 106 new SVG assets parse, render and stay within the 24px canvas', async ({
+test('SVG assets added since NI-02 parse, render and stay within the 24px canvas', async ({
   page,
   request,
 }) => {
-  expect(additions).toHaveLength(106);
+  expect(additions).toHaveLength(142);
   await page.goto('/');
   const assets = await Promise.all(
     additions.map(async ({ name }) => {

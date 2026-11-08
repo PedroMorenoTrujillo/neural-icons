@@ -99,7 +99,7 @@ for (const name of packages) {
   );
 
   if (name === 'core') {
-    assert.equal(files.filter((file) => file.endsWith('.svg')).length, 500);
+    assert.equal(files.filter((file) => file.endsWith('.svg')).length, 536);
     for (const file of [
       'src/index.js',
       'src/index.d.ts',

@@ -1,4 +1,5 @@
 import { ICONS_VERSION } from './release-version';
+import { families } from './showcase-data';
 export type Locale = 'en' | 'es';
 
 const en = {
@@ -14,7 +15,7 @@ const en = {
   language: 'Language',
   heroTitle: 'Find your icon.',
   heroDescription:
-    'Explore 250 icon families. Open one to compare outline and filled, inspect the details, and copy the code for your project.',
+    `Explore ${families.length} icon families. Open one to compare outline and filled, inspect the details, and copy the code for your project.`,
   exploreIcons: 'Explore icons',
   searchIcons: 'Search icons',
   searchPlaceholder: 'Name, keyword, or category',
@@ -32,7 +33,7 @@ const en = {
     html: {
       lead: 'Use the SVG files directly in plain HTML. No framework, JavaScript, or Neural UI is required.',
       status:
-        'All 250 icon families are available here. Download the SVG you need; plain HTML does not require an npm package.',
+        `All ${families.length} icon families are available here. Download the SVG you need; plain HTML does not require an npm package.`,
       installTitle: 'Prepare the SVG file',
       installDescription:
         'No package is needed. Download search.svg and place it at /icons/search.svg in your site’s public files, or update the example path.',
@@ -52,7 +53,7 @@ const en = {
     },
     angular: {
       lead: 'In Angular, Core supplies icon definitions and the Angular adapter renders them. Neural UI is not required.',
-      status: `Core and Angular ${ICONS_VERSION} are published on npm under the latest tag with all 250 families.`,
+      status: `Core and Angular ${ICONS_VERSION} are published on npm under the latest tag with ${families.length} families.`,
       installTitle: 'Install for Angular',
       installDescription:
         'Install the latest Core and Angular packages in your Angular 22 application. Neural UI is not required.',
@@ -71,7 +72,7 @@ const en = {
     },
     react: {
       lead: 'In React, pass an individual Core icon definition to the NeuIcon component. Neural UI is not required.',
-      status: `Core and React ${ICONS_VERSION} are published on npm under the latest tag with all 250 families.`,
+      status: `Core and React ${ICONS_VERSION} are published on npm under the latest tag with ${families.length} families.`,
       installTitle: 'Install for React',
       installDescription:
         'Install the latest Core and React packages in your React 19 application. Neural UI is not required.',
@@ -90,7 +91,7 @@ const en = {
     },
     vue: {
       lead: 'In Vue, pass an individual Core icon definition to the NeuIcon component. Neural UI is not required.',
-      status: `Core and Vue ${ICONS_VERSION} are published on npm under the latest tag with all 250 families.`,
+      status: `Core and Vue ${ICONS_VERSION} are published on npm under the latest tag with ${families.length} families.`,
       installTitle: 'Install for Vue',
       installDescription:
         'Install the latest Core and Vue packages in your Vue 3.5 application. Neural UI is not required.',
@@ -119,8 +120,8 @@ const en = {
   guideCopy: 'Copy code',
   aboutTitle: 'About Neural Icons',
   aboutDescription:
-    '250 icon families, outline and filled. MIT licensed for public and commercial use. Granular imports keep ordinary applications free of the full catalog; Neural UI is not required.',
-  packageStatus: `Core, Angular, React, and Vue ${ICONS_VERSION} are published on npm under the latest tag with all 250 families.`,
+    `${families.length} icon families, outline and filled. MIT licensed for public and commercial use. Granular imports keep ordinary applications free of the full catalog; Neural UI is not required.`,
+  packageStatus: `Core, Angular, React, and Vue ${ICONS_VERSION} are published on npm under the latest tag with ${families.length} families.`,
   colorTitle: 'Use any color.',
   familyDetail: 'Family detail',
   close: 'Close',
@@ -176,7 +177,7 @@ const es: typeof en = {
   language: 'Idioma',
   heroTitle: 'Encuentra tu icono.',
   heroDescription:
-    'Explora 250 familias de iconos. Abre una para comparar contorno y relleno, ver los detalles y copiar el código para tu proyecto.',
+    `Explora ${families.length} familias de iconos. Abre una para comparar contorno y relleno, ver los detalles y copiar el código para tu proyecto.`,
   exploreIcons: 'Explorar iconos',
   searchIcons: 'Buscar iconos',
   searchPlaceholder: 'Nombre, palabra clave o categoría',
@@ -194,7 +195,7 @@ const es: typeof en = {
     html: {
       lead: 'Usa los SVG directamente en HTML puro. No necesitas framework, JavaScript ni Neural UI.',
       status:
-        'Las 250 familias de iconos están disponibles aquí. Descarga el SVG que necesites; HTML puro no requiere instalar ningún paquete npm.',
+        `Las ${families.length} familias de iconos están disponibles aquí. Descarga el SVG que necesites; HTML puro no requiere instalar ningún paquete npm.`,
       installTitle: 'Preparar el archivo SVG',
       installDescription:
         'No necesitas instalar un paquete. Descarga search.svg y guárdalo como /icons/search.svg entre los archivos públicos de tu web, o adapta la ruta del ejemplo.',
@@ -214,7 +215,7 @@ const es: typeof en = {
     },
     angular: {
       lead: 'En Angular, Core aporta las definiciones de los iconos y el adaptador Angular las representa. No necesitas Neural UI.',
-      status: `Core y Angular ${ICONS_VERSION} están publicados en npm con la etiqueta latest y las 250 familias.`,
+      status: `Core y Angular ${ICONS_VERSION} están publicados en npm con la etiqueta latest y ${families.length} familias.`,
       installTitle: 'Instalar en Angular',
       installDescription:
         'Instala los paquetes más recientes de Core y Angular en tu aplicación Angular 22. No necesitas Neural UI.',
@@ -233,7 +234,7 @@ const es: typeof en = {
     },
     react: {
       lead: 'En React, pasa una definición individual de Core al componente NeuIcon. No necesitas Neural UI.',
-      status: `Core y React ${ICONS_VERSION} están publicados en npm con la etiqueta latest y las 250 familias.`,
+      status: `Core y React ${ICONS_VERSION} están publicados en npm con la etiqueta latest y ${families.length} familias.`,
       installTitle: 'Instalar en React',
       installDescription:
         'Instala los paquetes más recientes de Core y React en tu aplicación React 19. No necesitas Neural UI.',
@@ -252,7 +253,7 @@ const es: typeof en = {
     },
     vue: {
       lead: 'En Vue, pasa una definición individual de Core al componente NeuIcon. No necesitas Neural UI.',
-      status: `Core y Vue ${ICONS_VERSION} están publicados en npm con la etiqueta latest y las 250 familias.`,
+      status: `Core y Vue ${ICONS_VERSION} están publicados en npm con la etiqueta latest y ${families.length} familias.`,
       installTitle: 'Instalar en Vue',
       installDescription:
         'Instala los paquetes más recientes de Core y Vue en tu aplicación Vue 3.5. No necesitas Neural UI.',
@@ -281,8 +282,8 @@ const es: typeof en = {
   guideCopy: 'Copiar código',
   aboutTitle: 'Acerca de Neural Icons',
   aboutDescription:
-    '250 familias de iconos, contorno y relleno. Licencia MIT para uso público y comercial. Las importaciones individuales evitan cargar el catálogo completo; no necesitas Neural UI.',
-  packageStatus: `Core, Angular, React y Vue ${ICONS_VERSION} están publicados en npm con la etiqueta latest y las 250 familias.`,
+    `${families.length} familias de iconos, contorno y relleno. Licencia MIT para uso público y comercial. Las importaciones individuales evitan cargar el catálogo completo; no necesitas Neural UI.`,
+  packageStatus: `Core, Angular, React y Vue ${ICONS_VERSION} están publicados en npm con la etiqueta latest y ${families.length} familias.`,
   colorTitle: 'Usa cualquier color.',
   familyDetail: 'Detalle de la familia',
   close: 'Cerrar',

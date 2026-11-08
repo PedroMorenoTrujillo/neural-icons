@@ -10,8 +10,7 @@ Install the matching stable packages in an Angular 22 application:
 npm install @neural-icons/core@latest @neural-icons/angular@latest
 ```
 
-These versions use the 250-family catalog. Angular accepts compatible Core 1.x
-updates, including future icon additions, without an adapter release.
+Version `1.2.0` uses the matching 268-family Core catalog.
 
 Register only the icons your application uses. String names resolve synchronously
 through Angular dependency injection, without bundling the full catalog:

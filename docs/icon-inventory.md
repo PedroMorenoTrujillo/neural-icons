@@ -504,5 +504,41 @@ Generated from `packages/core/icons/icons.json`. Do not edit by hand.
 | `presentation-filled`       | system        | slides, deck, teaching, filled                                 |
 | `kanban`                    | system        | board, workflow, tasks                                         |
 | `kanban-filled`             | system        | board, workflow, tasks, filled                                 |
+| `chart-bar`                 | system        | horizontal bar chart, bar graph, comparison                    |
+| `chart-bar-filled`          | system        | horizontal bar chart, bar graph, comparison, filled            |
+| `chart-area`                | system        | area chart, time series, filled graph                          |
+| `chart-area-filled`         | system        | area chart, time series, filled graph, filled                  |
+| `chart-pie`                 | system        | pie chart, proportions, percentage                             |
+| `chart-pie-filled`          | system        | pie chart, proportions, percentage, filled                     |
+| `chart-donut`               | system        | donut chart, doughnut chart, ring chart                        |
+| `chart-donut-filled`        | system        | donut chart, doughnut chart, ring chart, filled                |
+| `chart-scatter`             | system        | scatter plot, correlation, data points                         |
+| `chart-scatter-filled`      | system        | scatter plot, correlation, data points, filled                 |
+| `chart-bubble`              | system        | bubble chart, data points, size comparison                     |
+| `chart-bubble-filled`       | system        | bubble chart, data points, size comparison, filled             |
+| `chart-histogram`           | system        | histogram, frequency, distribution bins                        |
+| `chart-histogram-filled`    | system        | histogram, frequency, distribution bins, filled                |
+| `chart-treemap`             | system        | treemap, hierarchy, nested rectangles                          |
+| `chart-treemap-filled`      | system        | treemap, hierarchy, nested rectangles, filled                  |
+| `chart-gauge`               | system        | gauge, speedometer, meter                                      |
+| `chart-gauge-filled`        | system        | gauge, speedometer, meter, filled                              |
+| `chart-venn`                | system        | venn diagram, sets, intersection                               |
+| `chart-venn-filled`         | system        | venn diagram, sets, intersection, filled                       |
+| `chart-network`             | system        | network graph, nodes, connections                              |
+| `chart-network-filled`      | system        | network graph, nodes, connections, filled                      |
+| `chart-heatmap`             | system        | heatmap, intensity grid, heat matrix                           |
+| `chart-heatmap-filled`      | system        | heatmap, intensity grid, heat matrix, filled                   |
+| `chart-waterfall`           | system        | waterfall chart, running total, variance                       |
+| `chart-waterfall-filled`    | system        | waterfall chart, running total, variance, filled               |
+| `chart-box-plot`            | system        | box plot, quartiles, box and whisker                           |
+| `chart-box-plot-filled`     | system        | box plot, quartiles, box and whisker, filled                   |
+| `chart-radar`               | system        | radar chart, spider chart, multivariate                        |
+| `chart-radar-filled`        | system        | radar chart, spider chart, multivariate, filled                |
+| `chart-sankey`              | system        | sankey diagram, flow diagram, flow bands                       |
+| `chart-sankey-filled`       | system        | sankey diagram, flow diagram, flow bands, filled               |
+| `chart-timeline`            | system        | timeline chart, milestones, chronology                         |
+| `chart-timeline-filled`     | system        | timeline chart, milestones, chronology, filled                 |
+| `chart-candlestick`         | system        | candlestick chart, ohlc, stock prices                          |
+| `chart-candlestick-filled`  | system        | candlestick chart, ohlc, stock prices, filled                  |
 
-Total: **500 icons**.
+Total: **536 icons**.

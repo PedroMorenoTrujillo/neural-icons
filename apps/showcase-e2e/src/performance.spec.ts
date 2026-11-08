@@ -4,7 +4,7 @@ test('records catalog load, grid and search costs without a synthetic benchmark 
   page,
 }) => {
   await page.goto('/');
-  await expect(page.locator('.family-tile')).toHaveCount(250);
+  await expect(page.locator('.family-tile')).toHaveCount(268);
   const metrics = await page.evaluate(async () => {
     const navigation = performance.getEntriesByType('navigation')[0] as
       PerformanceNavigationTiming | undefined;
@@ -33,8 +33,8 @@ test('records catalog load, grid and search costs without a synthetic benchmark 
     };
   });
 
-  expect(metrics.initialGridFamilies).toBe(250);
-  expect(metrics.initialGridGlyphs).toBe(250);
+  expect(metrics.initialGridFamilies).toBe(268);
+  expect(metrics.initialGridGlyphs).toBe(268);
   expect(metrics.filteredGridFamilies).toBe(1);
   console.log(`NI-05 exploratory Chromium timings: ${JSON.stringify(metrics)}`);
 });

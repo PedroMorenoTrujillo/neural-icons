@@ -57,7 +57,7 @@ const cases = {
       console.log(NeuralIcon, provideNeuralIcons(${mixedNames.map((name) => `icon${name}`).join(', ')}));`,
 };
 
-const expectedModules = { A: 1, B: 1, C: 2, D: 2, E: 0, F: 500, G: 1, H: 10 };
+const expectedModules = { A: 1, B: 1, C: 2, D: 2, E: 0, F: 536, G: 1, H: 10 };
 const results = [];
 for (const [name, contents] of Object.entries(cases)) {
   const result = await build({

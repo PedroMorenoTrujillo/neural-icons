@@ -27,9 +27,9 @@ const allowedCategories = new Set([
 ]);
 const pathCharacters = /^[0-9a-zA-Z.,+\-\s]+$/;
 
-if (specs.length < 30 || specs.length > 500) {
+if (specs.length < 30 || specs.length > 536) {
   errors.push(
-    `Expected a focused catalog of 30–500 icons, found ${specs.length}.`,
+    `Expected a focused catalog of 30–536 icons, found ${specs.length}.`,
   );
 }
 
