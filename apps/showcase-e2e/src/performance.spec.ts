@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test('records catalog load, grid and search costs without a synthetic benchmark claim', async ({
   page,
 }) => {
-  await page.goto('/');
+  await page.goto('/icons/');
   await expect(page.locator('.family-tile')).toHaveCount(268);
   const metrics = await page.evaluate(async () => {
     const navigation = performance.getEntriesByType('navigation')[0] as

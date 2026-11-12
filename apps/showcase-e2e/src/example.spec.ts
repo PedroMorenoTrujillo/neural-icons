@@ -4,7 +4,7 @@ test('SSR renders the full family catalog and hydration preserves SVG nodes', as
   page,
   request,
 }) => {
-  const response = await request.get('/');
+  const response = await request.get('/icons/');
   const html = await response.text();
   expect(response.ok()).toBe(true);
   expect(html).toContain('ngh=');
@@ -29,7 +29,7 @@ test('SSR renders the full family catalog and hydration preserves SVG nodes', as
     await route.continue();
   });
   try {
-    await page.goto('/', { waitUntil: 'commit' });
+    await page.goto('/icons/', { waitUntil: 'commit' });
     await expect(page.locator('.family-tile')).toHaveCount(268);
     await page.evaluate(() => {
       Object.assign(window, {
@@ -62,7 +62,7 @@ test('SSR renders the full family catalog and hydration preserves SVG nodes', as
 test('search, approved aliases, category, empty state and variant preview', async ({
   page,
 }) => {
-  await page.goto('/');
+  await page.goto('/icons/');
   const search = page.getByRole('searchbox', { name: 'Search icons' });
   await expect(page.locator('.family-tile')).toHaveCount(268);
   await search.fill('attach');
@@ -168,7 +168,7 @@ test('mobile and dark theme retain a usable catalog and detail', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto('/');
+  await page.goto('/icons/');
   await page.getByRole('button', { name: 'Switch to dark mode' }).click();
   await expect(page.locator('app-root')).toHaveClass(/theme-dark/);
   await page.getByRole('link', { name: 'Inspect paperclip' }).click();
@@ -192,7 +192,7 @@ test('mobile and dark theme retain a usable catalog and detail', async ({
 test('certified families retain their distinct canonical SVG paths', async ({
   page,
 }) => {
-  await page.goto('/');
+  await page.goto('/icons/');
   for (const name of [
     'file',
     'file-text',

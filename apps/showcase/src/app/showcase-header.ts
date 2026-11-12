@@ -10,13 +10,13 @@ import {
 import type { Locale } from './showcase-copy';
 import { showcaseCopy } from './showcase-copy';
 import { ICONS_VERSION } from './release-version';
+import { BrandIcon } from './brand-icon';
 
-type View = 'catalog' | 'guide';
-type Theme = 'light' | 'dark';
+import type { Theme, View } from './showcase-model';
 
 @Component({
   selector: 'app-showcase-header',
-  imports: [NeuralIcon],
+  imports: [NeuralIcon, BrandIcon],
   templateUrl: './showcase-header.html',
   styleUrl: './showcase-header.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -26,11 +26,12 @@ export class ShowcaseHeader {
   protected readonly version = ICONS_VERSION;
   protected readonly iconGlobe = iconGlobe;
   readonly copy = input.required<typeof showcaseCopy.en>();
-  readonly view = input.required<View>();
+  readonly view = input.required<View | null>();
   readonly locale = input.required<Locale>();
   readonly theme = input.required<Theme>();
   readonly isModalOpen = input.required<boolean>();
   readonly pageHeading = input(true);
+  readonly homeHref = input.required<string>();
   readonly catalogHref = input.required<string>();
   readonly guideHref = input.required<string>();
   readonly navigate = output<{ event: MouseEvent; view: View }>();

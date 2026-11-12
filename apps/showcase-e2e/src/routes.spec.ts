@@ -17,9 +17,11 @@ const routes = [
     heading: 'Instalación y uso',
     title: 'Instalación y uso',
   },
-  { path: '/', lang: 'en', heading: 'Find your icon.', title: 'Icon catalog' },
+  { path: '/', lang: 'en', heading: 'SVG icons for the web', title: 'SVG icons for the web' },
+  { path: '/es/', lang: 'es', heading: 'Iconos SVG para la web', title: 'Iconos SVG para web' },
+  { path: '/icons/', lang: 'en', heading: 'Find your icon.', title: 'Icon catalog' },
   {
-    path: '/?lang=es',
+    path: '/es/icons/',
     lang: 'es',
     heading: 'Encuentra tu icono.',
     title: 'Catálogo de iconos',
@@ -82,6 +84,41 @@ test('guide SSR does not render the hidden catalog grid', async ({
   expect(html).not.toContain('class="family-tile"');
 });
 
+test('home and catalog have distinct canonical and language URLs before hydration', async ({
+  request,
+}) => {
+  const origin = 'https://icons.neuralui.org';
+  for (const path of ['/', '/icons/']) {
+    const english = await (await request.get(path)).text();
+    const spanish = await (await request.get(`/es${path}`)).text();
+    for (const [html, canonical] of [[english, path], [spanish, `/es${path}`]]) {
+      expect(html).toContain(`rel="canonical" href="${origin}${canonical}"`);
+      expect(html).toContain(`hreflang="en" href="${origin}${path}"`);
+      expect(html).toContain(`hreflang="es" href="${origin}/es${path}"`);
+      expect(html).toContain(`hreflang="x-default" href="${origin}${path}"`);
+    }
+    if (path === '/') {
+      expect(spanish).toContain('El ecosistema Neural');
+      expect(spanish).toContain('href="/es/icons/"');
+      expect(spanish).not.toContain('class="family-tile"');
+    } else {
+      expect(spanish).toContain('class="family-tile"');
+    }
+  }
+});
+
+test('the localized home preview opens the chosen icon variant', async ({ page }) => {
+  await page.goto('/es/');
+  await page.getByRole('button', { name: 'Relleno', exact: true }).click();
+  await expect(page.getByRole('link', { name: 'search', exact: true }))
+    .toHaveAttribute('href', '/es/icon/search/?variant=filled');
+  await page.getByRole('link', { name: 'search', exact: true }).click();
+  await expect(page.locator('.large-preview neural-icon'))
+    .toHaveAttribute('data-neural-icon', 'search-filled');
+  await page.getByRole('button', { name: 'Cerrar', exact: true }).click();
+  await expect(page).toHaveURL(/\/es\/icons\/$/);
+});
+
 test('new families have indexable SSR metadata and real catalog links', async ({
   request,
 }) => {
@@ -93,7 +130,7 @@ test('new families have indexable SSR metadata and real catalog links', async ({
   const canonical = html.match(/<link[^>]*rel="canonical"[^>]*>/)?.[0] ?? '';
   expect(canonical).toContain('https://');
   expect(canonical).toContain('/es/icon/shopping-cart/');
-  const catalog = await request.get('/?lang=es');
+  const catalog = await request.get('/es/icons/');
   expect(await catalog.text()).toContain('href="/es/icon/shopping-cart/"');
 });
 
@@ -197,9 +234,12 @@ test('guide opens in HTML and omits private repository links', async ({
   page,
 }) => {
   await page.goto('/?icon=wand&framework=react&lang=es');
+  if (await page.locator('.detail-scrim').isVisible()) {
+    await page.getByRole('button', { name: 'Cerrar', exact: true }).click();
+  }
   await page
     .locator('.primary-nav')
-    .getByRole('link', { name: 'Primeros pasos' })
+    .getByRole('link', { name: 'Instalación y uso' })
     .click();
   await expect(
     page.locator('.installation-tabs').getByRole('button', { name: 'HTML' }),
@@ -215,7 +255,7 @@ test('guide opens in HTML and omits private repository links', async ({
 test('catalog never retains a framework query outside guide or icon detail', async ({
   page,
 }) => {
-  await page.goto('/?lang=es&framework=angular');
+  await page.goto('/es/icons/?framework=angular');
   await expect(
     page.getByRole('heading', { name: 'Encuentra tu icono.' }),
   ).toBeVisible();
@@ -223,7 +263,7 @@ test('catalog never retains a framework query outside guide or icon detail', asy
 
   await page
     .locator('.primary-nav')
-    .getByRole('link', { name: 'Primeros pasos' })
+    .getByRole('link', { name: 'Instalación y uso' })
     .click();
   await page
     .locator('.installation-tabs')
@@ -360,7 +400,9 @@ test('robots, sitemap and SVG download are served by the production app', async 
   expect(sitemapXml).toContain('/icon/shopping-cart/');
   expect(sitemapXml).toContain('/icon/hash/');
   expect(sitemapXml).toContain('/icon/chart-candlestick/');
-  expect(sitemapXml.match(/<url>/g)).toHaveLength(546);
+  expect(sitemapXml).toContain('/icons/</loc>');
+  expect(sitemapXml).toContain('/es/icons/</loc>');
+  expect(sitemapXml.match(/<url>/g)).toHaveLength(548);
   for (const [path, title] of [
     ['/legal-notice/', 'Legal notice'],
     ['/privacy/', 'Privacy policy'],

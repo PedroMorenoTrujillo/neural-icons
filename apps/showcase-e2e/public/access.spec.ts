@@ -5,11 +5,13 @@ import { resolve } from 'node:path';
 const origin = 'https://icons.neuralui.org';
 const { version } = JSON.parse(readFileSync(resolve(__dirname, '../../../packages/core/package.json'), 'utf8')) as { version: string };
 const cases = [
-  ['/', '/', 'Find your icon.'],
-  ['/es/', '/es/', 'Encuentra tu icono.'],
+  ['/', '/', 'Neural Icons'],
+  ['/es/', '/es/', 'Neural Icons'],
+  ['/icons/', '/icons/', 'Find your icon.'],
+  ['/es/icons/', '/es/icons/', 'Encuentra tu icono.'],
   ['/guide/', '/guide/', 'Install and use'],
   ['/es/guide/', '/es/guide/', 'Instalación y uso'],
-  ['/?lang=es', '/es/', 'Encuentra tu icono.'],
+  ['/?lang=es', '/es/', 'Neural Icons'],
   ['/?view=guide', '/guide/', 'Install and use'],
   ['/?view=guide&lang=es', '/es/guide/', 'Instalación y uso'],
   ['/?icon=search', '/icon/search/', 'search'],
@@ -48,7 +50,7 @@ test('legacy filled React view preserves query state', async ({ page }) => {
 });
 
 test('capture the published catalogue version', async ({ page }, testInfo) => {
-  await page.goto('/es/');
+  await page.goto('/es/icons/');
   await expect(page.locator('.release-version')).toHaveText('v' + version);
   await expect(page.getByRole('heading', { name: 'Encuentra tu icono.', exact: true })).toBeVisible();
   await page.screenshot({ path: resolve(process.cwd(), 'test-results/public-access/icons-' + testInfo.project.name + '.png') });
