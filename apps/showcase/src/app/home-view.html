@@ -1,0 +1,46 @@
+<main class="home">
+  <section class="intro" aria-labelledby="home-heading">
+    <div class="intro-copy">
+      <h1 id="home-heading">Neural Icons</h1>
+      <p class="headline">{{ t().headline }}</p>
+      <p class="description">{{ t().description }}</p>
+      <div class="actions">
+        <a class="button primary" [href]="catalogHref()" (click)="navigate.emit({ event: $event, view: 'catalog' })">
+          {{ t().explore }} <neural-icon [icon]="arrow" [size]="18" />
+        </a>
+        <a class="button secondary" [href]="guideHref()" (click)="navigate.emit({ event: $event, view: 'guide' })">
+          {{ copy().guideTitle }}
+        </a>
+      </div>
+    </div>
+    <section class="specimen" aria-labelledby="specimen-heading">
+      <div class="specimen-header">
+        <h2 id="specimen-heading">{{ t().preview }}</h2>
+        <div class="segmented" role="group" [attr.aria-label]="t().preview">
+          <button type="button" [attr.aria-pressed]="variant() === 'outline'" (click)="variant.set('outline')">{{ copy().outline }}</button>
+          <button type="button" [attr.aria-pressed]="variant() === 'filled'" (click)="variant.set('filled')">{{ copy().filled }}</button>
+        </div>
+      </div>
+      <ul class="specimen-grid">
+        @for (family of featured(); track family.name) {
+          <li>
+            <a [href]="iconHref(family.name)">
+              <neural-icon [icon]="family[variant()]" [size]="34" />
+              <span>{{ family.name }}</span>
+            </a>
+          </li>
+        }
+      </ul>
+    </section>
+  </section>
+
+  <div class="library-details">
+    <dl class="counts">
+      <div><dt>{{ t().families }}</dt><dd>{{ total() }}</dd></div>
+      <div><dt>{{ t().variants }}</dt><dd>{{ total() * 2 }}</dd></div>
+    </dl>
+    <p>{{ t().usage }}</p>
+  </div>
+
+  <app-ecosystem-view [locale]="locale()" [theme]="theme()" />
+</main>

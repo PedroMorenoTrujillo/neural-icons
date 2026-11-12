@@ -60,9 +60,23 @@
       </svg>
       }
     </button>
+    <a
+      class="github-link"
+      href="https://github.com/PedroMorenoTrujillo/neural-icons"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="GitHub"
+      [attr.aria-label]="locale() === 'es' ? 'Repositorio de Neural Icons en GitHub · Se abre en una pestaña nueva' : 'Neural Icons repository on GitHub · Opens in a new tab'"
+    ><app-brand-icon brand="github" /></a>
   </div>
 </header>
-<nav class="primary-nav" [attr.aria-label]="copy().mainNavigation">
+<nav class="primary-nav" [attr.aria-label]="copy().mainNavigation" [attr.inert]="isModalOpen() ? '' : null">
+  <a
+    [href]="homeHref()"
+    [attr.aria-current]="view() === 'home' ? 'page' : null"
+    (click)="navigate.emit({ event: $event, view: 'home' })"
+    >{{ locale() === 'es' ? 'Inicio' : 'Home' }}</a
+  >
   <a
     [href]="catalogHref()"
     [attr.aria-current]="view() === 'catalog' ? 'page' : null"
@@ -73,6 +87,6 @@
     [href]="guideHref()"
     [attr.aria-current]="view() === 'guide' ? 'page' : null"
     (click)="navigate.emit({ event: $event, view: 'guide' })"
-    >{{ copy().getStarted }}</a
+    >{{ copy().guideTitle }}</a
   >
 </nav>

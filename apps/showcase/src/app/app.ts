@@ -1,6 +1,5 @@
 import { iconSearch } from '@neural-icons/core/icons/search';
-import { iconExternalLink } from '@neural-icons/core/icons/external-link';
-import { NeuralIcon } from '@neural-icons/angular';
+import { BrandIcon } from './brand-icon';
 import { iconHome } from '@neural-icons/core/icons/home';
 import { iconMessage } from '@neural-icons/core/icons/message';
 import { iconSparkles } from '@neural-icons/core/icons/sparkles';
@@ -12,6 +11,7 @@ import { LEGAL_CONTENT } from './legal-content';
 import { iconFromUrl, localeFromUrl, showcasePath, viewFromUrl, writeShowcasePath } from './showcase-url';
 import { ShowcaseHeader } from './showcase-header';
 import { GuideView } from './guide-view';
+import { HomeView } from './home-view';
 import { CatalogView } from './catalog-view';
 import { DetailPanel } from './detail-panel';
 import type { Framework, Theme, View } from './showcase-model';
@@ -58,7 +58,7 @@ function frameworkFromUrl(url: URL): Framework {
 }
 
 @Component({
-  imports: [ShowcaseHeader, GuideView, CatalogView, DetailPanel, LegalView, NeuralIcon],
+  imports: [ShowcaseHeader, HomeView, GuideView, CatalogView, DetailPanel, LegalView, BrandIcon],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
@@ -84,7 +84,6 @@ export class App {
   );
   protected readonly detailPanel = viewChild(DetailPanel);
   protected readonly searchIcon = iconSearch;
-  protected readonly externalLinkIcon = iconExternalLink;
   protected readonly heroIcons = [iconHome, iconMessage, iconSparkles] as const;
   protected readonly locale = signal<Locale>(
     localeFromUrl(this.initialUrl),
@@ -113,6 +112,11 @@ export class App {
   protected readonly copyFeedback = signal('');
   protected readonly categories = categories;
   protected readonly total = families.length;
+  protected readonly featured = ['search', 'message', 'sparkles', 'bookmark', 'chart-donut', 'heart']
+    .flatMap((name) => {
+      const family = familyByName.get(name);
+      return family ? [family] : [];
+    });
   protected readonly sizes = [16, 20, 24, 32] as const;
   protected readonly colors = [
     '#236ed8',
@@ -311,7 +315,7 @@ export class App {
     )
       return;
     event.preventDefault();
-    if (this.view() === view && !this.legalKind()) return;
+    if (this.view() === view && !this.legalKind() && !this.selectedName()) return;
     this.legalKind.set(null);
     this.view.set(view);
     this.selectedName.set(null);
@@ -354,6 +358,7 @@ export class App {
     this.selectedVariant.set('outline');
     this.copyFeedback.set('');
     this.writeUrl(name);
+
     if (this.isNarrow()) this.focusDetail();
   }
 
@@ -426,7 +431,7 @@ export class App {
     const name = iconFromUrl(url);
     const view = viewFromUrl(url);
     const selectedName = name && familyByName.has(name) ? name : null;
-    if (view === 'catalog' && !selectedName && url.searchParams.has('framework')) {
+    if (view !== 'guide' && !selectedName && url.searchParams.has('framework')) {
       url.searchParams.delete('framework');
       window.history.replaceState({}, '', url);
     }
@@ -452,7 +457,9 @@ export class App {
   private updateSeo(url: URL): void {
     const locale = this.locale();
     const name = this.selectedName();
-    const guide = this.view() === 'guide' && !name;
+    const view = this.view();
+    const guide = view === 'guide';
+    const home = view === 'home';
     const legal = this.legalKind();
     const title = legal ? `${LEGAL_CONTENT[locale][legal].title} — Neural Icons` : name
       ? locale === 'es'
@@ -462,9 +469,13 @@ export class App {
         ? locale === 'es'
           ? 'Instalación y uso — Neural Icons'
           : 'Install and use — Neural Icons'
-        : locale === 'es'
-          ? 'Catálogo de iconos — Neural Icons'
-          : 'Icon catalog — Neural Icons';
+        : home
+          ? locale === 'es'
+            ? 'Neural Icons — Iconos SVG para web'
+            : 'Neural Icons — SVG icons for the web'
+          : locale === 'es'
+            ? 'Catálogo de iconos — Neural Icons'
+            : 'Icon catalog — Neural Icons';
     const family = name ? familyByName.get(name) : undefined;
     const searchTerms: readonly string[] = family
       ? (locale === 'es' && name ? spanishSearchTerms[name] : undefined) ??
@@ -481,9 +492,13 @@ export class App {
         ? locale === 'es'
           ? 'Instala Neural Icons y aprende a usar sus SVG en HTML, Angular, React y Vue sin Neural UI.'
           : 'Install Neural Icons and use its SVGs in HTML, Angular, React and Vue without Neural UI.'
-        : locale === 'es'
-          ? `Explora ${families.length} familias de Neural Icons con variantes de contorno y relleno para HTML, Angular, React y Vue.`
-          : `Explore ${families.length} Neural Icons families with outline and filled variants for HTML, Angular, React and Vue.`;
+        : home
+          ? locale === 'es'
+            ? `Neural Icons es la biblioteca SVG del ecosistema Neural. ${families.length} familias con contorno y relleno para HTML, Angular, React y Vue.`
+            : `Neural Icons is the SVG library in the Neural ecosystem. ${families.length} families in outline and filled for HTML, Angular, React and Vue.`
+          : locale === 'es'
+            ? `Busca entre ${families.length} familias de iconos, compara contorno y relleno y descarga el SVG o copia el código.`
+            : `Search ${families.length} icon families, compare outline and filled, then download the SVG or copy the code.`;
     this.document.documentElement.lang = locale;
     this.title.setTitle(title);
     this.meta.updateTag({ name: 'description', content: description });
@@ -491,7 +506,7 @@ export class App {
     this.meta.updateTag({ property: 'og:description', content: description });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
     const socialImage = new URL('/social-card.png', this.siteOrigin || url.origin).href;
-    const imageAlt = locale === 'es' ? 'Catálogo de Neural Icons con variantes de contorno y relleno' : 'Neural Icons catalog with outline and filled variants';
+    const imageAlt = locale === 'es' ? 'Muestra de iconos de Neural Icons' : 'A selection of Neural Icons';
     this.meta.updateTag({ property: 'og:image', content: socialImage });
     this.meta.updateTag({ property: 'og:image:width', content: '1200' });
     this.meta.updateTag({ property: 'og:image:height', content: '630' });
@@ -502,12 +517,16 @@ export class App {
     this.meta.updateTag({ name: 'twitter:image', content: socialImage });
     this.meta.updateTag({ name: 'twitter:image:alt', content: imageAlt });
 
-    const canonical = new URL(legal ? `${locale === 'es' ? '/es' : ''}/${legal}/` : showcasePath(locale, name, guide ? 'guide' : 'catalog'), this.siteOrigin || url.origin);
+    const pagePath = (language: Locale) =>
+      legal ? `${language === 'es' ? '/es' : ''}/${legal}/` : showcasePath(language, name, view);
+    const origin = this.siteOrigin || url.origin;
+    const canonical = new URL(pagePath(locale), origin);
     this.meta.updateTag({ property: 'og:url', content: canonical.href });
+    this.meta.updateTag({ property: 'og:locale', content: locale === 'es' ? 'es_ES' : 'en_US' });
+    this.meta.updateTag({ property: 'og:locale:alternate', content: locale === 'es' ? 'en_US' : 'es_ES' });
     this.setHeadLink('canonical', canonical.href);
-    for (const language of ['en', 'es'] as const) {
-      const alternate = new URL(canonical);
-      alternate.pathname = legal ? `${language === 'es' ? '/es' : ''}/${legal}/` : showcasePath(language, name, guide ? 'guide' : 'catalog');
+    for (const language of ['en', 'es', 'x-default'] as const) {
+      const alternate = new URL(pagePath(language === 'es' ? 'es' : 'en'), origin);
       this.setHeadLink('alternate', alternate.href, language);
     }
     this.meta.updateTag({

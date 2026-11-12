@@ -1,6 +1,6 @@
 /** Canonical pages and their slash aliases; query-based legacy links remain valid at these paths. */
 export function publicShowcasePaths(names: readonly string[]): Set<string> {
-  const english = ['', '/guide', '/legal-notice', '/privacy', '/cookies', ...names.map(name => `/icon/${encodeURIComponent(name)}`)];
+  const english = ['', '/icons', '/guide', '/legal-notice', '/privacy', '/cookies', ...names.map(name => `/icon/${encodeURIComponent(name)}`)];
   return new Set(english.flatMap(path => [path || '/', `/es${path}`]));
 }
 

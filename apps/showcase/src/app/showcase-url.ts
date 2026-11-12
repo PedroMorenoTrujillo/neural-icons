@@ -15,16 +15,20 @@ export function iconFromUrl(url: URL): string | null {
 }
 
 export function viewFromUrl(url: URL): View {
-  return !iconFromUrl(url) &&
-    (/^\/(?:es\/)?guide\/?$/.test(url.pathname) ||
+  if (iconFromUrl(url) !== null || /^\/(?:es\/)?icons\/?$/.test(url.pathname) ||
+      url.searchParams.get('view') === 'catalog') return 'catalog';
+  if (/^\/(?:es\/)?guide\/?$/.test(url.pathname) ||
       url.searchParams.get('view') === 'guide' ||
-      ['#installation', '#usage', '#color'].includes(url.hash))
-    ? 'guide' : 'catalog';
+      ['#installation', '#usage', '#color'].includes(url.hash)) return 'guide';
+  return 'home';
 }
 
 export function showcasePath(locale: Locale, name: string | null, view: View): string {
   const prefix = locale === 'es' ? '/es/' : '/';
-  return name ? `${prefix}icon/${encodeURIComponent(name)}/` : view === 'guide' ? `${prefix}guide/` : prefix;
+  if (name) return `${prefix}icon/${encodeURIComponent(name)}/`;
+  if (view === 'guide') return `${prefix}guide/`;
+  if (view === 'catalog') return `${prefix}icons/`;
+  return prefix;
 }
 
 export function writeShowcasePath(url: URL, locale: Locale, name: string | null, view: View): void {

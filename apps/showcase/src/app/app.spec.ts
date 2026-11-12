@@ -12,7 +12,7 @@ describe('Neural Icons public showcase', () => {
       addEventListener: () => undefined,
       removeEventListener: () => undefined,
     }));
-    window.history.replaceState({}, '', '/');
+    window.history.replaceState({}, '', '/icons/');
     await TestBed.configureTestingModule({
       imports: [App],
     }).compileComponents();
@@ -185,7 +185,7 @@ describe('Neural Icons public showcase', () => {
       'In a Vue template, NeuIcon is decorative by default',
     );
     expect(root.querySelector('.usage.about-section a')).toBeNull();
-    required<HTMLAnchorElement>(root, '.primary-nav a[href="/"]').click();
+    required<HTMLAnchorElement>(root, '.primary-nav a[href="/icons/"]').click();
     await fixture.whenStable();
     required<HTMLAnchorElement>(
       root,
@@ -210,11 +210,11 @@ describe('Neural Icons public showcase', () => {
     await fixture.whenStable();
 
     expect(document.documentElement.lang).toBe('es');
-    expect(window.location.pathname).toBe('/es/');
+    expect(window.location.pathname).toBe('/es/icons/');
     expect(root.querySelector('#catalog-heading')?.textContent).toBe(
       'Encuentra tu icono.',
     );
-    root.querySelectorAll<HTMLAnchorElement>('.primary-nav a')[1].click();
+    required<HTMLAnchorElement>(root, '.primary-nav a[href="/es/guide/"]').click();
     await fixture.whenStable();
     expect(root.querySelector('#installation-heading')?.textContent).toBe(
       'Instalación y uso',
@@ -264,14 +264,14 @@ describe('Neural Icons public showcase', () => {
       'Este fragmento usa iconSearch del ejemplo anterior',
     );
 
-    root.querySelectorAll<HTMLAnchorElement>('.primary-nav a')[0].click();
+    required<HTMLAnchorElement>(root, '.primary-nav a[href="/es/icons/"]').click();
     await fixture.whenStable();
     await search(root, 'comunicación');
     expect(root.querySelectorAll('.family-tile').length).toBeGreaterThan(0);
     languageButton.click();
     await fixture.whenStable();
     expect(document.documentElement.lang).toBe('en');
-    expect(window.location.pathname).toBe('/');
+    expect(window.location.pathname).toBe('/icons/');
   });
 
   it('provides the selected SVG asset and an inline HTML example for each variant', async () => {
@@ -313,14 +313,14 @@ describe('Neural Icons public showcase', () => {
 
   it('explains arbitrary CSS colors and identifies preview swatches as examples', async () => {
     const { fixture, root } = await render();
-    root.querySelectorAll<HTMLAnchorElement>('.primary-nav a')[1].click();
+    required<HTMLAnchorElement>(root, '.primary-nav a[href="/guide/"]').click();
     await fixture.whenStable();
     const guide = root.querySelector('#color');
     expect(guide?.textContent).toContain('Any valid CSS color works');
     expect(guide?.textContent).toContain('currentColor');
     expect(guide?.textContent).toContain('not a fixed palette');
 
-    root.querySelectorAll<HTMLAnchorElement>('.primary-nav a')[0].click();
+    required<HTMLAnchorElement>(root, '.primary-nav a[href="/icons/"]').click();
     await fixture.whenStable();
     required<HTMLButtonElement>(root, '#family-search').click();
     await fixture.whenStable();

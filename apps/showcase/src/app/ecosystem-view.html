@@ -1,0 +1,46 @@
+<section id="ecosystem" aria-labelledby="ecosystem-title">
+  <header>
+    <h2 id="ecosystem-title">{{ t().title }}</h2>
+    <p>{{ t().intro }}</p>
+  </header>
+
+  <div class="products">
+    @for (product of products(); track product.id) {
+      <article>
+        <p class="kind">{{ product.kind }}</p>
+        <h3>{{ product.name }}</h3>
+        <p class="description">{{ product.description }}</p>
+        <figure>
+          @switch (product.id) {
+            @case ('web') {
+              <img class="web-preview" [src]="'/assets/ecosystem/core-card-' + theme() + '.png'"
+                alt="" width="602" height="412" loading="lazy" decoding="async" />
+            }
+            @case ('native') {
+              <img class="phone" src="/assets/ecosystem/native-card-ios.png"
+                alt="" width="1206" height="2622" loading="lazy" decoding="async" />
+            }
+            @case ('charts') {
+              <img class="phone" src="/assets/ecosystem/charts-line-ios.png"
+                alt="" width="480" height="1043" loading="lazy" decoding="async" />
+            }
+            @case ('ai') {
+              <div class="contract">
+                <code>get_api</code>
+                <strong>NeuButtonComponent</strong>
+                <dl>
+                  <dt>Web v2</dt><dd><code>(neuClick)</code></dd>
+                  <dt>Native</dt><dd><code>(pressed)</code></dd>
+                </dl>
+              </div>
+            }
+          }
+          <figcaption>{{ product.preview }}</figcaption>
+        </figure>
+        <a [href]="product.href">{{ product.link }} <neural-icon [icon]="external" [size]="16" /></a>
+      </article>
+    }
+  </div>
+
+  <a [href]="uiUrl() + '/ecosystem'">{{ t().explore }} <neural-icon [icon]="arrow" [size]="16" /></a>
+</section>

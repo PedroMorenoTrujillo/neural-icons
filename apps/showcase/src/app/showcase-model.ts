@@ -2,7 +2,7 @@ import type { NeuralIconDefinition } from '@neural-icons/core';
 
 export type Framework = 'angular' | 'react' | 'vue' | 'html';
 export type Theme = 'light' | 'dark';
-export type View = 'catalog' | 'guide';
+export type View = 'home' | 'catalog' | 'guide';
 
 export interface IconFamily {
   readonly name: string;

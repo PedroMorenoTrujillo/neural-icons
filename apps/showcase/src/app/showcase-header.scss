@@ -100,7 +100,8 @@ p {
 }
 
 .language-button,
-.theme-button {
+.theme-button,
+.github-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -120,7 +121,8 @@ p {
 }
 
 .language-button:hover,
-.theme-button:hover {
+.theme-button:hover,
+.github-link:hover {
   border-color: var(--accent);
   color: var(--ink);
   background: var(--surface-raised);
@@ -130,7 +132,8 @@ p {
   letter-spacing: 0.04em;
 }
 
-.theme-button {
+.theme-button,
+.github-link {
   width: 44px;
   padding: 0;
 }
@@ -182,11 +185,18 @@ p {
   }
   .primary-nav {
     height: 48px;
+    gap: clamp(16px, 5vw, 30px);
     padding-inline: 16px;
   }
 }
 
 @media (max-width: 420px) {
+  .masthead { gap: 8px; }
+  .identity { gap: 8px; }
+  .identity .brand-title { font-size: 1rem; }
+  .brand-mark { width: 32px; height: 32px; }
+  .header-actions { gap: 6px; }
+  .language-button { padding-inline: 8px; }
   .identity p:not(.brand-title) {
     display: none;
   }

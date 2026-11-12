@@ -13,7 +13,7 @@ test('SVG assets added since NI-02 parse, render and stay within the 24px canvas
   request,
 }) => {
   expect(additions).toHaveLength(142);
-  await page.goto('/');
+  await page.goto('/icons/');
   const assets = await Promise.all(
     additions.map(async ({ name }) => {
       const response = await request.get(`/icons/${name}.svg`);
