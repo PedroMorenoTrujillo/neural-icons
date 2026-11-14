@@ -5,12 +5,15 @@ import {
   output,
   ViewEncapsulation,
 } from '@angular/core';
-import { showcaseCopy } from './showcase-copy';
+import { showcaseCopy, type Locale } from './showcase-copy';
+import { EcosystemView } from './ecosystem-view';
+import type { Theme } from './showcase-model';
 
 type Framework = 'html' | 'angular' | 'react' | 'vue';
 
 @Component({
   selector: 'app-guide-view',
+  imports: [EcosystemView],
   templateUrl: './guide-view.html',
   styleUrl: './guide-view.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,6 +21,8 @@ type Framework = 'html' | 'angular' | 'react' | 'vue';
 })
 export class GuideView {
   readonly copy = input.required<typeof showcaseCopy.en>();
+  readonly locale = input.required<Locale>();
+  readonly theme = input.required<Theme>();
   readonly framework = input.required<Framework>();
   readonly installSnippet = input.required<string>();
   readonly setupSnippet = input.required<string>();

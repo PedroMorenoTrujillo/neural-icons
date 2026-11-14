@@ -72,6 +72,20 @@ figcaption { text-align: center; font-size: .75rem; }
   border-radius: 10px;
 }
 
+.chart-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.ecosystem-icon-sample {
+  display: flex;
+  gap: 24px;
+  color: var(--accent);
+}
+
 .phone {
   display: block;
   width: 94px;
