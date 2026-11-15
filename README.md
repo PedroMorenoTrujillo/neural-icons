@@ -2,7 +2,7 @@
 
 Original, framework-agnostic iconography for Neural UI 2.0. Core and the Angular, React, and Vue adapters are published on npm with 268 families / 536 glyphs and share one coordinated release version. `0.0.1-next.2` remains available under `next`.
 
-Browse the [icon catalog](https://icons.neuralui.org/) and [installation and usage guide](https://icons.neuralui.org/guide/). Both are also available in Spanish from the language switcher. Vercel serves the production showcase from the verified `deploy/icons` branch; see [deployment settings](docs/cloudflare-deployment.md).
+Browse the [icon catalog](https://icons.neuralui.org/) and [installation and usage guide](https://icons.neuralui.org/guide/). Both are available in Spanish from the language switcher. The showcase has a dedicated source repository and uses the published npm packages.
 
 ## Packages
 
@@ -10,7 +10,6 @@ Browse the [icon catalog](https://icons.neuralui.org/) and [installation and usa
 - `@neural-icons/angular`: a standalone Angular 22 component that renders core definitions with deterministic SSR-safe markup.
 - `@neural-icons/react`: a React 19 renderer for granular Core definitions.
 - `@neural-icons/vue`: a Vue 3.5 renderer for granular Core definitions.
-- `showcase`: a zoneless Angular 22 SSR application that exercises the complete base set.
 
 ## Design status
 
@@ -34,29 +33,16 @@ Useful focused commands:
 npx nx test core
 npx nx test angular
 npx nx build angular
-npx nx serve showcase
 npx nx run angular:verify-package
-npx nx e2e showcase-e2e
 ```
-
-For a local cross-browser regression after installing the Playwright Firefox and WebKit engines, run `NEURAL_ICONS_CROSS_BROWSER=1 npx playwright test --config=apps/showcase-e2e/playwright.config.mts`. This opt-in matrix includes desktop Firefox/WebKit and iPhone/iPad WebKit emulation. Real iOS hardware still needs a separate device check.
 
 `npm run generate:icons` converts the canonical geometry manifest into individual TypeScript modules, standalone SVG files, name/family types, and the inventory document. `npm run generate:variants` completes the filled companions before refreshing those artifacts. CI should use `npm run check:generated` to reject stale generated artifacts. The current catalog has 536 entries: 268 each of `outline` and `filled`.
 
 Every core build also depends on validation. Renamed/removed icons must not leave orphaned generated files; the generator reports these for manual review. Dependency installation uses normal peer resolution; see the [audit](docs/architecture-audit.md) for the verified tooling contract.
 
-`angular:verify-package` packs and extracts both compiled packages into a temporary directory, checks their exports and tree-shaking, and compiles a consumer with Angular AOT without workspace aliases. `node tools/verify-clean-angular-consumer.mjs --registry-only` separately installs Core and Angular from npm and repeats the AOT consumer check. The browser suite runs the production showcase locally, checks prerendered SVG markup, and verifies DOM-node reuse during hydration.
+`angular:verify-package` packs and extracts both compiled packages into a temporary directory, checks their exports and tree-shaking, and compiles a consumer with Angular AOT without workspace aliases. `node tools/verify-clean-angular-consumer.mjs --registry-only` separately installs Core and Angular from npm and repeats the AOT consumer check.
 
 Internal catalog QA: `node tools/generate-catalog-review.mjs` preserves the historical 197-family naming ledger and 20 contact sheets; `node tools/generate-ni06-review.mjs` generates six sheets for the 53 added families. Both use representative 16/20/24/32 px previews. `node tools/serve-contact-sheets.mjs` serves the base sheets on loopback. These are review artifacts, not the public showcase.
-
-To inspect the production build locally:
-
-```bash
-npx nx build showcase
-node dist/apps/showcase/server/server.mjs
-```
-
-Open `http://127.0.0.1:4000`. The showcase server binds to loopback only.
 
 ## Consumption contract
 
@@ -90,7 +76,7 @@ Labels are trimmed; empty or whitespace-only labels remain decorative. SVG asset
 
 ## Publishing
 
-This repository, its packages, and the SVG catalog are licensed under [MIT](LICENSE). Stable Core, Angular, React, and Vue releases are published under `latest` with the 268-family catalog. Their versions and the showcase are prepared together using `npm run release:prepare -- <version>`. The `next` tag remains on `0.0.1-next.2`; it has not been promoted to `latest`.
+This repository, its packages, and the SVG catalog are licensed under [MIT](LICENSE). Stable Core, Angular, React, and Vue releases are published under `latest` with the 268-family catalog. Their versions are prepared together using `npm run release:prepare -- <version>`. The `next` tag remains on `0.0.1-next.2`.
 
 See [coordinated releases](docs/coordinated-releases.md) for the single Core tag, release checks, Core-first order, four npm trusted publishers and automatic showcase deployment.
 

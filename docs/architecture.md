@@ -7,7 +7,7 @@ packages/core       pure icon data; no DOM, Angular, or runtime registry
        ↓
 packages/angular    Angular 22 standalone renderer
        ↓
-apps/showcase       SSR + hydration integration and visual review
+Neural Icons site   SSR + hydration integration using the npm packages
 ```
 
 `@neural-icons/core` is the source-level contract. An icon is an immutable object containing a kebab-case name, category, search tags, a fixed `0 0 24 24` view box, and one or more path strings. This representation is serializable and safe to use in browsers, Node.js, workers, tests, and server rendering.
