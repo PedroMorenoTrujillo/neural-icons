@@ -7,7 +7,6 @@ import {
   compareReleases,
   PROJECTS,
 } from './release-policy.mjs';
-import { generateReleaseVersion } from './generate-release-version.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const version = releaseVersion(process.argv[2]);
@@ -38,7 +37,6 @@ const manifests = Object.fromEntries(
   ]),
 );
 verifyManifests(manifests, version);
-generateReleaseVersion();
 console.log(
-  `Prepared all four packages and the showcase for core@${version}. Commit and push the reviewed changes before creating that tag.`,
+  `Prepared all four packages for core@${version}. Commit and push the reviewed changes before creating that tag.`,
 );

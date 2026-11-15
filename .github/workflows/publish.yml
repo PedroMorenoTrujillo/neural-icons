@@ -8,13 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       verify_only:
-        description: Verify and build without publishing or deploying
+        description: Verify and build without publishing
         type: boolean
         default: true
-      deploy_current:
-        description: Deploy the already published current packages from main without publishing npm
-        type: boolean
-        default: false
 
 permissions:
   contents: read
@@ -46,22 +42,10 @@ jobs:
       - run: npm run verify:release
       - name: Pack all four exact release artifacts
         run: npm run release:pack
-      - name: Build the showcase and preserve every published URL
-        run: |
-          npm run build:cloudflare
-          npm run build:vercel
-          node tools/verify-showcase-release.mjs
       - uses: actions/upload-artifact@v7
         with:
           name: icons-packages
           path: dist/release/
-          if-no-files-found: error
-          retention-days: 14
-          overwrite: true
-      - uses: actions/upload-artifact@v7
-        with:
-          name: icons-showcase
-          path: dist/cloudflare/
           if-no-files-found: error
           retention-days: 14
           overwrite: true
@@ -103,77 +87,3 @@ jobs:
           if-no-files-found: error
           retention-days: 14
           overwrite: true
-
-  verify-published:
-    needs: verify
-    if: github.repository == 'PedroMorenoTrujillo/neural-icons' && github.actor == 'PedroMorenoTrujillo' && github.triggering_actor == 'PedroMorenoTrujillo' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.deploy_current == true && inputs.verify_only != true
-    runs-on: ubuntu-24.04
-    timeout-minutes: 25
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-      - uses: actions/setup-node@v7
-        with:
-          node-version-file: .nvmrc
-          package-manager-cache: false
-      - uses: actions/download-artifact@v8
-        with:
-          name: icons-packages
-          path: dist/release/
-      - run: node tools/release-batch.mjs --verify-registry
-      - uses: actions/upload-artifact@v7
-        with:
-          name: icons-registry-verification
-          path: dist/release/registry-verified.json
-          if-no-files-found: error
-          retention-days: 14
-          overwrite: true
-
-  deploy-showcase:
-    needs: [verify, publish, verify-published]
-    if: always() && needs.verify.result == 'success' && (needs.publish.result == 'success' || needs.verify-published.result == 'success') && github.repository == 'PedroMorenoTrujillo/neural-icons' && github.actor == 'PedroMorenoTrujillo' && github.triggering_actor == 'PedroMorenoTrujillo' && !contains(github.ref_name, '-') && inputs.verify_only != true
-    runs-on: ubuntu-24.04
-    timeout-minutes: 25
-    permissions:
-      contents: write
-    env:
-      VERCEL_ORG_ID: team_5yMmfudZR826vI2MXwbYfXUY
-      VERCEL_PROJECT_ID: prj_YRhAzLJ7xoNXOPS6KE5GVj2V5ZpE
-    steps:
-      - uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v7
-        with:
-          node-version-file: .nvmrc
-          package-manager-cache: false
-      - uses: actions/download-artifact@v8
-        with:
-          name: icons-showcase
-          path: dist/cloudflare/
-      - uses: actions/download-artifact@v8
-        with:
-          name: icons-registry-verification
-          path: dist/release/
-      - name: Bind the website to all four verified public npm archives
-        run: node tools/verify-showcase-release.mjs --published
-      - name: Promote the verified source to the existing Vercel production branch
-        run: node tools/promote-vercel-source.mjs
-      - name: Verify the served Vercel receipt, badge and all existing public URLs
-        run: node tools/verify-showcase-release.mjs --live
-      - name: Verify anonymous desktop and mobile access, including legacy links
-        run: |
-          npm ci
-          npm exec -- playwright install --with-deps chromium
-          npm exec -- nx run showcase-e2e:verify-public
-      - uses: actions/upload-artifact@v7
-        if: always()
-        with:
-          name: icons-public-access
-          path: test-results/public-access/
-          if-no-files-found: ignore
-          retention-days: 7

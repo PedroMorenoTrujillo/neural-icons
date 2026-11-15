@@ -4,16 +4,15 @@ import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, resolve } from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
-import { generateReleaseVersion } from './generate-release-version.mjs';
 import {
   PROJECTS,
   REPOSITORY,
-  VERCEL_PROJECT_ID,
   compareReleases,
   verifyManifests,
   verifyReleaseActor,
   verifyArchive,
   verifyRegistryManifest,
+  releaseVersion,
 } from './release-policy.mjs';
 
 const root = resolve(import.meta.dirname, '..');
@@ -78,17 +77,20 @@ async function waitForRegistry(artifact) {
     if (attempt < 79) await delay(15_000);
   }
   throw new Error(
-    `${artifact.name}@${artifact.version} is not publicly available; no showcase deployment is allowed`,
+    `${artifact.name}@${artifact.version} is not publicly available`,
   );
 }
 
+const coreVersion = () =>
+  releaseVersion(JSON.parse(readFileSync(resolve(root, 'packages/core/package.json'), 'utf8')).version);
+
 if (process.argv.includes('--identity')) {
   const version = verifyReleaseActor(process.env);
-  assert.equal(generateReleaseVersion(true), version);
+  assert.equal(coreVersion(), version);
   git(['merge-base', '--is-ancestor', 'HEAD', 'origin/main']);
   console.log(`Verified owner-triggered release: core@${version}`);
 } else if (process.argv.includes('--prepare')) {
-  const version = generateReleaseVersion(true);
+  const version = coreVersion();
   const source = Object.fromEntries(
     PROJECTS.map((project) => [
       project,
@@ -135,7 +137,6 @@ if (process.argv.includes('--identity')) {
     repository: REPOSITORY,
     version,
     commit: git(['rev-parse', 'HEAD']),
-    project: VERCEL_PROJECT_ID,
     channel: version.includes('-') ? 'next' : 'latest',
     packages,
   };
@@ -156,7 +157,7 @@ if (process.argv.includes('--identity')) {
       if (current)
         assert.ok(
           compareReleases(version, current) >= 0,
-          'Refusing to move an npm channel or the showcase backwards',
+          'Refusing to move an npm channel backwards',
         );
     } else assert.equal(tags.status, 404);
     if (!(await registry(artifact))) {
