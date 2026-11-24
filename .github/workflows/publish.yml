@@ -80,6 +80,19 @@ jobs:
           npm ci
           npm exec -- playwright install --with-deps chromium
           node tools/verify-clean-angular-consumer.mjs --registry-only
+      - name: Request an Icons showcase build on Cloudflare Pages
+        env:
+          ICONS_PAGES_DEPLOY_HOOK: ${{ secrets.ICONS_PAGES_DEPLOY_HOOK }}
+        run: |
+          node --input-type=module <<'NODE'
+          const hook = process.env.ICONS_PAGES_DEPLOY_HOOK;
+          if (!hook) throw new Error('The Icons Cloudflare Pages deploy hook is missing.');
+          const response = await fetch(hook, {
+            method: 'POST', redirect: 'error', signal: AbortSignal.timeout(15_000),
+          }).catch(() => { throw new Error('Could not request the Icons Cloudflare Pages build.'); });
+          if (!response.ok) throw new Error(`Cloudflare Pages rejected the build request (${response.status}).`);
+          console.log('Icons Cloudflare Pages build requested.');
+          NODE
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: icons-registry-verification
